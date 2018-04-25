@@ -1,0 +1,334 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0079)http://www.controlloop.co.za/Articles/Loop_signatures_14/loop_signatures_14.htm -->
+<HTML><HEAD><TITLE>Loop signatures 14</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 14_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 14_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 14_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 14_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 14_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=689><IMG height=1 src="Loop signatures 14_files/clearpixel.gif" 
+      width=689 border=0></TD>
+    <TD width=20><IMG height=1 src="Loop signatures 14_files/clearpixel.gif" 
+      width=20 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 14_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 14_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 14_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=9></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=689>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica>Loop Problem 
+      Signatures No 14</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Digital controllers - 
+      Part 6<BR>The D term (continued)</FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>In the 
+      previous article, the purpose of derivative, and the two types of 
+      processes where it works effectively were discussed.&nbsp; This article 
+      and the next will deal with the practicalities of using derivative as 
+      applied in the modern digital controller.
+      <P align=justify>As was seen, if a "vertically" changing input signal 
+      (like a step change) is applied to a derivative block, the block's output 
+      in theory should go to infinity.&nbsp; An example of this is shown in 
+      Figure 1, where a P+D controller in the test rig is subjected to a step 
+      change in setpoint.&nbsp; The PD (controller output) immediately spikes up 
+      to maximum, and then comes straight back down again. </FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 1</FONT></B>
+      <P align=justify>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture69 height=412 alt="Figure 1" 
+            src="Loop signatures 14_files/loogsig14fig1.jpg" width=550 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>In the old analogue electronic and pneumatic controllers a 
+      response like this was impossible as their speed of response was limited 
+      by natural lags inherent in the way they worked, examples being the speed 
+      of pneumatic signal propagation, and capacitor charging time.&nbsp; 
+      However in a digital system that uses mathematical calculations, the 
+      maximum output value would only be limited by the number of bits used the 
+      system.&nbsp; Furthermore as a digital system is non-continuous and 
+      operates on a scan rate, even the smallest change from the previous scan 
+      would be seen as a step, and the output would go to a maximum or minimum 
+      limit.&nbsp; Therefore a digital system using a straight derivative block 
+      would be unusable, as the output would be continually jumping up and down 
+      between limits.
+      <P align=justify>Manufacturers studied the derivative action of the 
+      analogue units, and inserted a first order lag filter in front of the 
+      derivative block, to make their digital controllers operate in a similar 
+      fashion. This is illustrated in Figure 2.&nbsp; The filter acts the same 
+      way as the natural lags do in an analogue system.&nbsp; A step change is 
+      now converted into an exponential lag response, and the derivative of 
+      this, is the classical derivative response.</FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 2</FONT></B>
+      <P align=justify>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture70 height=373 alt="Figure 2" 
+            src="Loop signatures 14_files/loopsig14fig2.gif" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>It is necessary to discuss the strange whims and peculiarities of 
+      some of the manufacturers.&nbsp; As mentioned in previous articles, there 
+      are no standards whatsoever in control, and particularly so when it comes 
+      to controllers.&nbsp; The manufacturers not only make their brands of 
+      controllers uniquely different to other brands, but many of them may not 
+      even make the next batch of controllers or next version of controller 
+      software the same way.&nbsp; So any software version or a different model 
+      of controller coming out of the same stable may be completely 
+      different.&nbsp; (This obviously is highly confusing to the user).&nbsp; 
+      For example some manufacturers do not place the derivative filter before 
+      the derivative unit, but before all three (P, I and D) blocks.&nbsp; In 
+      other words they put a filter in front of the whole controller.&nbsp; 
+      There seems to be no logical explanation for this, as it also affects the 
+      tuning of the P and I terms.
+      <P align=justify>The most confusing thing when it comes to the derivative 
+      filter, is how individual manufacturers handle its value.&nbsp; As can be 
+      seen in Figure 2 most controllers have the time constant of the filter set 
+      to a value given by:
+      <P align=justify>&nbsp;&nbsp; <B>TC = a x TD</B>, where <B>a </B>is a 
+      constant, and <B>TD</B> is the derivative time.
+      <P align=justify>This is done to effectively make the derivative response 
+      directly proportional to the value of the derivative time, TD.&nbsp; If it 
+      was not done this way, then it would be necessary to change the filter 
+      time constant, every time TD was changed.
+      <P align=justify>The value of <B>a</B> is really critical.&nbsp; Most 
+      manufacturers set its value somewhere between 0.125 and 0.25, and 
+      generally don't let the user adjust it.&nbsp; The response of a P+D 
+      controller with a derivative filter <B>a</B> coefficient of 0.25, to an 
+      input step change in error is shown in Figure 3.&nbsp; This is a typical 
+      classical derivative response to a step change.</FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 3</FONT></B>
+      <P align=justify>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture71 height=410 alt="Figure 3" 
+            src="Loop signatures 14_files/loopsig14fig3.jpg" width=550 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>In the previous loop signature article I wrote about a senior 
+      instrument technician in a paper plant who believed in using derivative in 
+      every loop.&nbsp; On examining his DCS system (which is a very popular and 
+      well known make), it was found that the value of the <B>a</B> coefficient 
+      was user adjustable, and had been set to unity.&nbsp; To understand the 
+      effect of this, it is necessary to look at the combined transfer function 
+      of the filter and derivative block.&nbsp; This may be written as:
+      <P align=justify><IMG id=Picture72 height=57 hspace=0 
+      src="Loop signatures 14_files/loopsig14eq1.gif" width=261 align=top 
+      border=0>&nbsp;
+      <P>If we put <B>a = 1</B>, then the equation becomes:
+      <P><IMG id=Picture73 height=48 hspace=0 
+      src="Loop signatures 14_files/loopsig14eq2.gif" width=66 align=top 
+      border=0>&nbsp;
+      <P>Thus the filter cancels out the derivative term.&nbsp; Figure 4 is the 
+      response of the same P+D controller to an input step change in error, but 
+      with the <B>a</B> coefficient of the derivative filter set equal to unity. 
+      The derivative kick is entirely gone, and all that is left is a purely 
+      proportional response!</FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Figure 4</FONT></B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture78 height=410 alt="Figure 4" 
+            src="Loop signatures 14_files/loopsig14fig4.gif" width=550 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>The senior technician was very embarrassed when this was explained 
+      to him.&nbsp; His men had spent months tuning derivative into loops 
+      without realising that the derivative was in fact not working at all. 
+      However it was not altogether his fault.&nbsp; Nobody had ever taught him 
+      about a derivative filter.&nbsp; Reference to the DCS user's manual showed 
+      that unity is the default value as set by the manufacturer.&nbsp; The 
+      manual indicated that the <B>a</B> coefficient was adjustable anywhere 
+      between 0.1 and a 100.&nbsp; There was no other reference in the manual to 
+      this coefficient, and the instrument technicians in the plant said that in 
+      their training courses on the DCS, no mention had ever been made of the 
+      coefficient.&nbsp; Why should a manufacturer set a default value in the 
+      system that effectively switches one of the parameters off?&nbsp; It's 
+      completely senseless.
+      <P align=justify>Taking this further, the author was recently working in a 
+      large South African petro-chemical refinery where another well-known make 
+      of DCS was installed.&nbsp; On finding a temperature loop where D would be 
+      beneficial, the manual was consulted to determine the <B>a</B> 
+      coefficient.&nbsp; It was found that the coefficient was adjustable over a 
+      wide range, but in this case the manufacturer's default value was 
+      2.5.&nbsp; This is amazing, as it now makes the denominator in Equation A 
+      larger than the numerator.&nbsp; The former is a lag, and the latter (D 
+      component) is a lead.&nbsp; When you have a lead divided by a lag, and the 
+      lead is smaller than the lag, the expression turns into a lag.&nbsp; In 
+      other words the D parameter with its filter is now acting as a large lag 
+      on the controller output.&nbsp; The effect of this is shown in Figure 5 on 
+      the same controller with the <B>a</B> coefficient set to 2.5.&nbsp; It can 
+      be seen that the controller now takes over 3 minutes to respond to a 10% 
+      change in error!&nbsp; </FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 5</FONT></B>
+      <P align=justify>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture79 height=410 alt="Figure 5" 
+            src="Loop signatures 14_files/loopsig14fig5.gif" width=550 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>It is hard to believe that a leading manufacturer of control 
+      equipment can put such a stupid value of the <B>a</B> coefficient into his 
+      controller as the default value.&nbsp; In their particular manual they do 
+      talk about the <B>a</B> coefficient, and say that it is adjustable, and a 
+      larger value should be used in the presence of large noise on the PV 
+      signal.&nbsp; This is really not a sensible approach.&nbsp; The D term was 
+      never intended to act as a noise filter.&nbsp; If one has to attenuate 
+      noise, then the DCS has a proper lag filter which can be placed in front 
+      of the incoming PV signal.&nbsp; (Please refer to other articles on the 
+      dangers inherent in using large filters).&nbsp; One can only conclude that 
+      some of the manufacturers, or at any rate, the people writing their 
+      controller software, have no real understanding of the practicalities of 
+      control.
+      <P align=justify>It is of interest that the people who had commissioned 
+      the refinery had brought in an expert on refinery control from overseas to 
+      tune the controllers.&nbsp; He also had obviously no idea of the practical 
+      aspects of the <B>a</B> coefficient, and had increased the P gain 
+      dramatically to overcome the tremendously slugged response when he used 
+      the D term.</FONT>
+      <P align=justify><A 
+	      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A> 
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton97',1)" 
+            onmouseout="F_roll('NavigationButton97',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton97 height=19 alt=Home 
+            src="Loop signatures 14_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton97></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton98',1)" 
+            onmouseout="F_roll('NavigationButton98',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton98 height=19 alt=Training 
+            src="Loop signatures 14_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton98></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton99',1)" 
+            onmouseout="F_roll('NavigationButton99',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton99 height=19 alt=Consulting 
+            src="Loop signatures 14_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton99></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton100',1)" 
+            onmouseout="F_roll('NavigationButton100',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton100 height=19 alt=Protuner 
+            src="Loop signatures 14_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton100></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton101',1)" 
+            onmouseout="F_roll('NavigationButton101',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton101 height=19 alt="Contact us" 
+            src="Loop signatures 14_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton101></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton102',1)" 
+            onmouseout="F_roll('NavigationButton102',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton102 height=19 alt=Articles 
+            src="Loop signatures 14_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton102></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 14_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

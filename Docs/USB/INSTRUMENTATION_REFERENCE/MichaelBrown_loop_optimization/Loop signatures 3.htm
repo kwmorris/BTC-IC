@@ -1,0 +1,306 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0077)http://www.controlloop.co.za/Articles/Loop_signatures_3/loop_signatures_3.htm -->
+<HTML><HEAD><TITLE>Loop signatures 3</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 3_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 3_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 3_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 3_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 3_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=699><IMG height=1 src="Loop signatures 3_files/clearpixel.gif" 
+      width=699 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 3_files/clearpixel.gif" 
+      width=10 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 3_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 3_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 3_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=12></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=699>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000>Loop Problem 
+      Signatures No 3</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>Problem 
+      "signatures" : process dynamics - process gain</FONT></B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>
+      <P>An instrumentation technician once told me that to him a process 
+      consists only of a trace on a screen.&nbsp; This is rather a sad 
+      attitude.&nbsp; If one wishes to control a process then it is important to 
+      have a reasonable basic knowledge and understanding of the process itself, 
+      and certainly one should also be aware of what external influences can act 
+      on it.&nbsp; To this end, if you are not intimately familiar with the 
+      process yourself, it is essential that you work with a process expert who 
+      can guide and help you in gaining this understanding.&nbsp; Apart from 
+      this, if you wish to successfully optimise the control of a process, it is 
+      also essential that you establish the dynamics of the process.
+      <P>Process dynamics are described by an equation known as the process 
+      transfer function, which can be loosely described as various factors which 
+      cause the output of the process to respond in a particular way to any 
+      change on the input of the process.&nbsp; The importance of understanding 
+      the dynamics of any process is fundamental to successful control 
+      optimisation, and cannot be overstressed.&nbsp; In our control 
+      optimisation courses, process dynamics occupies a large part of the more 
+      advanced part of the course.&nbsp; Unfortunately all this information is 
+      beyond the scope of these articles, and only a few of the more basic 
+      factors will be covered, viz. process gain, deadtime, and single first 
+      order lags.&nbsp; It is of interest to note that these three factors were, 
+      and largely still are, the only factors that are taken into account in 
+      many of the more simplistic tuning techniques, (for example, Ziegler &amp; 
+      Nicholls tuning), which is one of the reasons why these tuning methods 
+      often fail, as there are also many other dynamic factors that may occur in 
+      real process responses.
+      <P>In this article we will deal with process gain, firstly for self 
+      regulating processes, and secondly for integrating processes.
+      <P>Figure 1 shows a simple pressure control self regulating loop. </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Figure 1 
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=360 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture40 height=270 alt="Figure 1" 
+            src="Loop signatures 3_files/loopsig3fig1.gif" width=360 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>The 
+      controller is in manual, and a step change is made on the output of the 
+      controller (process demand - PD).&nbsp; The pressure (process variable - 
+      PV), rises up exponentially and settles out at a new value.&nbsp; The 
+      process gain is defined as the size of the step in PV, measured after it 
+      has reached steady state, divided by the size of the step that was made in 
+      the PD.&nbsp; The measurements are made in percent of span, and as these 
+      units cancel, process gain of a self regulating process is unitless.&nbsp; 
+      It is also sometimes referred to as loop forward gain, or steady state 
+      gain.&nbsp; It can be thought of as an amplification factor in the 
+process.
+      <P>In practice the process gain is very important.&nbsp; It is made up by 
+      two factors, the first being the valve sizing, and the second the spanning 
+      of the transmitter.&nbsp; Ideally one would like to use the full span of 
+      both devices, particularly that of the valve, which being a mechanical 
+      devices is very limited in rangeability, and may suffer from problems like 
+      hysteresis and backlash.&nbsp; Therefore if the valve was moved from 0 - 
+      100% open operating position, and the measurement responded likewise from 
+      0 - 100%, then the process gain would be unity, which is ideal.
+      <P>As a general rule of thumb, if the process gain is greater than unity 
+      the valve is oversized, and if it is less than unity, it is usually due to 
+      the transmitter span being too wide.
+      <P>One disadvantages of a valve being oversized is that the proportional 
+      gain in the controller has to be correspondingly reduced to achieve a 
+      desired response.&nbsp; This leads to problems on many controllers that 
+      have limited low end gains.&nbsp; Typically many commercial controllers 
+      are limited to a minimum gain of 0.1 (or 1000% proportional band).&nbsp; 
+      On fast processes like flows, which are tuned with low gain and fast 
+      integral, it may not be possible to set a low enough gain in the 
+      controller if the valve is oversized.
+      <P>Another and probably even more important disadvantage of oversized 
+      valves is that the process gain actually amplifies the valve 
+      imperfections, and results in a degradation of control performance.&nbsp; 
+      Therefore if a valve suffers from say a 1% hysteresis (which is pretty 
+      normal), the offset as seen on the PV will be that 1% offset multiplied by 
+      the process gain.&nbsp; For example if we had a process gain of 4, then 
+      the offset on the PV would be 4%.&nbsp; This means that the control error 
+      also becomes bigger in a directly proportional relationship to the valve 
+      oversizing.&nbsp; Also if a cycle occurs in closed loop due to a valve 
+      problem, like a hysteresis cycle on an integrating loop, then the 
+      amplitude of the cycle as seen on the PV, will also be multiplied&nbsp; by 
+      the process gain.<P>On the other side, if a transmitter is spanned too 
+      wide which results in a process a gain of less than unity, problems can 
+      occur firstly with the quality of the measurement.&nbsp; For example if 
+      the process gain was 0.5, it would mean that only the first 50% of the 
+      transmitter span was being used.&nbsp; If this was on say an orifice flow, 
+      it would severely limit the useful flow range and measurement accuracy.
+      <P>Secondly a low process gain also necessitates having to increase the 
+      controller proportional gain to achieve a particular control 
+      response.&nbsp; This makes the output of the controller more "jumpy", and 
+      will also further amplify signal noise which results in increased valve 
+      wear and possibly increased control variance.
+      <P>As a general rule of thumb, good engineering practice dictates that the 
+      process gain for a self regulating process should lie between 0.5 and 2.0.
+      <P>Figure 2 shows an open loop test performed in a South African 
+      petrochemical refinery, on a flow control valve that was hugely oversized. 
+      </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Figure 2
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=509 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture43 height=342 alt="Figure 2" 
+            src="Loop signatures 3_files/loopsig3fig2.gif" width=509 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>The 
+      process gain in this case was close to 13!&nbsp; The valve itself had 
+      negligible hysteresis and as a result, in this particular case, good 
+      control could in fact be achieved.&nbsp; However to realise this, the 
+      proportional gain that had to be inserted in the controller was 0.000125 
+      (or proportional band of 8,000%)!
+      <P>Process gain for an integrating loop is rather different.&nbsp; As 
+      explained in the last article in this series, the PV can only be constant 
+      in an integrating process when the PD is at the balance point.&nbsp; Once 
+      the PD moves off balance the, PV starts ramping.
+      <P>One way of defining the process gain for an integrating level loop 
+      would be the as the slope of the PV ramp resulting when the PD is at 100%, 
+      and there is zero flow out of (or into, as the case may be), the other 
+      side of the tank.&nbsp; Figure 3 shows how the process gain is measured in 
+      practice for such a process.&nbsp; The unit of process gain for an 
+      integrating process is "inverse seconds".&nbsp; (It is a slope).</FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Figure 3
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=360 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture42 height=269 alt="Figure 3" 
+            src="Loop signatures 3_files/loopsig3fig3.gif" width=360 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>The 
+      reciprocal of the process gain for a level process, is known as the tank 
+      retention time.&nbsp; This is the time that it would take for the tank to 
+      empty from full to zero if there was no flow into the other side of the 
+      tank.&nbsp; As most tanks would take a considerable time to empty, it 
+      becomes apparent that the process gain of most integrating processes, will 
+      be tiny numbers, generally much, much, smaller than unity.&nbsp; For 
+      example if the retention time of a tank was 1,000 seconds, its process 
+      gain would be 0.001.
+      <P>Therefore in light of this, another fact becomes immediately 
+      apparent,&nbsp; and this that if fast control is required for an 
+      integrating processes, in most cases, one is going to need relatively high 
+      proportional gains in the controller to counter the small process 
+      gains.</FONT>
+      <P><A 
+      href="http://www.controlloop.co.za/Articles/Loop_signatures_4/loop_signatures_4.htm"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Loop Problem Signatures No 
+      4</FONT></A><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-1><BR></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1></FONT></B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1> </FONT></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton31',1)" 
+            onmouseout="F_roll('NavigationButton31',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton31 height=19 alt=Home 
+            src="Loop signatures 3_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton31></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton32',1)" 
+            onmouseout="F_roll('NavigationButton32',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton32 height=19 alt=Training 
+            src="Loop signatures 3_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton32></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton33',1)" 
+            onmouseout="F_roll('NavigationButton33',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton33 height=19 alt=Consulting 
+            src="Loop signatures 3_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton33></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton34',1)" 
+            onmouseout="F_roll('NavigationButton34',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton34 height=19 alt=Protuner 
+            src="Loop signatures 3_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton34></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton35',1)" 
+            onmouseout="F_roll('NavigationButton35',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton35 height=19 alt="Contact us" 
+            src="Loop signatures 3_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton35></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton36',1)" 
+            onmouseout="F_roll('NavigationButton36',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton36 height=19 alt=Articles 
+            src="Loop signatures 3_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton36></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 3_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

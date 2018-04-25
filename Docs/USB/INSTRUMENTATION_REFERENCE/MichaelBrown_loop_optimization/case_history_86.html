@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 86</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_86_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_86_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_86_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_86_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_86_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_86_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 86</span></b></p>
+                <p><b>PROBLEMS IN CONTROLLING THE PRESSURE IN AN ARC FURNACE</b></p>
+                <p>Some
+interesting problems relating to pressure control were presented to me
+recently which concerned the control of pressures in an arc furnace in
+a metals plant.</p>
+                <p>Figure 1 shows a block diagram
+of the process.&nbsp;A large amount of combustible gas is produced
+whilst the furnace is operating.&nbsp;The gas is sucked out of the
+furnace, and passes though a gas plant where it is cleaned.&nbsp;The
+suction&nbsp;is provided by two compressors connected in parallel,
+which are situated downstream from the gas plant.&nbsp;A certain amount
+of the gas is used as fuel for other processes in the plant, and the
+remainder is sent to the stack.</p>
+                <p><img id="Picture9" src="case_history_86_files/cashis86_fig_1.jpg" alt="cashis86 fig 1" title="cashis86 fig 1" align="top" border="0" height="333" hspace="0" vspace="0" width="550"></p>
+                <p><i>Figure 1</i></p>
+                <p>The process people who designed the plant wished to control the gas pressure at two places as follows:</p>
+                <ol>
+                    <li>Furnace Pressure Control:<br>It is desirable that the furnace pressure be kept constant.&nbsp;If it gets too high, flames start shooting out 
+                        of the furnace through the seals and this can damage them, apart from fumes being expelled. </li>
+                    <li>Users' Pressure Control<br>The
+pressure of the gas being supplied to the other users should preferably
+be kept constant.&nbsp;Also if it exceeds a certain pressure, damage
+and other problems can occur in the other processes.&nbsp;A high users
+pressure sensor is incorporated in the system to trip the gas plant on
+high pressure.</li>
+                </ol>
+                <p>As
+can be seen in Figure 1, the designers attempted to achieve the first
+of these two objectives by mounting a recycle valve around the
+compressors to vary the suction pressure at the compressor
+inlet.&nbsp;It was hoped that adjusting this valve by the furnace
+pressure controller would be able to keep the furnace pressure at the
+desired control setpoint.</p>
+                <p>To
+control the users' pressure a control valve was installed before the
+stack to control the of the compressors' outlet pressure which feeds to
+the users (and of course also to the stack).&nbsp;This was implemented
+by measuring the compressor outlet pressure and adjusting the valve via
+the users' pressure controller.</p>
+                <p>Unfortunately
+these control strategies have some fatal flaws in them which prevented
+the system from working as was intended, and resulted in large costs in
+having to replace the seals on the furnace on a fairly regular
+basis.&nbsp;Also gas plant trips occurred frequently due to high user
+pressure surges, at the compressors' outlets.</p>
+                <p>What
+occurred in practice was that very poor control was achieved.&nbsp;One
+of the major problems is that the pressure inside the furnace varies
+continuously as conditions in an arc furnace are in a continuous state
+of flux , and can fluctuate extremely rapidly and frequently.&nbsp;From
+time to time, some sort of substantial event occurs inside the furnace
+that results in a huge pressure surge for a short while.&nbsp;Such a
+surge can be seen in Figure 3, where the furnace pressure suddenly
+spiked up and then back down at a time when both controllers were in
+manual, with steady outputs.</p>
+                <p>The
+next problem is that the two control loops are in fact highly
+interactive.&nbsp;Looking at the block drawing it appears pretty
+obvious that any movement in the furnace pressure control valve must
+have an effect simultaneously on the compressors' output as well as on
+the suction pressure.&nbsp;So any action taken by the furnace pressure
+controller will also immediately effect the compressors' outlet
+pressure, which is the users' pressure.&nbsp;</p>
+                <p>To give an
+example of how this interaction works, let us imagine that conditions
+were fairly steady, and the controllers are managing to keep the
+pressures more or less at their setpoints.&nbsp;Suddenly there is a
+large pressure surge in the furnace.&nbsp;The furnace pressure
+controller will immediately start closing the recycle valve to increase
+suction.&nbsp;The compressors' outlet pressure, which is the users'
+pressure will also then increase immediately.&nbsp;The users' pressure
+controller will sense this and will then start opening the vent valve
+to drop the in-plant pressure, which in turn will effect the suction
+pressure and so-on.</p>
+                <p>Unfortunately
+feedback control cannot cope well in interactive situations.&nbsp;If
+you have two interactive feedback loops, all you can really do to
+decouple them (without resorting to more advanced techniques like
+dynamic decouplers), is to tune the one fast and the other much
+slower.&nbsp;If you really think about it, the ultimate method of
+decoupling is to put one loop in manual!</p>
+                <p>The
+difficulty on this system is that because of the sudden and violent
+pressure surges in the furnace, one really needs fast control on the
+furnace pressure to try and catch the surges.&nbsp;It is actually
+doubtful if feedback control would be fast enough to completely achieve
+this, but certainly it could reduce the magnitude of the surges
+considerably, and keep a much better average pressure in the
+furnace.&nbsp;</p>
+                <p>However
+if one did tune the furnace pressure controller faster, then as
+mentioned above, when a pressure surge occurs in the furnace, the
+controller will immediately start closing the recycle valve, which will
+increase the suction pressure at the compressors' inlets.&nbsp;However
+simultaneously the users' pressure at the compressors' discharge will
+also increase.&nbsp;Now if we have tuned the furnace pressure loop
+fast, it will be necessary to really slow down the user pressure
+controller to try and minimise interaction.&nbsp;Therefore this
+controller will be too slow to deal with the increased pressure at the
+compressors' outlets which will result the users' pressure increasing
+rapidly.&nbsp;Unfortunately the users cannot cope with too high a
+pressure, and the high pressure sensor on the users' pressure will trip
+the gas plant immediately on such pressure surges.</p>
+                <p>An
+attempt was in fact made to try and tune the furnace pressure
+controller faster but it kept on tripping the system - to the
+consternation of the Production people..</p>
+                <p>In
+order to get a better understanding and feeling of the dynamics in the
+system, some tests were performed.&nbsp;Initially both controllers were
+placed in manual, and steps in the output of the furnace pressure
+controller were made whilst the users' pressure controller's output was
+kept constant.&nbsp;After that steps in the output of the users'
+pressure controller were made whilst the furnace pressure controller's
+output was kept constant.&nbsp;These tests are shown in Figures 2 and 3
+respectively.</p>
+                <p><img id="Picture10" src="case_history_86_files/cashis86_fig_2.jpg" alt="cashis86 fig 2" title="cashis86 fig 2" align="top" border="0" height="389" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p><img id="Picture11" src="case_history_86_files/cashis86_fig_3.jpg" alt="cashis86 fig 3" title="cashis86 fig 3" align="top" border="0" height="389" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>Two
+very interesting things were observed from these tests.&nbsp;Firstly
+because the furnace is quite a long way away from the compressors, and
+there is quite a large volumetric capacity in the piping and in the gas
+plant between the two, it had always been assumed that there would be
+quite a bit of deadtime before changes in the furnace pressure control
+valve would&nbsp;affect the users' pressure.&nbsp;However the tests
+show this is not true and the deadtime is almost zero.&nbsp;The
+pressure changes move though the system incredibly quickly, as can be
+seen in the figures.&nbsp;Secondly the tests showed just how
+interactive the system is in reality.&nbsp;Changes on either of the
+controller's outputs had immediate and virtually equal effects on the
+users' pressure, and on the furnace pressure.&nbsp;However the furnace
+pressure did not always react very positively to these changes, which
+is almost definitely due to the rapidly fluctuating conditions
+occurring in the furnace.</p>
+                <p>In the report to the client the following points were made:</p>
+                <ol>
+                    <li>There
+was no way in which the current control strategy could be made to work
+effectively.&nbsp;No amount of tuning controllers could do anything to
+make things better.</li>
+                    <li>It was felt that the
+system was too interactive for any chance of success even if dynamic
+decoupling was to be implemented, which would also be quite an
+expensive as the control system was working on old stand-alone
+controllers.</li>
+                    <li>The
+only way that even reasonably good averaging furnace pressure control
+could be achieved is by allowing fast tuning of the furnace pressure
+controller which would mean much higher pressure conditions would occur
+at times at the compressors' outlets.&nbsp;This would mean that some
+other strategy would have to be employed to prevent the gas to the
+users from reaching a higher pressure.&nbsp;One suggestion was to pass
+the users' gas through a surge tank with a pressure control on its
+outlet, so that pressure surges could be absorbed in the
+tank.&nbsp;This was rejected for various reasons, including expense, as
+a huge volume would be required.&nbsp;Another very good suggestion
+which seemed to be the best, and which was made by one of the client's
+process engineers was to try and use a separate compressor for the
+users' gas so as to isolate this gas from the bypass pressure control.</li>
+                </ol>
+                <p><b>Epilogue</b></p>
+                <p>The
+client accepted the recommendations.&nbsp;The system was changed so
+that the users' gas was supplied from a completely separate compressor,
+whilst the furnace pressure control was changed so that the control
+valve vented air directly to the stack, and the recycle valve across
+the compressor was not used for control.&nbsp;This effectively
+decoupled the two pressure controls.</p>
+                <p>The
+client reports that the new control strategy is working well, and that
+outages are down considerably, and replacement of furnace seals reduced
+drastically.</p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

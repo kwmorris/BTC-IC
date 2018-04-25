@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures P2-7</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-7_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-7_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-7_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-7_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-7_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="loop_signatures_p2-7_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b>BASICS OF FREQUENCY PLOTS - PART 2</b></p>
+                <p>In
+the previous article in this series the Bode Open Loop frequency plot
+was discussed, and it was shown how certain information pertaining to
+the dynamics of the process could be determined from it.&nbsp;It is now
+going to be shown what happens when you put a controller into automatic.</p>
+                <p>When
+a controller is switched into automatic, the process and the controller
+are mathematically multiplied together.&nbsp;By correct tuning, one
+attempts to produce a resultant known as "pole cancellation", which
+mathematically is a perfect deadtime integrator.&nbsp;This is given by
+the formula:</p>
+                <ul>
+                    <p><b>C(s) x P(s) = Ke<sup><span style="font-size: xx-small;">-DTs</span></sup>/s</b></p>
+                </ul>
+                <p>This
+out of interest is the same formula as that given for a simple
+integrating process like a level control, which was described quite a
+few times in the first Loop Signature series.</p>
+                <p>The
+Bode plot of such a process is shown in Figure 1.&nbsp;Note that the
+gain plot is now a perfectly straight line falling off at a constant
+20db/decade, whilst the phase plot although pretty similar in shape to
+the Bode open loop plot looked at in the last article, now starts off
+at low frequencies at -90<sup>o</sup> phase angle.&nbsp;This is the <i>closed loop, or combined</i>,
+frequency plot of a perfectly tuned self-regulating
+process.&nbsp;(However it is also exactly same as the open loop plot of
+a simple integrating process, which will later be used to show why
+integrating loops behave so differently from self-regulating loops,
+mainly due to the fact they start out -90<sup>o</sup> out of phase). </p>
+                <p><img id="Picture22" src="loop_signatures_p2-7_files/loopsig2-7Figure_1.jpg" alt="loopsig2-7Figure 1" title="loopsig2-7Figure 1" align="top" border="0" height="498" hspace="0" vspace="0" width="650"></p>
+                <p><i>Figure 1</i></p>
+                <p>This type of perfect tuning is known as <i>"pole cancellation"</i>
+tuning.&nbsp;There are various good reasons as to why it is the ideal
+type of tuning, most of which are beyond the scope of this article, but
+one of the main reasons is that the tuning obtained gives lower
+controller gain with faster integral, which results in less error
+amplification through the controller, and faster recovery from load
+upsets.</p>
+                <p>The
+controller has three terms in it, viz. P (proportional), I (integral),
+and D (derivative), which can alter the open loop plot when they are
+multiplied with it.&nbsp;Figure 2 illustrates their effect as follows:</p>
+                <ul>
+                    <li>The P term has no effect whatsoever on the shape of the plot but moves its position relative to the vertical (gain) axis.&nbsp;</li>
+                    <li>The I term has more effect on the lower frequencies side of the plot, and tends to lift up the left hand side.</li>
+                    <li>The
+D term has more effect on the higher frequencies side of the plot, and
+tends to lift up the right hand side, but as will be seen later it can
+have some other strange effects.</li>
+                </ul>
+                <p><img id="Picture23" src="loop_signatures_p2-7_files/loopsig2-7Figure_2.gif" alt="loopsig2-7Figure 2" title="loopsig2-7Figure 2" align="top" border="0" height="376" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 2</i></p>
+                <p>Now
+in the case of this simple self-regulating process with a gain, a
+single lag and a dead-time, we saw in the previous Loop Signature
+article that the open loop plot finished off at the highest frequency
+at &#8211;20db/decade, which means that the last thing we wish to do is to
+use the D term, as it will mess up the slope at the end. (Purely out of
+interest, and as mentioned in the Part 1 Loop signature series, we can
+now see why the D term is not desirable in many types of
+processes.&nbsp;In fact using then D term can often make our response
+slower and more cyclic than desirable.&nbsp;It the D term should be
+only ever used on two particular types of process dynamics, which will
+be fully covered later in this series).</p>
+                <p>Therefore
+in this case, the only term we can use to straighten the open loop plot
+is the I term.&nbsp;Therefore to tune this controller properly, one has
+to first set the I term to a value that will straighten the plot
+completely, and then we must apply the P term to raise or lower the
+plot to give us the desired response we wish to end up with.&nbsp;It
+will be shown in a later article how one determines the value of these
+terms.</p>
+                <p>In
+many situations either with incorrect tuning or in cases as will be
+seen later where the plot cannot be straightened completely, we will
+not get ideal control.&nbsp;Figure 3 illustrates what sort of response
+we will get to setpoint changes in automatic if the plot is not
+straightened completely.&nbsp;If the plot is bent up at the bottom the
+response will be slower than desired and the process will tend to
+"cycle" upwards to setpoint, often referred to as "stepping-up to
+setpoint".&nbsp;Alternatively if the plot is bent up at the bottom the
+response will tend to be more cyclic than desirable around setpoint.</p>
+                <p><img id="Picture24" src="loop_signatures_p2-7_files/loopsig2-7Figure_3.gif" alt="loopsig2-7Figure 3" title="loopsig2-7Figure 3" align="top" border="0" height="360" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 3</i></p>
+                <p>We
+now come to a very important part of understanding how feedback control
+loops operate in automatic, and when they can go unstable.</p>
+                <p><b>The Rules of Instability</b></p>
+                <p>For continuous cycling to occur the following <i>two conditions must simultaneously</i> occur:</p>
+                <ul>
+                    <li>The combined loop gain must be &#8805; unity (0db)</li>
+                    <li>AND&nbsp;the &#934; (phase angle) = -180°</li>
+                </ul>
+                <p>It must be noted that unless <i>both</i>
+these conditions are met at the same time, the loop cannot go unstable
+(i.e. cycle continuously).&nbsp;If the conditions are not met, and even
+if the conditions are close to them, then the loop may cycle for a
+while or even for a long time, but with steadily decreasing amplitudes.</p>
+                <p>With
+an understanding of the above we can now define the "ultimate cycle",
+which has been talked about in earlier parts of the course.</p>
+                <p><b>The Ultimate Definition</b></p>
+                <ul>
+                    <li>The
+ULTIMATE GAIN is that gain which when added to the open loop gain
+produces a gain of unity (0db) at the -180° phase point on the Bode
+open loop plot.</li>
+                    <li>This is at the crossover frequency, which is also known as the ULTIMATE FREQUENCY</li>
+                    <li>ULTIMATE PERIOD = 2 &#960;/&#969;<sub><span style="font-size: xx-small;">ultimate</span></sub></li>
+                </ul>
+                <p>This
+definition now allows us to get more information from the Bode open
+loop plot.&nbsp;In the last Loop Signature article (Number P2-6), it
+was described how to ascertain the process gain, the time constant, and
+the crossover frequency form the plot.&nbsp;Now as the ultimate
+frequency is the same as the crossover frequency the ultimate period
+can be calculated from the formula above.&nbsp;</p>
+                <p>The
+ultimate gain can also be measured as shown in Figure
+4.&nbsp;Remembering from the last article that the P term does not
+change the shape of the plot, but merely raises it up or down on the
+vertical axis, Then essentially if we were to put the loop into
+automatic with a P only controller, then we would have to raise the
+plot by a sufficient number of decibels so as to move up the point in
+the open loop plot which was at the crossover frequency to reach unity
+gain.&nbsp;Therefore referring to Figure 4, we would have to insert a P
+gain in the controller of 12.73 db.&nbsp;This equates to an absolute
+gain of 4.33.&nbsp;</p>
+                <p><img id="Picture25" src="loop_signatures_p2-7_files/loopsig2-7Figure_4.jpg" alt="loopsig2-7Figure 4" title="loopsig2-7Figure 4" align="top" border="0" height="527" hspace="0" vspace="0" width="650"></p>
+                <p><i>Figure 4</i></p>
+                <p>In
+the next Loop Signature article we will go on to describe how one tunes
+with sufficient robustness (i.e. safety), and how this is measured in
+the Bode closed loop plot.</p>
+                <p><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;<a href="mailto:michael.brown@pixie.co.za">michael.brown@pixie.co.za</a></span></b></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

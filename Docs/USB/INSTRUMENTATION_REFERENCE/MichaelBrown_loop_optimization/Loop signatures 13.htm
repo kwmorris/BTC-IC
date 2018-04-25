@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0079)http://www.controlloop.co.za/Articles/Loop_signatures_13/loop_signatures_13.htm -->
+<HTML><HEAD><TITLE>Loop signatures 13</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 13_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 13_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 13_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 13_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 13_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=689><IMG height=1 src="Loop signatures 13_files/clearpixel.gif" 
+      width=689 border=0></TD>
+    <TD width=20><IMG height=1 src="Loop signatures 13_files/clearpixel.gif" 
+      width=20 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 13_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 13_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 13_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=10></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=689>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica>Loop Problem Signatures No 
+      13</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Digital controllers - 
+      Part 5<BR>The D term<BR><BR></FONT></B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>I would like to mention at the 
+      outset, that the next three articles on the D term in the digital 
+      controllers were previously published some years ago in South African 
+      Instrumentation and Control magazine.&nbsp; However I feel strongly that 
+      this section on the digital controllers in the Loop Signature series would 
+      hardly be complete if these were left out, so I must apologise in advance 
+      if you have previously read them.
+      <P>Derivative is hardly ever used in feedback control loops, and most 
+      people have very little practical understanding of the subject.&nbsp; 
+      Opinions on its use vary from one extreme to the other.&nbsp; A Professor 
+      of control at a leading South African teaching establishment once told me 
+      that he had proved conclusively that derivative not only was of no help, 
+      but that it actually slowed down control response.&nbsp; At the other end 
+      of the spectrum, a grizzled senior control technician in a large paper 
+      mill with many years of experience, stated that he insisted that his 
+      people tuned derivative into virtually every loop in the plant, as he was 
+      convinced that it not only speeded up response, but it also was a major 
+      contributor to loop stability.&nbsp; Both of theses views could be said to 
+      be partially correct in some aspects, but do not reflect the whole truth.
+      <P>In actual practice, derivative is generally found employed in less than 
+      one in several hundreds of control loops.&nbsp; Reasons for this will be 
+      given in this, and in the next two articles. 
+      <P>The objective of the derivative term is to speed up the control 
+      response in very slow processes as often encountered in some temperature 
+      controls.&nbsp; A good example of where derivative could be used was found 
+      at one of the plants in Secunda.&nbsp;&nbsp; A practical control course 
+      was being held. The class had just finished tuning a very slow temperature 
+      loop, and were trying the calculated settings using only P and I 
+      control.&nbsp; On making a 10% setpoint change, the valve opened up to 
+      about 30% under the proportional action, and the temperature started 
+      rising very slowly.&nbsp; The integral action then also started ramping 
+      the output up and the temperature eventually got to setpoint about 45 
+      minutes later.&nbsp; 
+      <P>The Operator watching this laughed, and mentioned that he could do the 
+      same thing in manual, but much faster.&nbsp; To demonstrate this, and 
+      after the temperature had been reset to its original value, he placed the 
+      loop in manual, and immediately opened the valve fully to 100%.&nbsp; 
+      The temperature then started rising much more quickly than it had done the 
+      previous time.&nbsp; When it had risen a certain amount, and based on his 
+      experience and judgement, but still some way from setpoint, he started 
+      closing down the valve to prevent the temperature from overshooting.&nbsp; 
+      Eventually he got the temperature to the new setpoint about 40% faster 
+      than it had in the previous automatic PI control.&nbsp; The same result 
+      would have occurred in automatic if derivative had been used correctly.
+      <P>Our experience has been that the derivative term can in fact improve 
+      the control response time on two types of process dynamics.&nbsp; The 
+      first is a slow self-regulating process with multiple single order lags in 
+      series.&nbsp; This is typified by an "S-shaped" response to a manual step 
+      change in controller output.&nbsp; This response often gives the 
+      impression of long deadtime.&nbsp; (Figure 1 shows such a response for a 
+      process with five only 5 second first order lags in series, and zero 
+      deadtime). The I term cancels out part of the lags, and the D term can 
+      also cancel out a further lag, which allows better straightening of the 
+      closed loop Bode gain plot at the high frequency end.&nbsp;&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 1
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture69 height=371 alt="Figure 1" 
+            src="Loop signatures 13_files/loopsigs13fig1.jpg" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>It should be noted 
+      that the D term is ineffective on self-regulating processes with only a 
+      single lag, irrespective of the size of the lag.&nbsp; The I term cancels 
+      the poles effectively on its own, and D will actually not help the 
+      response at all.
+      <P>The second type of process where the D term is particularly effective, 
+      is on an integrating process with a large lag.&nbsp; These process types 
+      are typified in batch reactor temperature control.&nbsp; A schematic of a 
+      simple batch reactor control scheme is shown in Figure 2.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 2
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture70 height=276 alt="Figure 2" 
+            src="Loop signatures 13_files/loopsigs13fig2.gif" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The response of such 
+      a process to a manual step change in controller output is shown in Figure 
+      3.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 3
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture71 height=373 alt="Figure 3" 
+            src="Loop signatures 13_files/loopsigs13fig3.jpg" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Note how the process 
+      variable curves slowly into the ramp.&nbsp; In automatic, the D term will 
+      cancel out the lag, and the process will respond to changes very much 
+      faster.&nbsp; It really works well in these applications.&nbsp; In a 
+      pharmaceutical factory in the UK one plant consisted of only batch 
+      reactors.&nbsp; Previously all the temperature control had been performed 
+      by using P only.&nbsp; By adding the D term the reaction times were so 
+      much faster that production through the plant was eventually increased by 
+      a staggering 17%!
+      <P>The reason that I action is not used in this particular type of 
+      process, is because a setpoint change on an integrating process that 
+      employs the I term in the controller will always result in an 
+      overshoot.&nbsp; If there is no cooling on a batch reactor, then overshoot 
+      is not acceptable as there is no way to reduce the temperature back to 
+      setpoint in a reasonable time after an overshoot.
+      <P>How is the D term applied in a controller?&nbsp; Figure 4 shows the 
+      principle.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 4
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture72 height=277 alt="Figure 4" 
+            src="Loop signatures 13_files/loopsigs13fig4.gif" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Derivative is used in 
+      Calculus to measure the slope of a line.&nbsp; On a continuous system as 
+      seen in control applications, the error signal (or sometimes the process 
+      variable (PV) signal, as will be discussed in the next article in this 
+      series) is fed into a derivative calculation block.&nbsp; The output 
+      represents the rate of change of the input signal. The derivative of a 
+      constant input signal is zero.&nbsp; The derivative of a ramp input is a 
+      step.&nbsp; The steeper the ramp, the bigger the output step.&nbsp; The 
+      derivative of a vertical change in input, however big or small, gives a 
+      theoretical output of infinity.&nbsp; This one of the main reasons why D 
+      is so seldom used.&nbsp; Most process variable signals are noisy.&nbsp; 
+      The small fast changing variations of PV cause the output of the 
+      controller to jump about too much.
+      <P>The D term is employed to try and move the output faster if the error 
+      signal changes quickly.&nbsp; Some people call it "anticipatory" 
+      control.&nbsp; Nichols of Ziegler and Nichols fame coined the phase 
+      "preact control".<BR>Figure 5 is a schematic of a simple controller 
+      configured with a "parallel" PI algorithm.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 5
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture73 height=276 alt="Figure 5" 
+            src="Loop signatures 13_files/loopsigs13fig5.gif" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>For simplicity no I 
+      action is included.&nbsp; Therefore a manual bias is provided to allow 
+      "manual reset" which allows one to manually eliminate offset between PV 
+      and setpoint.&nbsp; A ramp change of setpoint is shown.&nbsp; The 
+      resultant error signal, and the proportional action also ramp.&nbsp; The 
+      output of the D unit is a step.&nbsp; The final output of the controller 
+      is then a step followed by a ramp.
+      <P>This response is enlarged in Figure 6, and is compared also with a P 
+      only response. </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 6 
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture74 height=275 alt="Figure 6" 
+            src="Loop signatures 13_files/loopsigs13fig6.gif" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>It can be clearly 
+      seen that the controller output reacts to a step change in error T seconds 
+      faster with P+D control, as opposed to P only control.
+      <P>In the next article, the application and use of derivative in modern 
+      digital controllers will be discussed.
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton91',1)" 
+            onmouseout="F_roll('NavigationButton91',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton91 height=19 alt=Home 
+            src="Loop signatures 13_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton91></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton92',1)" 
+            onmouseout="F_roll('NavigationButton92',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton92 height=19 alt=Training 
+            src="Loop signatures 13_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton92></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton93',1)" 
+            onmouseout="F_roll('NavigationButton93',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton93 height=19 alt=Consulting 
+            src="Loop signatures 13_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton93></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton94',1)" 
+            onmouseout="F_roll('NavigationButton94',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton94 height=19 alt=Protuner 
+            src="Loop signatures 13_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton94></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton95',1)" 
+            onmouseout="F_roll('NavigationButton95',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton95 height=19 alt="Contact us" 
+            src="Loop signatures 13_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton95></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton96',1)" 
+            onmouseout="F_roll('NavigationButton96',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton96 height=19 alt=Articles 
+            src="Loop signatures 13_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton96></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 13_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

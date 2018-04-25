@@ -1,0 +1,48 @@
+From: Avinash Harjani [mailto:avinash.harjani@ni.com]
+Sent: Tuesday, January 25, 2011 6:06 PM
+To: Tony Kuphaldt
+Subject: Re: Permission to copy NI DAQ datasheets to CD-ROM
+
+Hi Tony: 
+
+These are public documents and yes you can copy 
+them onto disks.  Hope this helps.  Look forward 
+to your cRio adoption in the future in the labs.
+
+Thanks,
+
+Avinash Harjani
+National Instruments
+(425)-881-8969
+
+ 
+
+
+On Jan 25, 2011, at 9:16 AM, "Tony Kuphaldt" <tkuphald@btc.ctc.edu> wrote:
+
+Hi Avi,
+
+I would like to get permission from NI to copy PDF 
+datasheets on data acquisition devices to a CD-ROM
+so that students have offline access to them.  
+These CD-ROM disks will not be sold, and they will 
+be used strictly for educational purposes.  Many 
+of my students have no or slow internet connections 
+at home, and so having all the datasheets they need
+for research and homework in an offline format is 
+quite helpful.
+    
+If you could connect me to the right person at NI 
+to give permission to copy these documents, I 
+would appreciate.  These are all documents found
+on the NI website (e.g. USB-6008 manual). 
+
+Tony Kuphaldt
+Instructor, Instrumentation and Control Technology
+Bellingham Technical College
+3028 Lindbergh Avenue
+Bellingham, WA 98225-1599
+(360)-752-8477 [phone]
+(360)-752-7277 [fax]
+
+

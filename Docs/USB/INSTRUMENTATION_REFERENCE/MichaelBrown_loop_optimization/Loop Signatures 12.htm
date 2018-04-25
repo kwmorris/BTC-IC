@@ -1,0 +1,396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0079)http://www.controlloop.co.za/Articles/Loop_Signatures_12/loop_signatures_12.htm -->
+<HTML><HEAD><TITLE>Loop Signatures 12</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop Signatures 12_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop Signatures 12_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop Signatures 12_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop Signatures 12_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop Signatures 12_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=689><IMG height=1 src="Loop Signatures 12_files/clearpixel.gif" 
+      width=689 border=0></TD>
+    <TD width=20><IMG height=1 src="Loop Signatures 12_files/clearpixel.gif" 
+      width=20 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop Signatures 12_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop Signatures 12_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop Signatures 12_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=9></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=689>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000>Loop Problem Signatures No 12</FONT>
+      <P align=left><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>Digital controllers - Part 4<BR>The I Term</FONT></B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>
+      <P>In the previous article in this series, it was shown that the main 
+      problem with the P only controller is the fact that it is not capable of 
+      eliminating offset between setpoint and process variable (PV) by 
+      itself.&nbsp; Manual reset was discussed whereby the user can manually 
+      eliminate the offset by adjusting a bias added to the process demand (PD - 
+      output signal from the controller).&nbsp; This however is a short-term 
+      solution, because another offset will arise if a load change occurs.
+      <P align=justify>A mathematical genius in the 1930's found a simple way to 
+      overcome the offset problem, by introducing an automatic mechanism to 
+      eliminate offset.&nbsp; This is the I or "integral" term.&nbsp; Figure 1 
+      shows how an integrator works.&nbsp; </FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 1
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture69 height=292 alt="Figure 1" 
+            src="Loop Signatures 12_files/loopsigs12fig1.jpg" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>The error signal is fed into the input of the device.&nbsp; If the 
+      error is zero the output of the integrator remains fixed at whatever its 
+      current value is.&nbsp; However if an error does appear at the input, then 
+      the unit starts integrating the error value with time.&nbsp; Thus if the 
+      error input is a step, as shown in the figure, the output of the 
+      integrator will be a ramp, the slope of which will remain constant for as 
+      long as the error remains constant.&nbsp; If the error input is a larger 
+      step (bigger error) then the ramp will have a proportionally steeper 
+      slope.&nbsp; (It is important to note that the integral action in a 
+      controller is therefore greater, the larger the error.&nbsp; Conversely, 
+      as the PV gets closer to setpoint, so the integral ramp rate, and hence 
+      effect on the PD, will be much less.)
+      <P align=justify>The integrator acts as an automatic offset adjuster, 
+      because if any error arises on its input, it will try and move the output 
+      in a direction to diminish the error.&nbsp; As the error gets smaller, 
+      then so will slope of the output ramp.&nbsp; When the error finally 
+      disappears, the integrator's output will remain constant at its last 
+      value.&nbsp; Thus it acts as an automatic bias to eliminate offset.
+      <P align=justify>It should be noted that the I term's only purpose is to 
+      eliminate offset.
+      <P align=justify>Figure 2 illustrates a simple P + I controller which is 
+      being tested.&nbsp; (See earlier article in this series for controller 
+      test procedures).&nbsp; </FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 2
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture80 height=276 alt="Figure 2" 
+            src="Loop Signatures 12_files/loopsigs12fig2.gif" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>A setpoint step change is made, which results in a step change in 
+      error appearing at the input of both the P and I blocks.&nbsp; The output 
+      of the P block is a step, and the output of the I block is a ramp.&nbsp; 
+      The two responses are added as shown in the figure, so that the PD is a 
+      step followed immediately by a ramp.
+      <P align=justify>This response is enlarged in Figure 3.&nbsp; </FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 3
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture81 height=250 alt="Figure 3" 
+            src="Loop Signatures 12_files/loopsigs12fig3.gif" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>Imagine that the step portion of the response, which is the 
+      contribution from the P block, has a magnitude 10%.&nbsp; The I term then 
+      carries on increasing the PD at a constant ramp rate.&nbsp; If it takes 
+      say T seconds to raise the output a further 10%, it is said that the I's 
+      contribution has "repeated" the P's contribution in T seconds.
+      <P align=justify>The most commonly used units of measurement of the I term 
+      are seconds/repeat, or minutes/repeat, or the inverse, which is 
+      repeats/second, or repeats/minute.&nbsp; As usual there are no standards, 
+      and each controller manufacturer use whatever unit they wish.&nbsp; 
+      <P align=justify>Note that these terms only apply to controllers with 
+      Series or Ideal algorithms.&nbsp; The time has now come to explain why the 
+      Parallel algorithm behaves so differently.
+      <P align=justify>In the earlier article on algorithms it was mentioned 
+      that if one is to reduce the gain on controllers with the Series or Ideal 
+      algorithms, the process response to a step change would be slower.&nbsp; 
+      However, conversely on a controller with the Parallel algorithm, the 
+      response would become more cyclic.
+      <P align=justify>The algorithm for the Parallel controller with P + I 
+      tuning is:
+      <P align=justify><IMG id=Picture72 height=48 alt="Equation 1" hspace=0 
+      src="Loop Signatures 12_files/loopsigs12eq1.jpg" width=138 align=top 
+      border=0>&nbsp;
+      <P align=left>The algorithms for the are the same for Series or 
+      Ideal&nbsp; controllers with P + I tuning.&nbsp; (They differ only in the 
+      D term, if it is used):
+      <P align=left><IMG id=Picture73 height=54 alt="Equation 2" hspace=0 
+      src="Loop Signatures 12_files/loopsigs12eq2.jpg" width=151 align=top 
+      border=0>&nbsp;
+      <P>It is important to note that in the latter algorithm, the P term also 
+      multiplies through into the I term, so if Kp is reduced, then the integral 
+      becomes slower, and the slope of the ramp is less.
+      <P align=justify>The top graph in Figure 4 shows the response of a P + I 
+      controller undergoing testing. </FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 4
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=400 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture82 height=292 alt="Figure 4" 
+            src="Loop Signatures 12_files/loopsigs12fig4.gif" width=400 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>The controller gain Kp = 1.&nbsp; The I is set to a value that on 
+      the Ideal and Series controllers would repeat the P action in T 
+      seconds.&nbsp; It should also be noted that a Parallel controller would 
+      also have an identical response to this for Kp = 1 and with the same I 
+      value.
+      <P align=justify>Now in the Parallel controller, if the gain was halved 
+      (Kp = 0.5), then nothing would happen to the integral ramp rate as the two 
+      terms are not linked at all.&nbsp; Therefore on a 10% step change in 
+      error, the P action would result in an output step of 5%, and the integral 
+      would still continue ramping up at the same rate as it did in the previous 
+      test with Kp = 1. 
+      <P align=justify>This is shown in the middle graph in Figure 4.&nbsp; It 
+      is now observed that the P action is repeated in time T/2 seconds.&nbsp; 
+      Therefore the reason that the Parallel controller gets more cyclic when 
+      the gain is reduced, is because effectively the integral gets faster in 
+      relation to the P action.
+      <P align=justify>In the Series and Ideal controllers where Kp is 
+      multiplied with the I term, the integral ramp rate is now reduced by 50%, 
+      and as can be seen in the bottom graph in Figure 4, I repeats the P action 
+      in T seconds.&nbsp; Thus the relationship between P and I is maintained.
+      <P align=justify>The difference between the closed loop responses of 
+      Series and Parallel controllers controlling the same process with a 
+      reduction in the gain, but no change in integral, is shown in Figures 5, 
+      6, and 7.
+      <P align=justify>In Figure 5, the response for any of the three algorithms 
+      is the same provided Kp = 1.</FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 5
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture75 height=312 alt="Figure 5" 
+            src="Loop Signatures 12_files/loopsigs12fig5.jpg" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>In Figure 6, the response for the Series or Ideal is shown with Kp 
+      = 0.25, and the Parallel in Figure 7, also with Kp = 0.25.&nbsp; </FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 6
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=501 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture76 height=315 alt="Figure 6" 
+            src="Loop Signatures 12_files/loopsigs12fig6.jpg" width=501 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 7
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture77 height=313 alt="Figure 7" 
+            src="Loop Signatures 12_files/loopsigs12fig7.jpg" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>Whereas the response on the former has become very slow, the 
+      Parallel has become much more cyclic.&nbsp;&nbsp; This means that if one 
+      was using the Parallel algorithm and did indeed wish to reduce P by a 
+      factor of 4 to slow the response down, then you would also have to 
+      increase (lengthen) the integral by the same factor.
+      <P align=justify>Thus the Parallel algorithm makes life extremely 
+      difficult for the poor instrument specialist, as tuning is made very much 
+      more complicated, as one has to adjust all the parameters 
+      simultaneously.&nbsp; On the Series or Ideal algorithms on self-regulating 
+      processes, once you have got the correct I (or I + D) settings, then you 
+      can leave those terms alone and play only with the P "knob" to obtain the 
+      desired response.
+      <P align=justify>As mentioned in a previous article in this series, I have 
+      found that people who were "wizards" in tuning in their plants when they 
+      worked on older controllers, lost their "art" completely when newer 
+      computerised controllers were introduced which have the Parallel 
+      algorithm.&nbsp; This is because there is a completely different "feel" to 
+      the tuning.&nbsp; 
+      <P align=justify>Fortunately there was such resistance from users in the 
+      early days of computerised control systems with the Parallel algorithm, 
+      that manufacturers generally now offer the user a choice between the 
+      Parallel, and at least one of the others.
+      <P align=justify>I would strongly recommend that you choose either the 
+      Series or Ideal.&nbsp; It will make your life very much easier when it 
+      comes to tuning.
+      <P align=justify>At the time of writing this article I was doing some 
+      optimisation on a very remote diamond mine in Southern Africa.&nbsp; The 
+      mine has standardised on a particular make of PLC for all its 
+      controls.&nbsp; Generally as PLC's sometimes do not handle PID's well, I 
+      always do some tests on them to check on the operation.&nbsp; In this mine 
+      we tested three PLC's all of the same model on different plants, and found 
+      that they were all reasonably accurate with the P action.&nbsp; However 
+      they all had huge errors on the I timing response.&nbsp; The errors ranged 
+      from -50% to +50%.&nbsp; (The D response was not tested).
+      <P align=justify>As the I function is completely time dependent, the 
+      problem obviously arises from the scan rate of how often the PID is 
+      executed in the PLC.&nbsp; Unfortunately the manuals on the PLC's were 
+      really terrible with extremely poor, limited, and confusing descriptions 
+      of the PID operation.&nbsp; Also the plant personnel did not have any 
+      training on the PID operation.&nbsp; Therefore it was impossible to say 
+      whether the problem was a manufacturing error or faulty programming.&nbsp; 
+
+      <P align=justify>The scan rate itself as actually measured on the 
+      controller's output was very different to the setting in the controller's 
+      programme in the PLC, and did not tie in with any of the information given 
+      in the manual.&nbsp; The manual did however mention that PID block should 
+      be executed in a sequence free from interrupts.
+      <P align=justify>Figure 8 shows one of the actual tests performed on the 
+      controller to check the P + I performance.&nbsp; It can also be seen in 
+      the test how the integral ramp is very "wavy" which would indicate 
+      possible interrupts upsetting the PID timing execution.</FONT>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Figure 8
+      <P align=justify></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture79 height=299 alt="Figure 8" 
+            src="Loop Signatures 12_files/loopsigs12fig8.gif" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=left><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>The mine is now going to go back to the supplier to get help and 
+      more explanations on why the controllers are not performing properly, and 
+      as to why they are so far off specification.</FONT>
+      <P align=left><A 
+	      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton85',1)" 
+            onmouseout="F_roll('NavigationButton85',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton85 height=19 alt=Home 
+            src="Loop Signatures 12_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton85></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton86',1)" 
+            onmouseout="F_roll('NavigationButton86',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton86 height=19 alt=Training 
+            src="Loop Signatures 12_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton86></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton87',1)" 
+            onmouseout="F_roll('NavigationButton87',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton87 height=19 alt=Consulting 
+            src="Loop Signatures 12_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton87></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton88',1)" 
+            onmouseout="F_roll('NavigationButton88',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton88 height=19 alt=Protuner 
+            src="Loop Signatures 12_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton88></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton89',1)" 
+            onmouseout="F_roll('NavigationButton89',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton89 height=19 alt="Contact us" 
+            src="Loop Signatures 12_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton89></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton90',1)" 
+            onmouseout="F_roll('NavigationButton90',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton90 height=19 alt=Articles 
+            src="Loop Signatures 12_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton90></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop Signatures 12_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

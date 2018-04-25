@@ -1,0 +1,359 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0079)http://www.controlloop.co.za/Articles/Loop_signatures_16/loop_signatures_16.htm -->
+<HTML><HEAD><TITLE>Loop signatures 16</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 16_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 16_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 16_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 16_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 16_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=682><IMG height=1 src="Loop signatures 16_files/clearpixel.gif" 
+      width=682 border=0></TD>
+    <TD width=27><IMG height=1 src="Loop signatures 16_files/clearpixel.gif" 
+      width=27 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 16_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 16_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 16_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=6></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=682>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica>Loop Problem Signatures No 
+      16</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Digital controllers - 
+      Part 8<BR>The Full PID Controller and Response to Setpoint or Load 
+      Changes</FONT></B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <P>A simple controller complete with all three parameters, P, I, and D is 
+      shown in Figure 1.
+      <P></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture72 height=342 alt="Figure 1" 
+            src="Loop signatures 16_files/loopsig16fig1.gif" width=550 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 1</FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>As shown in the 
+      figure, if a setpoint step change was made, an error signal would appear 
+      on the output of the subtraction block.&nbsp; Alternatively an identical 
+      error signal would occur if the PV changed in a step of equal magnitude, 
+      but in the opposite direction.&nbsp; (A change in PV due to an effect in 
+      the process not caused by the controller is known as a load change).&nbsp; 
+      The step in error would then go through the controller and would be acted 
+      on simultaneously by all three (P, I, and D) terms.&nbsp; The resultant 
+      response appearing on the output of the controller is shown in the 
+      figure.&nbsp; The important point to note here that is with this 
+      controller, the response will be the same irrespective of whether the 
+      error was caused by a change in setpoint or by a change in load.
+      <P>Electronic analogue PID controllers appeared on the market in the 
+      1960's.&nbsp; They offered considerable advantages, particularly 
+      flexibility, as opposed to the old pneumatic controllers.&nbsp; At that 
+      time people were still trying hard to make feedback control systems 
+      operate better.&nbsp; Bearing in mind that the vast majority of 
+      controllers are used in continuous process plants, the manufacturers 
+      realised that in general the type of response as seen in the figure which 
+      causes the valve to kick open (or shut as the case may be), would not be 
+      desirable in most situations on a working plant.&nbsp;&nbsp; Typically 
+      such plants take a long time to start up and get running optimally in 
+      steady state conditions.&nbsp; The last thing process people want on most 
+      loops when running in steady state is for a valve to suddenly kick wide 
+      open.&nbsp; It could cause a plant trip, or it could initiate large 
+      disturbances to processes downstream.
+      
+      <P>When I begin my courses or give presentations on regulatory control, I 
+      normally start off by mentioning that in general I find about 85% of the 
+      loops I examine in plants world-wide are completely detuned.&nbsp; Many 
+      process engineers will state that they are quite happy with this.&nbsp; I 
+      have been told many times by senior process people that they would far 
+      rather have their loops detuned than running fast and bumping the plant 
+      around. Are they correct or incorrect?&nbsp; The same people will often 
+      ask me to tune a critical loop as well as possible as its operation is 
+      critical to further process downstream, and then they will add that it 
+      must not be tuned so fast that it could cause bumps.&nbsp; So in the same 
+      breath they are effectively saying the loop must be tuned fast, and then 
+      they are saying it should be tuned slowly.&nbsp; 
+      <P>If people want the controllers detuned then why bother having them in 
+      the first place? Why are regulatory controls needed at all on continuous 
+      process plants? 
+      
+      <P>A world leading American control engineer answered this question 
+      recently in an article where he stated that the purpose of the regulatory 
+      controls in a continuous process plant is to minimise variance throughout 
+      all stages of production.&nbsp; What he means by this is that when such a 
+      plant is running at steady state conditions, the regulatory controls are 
+      there to keep all the various processes as close to setpoint as possible 
+      under all conditions of change, so that minimum variance is achieved. 
+
+      <p>What changes can occur when plants run at steady state?&nbsp; Firstly 
+      load changes can, and often do occur.&nbsp; Such changes are seldom very 
+      fast and "steppy", but normally occur quite slowly.&nbsp;&nbsp; Typical 
+      examples are ambient temperature changes affecting plant exposed to the 
+      outside environment like petro-chemical refineries.&nbsp; Such plants 
+      typically often swing quite badly with day-night temperature 
+      variations.&nbsp; Slow load changes like this will not cause a big kick on 
+      the controller's output if it is tuned fast.&nbsp; However the fast tuning 
+      should be able to catch the changes and minimise deviations from set 
+point.
+
+<P>The second type of changes that will be encountered on continuous 
+      process plants are setpoint changes that operators make whilst optimising 
+      the plant.&nbsp; Set-point changes are generally steps.&nbsp; These will 
+      result in controller output kicks if full PID control is employed.&nbsp; 
+      <P>In most cases in a plant it is not actually necessary to have a fast 
+      response to a setpoint change.&nbsp; A slower response is generally quite 
+      acceptable.&nbsp; 
+
+      <P>One can summarise the above requirements with two very important 
+      premises that state: 
+
+      <P>1. Fast control is required for load changes<BR>2. Slow control is 
+      required for set-point changes.
+
+      <P>Please note that these premises are generalised, but they do apply to 
+      the vast majority of control loops found in continuous process 
+      plants.&nbsp; There are of course some loops that do require a fast 
+      response on setpoint changes.&nbsp; Examples would be cascade slave loops, 
+      or loops where their setpoints are being set from some higher level 
+      control system.
+      <P>To achieve the above differences in response, you could of course use 
+      ramps on setpoints.&nbsp; However this is seldom done.&nbsp; The 
+      controller designers back in the 1960's came up with a better idea.&nbsp; 
+      They reconfigured the controller as shown in Figure 2.
+      <P></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture73 height=370 alt="Figure 2" 
+            src="Loop signatures 16_files/loopsig16fig2.gif" width=550 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 2</FONT></B>
+      <P align=left><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>In this 
+      new configuration it can be seen that the D term is now only on the PV 
+      signal and is not acted on at all by the error signal.&nbsp; If we have a 
+      load change, the D term acts only on the PV signal, whilst the P and I 
+      terms act on the error signal, resulting in a full P+I+D response.&nbsp; 
+      However on setpoint changes, only P+I acts on the error signal.&nbsp; 
+      There is no D response at all until the PV starts moving in response to 
+      the change in the PD (controller output signal), and this D contribution 
+      to the response is relatively small.
+      <P align=left>This configuration virtually became a standard at that 
+      time.&nbsp; Nearly every controller manufacturer used it.&nbsp; Even today 
+      it is still generally the default configuration on most industrial 
+      controllers.&nbsp; 
+      <P align=left>This is not a bad thing from the control point of view in 
+      most cases.&nbsp; I am personally only aware of one particular type of 
+      process where it is really desirable to actually use the D term on a 
+      setpoint change.&nbsp; 
+      <P align=left>However of dramatically far more importance, and what no 
+      one, including most controller manufacturers seem to be aware of, is that 
+      this configuration in practice actually prohibits the use of the D term 
+      completely, even if you should wish to use it in situations where it would 
+      help deal with load changes.&nbsp; This is because this configuration 
+      makes it almost impossible to test the tuning of the D term on the 
+      controller.
+      <P align=left>This because to test tuning one must watch how the 
+      controller responds to setpoint changes.&nbsp; You can play with the D 
+      "knob" until you are blue in the face, but you will not be able to see the 
+      true effect of its action whilst making setpoint changes.&nbsp; The only 
+      way to really be able to check it is by inducing step load changes, and 
+      this is usually very difficult to do in practice.
+      <P align=left>Probably the main reason why the D term is so seldom used, 
+      is because most controllers have this configuration as their default, and 
+      hence one cannot tune in the D term.&nbsp; I personally would never ever 
+      consider purchasing a controller that did not allow me to change back to a 
+      full P+I+D response on setpoint change in order to allow me to perform 
+      tuning tests.&nbsp; Remember that the D term can be very effective when 
+      used in the right processes where it can operate effectively - see earlier 
+      loop signature articles dealing with the D term.
+      <P align=left>When controllers were written into computers in the 1980's, 
+      some manufacturers took the configuration one step further to slow down 
+      the response on setpoint changes even more.&nbsp; In many instances, 
+      particularly on integrating processes, you can have a large proportional 
+      gain in the controller.&nbsp; Thus if there is a high P gain in the 
+      controller, setpoint changes can also cause a big kick on the 
+      output.&nbsp; To prevent this happening, a new configuration was drawn up, 
+      so that the P and the D terms are both removed from the error and 
+      effectively put on the PV signal.&nbsp; Such a configuration is shown in 
+      Figure 3.&nbsp; (The drawing is purely representational.&nbsp; In reality 
+      the operation is performed by the use of a mathematical formula, as you 
+      cannot have the P acting directly on the PV signal).
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture74 height=420 alt="Figure 3" 
+            src="Loop signatures 16_files/loopsig16fig3.gif" width=550 
+          border=0></TD></TR></TBODY></TABLE></DIV><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1><BR>
+      <DIV align=center></FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2><B>Figure 3</B></FONT></DIV>
+      <P align=left><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>This 
+      controller really does give nice slow response on setpoint changes, but 
+      the practical effects of it are even more dramatic.&nbsp; A controller 
+      with this configuration cannot be tuned at all!&nbsp; This is because the 
+      one term you must get right when tuning is the P term.&nbsp; You can again 
+      play around on this controller making setpoint changes and adjusting the P 
+      term as much as you like, but you will not get any P response.&nbsp; The 
+      only change on the PD will be caused by the integral response.&nbsp; 
+      <P align=left>You would think that most people would be aware of this, and 
+      that the manufacturers would put a big note in their manuals explaining 
+      that this configuration cannot be used when tuning.&nbsp; However in 
+      reality I have never seen such a note in a manufacturer's manual. I have 
+      been into many plants where there their control system has an integral 
+      only response on setpoint change as the default configuration.&nbsp; In 
+      nearly every such plant no one was aware of the configuration, and as a 
+      result the tuning in these plants was shockingly bad. 
+      <P align=left>Apart from terrible control, this lack of understanding has 
+      resulted in direct financial loss in at least one plant I 
+      visited.&nbsp;&nbsp; This was a pharmaceutical manufacturer in the UK who 
+      had chosen only P+I action on setpoint response for use on batch 
+      reactors.&nbsp;&nbsp; This is a case where the D response on setpoint 
+      change is essential.&nbsp; It can literally speed up the response on a 
+      setpoint change by a factor of four.&nbsp; After testing a setpoint change 
+      with a full PID response, and on observing how much faster the process 
+      reacted, the Production Manager estimated that they could have increased 
+      production though the plant by approximately 14 million Pounds Sterling 
+      per annum.&nbsp; Unfortunately the various drug authorities of countries 
+      to which the pharmaceutical companies distribute their products, insist 
+      that the manufacturing processes be sealed once they have been accepted, 
+      and no changes are permitted.&nbsp; 
+      <P align=left>It is very difficult and expensive to get changes authorised 
+      at later dates.
+      <P align=left>This is a very good example why it is so important for users 
+      to fully understand how their controllers operate, and what options are 
+      available.&nbsp; As said in an earlier loop signature, it is essential 
+      that you fully understand your controller if you wish to successfully 
+      optimise your plant.
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A></P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton109',1)" 
+            onmouseout="F_roll('NavigationButton109',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton109 height=19 alt=Home 
+            src="Loop signatures 16_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton109></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton110',1)" 
+            onmouseout="F_roll('NavigationButton110',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton110 height=19 alt=Training 
+            src="Loop signatures 16_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton110></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton111',1)" 
+            onmouseout="F_roll('NavigationButton111',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton111 height=19 alt=Consulting 
+            src="Loop signatures 16_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton111></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton112',1)" 
+            onmouseout="F_roll('NavigationButton112',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton112 height=19 alt=Protuner 
+            src="Loop signatures 16_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton112></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton113',1)" 
+            onmouseout="F_roll('NavigationButton113',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton113 height=19 alt="Contact us" 
+            src="Loop signatures 16_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton113></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton114',1)" 
+            onmouseout="F_roll('NavigationButton114',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton114 height=19 alt=Articles 
+            src="Loop signatures 16_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton114></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 16_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

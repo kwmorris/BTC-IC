@@ -1,0 +1,395 @@
+
+
+<html>
+<body>
+
+<h1>Emerson DeltaV DCS configuration notes</h1>
+
+<hr>
+
+<p>
+Note: <i>When using the <u>DeltaV Explorer</u> program to configure the DCS, most of your mouse-clicks will be on objects in the left-hand pane of the screen.  This area shows a hierarchy of folders, devices, and files that comprise the DeltaV DCS, not unlike the view given by <u>Windows Explorer</u> showing the locations of all directories and files.</i>
+</p>
+
+<p>
+Virtually every edit, addition, or other change you make to a part of the DeltaV system using the <u>DeltaV Explorer</u> utility is made to the database in the computer workstation, and must be subsequently <i>downloaded</i> to all relevant nodes on the DeltaV network before they take effect.  You will find yourself repeatedly "downloading" changes made to the I/O and to the controller node as you build your control loop (or you can wait until all changes have been made and then do one large download as your last step).
+</p>
+
+<p>
+Here are some links to major sections of this document:
+</p>
+
+<ul>
+<li><a href="#Programs">Different Emerson software programs used in the DeltaV system</a></li>
+<li><a href="#Generic_loops">Using pre-configured "Generic" loops in the BTC lab</a></li>
+<li><a href="#Quickstart">Quick-start guide to setting up a control loop from scratch</a></li>
+<li><a href="#AMS">Using AMS Device Manager to manage smart instruments</a></li>
+<li><a href="#Archival">Archiving the system configuration</a></li>
+<li><a href="#Firmware">Upgrading controller firmware</a></li>
+</ul>
+
+<p>
+Vitally Important Note: <i>There are certain sample files in the DeltaV system that are to be used as templates, but should <u>never under any circumstances</u> be altered.  These include the "AREA_A" area seen within <u>DeltaV Explorer</u> and the "main" display graphic found within <u>DeltaV Operate</u> (in Configure mode).  Feel free to copy these template files to expedite your creation of new areas and graphics, respectively, but editing either one will cause problems in the future!</i>
+</p>
+
+<p>
+Vitally Important Note: <i>Do not install any software whatsoever on any DeltaV PC workstation not made by Emerson to work with the DeltaV system!!!  Even "safe" upgrades such as Windows Service Packs and Microsoft Office (e.g. Word, Excel, Access, Powerpoint, etc.) are quite risky to the DeltaV system.  It is okay to install non-executable files such as PDF documents, HTML pages, text files, and the like since they will not interfere with the execution of any Emerson program.  I learned this the hard way by installing National Instruments LabVIEW software on the ProPlus engineering workstation -- the installation corrupted a .dll file critical to the operation of DeltaV Operate, causing a lot of headache.  An engineer familiar with DeltaV later told me not to install any software not expressly made to work with DeltaV -- even Microsoft operating system upgrades have been known to cause DeltaV to crash.  CONSIDER YOURSELF WARNED!!!!</i>
+</p>
+
+
+
+
+
+<br>
+<hr>
+<a name="Programs"></a>
+<h2>Different Emerson software programs used in the DeltaV system</h2>
+
+<p>
+The DeltaV system is not administered through a single piece of software running on a PC workstation.  Rather, several programs exist to help you configure, diagnose, and operate the system.  Among them are:
+</p>
+
+<ul>
+<li><u>DeltaV Explorer</u>: used to do all the setup and "engineering" work on the system.  Typically used by engineers and technicians, but not operations personnel.</li>
+<li><u>DeltaV Operate</u>: used to actually run loops in a configured control system.  Typically used by operations personnel.</li>
+<li><u>Control Studio</u>: used to build and edit function block programs for executing control algorithms.  Typically used by engineers and technicians, and launched from <u>DeltaV Explorer</u> when building control modules.</li>
+<li><a href="#AMS"><u>AMS Device Manager</u>:</a> used to configure and maintain "smart" field instrumentation.  Typically used by instrument technicians.  This program may stand alone from the DeltaV system, and is capable of interfacing with many different Emerson products and control platforms.</li>
+<li><a href="#Firmware"><u>Controller Upgrade Utility</u>:</a> used to "flash" new firmware to controller nodes in a DeltaV system.</li>
+</ul>
+
+
+
+
+<br>
+<hr>
+<a name="Generic_loops"></a>
+<h2>Using pre-configured "Generic" loops in the BTC lab</h2>
+
+<p>
+In order to make BTC's DeltaV control system useful to students who have not yet studied the details of its configuration, several "Generic" loops have been pre-configured.  These "generic" loops have pre-configured I/O channels, control modules, function block programs, and operator screens.  All you need to do is connect your field instruments to the appropriate I/O terminals and the loop will be ready to operate.
+</p>
+
+<p>
+The only changes you (may) need to make to a Generic Loop in fulfilling a lab project requirement is to scale the input to the correct engineering units, set the controller action (either direct or reverse), and/or tune the PID settings.  All function block parameter changes are made using the <u>Control Studio</u> software application.  This may be launched from either <u>DeltaV Explorer</u> (by right-clicking on the appropriate control module) or from <u>DeltaV Operate</u> (by clicking on the appropriate icon at the bottom of the controller faceplate).
+</p>
+
+<p>
+PV scaling is done in two function blocks: AIN and PID.  In the AIN function block you must set the "OUT Scale" parameter to the desired measurement range of your process transmitter (e.g. 0 to 300 degrees F).  The "XD Scale" parameter should remain at the factory default range of 0 to 100 percent.  The linearization type "L Type" parameter needs to be set to "indirect" to allow the scaling to take place.  Note that "indirect" has absolutely nothing to do with the direct/reverse action of the controller -- it means something totally different!  In the PID block the only parameter you need to edit is the "PV Scale" range which needs to match the "OUT Scale" range in the AIN block (which is the same as the process transmitter's range).  Nothing whatsoever should be edited in the AOUT function block.
+</p>
+
+<p>
+Direct vs. Reverse controller action is set in the PID function block, in a parameter called "Control Opts".  Direct action is selected here by checking a box next, while Reverse action is selected by not checking that box.
+</p>
+
+<p>
+PID tuning may be done by setting the Gain, Reset, and Rate parameters within the PID function block using <u>Control Studio</u>, or more conveniently by clicking on the tuning parameters icon at the bottom of the controller faceplate display in <u>DeltaV Operate</u>.  The latter option is far more convenient, and does not require you to "download" the changes as is necessary when using <u>Control Studio</u>.
+</p>
+
+<p>
+Remember that when you do use <u>Control Studio</u> to make any changes to function block connections or to function block parameters, you must save those changes to the computer workstation as well as "download" those changes to the controller in the DCS cabinet.  When downloading, you will be prompted to choose to "upload" any other system changes prior to downloading, and <i>you should always opt to do this step when working on a live DeltaV system</i>.  If you skip the "upload" step and proceed with your download, you will over-write any run-time changes made by other people using the DeltaV system, such as setpoint changes, PID tuning changes, controller mode (Auto/Manual) changes, etc.  This will surely aggravate your classmates, and we don't want that!
+</p>
+
+
+
+
+
+<br>
+<hr>
+<a name="Quickstart"></a>
+<h2>Quick-Start guide to setting up a control loop (plus operator graphic) from scratch</h2>
+
+<ol>
+<li>Use <u>DeltaV Explorer</u> to enable and configure all <a href="#Quick_IO">I/O channels</a> (inputs and outputs for your loop's field instruments), then download those changes to the DeltaV nodes.</li>
+<li>Use <u>DeltaV Explorer</u> to <a href="#Quick_module">build a new Control Module</a>, in the "BTC_LAB" area corresponding to your particular section of the lab.</li>
+<li>Use <u>Control Studio</u> to <a href="#Quick_functionblock">build a function block program</a> and assign I/O points to the analog input and analog output blocks.</li>
+<li>Use <u>DeltaV Operate</u> (in Configure mode) to <a href="#Quick_buildscreen">create a display screen an operator can use</a> for operating this loop.</li>
+<li>Use <u>DeltaV Explorer</u> to <a href="#Quick_loadscreen">upload your new display screen from the workstation it was created on, then download it to all workstations on the DeltaV network.</a>  This will allow all the operator workstations to access the operator picture you've created for your controller.</li>
+<li>Use <u>DeltaV Explorer</u> to <a href="#Quick_modulescreen">link the operator display screen to your new module</a>.  This allows the operator's on-screen controls to alter parameters such as setpoint, output, auto/manual mode, and PID tuning constants in the control module you built.</li>
+<li>Use <u>DeltaV Explorer</u> to <a href="#Quick_moduleassign">assign the new module to a controller</a>.</li>
+</ol>
+
+
+
+
+
+
+
+
+<br>
+
+<a name="Quick_IO"></a>
+<h3>Configuring I/O</h3>
+
+<ul>
+<li>Start <u>DeltaV Explorer</u> program.</li>
+<li>(One at a time) select each I/O point you will be using, and right-click, go to Properties.  In the Properties dialog box, check the "Enable" box and give the point a tag name that makes human sense.</li>
+<li>Right-click on I/O and download all the changes you've made.</li>
+<li>Right-click on CTRL-01 (the controller hosting the I/O you've just configured) and download all changes.</li>
+</ul>
+
+
+
+
+<br>
+
+<a name="Quick_module"></a>
+<h3>Building a control module</h3>
+
+<ul>
+	
+<li>Start <u>DeltaV Explorer</u> program (if it's not already running).</li>
+
+<li>Click on "Control Strategies" to explore the different areas included in it.  One of those areas should be named "AREA_A".  This is one of the default areas that comes "stock" with DeltaV.  LEAVE THIS ONE ALONE!!!  All your work will be done in either the "BTC_LAB_NORTH" or "BTC_LAB_SOUTH" area instead.  You will soon be "dragging and dropping" an item to the appropriate "BTC_LAB" area, so leave it on display in the left-hand pane so you can see it.</li>
+
+<li>Click on "Library," then "Module Templates," then "Analog Control," then "PID_LOOP".  Drag PID_LOOP template to existing Control Area (in our case, the one named "BTC_LAB_NORTH" or "BTC_LAB_SOUTH").</li>
+
+<li>Click on appropriate "BTC_LAB" icon underneath the "Control Strategies" icon, so that you see that module template shown in the main window area on the screen.</li>
+
+<li>Right-click on that module name to rename it to something other than "PID_LOOP_1" (you might want to choose your team name as the name of the control strategy!).  Do not put space characters in the name!  For example, name it "RED_TEAM" instead of "RED TEAM".</li>
+
+</ul>
+
+
+
+
+
+<br>
+
+<a name="Quick_functionblock"></a>
+<h3>Building a function block program</h3>
+
+<ul>
+	
+<li>From <u>DeltaV Explorer</u>, right-click on the module you have created in the "BTC_LAB" area and open it using <u>Control Studio</u>.  Another window will appear, which shows the function blocks comprising that control module.  You may maximize this window if you wish.</li>
+
+<li>The stock PID_LOOP module does not contain analog input or output blocks, because it is possible to directly assign I/O to the PID block.  However, FOUNDATION Fieldbus requires separate AI and AO blocks (and it looks cleaner anyway) so add an AI block and an AO block from the tool field on the right of the <u>Control Studio</u> screen (under the "IO" palette of blocks) and then properly connect these new blocks to the PID control block.  If you need an example to follow, look at the FF_PID_LOOP module template.  Do not start with this template for your non-Fieldbus loop, though, because the blocks will have attributes specific to Fieldbus devices, and you don't want this for your non-Fieldbus module!  The "OUT" tab of the analog input block should connect to the "IN" tab of the PID block; the "OUT" tab of the PID block should connect to the "CAS_IN" tab of the analog output block; and finally the "BKCAL_OUT" tab of the analog output block should connect back around to the "BKCAL_IN" tab of the PID block.</li>
+
+<li>Assign I/O to analog input and output blocks: right-click on the block, select "Assign I/O", and then tell each block where to associate with a real I/O point, either input or output.</li>
+
+<li>Click on the analog input block, then look in the lower-left corner of the screen to see all the parameters associated with that block.  Configure the OUT_SCALE parameter for the analog input function block for the lower- and upper-range values you have your transmitter scaled to, as well as the engineering unit.</li>
+
+<li>Click on the PID function block, then look in the lower-left corner of the screen to see all the parameters associated with that block.  Configure the PV_SCALE parameter for the PID function block for the lower- and upper-range values you have your transmitter scaled to, as well as the engineering unit.  Also, configure the direct/reverse control action in the PID function block.  This is found in the CONTROL_OPTS parameter.  A box labeled "Direct acting" is unchecked by default, meaning the DeltaV system assumes reverse action by default.</li>
+
+<li>Save and Download your edits in <u>Control Studio</u>, then minimize or close the <u>Control Studio</u> utility.</li>
+
+</ul>
+
+
+
+
+
+<br>
+
+<a name="Quick_buildscreen"></a>
+<h3>Creating an operator display screen for the loop</h3>
+
+<p>
+Note: <i>The next step is to link your control module to an HMI display screen so that an operator may access setpoint, manual/auto modes, and other common features of a PID control loop.  Before you can proceed with this step, however, there must be an existing operator display screen built to link your module to.  For this reason, we will now use a different Emerson program to build a display screen before proceeding with <u>DeltaV Explorer</u> to finish the loop configuration.</i>
+</p>
+
+<ul>
+
+<li> Start up the "<u>DeltaV Operate</u>" application and go to the "Configure" mode (as opposed to the "Run") mode.  You may use the <Ctrl><W> hot-key combination to switch back and forth between "Configure" and "Run" modes.</li>
+
+<li>It is advisable to begin a new picture by opening up the example named "main" in the template area, then IMMEDIATELY re-saving it under a different name.  Do not under any circumstances alter the "main" template and then re-save it under the original name!!!!  Immediately "save as" a different name (your choice), and only then should you make any changes!</li>
+
+<li>Draw a shape on the screen, such as a rectangle.  After selecting the shape, click on the Open Faceplate Expert toolbar button (it looks like a controller faceplate with three vertical bargraphs).  This will prompt you to select a module.  Browse until you find the PID control module you created, selecting one of the PID function block parameters (such as OUT, current value -- CV).  This associates a faceplate with an object on the picture, so that a faceplate will open up when an operator clicks on that object (in the "Run" mode).</li>
+
+<li>Alternatively, choose a pre-made "Dynamo" set such as "Valves" and click-and-drag the shape you want to the screen, then use the Faceplate Expert toolbar button to associate the shape's faceplate with a module.</li>
+
+<li>Switch to "Run" mode (push <Ctrl><W>) to see how your new screen operates.  Click on the shape you created, and a PID controller faceplate will pop up, allowing you to control the PID function block.</li>
+
+<li>Click on the lower-left button on the controller faceplate to bring up the "Detail" display.  This display allows you to change tuning parameters, alarm trip points, and to enable or disable alarms.  I recommend you disable all alarms from the detail page so that you don't generate annoyances while connecting and disconnecting wiring in your loop.</li>
+
+<li>Go back to "Configure" mode, and draw other objects, or select pre-made objects from the Dynamos list.</li>
+
+<li>Right-click on an object to open a menu, and select "Animations...".  This will open up a dialog box for you to select what type of animation (color changes, bargraph, transparency, etc.) you wish to have that object display in connection with a variable in your control module.  The "Fill" animation is what we use to generate a bargraph effect, where the object fills in a color in accordance with a variable's value.</li>
+
+<li>To place a numerical display field on the screen, click the tool button marked "ABC100" (Datalink Stamper).  This will open up a dialog box for you to select input or output, numerical formatting, etc.  After selecting the variable to be associated with this numerical field, click on "OK" and you can then place the field anywhere on your picture.</li>
+
+<li> To build a Data Entry control, first draw an object on the screen and select it.  Next, click on the button for the "DeltaV Data Entry Expert".  This will open a dialog box where you can select what type of interface (pushbutton, slider, number field) and the variable it outputs to. </li>
+
+<li>To build a trend chart, first click on the button for the "Chart" object (looks like a tiny chart with three trend lines), then go to the workspace area and draw a rectangle to specify where the chart will go and how large it will be.  Next, right-click on the chart and select "Chart Configuration" to specify pens, colors, linestyles, scales, etc.</li>
+
+</ul>
+
+
+
+<a name="Quick_loadscreen"></a>
+<h3>Uploading/downloading graphic operator screens ("pictures")</h3>
+
+<p>
+If you create an operator screen using <u>DeltaV Operate</u> (in Configure mode) on the ProPlus workstation, it will not be available on the regular (non-engineering) workstations, and visa-versa.  The graphics will simply reside on the hard drive of the computer you used to create them.  What needs to be done is to "upload" all the graphic data from the workstations to the ProPlus station database, and then download that database to all the workstations.
+</p>
+
+<ul>
+
+<li>Start up <u>DeltaV Explorer</u> and look at the workstation icons under the Control Network path.  You will see a blue triangle with a question mark inside next to each workstation that has not been updated with the database.  Right-click on the workstation and select "Download" (Operator Station option), then do an "upload" to copy data from that workstation to the ProPlus database, and then "download" to distribute that data to the other workstations.</li>
+
+<li>Alternatively, you can choose to "Download" the entire Control Network.  This, of course, will take longer to do because it's dealing with all the PC's, plus the controller node(s).</li>
+
+</ul>
+
+
+
+
+<h3>Accessing and using graphic operator screens ("pictures")</h3>
+
+<ul>
+
+<li>Start up <u>DeltaV Operate</u> (in Run mode), if it is not running already.</li>
+
+<li>From the "DeltaV" main display, right-click anywhere on the screen and select the picture you want from the list.</li>
+
+<li>If the main DeltaV display is not currently shown, you may click on the "Reset Layout" button on the top toolbar (it looks like two tanks, one red and one blue, connected with pipes at the top and the bottom).  This should bring the display to its factory default condition!  After doing this, you should be set for right-clicking on the screen and calling up the picture you wish to see.</li>
+
+</ul>
+
+
+
+
+
+
+
+<h3>Deleting unwanted graphic operator screens ("pictures")</h3>
+
+<p>
+In order to delete a graphic screen, the file (plus the associated "yellowpages" file) must be individually deleted from ALL workstations on the network, not just any one workstation (even the ProPlus!).
+</p>
+
+<ul>
+
+<li>Go to the D: drive (DVData/DeltaV/DVData/Graphics-iFix/Pic) and delete the graphics file there.</li>
+
+<li>Go to the D: drive (DVData/DeltaV/DVData/YellowPages/Graphics-iFIX/Pic) and delete the graphics file there.</li>
+
+</ul>
+
+
+
+
+
+
+<h3>Updating/editing existing graphic operator screens ("pictures")</h3>
+
+<p>
+Note: <i>do all edits from the ProPlus workstation.  If you edit from one of the other workstations, there is a distinct possibility of an older version of your graphic (hosted on the ProPlus) being written over your new version!</i>
+</p>
+
+<p>
+Once your edits are complete, use <u>DeltaV Explorer</u> to download your new (edited) graphic screen from the ProPlus to all other workstations, so they will have the newest version.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+<a name="Quick_modulescreen"></a>
+<h3>Linking a display screen to your new control module</h3>
+
+<p>
+Note: <i>Now that an operator display screen has been created using <u>DeltaV Operate</u> (in Configure mode), you may proceed to link your new control module to that display screen.  This will allow the operator's actions in <u>DeltaV Operate</u> to manipulate parameters in the control module (e.g. setpoints, PID tuning parameters, etc.).</i>
+</p>
+
+<ul>
+
+<li>Click on the name of your module in the hierarchical directory on the left hand side of the Exploring DeltaV application (under "Control Strategies" and "BTC_LAB").  Right-click, then select "Properties".  this will open up a dialog box.  </li>
+
+<li>Click on the "Displays" tab, and assign a pre-made "Primary Control" display screen to your module.  If you have not yet made a display graphic ("picture"), you will need to create this display screen using the <u>DeltaV Operate</u> program (in Configuration mode) before completing this step.  Note that the Primary Control graphic you specify may be located on another workstation from the one you're using to edit the module!  Browse other workstations if necessary to find the graphic to assign under "Primary Control".  </li>
+
+<li>The "Detail:" parameter under the "Displays" tab determines the type of detail screen that opens when you click on the detail button on the faceplate.  Some detail screens (ex: "Loop_dt") have options such as PID tuning parameters, while others do not.  </li>
+
+<li>Also, fill in the "Faceplate:" parameter under the "Displays" tab to give you the right type of faceplate to open when you click on an object in your graphic.  For example, the "Loop_fp" faceplate is a PID controller faceplate, while the "Mod_fp" faceplate is strictly alarms.  </li>
+
+<li>Now click on the "Tools" tab and double-check to see the module is assigned to a node, then click on the Download Module button to send the module configuration data to the controller.</li>
+
+</ul>
+
+
+
+
+
+<br>
+
+<a name="Quick_moduleassign"></a>
+<h3>Assigning the new control module to a controller node</h3>
+
+<ul>
+
+<li>From <u>DeltaV Explorer</u>, assign your module to an active controller node in the DeltaV system by going to the "File" drop-down menu and clicking on "Assign to node..."  You want to choose the DeltaV controller, not a personal computer workstation.  This step determines what physical hardware will execute your control module (and function blocks).  Although it is possible to have the PC workstation execute all the control, it is much wiser to have the control function performed by the DeltaV controller (a much more robust piece of hardware and operating system than a desktop computer!)</li>
+
+<li>Right-click on "Control Network" in the left-hand pane and tell it to download all changes.  This will update both the controller and the PPLUS workstation you're working on, to be ready to execute the control module you've just configured.</li>
+
+<li>You may at this point right-click on your control module (in the appropriate "BTC_LAB" area) and open it using <u>Control Studio</u>.  Once <u>Control Studio</u> opens up, click on the "online" button to see all the live variable values.  Here, you should be able to see whether or not your loop is basically working.  At this point you may select the PID controller and proceed to adjust the operating parameters (SP, Mode, tuning, etc.) to operate the control loop.  This proves you can operate a loop (albeit inefficiently) without having to create a graphic operator display.</li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<a name="AMS"></a>
+<h2>Using <u>AMS Device Manager</u> to manage smart instruments</h2>
+
+<ul>
+<li>Start the <u>AMS Device Manager</u> program.</li>
+<li>Go to the "DeltaV Network" icon (it appears automatically under the Device Connection View as a set of DCS cards, or under the Device Explorer view under Physical Networks -- BTC_PPLUS -- DeltaV Network 1) and right-click on it.  Select the "Rebuild Hierarchy" option in the pop-up menu.  This commands <u>AMS</u> to re-build its database of controller nodes and I/O channels in the DeltaV system.  Note that this step does <i>not</i> scan for new field instruments, only for new DeltaV system components!</li>
+<li>You may also need to right-click on various icons in the tree structure and select "Scan Devices" to scan for the presence of any new devices connected to the DeltaV I/O.</li>
+</ul>
+
+
+
+
+
+<br>
+<hr>
+<a name="Archival"></a>
+<h2>Archiving the system configuration</h2>
+
+<p>
+Using <u>DeltaV Explorer</u>, right-click on the top-level icon (BTC_DeltaV_System) and select "Export".  Give the filename some specific date information so you can back up multiple copies on different days without having naming conflicts.  Keep this file in a safe place in case the ProPlus workstation ever happens to crash or wipe out its configuration.
+</p>
+
+
+
+
+
+
+
+
+<br>
+<hr>
+<a name="Firmware"></a>
+<h2>Using <u>Controller Upgrade Utility</u> to flash controller firmware</h2>
+
+<p>
+When changing software versions, or installing an old controller on a new network, you must invoke a special utility Emerson provides just for this purpose.  Click on the Windows "Start" button and navigate to the DeltaV folder, then select "Installation".  Under this sub-folder you will see an icon for a <u>Controller Upgrade Utility</u> program.  Click that icon, then follow the instructions to upgrade the firmware of the desired controller(s).
+</p>
+
+
+
+
+
+
+
+</body>
+</html>
+

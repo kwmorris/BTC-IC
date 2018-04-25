@@ -1,0 +1,98 @@
+Thank you very much!
+
+-----Original Message-----
+From: gtop-request2932@cs.jp.yokogawa.com
+[mailto:gtop-request2932@cs.jp.yokogawa.com]
+Sent: Tuesday, August 15, 2006 5:48 PM
+To: Tony Kuphaldt
+Cc: fld_request@csv.yokogawa.co.jp
+Subject: [Bulk]: FW: [gts:9606] FW: [fld_request:956] catalog
+Importance: Low
+
+
+Mr. Tony Kuphaldt
+
+This is the Webmaster of Yokogawa Electric Corporation.
+On behalf of our Field Instruments Webmaster, I will respond to you on
+your request.
+
+We understand that you wish to include some of our technical reference
+PDF files in your CD-ROM for your students' use.
+We approve the use of the information as it is already available on our
+website and is in the public domain.  Our conditions are that it is only
+for educational purposes and not for comercial use and that you will
+note our copyright on that educational CD-ROM.
+
+Webmaster of Yokogawa Electric Corporation
+
+-----Original Message-----
+From: apache@jp.yokogawa.com [mailto:apache@jp.yokogawa.com]
+Sent: Monday, August 14, 2006 2:29 PM
+To: fld_request@csv.yokogawa.co.jp
+Subject: [fld_request:956] catalog
+
+tkuphald@btc.ctc.edu (Tony Kuphaldt) sent the following comment about
+The YOKOGAWA Field Instruments WWW server:
+
+------------------------------------------------------------
+Name...............:Tony Kuphaldt
+E-mail.............:tkuphald@btc.ctc.edu
+Phone Number.......:360-752-8477
+Fax Number.........:360-752-7277
+Organization Name..:Bellingham Technical College
+Department.........:Instrumentation
+Address............:3028 Lindbergh Avenue Zip/Postal Code....:98225-1599
+Country............:USA Message............:To Whom it may Concern,
+
+I am an instructor of instrumentation at Bellingham Technical College in
+Washington state, and am in the process of compiling a reference CD-ROM
+for my students' use.  Having an "offline" reference is important for
+students who do not have fast internet service, or internet service at
+all at their homes.  I am interested in copying some of your technical
+reference PDF files from your website and copying them on to these
+disks.
+
+Please let me know if this use of your material would be permissible.
+These CD-ROM disks will only be used for students' educational purposes,
+and they will not be sold.  Of course I will give proper attribution to
+you as the author and provider of this material on the CD-ROM.
+
+Thank you for your time and consideration,
+
+Sincerely,
+
+Tony Kuphaldt
+Instructor, Instrumentation
+Bellingham Technical College
+3028 Lindbergh Avenue
+Bellingham, WA 98225-1599
+360-752-8477
+tkuphald@btc.ctc.edu
+
+
+
+
+
+Catalog
+
+Process Control Systems & Instruments....................:Process-Cont
+DPharp Differential Pressure Transmitter.................:DPharp-EJ
+DPharp EJA series........................................:DPharp-EJA
+ADMAG AXF Magnetic Flowmeter.............................:
+ADMAG SE Magnetic Flowmeter..............................:
+ADMAG CA.................................................:
+digitalYEWFLO Flowmeter..................................:
+US300PM Ultrasonic Flowmeter, Portable type .............:
+US300FM Ultrasonic Flowmeter ............................:
+PCI Pneumatic Control Instrumentation....................:100LINEetc
+YTA series Temperature Transmitter.......................:
+VP200/PK200 Current-to-Pneumatic Positioner/Converter....:
+Others...................................................:
+
+
+
+------------------------------------------------------------
+Server protocol  : HTTP/1.1
+Remote host      :
+Remote IP address: 67.168.77.173
+

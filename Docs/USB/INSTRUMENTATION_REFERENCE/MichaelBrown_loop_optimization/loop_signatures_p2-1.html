@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures p2-1</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-1_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-1_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-1_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-1_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-1_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="2"><img src="loop_signatures_p2-1_files/clearpixel.gif" alt="" border="0" height="1" width="2"></td>
+            <td width="748"><img src="loop_signatures_p2-1_files/clearpixel.gif" alt="" border="0" height="1" width="748"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td class="TextObject" width="748">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b><span style="font-size: small;">Introduction to Part 2 loop signatures and process transfer functions</span></b></p>
+                <p><b>Introduction to Part 2</b></p>
+                <p>The
+previous series of loop signature articles dealt with the basics of
+control loop optimisation, and concentrated on trouble shooting, and
+looked at "SWAG" tuning of simple processes.&nbsp;Apart from cascade
+control it only dealt with single input, single output loops in
+isolation from other possible interactive systems.</p>
+                <p>The series is now available on CDRom that can be ordered via our web site <a href="http://www.controlloop.co.za/">www.controlloop.co.za</a>. </p>
+                <p>In
+this new series, consideration will be given to dealing practically
+with more difficult things like interactive processes, and with
+processes with much more complex dynamics.</p>
+                <p>In
+addition there will be more "tying up" of the practice to the
+theory.&nbsp;As a result you will get a much better understanding of
+the practice, and it will give you much more self-confidence in finding
+solutions to what can sometimes be difficult problems.&nbsp;Many
+delegates who have passed through our courses have reported back that
+the second Part has proved equally, if not even more valuable, than the
+first part, and in many instances they have managed to very
+successfully automate loops that previously had only run in manual.</p>
+                <p><b>Process Transfer Functions</b></p>
+                <p>As
+shown in Figure 1 a process transfer function is merely a mathematical
+function describing how the output of a process will respond to any
+change on the input to that process.&nbsp;It is literally and simply a
+mathematical description of the process.</p>
+                <p>
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture8" src="loop_signatures_p2-1_files/loopsigsp2-Fig1.gif" alt="Figure 1" title="Figure 1" border="0" height="346" width="500"></td>
+                        </tr>
+                    </tbody></table>
+                </p>
+                <p style="text-align: center;"><i>Figure 1</i></p>
+                <p>Now
+as mentioned in the Part 1 this function was considered by the
+mathematical control theory pioneers to be an absolute essential
+element which was needed in order to tune the controller.&nbsp; However
+unfortunately process transfer functions are relatively complex as both
+time and frequency responses are involved, and the best way of writing
+the functions is to use Laplace arithmetic.</p>
+                <p>Apart
+from the complexity of this for ordinary C&amp;I people who mostly last
+touched on Laplace in distant studies at their educational
+institutions, it was historically found that it was extremely
+difficult, if not almost impossible, to actually practically establish
+the various dynamic Laplace constants of industrial processes by either
+frequency testing or from modelling them by making step changes on the
+process input.&nbsp;As a result most people forgot about all the theory
+they had learnt, and proceeded to "fly be the seats of their pants",
+and as a result 98% of all optimisation was (and in fact generally
+still is) performed by WAG (Wild Ass Guess) or SWAG (Scientific Wild
+Ass Guess) methods.</p>
+                <p>Now
+in fact as far as the author is concerned, in certain respects the need
+for process transfer functions is still as important today as it ever
+was.&nbsp;As will be seen the whole of this second series of Loop
+Signatures will be dealing with these functions.&nbsp;In many instances
+as will be seen, and provided the C&amp;I practitioner has the right
+tools for the job, it will not be generally necessary for him or her to
+be too worried about very accurate values of the dynamic constants, and
+simplified transfer functions can in fact do a great job for certain
+tasks as will be seen a little later in the series.</p>
+                <p>However
+as also will be shown it is ABSOLUTELY VITAL when it comes to tuning
+that the practitioner is aware of what constants are in fact present in
+the process response, and in some cases the relationship between the
+magnitudes of some of these constants is very important.&nbsp;Once you
+have established these things, one can then&nbsp;decide how best to
+apply different types of tuning to different types of dynamics, with
+sometimes startling improvements in control performance.</p>
+                <p>How
+can one establish the process transfer function dynamic constants in
+the modern world, when full frequency testing is not possible?</p>
+                <ul>
+                    <li>Simple
+first order lag, deadtime models can be determined graphically as
+described in the first series.&nbsp;(Now before I get a flood of
+correspondence from people who would rightfully say that in the first
+series, I mentioned that these models are seldom good enough for good
+feedback tuning, please bear with me until later in the series where
+hopefully I will prove that although it is true for feedback tuning,
+some more advanced things like feedback compensators and decouplers are
+far less critical when it comes to tuning, and simple models generally
+are usually sufficient to tune them.)</li>
+                    <li>If
+you are fortunate enough to have access to a Protuner loop analysis
+software package, it gives simple first order lag, deadtime model on
+the tuning report, OR a much more complex model can be established from
+the relatively simple modeling procedures in the frequency plot section.</li>
+                </ul>
+                <p>To summarise why it is necessary to have information of process transfer functions:</p>
+                <ul>
+                    <li>As stressed above, a rough idea of the elements in the function should always be established when optimising any process</li>
+                    <li>Simple
+first order lag, deadtime models are needed for "SWAG" tuning methods,
+and are usually sufficient for tuning decouplers in feedforward and
+interactive control</li>
+                    <li>More complex models are often needed for off-line process simulation</li>
+                </ul>
+                <p>&nbsp;</p>
+                <p>In
+the next article in this second loop signature series we will be taking
+a look at an extremely powerful control tool, viz. feedforward, which
+in my opinion is not used nearly enough.</p>
+                <p><span style="font-size: 10pt;"></span><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a><br><br>&nbsp;</p>
+                <ul>
+                </ul>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 83</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_83_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_83_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_83_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_83_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_83_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_83_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: medium; color: rgb(204, 0, 0);">Control Loop Case History 83</span></b></p>
+                <p><b>DIFFICULT CONTROL LOOPS IN A BOARD FACTORY (PART 1)</b></p>
+                <p>I
+spent a fascinating couple of days recently in a factory making chip
+boards.&nbsp;They have their own unique problems as do every other type
+of industry I get involved with.</p>
+                <p>Very basically
+to make a chipboard one has to mix a variety of things like glue, water
+and other ingredients with the wood chips, which are then mixed
+together, and then go through a variety of processes, and are finally
+is pressed under intense pressure and fairly high temperature into the
+final product.&nbsp;It should also be mentioned that the boards consist
+of three layers with a core in the centre, and a face layer on the top
+and then bottom.&nbsp;The core and face layers are made with different
+recipes.&nbsp;The whole process is complex and a lot of expertise has
+gone into making it work properly.</p>
+                <p>Loops
+worked on during my visit included the control of the flow of each the
+ingredients in the recipes, a level loop, and on some of the
+temperature loops on the press.</p>
+                <p>Flow loops are
+usually very easy and fast to optimise, but as shown in numerous of my
+previous articles in this Case History series , severe problems are
+often encountered, of which the personnel the plant were usually
+completely unaware.&nbsp;In this plant the loops were working
+well.&nbsp;The flow meters were properly installed and well calibrated
+magnetic flow meters, and joy of joys, the final actuators were VSD's
+(variable speed drives) of the frequency changing type, driving gear
+pumps, which do not generally suffer from all the problems normally
+associated with valves.</p>
+                <p>All
+the loops except one were extremely easy to optimise.&nbsp;In general
+the new tunings gave very stable responses to setpoint changes about 6
+to 10 times faster than the original tuning settings, which is pretty
+much the normal improvement we achieve in plants.</p>
+                <p>However the one displayed a peculiar problem.&nbsp;A portion of the open loop test is shown in&nbsp;Figure 1.</p>
+                <p><img id="Picture2" src="case_history_83_files/cashis83Fig_1.jpg" alt="cashis83Fig 1" title="cashis83Fig 1" align="top" border="0" height="441" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>Flow
+loops are always self-regulating with the PV following changes in the
+PD (controller output).&nbsp;However in this case the PV shot up as it
+normally would when a step change was made in the PD.&nbsp;However it
+then started integrating up.&nbsp;This response is normally associated
+with a first order positive lead on an integrating process (which will
+be covered in detail in the next few months in my new Part 2 Loop
+Signature series).&nbsp;&nbsp;It is the first time I have ever seen it
+on a flow process, and it was very difficult to try and understand what
+caused it.</p>
+                <p>We
+performed quite a few tests on the loop, and the only conclusion we
+could come to is that it was probably caused by the pump which was
+operating at a very low speed right down near the bottom of the VSD's
+range.&nbsp; Possibly there is some effect that on a step change there
+is an initial flow change, and then some sort of integrating
+effect.&nbsp;At some stage the plant is hoping to change the pump to a
+different type, and it is expected that this strange effect will then
+disappear.</p>
+                <p>Just
+out of interest the effect does not present any problem on the actual
+control.&nbsp;You merely tune the loop as any normal flow loop, which
+gives a nice fast response, and the resulting fast control takes good
+care of the integrating portion of the response.&nbsp; </p>
+                <p>The
+personnel on the plant were particularly keen on sorting out problems
+in the controls of some of the temperature loops on the press.&nbsp;The
+final product quality is extremely dependent on the temperature of used
+in various portions of the press.&nbsp;Poor temperature control results
+in boards being rejected with subsequent loss of production.&nbsp;</p>
+                <p>There
+are three main temperature areas in the press, which presses several
+boards simultaneously.&nbsp;There are sections at the top and bottom
+where the temperatures are adjusted to keep the boards flat, and to
+prevent bowing.&nbsp;The temperature of the platens in the middle of
+the press is used to "cure" the boards correctly.</p>
+                <p>The
+platen temperature was dealt with first.&nbsp;Essentially they are
+heated by hot oil flowing through them.&nbsp;The temperature of the oil
+can be varied by moving a 3-way valve which allows hotter oil from a
+primary source to be injected into the flow.&nbsp;This valve is
+operated by an electric actuator.</p>
+                <p>The
+first thing of note on this loop was that the gain in the existing
+controller tuning was 120.&nbsp;This is the first time in my life that
+I have ever seen such a high gain in a modulating type
+controller.&nbsp;A gain of 120 is equivalent to a proportional band of
+0.83%!&nbsp;This is effectively ON/OFF control, which of course is
+inherently unstable.</p>
+                <p>Temperature
+processes of this type are generally integrating as they have the
+ability to absorb heat, i.e. more heat can be inserted in the process
+than is being lost from it, causing the temperature to rise in a ramp
+fashion.&nbsp;As there is usually no cooling, temperature is often much
+faster rising than when it is falling.</p>
+                <p>Integrating
+processes have been dealt with in detail in my Loop Signature series
+(now available on CD).&nbsp;As shown there they are very difficult to
+tune if one does not have a thorough understanding of the dynamics and
+characteristics of such processes.&nbsp;To tune them it is important to
+get the process into balance first, where the heat flow into and out of
+the process are equal.&nbsp;At this point the temperature of the
+process will remain constant, and then one make a step change in manual
+to get the temperature into a ramp from which it is possible to
+calculate the process gain, which will allow one then to obtain tuning
+parameters.</p>
+                <p>This
+particular process was found to react extremely slowly to changes, and
+it took nearly two hours to get it near balance.&nbsp; Unfortunately at
+that point an operator who had not been informed that we were
+performing tests on the process, did something on the primary heating
+source, which changed its temperature and hence affected the platen
+temperature.&nbsp;This is the type of thing that often happens in
+plants and is terribly frustrating as it can, and did in this case,
+upset hours of work.</p>
+                <p>Unfortunately
+time did not permit the test to be repeated.&nbsp; However from what
+had already been done, it was possible to make a rough model of the
+process which although probably not highly accurate, was good enough to
+be able to study the process dynamics and then decide on how best to
+control it.&nbsp;</p>
+                <p>The
+model showed two interesting facts.&nbsp;The process gain was 0.000064,
+and the deadtime was 68 seconds.&nbsp;This is very
+significant.&nbsp;The reciprocal of process gain of an integrating
+process is known as the process retention time, which in this case is
+approximately 4.5 hours.&nbsp;If this had been a level loop, it would
+mean that it would take the full tank 4.5 hours to empty with the
+control valve fully open. This is extremely slow.&nbsp;</p>
+                <p>A
+deadtime of 70 seconds compared with 4.5 hours (16,200 seconds) is
+insignificant.&nbsp;Deadtime is the factor that causes instability in a
+process as it introduces phase lag.&nbsp;This means that on a process
+like this one can effectively put any type of tune into the controller
+without worrying too much about it going unstable.&nbsp;This is the
+reason why the plant was getting away with the previous huge gain of
+120.</p>
+                <p>Now
+the problem with a big gain in a controller is that any noise on the PV
+signal is amplified by that gain, and appears on the output.&nbsp;The
+actual signal from most temperature transmitters are generally
+relatively noise free as any random fluctuations or "noise" in the
+actual temperature are effectively well filtered by the thermowell of
+the temperature probe.&nbsp;In this case the signal was relatively
+clean with an average noise amplitude of only about 0.2%.&nbsp;However
+when this is multiplied by 120 it means that the output will have a
+noise amplitude of 24% on it. </p>
+                <p>The
+frequency of the noise was relatively high&nbsp; In general high
+frequency noise like this is virtually completely attenuated in a
+pneumatic actuator, which acts very much as a dampener (or buffer) to
+noise, and the valve does not respond to it.&nbsp;Unfortunately in this
+case the actuator is not pneumatic, but electric, and it will respond
+immediately to fluctuations.&nbsp;To overcome this, one normally puts a
+small deadband around setpoint to try and prevent excessive switching
+and reversals of the motor.&nbsp;However you cannot put a 24% amplitude
+deadband on it, without excessive degradation of the control.</p>
+                <p>One
+tries to keep a balance between control and gain in the
+controller.&nbsp;It's a real trade off situation.&nbsp;In this case it
+was decided that a gain of 50 in the controller was really needed to
+give good control.&nbsp;However it was killing the valve.&nbsp;The
+actuator was "doing its nut".&nbsp;The plant personnel told me that
+maintenance on these expensive actuators had become a huge and very
+expensive problem.&nbsp;This was when they had a gain of 120.&nbsp;Even
+with a gain of 50 movement was excessive.&nbsp;Therefore we decided to
+make use of a lag filter to try to keep actuator fluctuations
+down.&nbsp;A filter time constant of 50 seconds was eventually decided
+on, which sound huge, but is actually negligible on a process like this.</p>
+                <p>Figure
+2 shows how the filter cut back on controller output fluctuations, and
+also what a nice response was being obtained with the final tuning.</p>
+                <p><img id="Picture3" src="case_history_83_files/cashis83Fig_2.jpg" alt="cashis83Fig 2" title="cashis83Fig 2" align="top" border="0" height="444" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>In the <a href="http://www.controlloop.co.za/Case_histories/Case_History_84/case_history_84.html">second part</a> of this article, another very interesting temperature loop will be discussed, as will a level loop.</p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

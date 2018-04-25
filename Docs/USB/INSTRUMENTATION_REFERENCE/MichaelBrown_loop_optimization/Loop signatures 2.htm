@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0077)http://www.controlloop.co.za/Articles/Loop_signatures_2/loop_signatures_2.htm -->
+<HTML><HEAD><TITLE>Loop signatures 2</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 2_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 2_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 2_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 2_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 2_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=699><IMG height=1 src="Loop signatures 2_files/clearpixel.gif" 
+      width=699 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 2_files/clearpixel.gif" 
+      width=10 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 2_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 2_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 2_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=11></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=699>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000>Loop Problem 
+      Signatures No 2</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>Problem 
+      "signatures" - the two classes of processes</FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>This article will 
+      discuss the two classes of processes called self-regulating and 
+      integrating (or ramping) processes.
+      <P>This subject is absolutely vital to regulatory control but strangely is 
+      seldom taught on control courses, and in fact there are very few 
+      instrumentation and control personnel who have even heard of this subject.
+      <P>From the control point of view, every process falls into the one or the 
+      other of the two classes.&nbsp; They behave, and are tuned very 
+      differently.&nbsp; It is essential that one must fully understand the 
+      difference if successful optimisation is to be achieved.
+      <P>Figure 1 illustrates the basic difference in responses between the two 
+      classes of processes. </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+1</FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=399 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture40 height=299 alt="Figure 1" 
+            src="Loop signatures 2_files/loopsig2fig1.gif" width=399 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Self-regulating 
+      processes are characterised by an open loop response to a step change that 
+      rises or falls to some new and constant value after the loop dynamics have 
+      died out.&nbsp; Integrating processes are characterized by an open loop 
+      response to a step input change that ramps continuously at a constant rate 
+      after the loop dynamics have died out.
+      <P>A typical example of a self-regulating process is the flow process 
+      shown in Figure 2.&nbsp; The process variable (PV) effectively follows the 
+      movements of the process demand (PD).</FONT> 
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+2</FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=399 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture41 height=299 alt="Figure 2" 
+            src="Loop signatures 2_files/loopsig2fig2.gif" width=399 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Integrating processes 
+      however, which are typified by level control processes as shown in Figure 
+      3, have a very different relationship between PD and PV.</FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+3</FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=398 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture42 height=299 alt="Figure 3" 
+            src="Loop signatures 2_files/loopsig2fig3.gif" width=398 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>All integrating 
+      processes rely on balancing the input and output of the process to keep 
+      the PV constant.&nbsp; In the case of the level control, the PV remains 
+      constant when the PD has the valve at such a position so that the flows in 
+      and out of the tank are equal.&nbsp; When this condition exists, the 
+      process is said to be balanced, and the PD and actual valve stem position 
+      are said to be at the balance point. 
+      <P>If the PD is stepped away from the balance point, the inflow and 
+      outflow will now differ, and the level will either move up or down, as the 
+      case may be, in the form of a constant ramp.&nbsp; If the PD is left at 
+      the same place, the ramp will continue until the tank empties, or 
+      overflows.&nbsp; 
+      <P>This means that an integrating process is inherently unstable, because 
+      if left in manual, the balance point will change sooner or later due to 
+      load changes, and the process will tend to "run away".&nbsp; Therefore 
+      integrating processes cannot be left unattended in manual for too long, 
+      and in fact must really be controlled in automatic.&nbsp; Self regulating 
+      processes on the other hand are inherently stable and can be left in 
+      manual. 
+      <P>In view of this one could query why self regulating processes need to 
+      be controlled at all.&nbsp; The main reason that controllers are used for 
+      the vast majority of self regulating processes is to cope with load 
+      changes.&nbsp; (Load changes can be defined as a change in conditions 
+      external to the loop causing the PV to change, and to move away from 
+      set-point). Of course in some cases the controller is there to make the 
+      process follow setpoint changes.
+      <P>It can, in certain instances, be very difficult to decide in which 
+      class a process should belong, as some processes appear to be both 
+      integrating and self regulating&nbsp; For example take the case of a level 
+      process similar to that illustrated in Figure 3, but without the pump at 
+      the bottom of the tank.&nbsp; Such a process is referred to as a "gravity 
+      fed" tank.&nbsp; If the level in this tank was in balance and the control 
+      valve was then opened a bit, the level would then start ramping down in 
+      the typical integrating fashion.&nbsp; However as it drops the hydrostatic 
+      head above the outlet pipe would&nbsp; decrease, thus causing the flow to 
+      decrease as well.&nbsp; The ramp rate would also decrease, and eventually 
+      if the valve had not been stepped too far, the level would balance itself 
+      out again, before the tank emptied.&nbsp; The response on the PV would 
+      actually look in the long term like a self regulating processes.&nbsp; So 
+      what class of process does it actually belong to?
+      <P>The rule of thumb is:&nbsp; "You tune a process the way it starts 
+      reacting".&nbsp; So if a process starts out as integrating (like the 
+      gravity fed tank), and then turns into a self regulating process, you tune 
+      it as an integrating process.&nbsp; If it starts out as a self regulating 
+      process, and then becomes integrating, then it is tuned as a self 
+      regulating process.
+      <P>Other rules of thumb are that flows are always self regulating, and 
+      levels integrating.&nbsp; One exception on levels, is controlling the head 
+      over a weir, which is self regulating.&nbsp; It can be sometimes quite 
+      difficult to decide into which class of processes pressures and 
+      temperature processes fall.&nbsp; One way to decide is to look at the 
+      response of the processes to changes when the loop is in manual or in 
+      automatic.&nbsp; Typical responses are shown in Figure 4.</FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+4</FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=399 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture43 height=299 alt="Figure 4" 
+            src="Loop signatures 2_files/loopsig2fig4.gif" width=399 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The importance of 
+      understanding the subject cannot be over-stressed if you wish to 
+      successfully optimise controls of processes.&nbsp; Most people have a 
+      basic feel of how self regulating processes operate, and how to go about 
+      tuning them.&nbsp; However in general very few people have any 
+      understanding, and even more importantly, any feel on how to tune 
+      integrating loops.
+      <P>In most plants I go into the integrating loops are in a shocking way, 
+      mostly being so badly tuned that they exhibit very slow cyclic responses 
+      to setpoint or load changes.&nbsp; Many are in a continuous&nbsp; very 
+      slow cycle.&nbsp; I was quite amused recently, when after an in-plant 
+      course in one of South Africa's largest petro-chemical refineries, the 
+      chief control engineer, a man with high qualifications, and many years of 
+      experience behind him, admitted to me after the course, that the section 
+      on optimising integrating loops had been a real eye opener to his staff 
+      and to him, and that he now agreed that probably not a single one of the 
+      many hundreds of level loops in his plant had been tuned correctly.
+      <P>Figure 5 illustrates a typical example of an "as found" level control 
+      response to a step change in setpoint, and Figure 6, the response on the 
+      same loop&nbsp; after proper tuning for "tight" control. </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+5</FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=474 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture44 height=318 alt="Figure 5" 
+            src="Loop signatures 2_files/loopsig2fig5.gif" width=474 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+6</FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=474 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture45 height=317 alt="Figure 6" 
+            src="Loop signatures 2_files/loopsig2fig6.gif" width=474 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>It should be noted 
+      that not all levels are tuned this way, as in some processes the level 
+      control is detuned to prevent the control valve from moving around too 
+      much, but this is the subject for another discussion.
+      <P></FONT><A 
+      href="http://www.controlloop.co.za/Articles/Loop_signatures_3/loop_signatures_3.htm"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Loop Problem Signatures No 
+      3</FONT></A><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-1><BR></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Michael Brown is a 
+      specialist in control loop optimisation, with many years of experience in 
+      process control instrumentation. His main activities are consulting, and 
+      teaching practical control loop analysis and optimisation. He gives 
+      training courses which can be held in clients' plants, where students can 
+      have the added benefit of practising on live loops. His work takes him to 
+      plants all over South Africa, and also to other countries. He can be 
+      contacted at: 
+      <P>Tel (011) 486-0567 Fax (011) 646-2385 E-Mail: </FONT></B><A 
+      href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton25',1)" 
+            onmouseout="F_roll('NavigationButton25',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton25 height=19 alt=Home 
+            src="Loop signatures 2_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton25></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton26',1)" 
+            onmouseout="F_roll('NavigationButton26',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton26 height=19 alt=Training 
+            src="Loop signatures 2_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton26></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton27',1)" 
+            onmouseout="F_roll('NavigationButton27',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton27 height=19 alt=Consulting 
+            src="Loop signatures 2_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton27></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton28',1)" 
+            onmouseout="F_roll('NavigationButton28',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton28 height=19 alt=Protuner 
+            src="Loop signatures 2_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton28></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton29',1)" 
+            onmouseout="F_roll('NavigationButton29',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton29 height=19 alt="Contact us" 
+            src="Loop signatures 2_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton29></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton30',1)" 
+            onmouseout="F_roll('NavigationButton30',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton30 height=19 alt=Articles 
+            src="Loop signatures 2_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton30></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 2_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

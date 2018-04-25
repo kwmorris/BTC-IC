@@ -1,0 +1,284 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: trend.eps
+%%Creator: Xcircuit v2.0
+%%CreationDate: Sat Jan 25 10:37:19 2003
+%%Pages: 1
+%%BoundingBox: 68 68 253 182
+%%DocumentNeededResources: font Helvetica font Times-Roman 
+%%EndComments
+%%BeginProlog
+%
+%  PostScript prolog for output from xcircuit
+%  Version: 2.0
+%
+%  Electrical circuit (and otherwise general) drawing program
+%
+%  Written by Tim Edwards 8/5/93--2/25/99  (tim@bach.ece.jhu.edu)
+%  The Johns Hopkins University
+%
+%%BeginResource: procset XCIRCproc 2.0 2
+% supporting definitions --- these are the primary xcircuit types.
+
+/XCIRCsave save def
+/topmat matrix currentmatrix def
+
+/fontslant { /slant exch def [1 0 slant 1 0 0] 
+    exch findfont exch makefont dup length dict /ndict exch def
+    { 1 index /FID ne { ndict 3 1 roll put } { pop pop } ifelse } forall
+    ndict definefont pop} def
+/cf { dup type /realtype eq {40 mul /fscale exch def} if dup /xfont exch def
+   findfont fscale scalefont setfont } def
+/Ss { gsave 0.67 dup scale gsave mty neg rmoveto
+   glevel 1 add /glevel exch def } def
+/ss { gsave 0.67 dup scale gsave mty 0.5 mul rmoveto
+   glevel 1 add /glevel exch def } def
+/ns { currentpoint transform   % preserve x position!
+   glevel {grestore} repeat /glevel 0 def
+   itransform pop currentpoint pop sub 0 rmoveto } def
+/ul { showflag 1 eq { gsave 
+   currentpoint topmat setmatrix 0 0 moveto 2 index stringwidth pop (_)
+   false charpath flattenpath pathbbox grestore exch pop 1 index
+   sub setlinewidth exch pop currentpoint 3 -1 roll add moveto 0
+   rlineto stroke moveto } if } def
+/ol { showflag 1 eq { gsave gsave
+   currentpoint topmat setmatrix 2 index stringwidth pop 3 index
+   true charpath flattenpath pathbbox grestore exch pop
+   exch pop topmat setmatrix (_) true charpath pathbbox grestore
+   exch pop 1 index sub setlinewidth exch pop currentpoint
+   exch 4 1 roll exch sub add moveto pop 0 rlineto stroke
+   moveto } if } def
+/stW { gsave true charpath flattenpath pathbbox pop exch pop sub
+   grestore } def
+/bs { stW 0 rmoveto } def
+/pspc 0 def
+/qS { (aa) stW (a a) stW sub 4 div 0 rmoveto } def
+/hS { qS qS } def
+/textx { dup 1 add copy 0 exch { exch dup type /stringtype eq
+	{stringwidth pop add}{exec} ifelse } repeat neg ns } def
+/mty { 0 topmat setmatrix (A) true charpath flattenpath pathbbox exch
+   pop exch sub exch pop neg grestore } def
+/texty { gsave 2 copy pop exec mty } def
+/tcenter { textx grestore 0.5 mul 0 rmoveto } def
+/tright  { textx grestore fspc sub 0 rmoveto } def
+/tmiddle { texty 0.5 mul rmoveto } def
+/ttop    { texty fspc sub rmoveto } def
+/tshow {{ dup type /stringtype eq {show}{exec} ifelse} repeat ns } def
+
+/label  { gsave translate 0 0 moveto rotate /just exch def just 16 and 0 gt
+	{0 1 dtransform gsave pagemat setmatrix idtransform exch grestore
+	1 0 dtransform gsave pagemat setmatrix idtransform exch grestore
+	dup 0 eq {pop mul 0 gt} {3 1 roll pop pop 0 lt} ifelse
+	{-1 /just just dup 3 and 1 ne {3 xor} if def} {1} ifelse exch 0 lt
+	{-1 /just just dup 12 and 4 ne {12 xor} if def} {1} ifelse scale } if
+	/glevel 0 def /showflag 0 def /fspc pspc def
+	just 1 and 0 gt {gsave just 2 and 0 gt {tright}{tcenter} ifelse}
+	{fspc 0 rmoveto} ifelse
+	just 4 and 0 gt {just 8 and 0 gt {ttop}{tmiddle} ifelse}
+	{0 fspc rmoveto} ifelse
+	/showflag 1 def tshow grestore } def
+/pinlabel { hlevel 0 eq { /pspc 20 def label /pspc 0 def }
+	{ pop pop pop pop {pop} repeat } ifelse } def
+/pinglobal { pinlabel } def
+/infolabel { pinlabel } def
+
+/begingate { /hlevel hlevel 1 add def gsave translate 0 0 moveto dup 0 lt
+	{neg 1 sub -1 1 scale} if rotate dup scale } bind def
+/makeparm  {3 string cvs dup length 1 add string /tstr exch def tstr exch
+	1 exch putinterval tstr 0 (v) putinterval tstr cvn} bind def
+/beginparm { -1 1 {makeparm exch def} for
+	dup type /arraytype eq { aload length -1 1 {makeparm exch def}
+	for } if begingate } bind def
+/endgate { /hlevel hlevel 1 sub def grestore } bind def
+
+/hlevel 0 def
+/tmpa [1 0 0 1 0 0] def
+/gar {8 8 true tmpa {<c0 c0 00 00 0c 0c 00 00>} imagemask} bind
+{8 8 true tmpa {<30 70 60 02 03 07 06 20>} imagemask} bind
+{8 8 true tmpa {<0c 1e 1e 0c c0 e1 e1 c0>} imagemask} bind
+{8 8 true tmpa {<0f 0f 0f 0f f0 f0 f0 f0>} imagemask} bind
+{8 8 true tmpa {<3f f3 e1 e1 f3 3f 1e 1e>} imagemask} bind
+{8 8 true tmpa {<df cf 8f 9f fd fc f8 f9>} imagemask} bind
+{8 8 true tmpa {<ff 3f 3f ff ff f3 f3 ff>} imagemask} bind 7 array astore def
+/ppaint { gsave clip tmpa dup setmatrix pathbbox neg exch neg 4 2 roll
+  neg 4 -1 roll 2 copy gt {exch} if 8 div ceiling 8 mul 4 2 roll neg 2 copy
+  gt {exch} if 8 div ceiling 8 mul 3 -1 roll -8 5 -1 roll
+  { 3 index exch 5 exch put dup -8 3 index { 3 index
+  exch 4 exch put 3 index exec } for } for pop pop pop pop grestore } bind def
+/setstyles {
+  currentlinewidth mul setlinewidth /style exch def
+  style 1 and 0 gt not {closepath} if
+  style 2 and 0 gt {currentlinewidth 4 mul dup 2 array astore 0 setdash} if 
+  style 4 and 0 gt {0.5 currentlinewidth 4 mul 2 array astore 0 setdash} if 
+  style dup 256 ge exch 480 lt and { gsave 1 setgray eofill grestore } if
+  style 16 and 0 gt { gsave style 224 and -5 bitshift dup 7 lt
+	{gar exch get ppaint} { pop eofill } ifelse grestore } if
+  style 8 and 0 gt { newpath } { stroke } ifelse grestore } def
+/scb { gsave setrgbcolor } bind def  /sce { grestore } bind def
+
+/polygon { gsave /num exch def moveto num 1 sub {lineto} repeat setstyles } def
+/xcarc   { gsave newpath arc setstyles } def
+/elb { matrix currentmatrix 7 -1 roll 7 -1 roll translate 5 1 roll 4 -1 roll
+	3 index div 1 scale } def
+/ele { 0 4 1 roll 0 4 1 roll } bind def
+/ellipse { gsave elb newpath ele arc setmatrix setstyles } def
+/pellip  { elb ele arc setmatrix } def
+/nellip  { elb ele arcn setmatrix } def
+/spline  { gsave moveto curveto setstyles } def
+/polyc   { {lineto} repeat } bind def
+/beginpath { gsave moveto } bind def
+/endpath { setstyles } bind def
+/bop	 { 1 setlinecap 0 setlinejoin 6 setmiterlimit 0 setgray } def
+/insertion {/PSobj save def /showpage {} def bop translate} def
+/end_insert {PSobj restore} def
+/setpagemat {/pagemat matrix currentmatrix def} def
+/inchscale  {setpagemat 0.375 mul dup scale} def
+/cmscale    {setpagemat 0.35433071 mul dup scale} def
+
+%%EndResource
+%%EndProlog
+
+% XCircuit output starts here.
+
+/arrowhead {
+% -12 -32 24 36 bbox
+begingate
+8 -28 beginpath
+3 -18 3 -15 0 0 curveto
+-3 -15 -3 -18 -8 -28 curveto
+-2 -26 2 -26 8 -28 curveto
+249  1.00 endpath
+endgate
+} def
+
+/arrow {
+% -12 -40 24 80 bbox
+begingate
+1  0.80 0 -40 0 20 2 polygon
+1.00 0 0 40 arrowhead
+endgate
+} def
+
+%%Page: 8400x020.eps 1
+%%PageOrientation: Portrait
+/pgsave save def bop
+% 1087 799 offsets
+0.4000 inchscale
+2.6000 setlinewidth
+
+0.800 0.800 0.800 scb
+1  1.00 607 1183 607 543 2 polygon
+1  1.00 639 1183 639 543 2 polygon
+1  1.00 671 1183 671 543 2 polygon
+1  1.00 703 1183 703 543 2 polygon
+1  1.00 735 1183 735 543 2 polygon
+1  1.00 767 1183 767 543 2 polygon
+1  1.00 799 1183 799 543 2 polygon
+1  1.00 831 1183 831 543 2 polygon
+1  1.00 863 1183 863 543 2 polygon
+1  1.00 895 1183 895 543 2 polygon
+1  1.00 927 1183 927 543 2 polygon
+1  1.00 959 1183 959 543 2 polygon
+1  1.00 991 1183 991 543 2 polygon
+1  1.00 1023 1183 1023 543 2 polygon
+1  1.00 1055 1183 1055 543 2 polygon
+1  1.00 1087 1183 1087 543 2 polygon
+1  1.00 1119 1183 1119 543 2 polygon
+1  1.00 1151 1183 1151 543 2 polygon
+1  1.00 1183 1183 1183 543 2 polygon
+1  1.00 1215 1183 1215 543 2 polygon
+1  1.00 1247 1183 1247 543 2 polygon
+1  1.00 1279 1183 1279 543 2 polygon
+1  1.00 1311 1183 1311 543 2 polygon
+1  1.00 1343 1183 1343 543 2 polygon
+1  1.00 1375 1183 1375 543 2 polygon
+1  1.00 1407 1183 1407 543 2 polygon
+1  1.00 1439 1183 1439 543 2 polygon
+1  1.00 1471 1183 1471 543 2 polygon
+1  1.00 1503 1183 1503 543 2 polygon
+1  1.00 1535 1183 1535 543 2 polygon
+1  1.00 1567 1183 1567 543 2 polygon
+1  1.00 1599 1183 1599 543 2 polygon
+1  1.00 1631 1183 1631 543 2 polygon
+1  1.00 1663 1183 1663 543 2 polygon
+1  1.00 575 1183 1663 1183 2 polygon
+1  1.00 575 1151 1663 1151 2 polygon
+1  1.00 575 1119 1663 1119 2 polygon
+1  1.00 575 1087 1663 1087 2 polygon
+1  1.00 575 1055 1663 1055 2 polygon
+1  1.00 575 1023 1663 1023 2 polygon
+1  1.00 575 991 1663 991 2 polygon
+1  1.00 575 959 1663 959 2 polygon
+1  1.00 575 927 1663 927 2 polygon
+1  1.00 575 895 1663 895 2 polygon
+1  1.00 575 863 1663 863 2 polygon
+1  1.00 575 831 1663 831 2 polygon
+1  1.00 575 799 1663 799 2 polygon
+1  1.00 575 767 1663 767 2 polygon
+1  1.00 575 735 1663 735 2 polygon
+1  1.00 575 703 1663 703 2 polygon
+1  1.00 575 671 1663 671 2 polygon
+1  1.00 575 639 1663 639 2 polygon
+1  1.00 575 607 1663 607 2 polygon
+1  1.00 575 575 1663 575 2 polygon
+sce
+1  1.00 575 1183 575 543 1663 543 3 polygon
+(Time) {/Helvetica 1.000 cf} 2 16 0 1023 479 label
+1.00 270 1167 495 arrow
+(0) {/Times-Roman 0.500 cf} 2 16 0 551 535 label
+(5) {/Times-Roman 0.500 cf} 2 16 0 551 567 label
+(10) {/Times-Roman 0.500 cf} 2 16 0 543 599 label
+(15) {/Times-Roman 0.500 cf} 2 16 0 543 631 label
+(20) {/Times-Roman 0.500 cf} 2 16 0 543 663 label
+(25) {/Times-Roman 0.500 cf} 2 16 0 543 695 label
+(30) {/Times-Roman 0.500 cf} 2 16 0 543 727 label
+(35) {/Times-Roman 0.500 cf} 2 16 0 543 759 label
+(40) {/Times-Roman 0.500 cf} 2 16 0 543 791 label
+(45) {/Times-Roman 0.500 cf} 2 16 0 543 823 label
+(50) {/Times-Roman 0.500 cf} 2 16 0 543 855 label
+(55) {/Times-Roman 0.500 cf} 2 16 0 543 887 label
+(60) {/Times-Roman 0.500 cf} 2 16 0 543 919 label
+(65) {/Times-Roman 0.500 cf} 2 16 0 543 951 label
+(70) {/Times-Roman 0.500 cf} 2 16 0 543 983 label
+(75) {/Times-Roman 0.500 cf} 2 16 0 543 1015 label
+(80) {/Times-Roman 0.500 cf} 2 16 0 543 1047 label
+(85) {/Times-Roman 0.500 cf} 2 16 0 543 1079 label
+(90) {/Times-Roman 0.500 cf} 2 16 0 543 1111 label
+(95) {/Times-Roman 0.500 cf} 2 16 0 543 1143 label
+(100) {/Times-Roman 0.500 cf} 2 16 0 535 1175 label
+(%) {/Times-Roman 1.000 cf} 2 16 0 479 863 label
+1.000 0.000 0.000 scb
+1  1.00 575 863 1663 863 2 polygon
+(SP) {/Helvetica 1.000 cf} 2 16 0 607 831 label
+sce
+0.000 0.000 1.000 scb
+1  1.00 575 881 585 883 593 881 613 883 625 879 631 881 643 883 653 881 671 883 
+687 881 697 845 707 847 723 845 741 847 771 845 777 843 779 845 795 847 811 843 
+821 845 843 847 857 881 871 881 877 879 881 883 893 883 895 881 903 881 915 879 
+927 883 937 881 953 883 957 881 971 881 971 879 985 881 991 881 999 843 1013 
+841 1029 841 1031 843 1049 845 1065 843 1087 841 1093 843 1123 843 1125 845 
+1133 847 1145 883 1165 881 1187 877 1209 881 1223 879 1241 881 1251 881 1255 
+879 1261 881 1283 881 1289 845 1317 843 1323 845 1349 845 1355 845 1369 843 
+1399 845 1405 843 1421 845 1433 881 1441 881 1453 881 1481 879 1493 883 1511 
+881 1515 879 1519 881 1535 881 1551 879 1569 881 1581 881 1587 841 1607 845 
+1623 841 1635 845 1655 845 1663 847 85 polygon
+sce
+0.627 0.125 0.941 scb
+1  1.00 575 767 585 763 591 763 611 757 623 753 629 753 639 747 649 747 661 741 
+673 741 677 737 685 733 689 735 701 743 715 745 729 751 741 759 769 767 787 777 
+809 783 831 793 845 797 855 795 869 787 883 785 889 779 909 771 925 763 943 759 
+951 753 965 745 981 741 989 735 995 737 1005 743 1021 747 1033 755 1065 767 
+1087 777 1101 787 1125 793 1131 797 1141 797 1149 793 1163 785 1193 773 1215 
+763 1233 755 1259 745 1267 739 1277 735 1283 735 1289 737 1297 743 1315 753 
+1337 759 1357 771 1383 781 1395 789 1421 797 1425 797 1433 797 1439 793 1451 
+789 1473 779 1499 771 1531 755 1549 751 1555 743 1577 737 1587 737 1603 745 
+1633 757 1655 761 1663 767 75 polygon
+(Output) {/Helvetica 1.000 cf} 2 16 0 703 703 label
+sce
+0.000 0.000 1.000 scb
+(PV) {/Helvetica 1.000 cf} 2 16 0 895 895 label
+sce
+pgsave restore showpage
+
+%%Trailer
+XCIRCsave restore
+%%EOF

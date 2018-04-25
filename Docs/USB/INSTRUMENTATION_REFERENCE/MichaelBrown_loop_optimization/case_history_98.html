@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+<title>Case History 98</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Generator" content="Microsoft FrontPage 4.0">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<style>
+</style>
+</head><body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory93Layout, 750, 2039))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="63"><img id="Picture1" src="case_history_98_files/Michael_Brown.gif" alt="" width="750" height="63" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="117"><img src="case_history_98_files/clearpixel.gif" alt="" width="117" height="1" border="0"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_98_files/clearpixel.gif" alt="" width="116" height="1" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="120" height="2"><img src="case_history_98_files/clearpixel.gif" alt="" width="120" height="1" border="0"></td>
+            <td>
+              <p align="center"><a href="http://www.controlloop.co.za/Case_histories/CDpromo.html">Educational
+              CDs</a></p></td>
+            <td width="119"><img src="case_history_98_files/clearpixel.gif" alt="" width="119" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="28"><img src="case_history_98_files/clearpixel.gif" alt="" width="750" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control
+                Loop Case History 9</span><span style="font-size: small; color: rgb(204, 0, 0);">8</span></b></p>
+                <p><b>FLOW SIGNAL REVEALS ALL<span style="font-size: 14pt; text-decoration: none;" lang="EN-ZA"><o:p>
+                </o:p></span></b></p>
+    
+		<p class="MsoBodyText">I was recently doing some work with some optimisation trainees in a paper mill, and we&nbsp; encountered several interesting things.  The first of these was when working on an important&nbsp; steam pressure control loop that had not been performing satisfactorily.</p>
+
+                <p class="MsoBodyText" align="center"><img src="case_history_98_files/Fig1.jpg" width="600" height="446" border="0"></p>
+                <p class="MsoBodyText" align="center"><i>Fig 1</i></p>
+   
+<p class="MsoBodyText"> Figure 1 shows an open loop test where step changes on the controller output do not result in very satisfactory and repeatable steps on the steam pressure (process variable).  The test showed little except that the pressure was not responding properly to changes in the controller&#8217;s output.</p>
+
+<p>Fortunately there was a steam flow indicator in series with the valve, so the test was repeated this time also with a recording of the steam flow.  This is shown in Figure 2.</p>
+
+                <p class="MsoBodyText" align="center"><img src="case_history_98_files/Fig2.jpg" width="600" height="446" border="0"></p>
+                <p class="MsoBodyText" align="center"><i>Fig. 2</i></p>
+
+		<p class="MsoBodyText"> The reasons for the poor steam pressure performance were immediately highlighted by the flow recording which revealed three really important problems:
+
+<p>1.  The flow dropped to zero when the controller output was at 60%.  Providing the flowmeter was correctly calibrated, this would show that the valve stroking has not been calibrated correctly.  This system has a split range system in it for a pressurising stage, and a depressurising stage.  The valve under the test should have started opening at a controller output of 50%.  A large gap in a split range system could mean huge bumps in the control, as the valves swap over..</p>
+
+<p>2 and 3: Equal step changes in the controller output did not result in equal step changes in the flow and two conclusions can be drawn from an examination of the graphs:<br>
+                a.	The size of the steps in flow starting from zero were initially quite small but&nbsp;<br>
+                increased as the valve opened.  This is a good example of non-linear installed&nbsp;<br>
+                characteristics.&nbsp;<br>
+                b.	The step sizes increased until the flow reached about 40%, and then they&nbsp;<br>
+                decreased rapidly until a maximum flow was obtained at about 48%.  This is&nbsp;<br>
+                sometimes referred to as &#8220;utility saturation&#8221; which is when a maximum is&nbsp;<br>
+                reached at a particular valve opening, and above that no further increase can&nbsp;<br>
+                be obtained.  This could be due to several factors, the most likely being that&nbsp;<br>
+                the pump could not deliver any more pressure.  In a case like this it is&nbsp;<br>
+                important to ascertain if this is always the case, or if possibly under some&nbsp;<br>
+                other conditions, higher flows could be obtained.  If in fact one could never&nbsp;<br>
+                get higher flows under all load and process conditions, then a high limit&nbsp;<br>
+                should be placed on the controller&#8217;s output to prevent the it from opening the&nbsp;<br>
+                valve further into a region where it can no further affect on the process.  This&nbsp;<br>
+                will prevent mechanical and integral wind-up (see later).<br>
+                The most interesting point of this exercise is that analysing the actual steam pressure&nbsp;<br>
+		response to changes in the controller output did little to reveal the problems outlined above.&nbsp;</p>
+
+<p>It would have been extremely difficult if not impossible to have diagnosed all the problems if there had not been a measurement showing what the flow though the valve was doing.  I believe it is really important on critical loops with a relatively slow response to have a measurement of the flow through the valve so one can really see what is going on in the loop.
+
+<p>Of course, if you do have such a flowmeter, then one should also use a cascade secondary flow control loop, so that the critically important primary controller (in this case the steam pressure controller) then asks the faster secondary controller to ensure that the correct amount of process input (in this case steam) is actually passed into the process.  It effectively goes very far down the line in eliminating valve problems from the primary loop.  In this example, it would have taken care of the non-linearity, and incorrect valve stroking.  It would also have made it very easy to see the utility saturation problem.</p>
+
+<p>Another interesting problem that we came across during the training, was a good example of controller wind-up.  Figure 3 shows a closed loop test on a pulp flow.  At the start of the test it can be seen that the flow was slightly below setpoint, and the controller output was at 100%.&nbsp;</p>
+
+                <p class="MsoBodyText" align="center"><img src="case_history_98_files/Fig3.jpg" width="600" height="446" border="0"></p>
+                <p class="MsoBodyText" align="center"><i>Fig. 3</i></p>
+
+<p class="MsoBodyText"> The setpoint was then reduced by 5%.  The flow was now above setpoint but didn&#8217;t start coming down quickly as could be expected.  The controller output did start ramping down very slowly.  When the output reached about 75% the flow then also started reducing very slowly.  A second setpoint change was made and the flow this time responded, albeit relatively slowly.</p>
+
+                <p class="MsoBodyText" align="center"><img src="case_history_98_files/Fig4.jpg" width="600" height="448" border="0"></p>
+                <p class="MsoBodyText" align="center"><i>Fig. 4</i></p>
+
+<p class="MsoBodyText"> The open loop test shown in Figure 4 is very interesting.  During the first half of the test where the controller output was fairly low down, the equal step-changes in the controller output resulted in fairly good responses in the flow.  However once the output increased past about 60%, the flow response started overshooting, and then coming down again slowly. Also the higher the output went the smaller the flow steps and the larger the reversal after the overshoot.  Eventually at about 80% output, it became impossible to actually increase the flow.</p>
+
+<p>There could be several reasons for the strange responses seen at higher flows.  I have seen similar things in the past on flows of high density pulps, due to dewatering on step changes, but in this case where the pulp was of lower density, it is very likely that there is a problem with the valve positioner (see below).  Again there would also appear to a utility saturation problem as the flow could not be increased past a certain point</p>
+
+                <p class="MsoBodyText" align="center"><img src="case_history_98_files/Fig5.jpg" width="600" height="446" border="0"></p>
+                <p class="MsoBodyText" align="center"><i>Fig. 5</i></p>
+
+
+<p class="MsoBodyText"> Figure 5 shows a &#8220;final&#8221; closed loop test with good, but fairly slow tuning.  It can be seen that the loop is cycling.  Most people immediately blame closed loop cycling on bad tuning. They then slow down the tuning until the cycle stops.  This generally works, but remember that the ultimate way to stop cycling is to put the controller into manual.  So effectively what these people are doing, is detuning the controller towards manual.  This stops the cycle but also destroys the effectiveness of the control.&nbsp;</p>
+
+<p> In fact what they do not realise is that cycling can be caused by many factors other than unstable tuning.  One way to check this is to ascertain the Ultimate Period of the loop, as loops with unstable tuning will generally cycle close to the Ultimate Frequency.  In this case the loop is a flow loop, and has an Ultimate Period of about 6 seconds.  The period of the actual cycle is about 24 seconds, so it is not poor tuning.  Another thing to look at is the &#8220;waveform&#8221; of the cycle.  Ultimate cycling is pretty close to sinusoidal waveforms on both the PV and the PD (controller output).&nbsp;</p>
+
+<p>In this case there is an interesting pattern on the cycles.  The PV has an almost &#8220;squarish&#8221; waveform, whilst the PD is in a very definite &#8220;saw-tooth&#8221; waveform.  These patterns are invariably due to the valve sticking on reversals, and the controller then integrating the error to try and get the valve back to the correct position.  This is sometimes referred to as a &#8220;stick-slip&#8221; cycle, and it is mainly found on fast self-regulating processes like flows.</p>
+
+<p>Stick-slip cycling is normally caused by one of two things.  The first is an inherent &#8220;stick-slip&#8221; characteristic in certain valves.  This has been covered in detail in Loop Signature Part 1-8 available outside Southern Africa on my CD &#8220;Basic Trouble Shooting and Loop Tuning. The second reason is the cycle is caused by positioner problems particularly when the positioner causes an overshoot on a step change.</p>
+
+<p>This is almost definitely the reason for the cycle in this case, and the positioner needs checking..</p>
+
+<p>In the next Case History which should be published in two months time, we shall look at some other interesting problems encountered in the same plant.</p>
+
+
+                <p align="left"><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p align="left"><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@mweb.co.za"><b><span style="font-size: xx-small;">michael.brown@mweb.co.za</span></b></a></p>
+    <center>
+                <p>&nbsp;</p>
+            </center></td>
+        </tr>
+    </tbody></table>
+</center></body></html>

@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 92</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory92Layout, 750, 4953))" style="text-align: center;" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_92_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_92_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_92_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_92_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_92_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_92_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 92</span></b></p>
+                <p><b>THE CONTROLLER HAS GONE OUT OF TUNE!</b></p>
+                <p>"The
+controller has gone out of tune!" How often does this plaintiff cry
+ring out in plants when a feedback loop ceases to perform well?&nbsp;
+Immediately everyone in the plant blames the controller's tuning. I
+believe this is one of the worst of the many common fallacies that
+exist when dealing with peoples' perceptions of feedback control.</p>
+                <p>It
+seems pretty obvious to me that it would be almost impossible for a
+controller's tuning to change by itself.&nbsp; Its not like the tuning
+of a string instrument, which can change with time and with differing
+ambient conditions. Tuning settings are just numerals generally
+inserted in registers in the software, and unless the computer system
+has gone "on the blink" they cannot just change by themselves.&nbsp;
+Therefore if the control was working well and then suddenly the control
+deteriorates, then something other than the tuning must have changed in
+the loop.</p>
+                <p>Now
+a controller is tuned to match the dynamics of the total process, and
+"the total process" refers to everything in the loop external to the
+controller. Apart from the actual plant equipment making up the
+process, this also includes the valve and the measuring transmitter
+system. From experience, generally over 80% of problems arising in
+loops are due to valve problems. However problems are also sometimes
+found in the measuring system, and sometimes something may have changed
+in the actual process. </p>
+                <p>When a problem occurs in a control loop that was previously working well, the golden rules are:</p>
+                <p>First
+check the valve. If that is fine, then check the measuring system, and
+if there is no problem there, then check the process. Never ever change
+the tuning unless there is a good and valid reason to do so. In fact,
+in one plant I have been dealing with, it requires management
+permission in writing to adjust tuning, and this is only granted if
+sufficient justification has been proved to exist. </p>
+                <p>The examples given in this
+article exhibit five loops with problems that I encountered in a
+distillation plant where I recently performed some optimisation.&nbsp;
+In all of these cases, the people in the plant were either completely
+unaware of the problems that existed, or else thought they were due to
+bad tuning. The first few examples show some of the control problems
+that can arise from excessive valve hysteresis.&nbsp; </p>
+                <p>Hysteresis
+in valves has been extensively dealt with in the Part 1 Loop Signature
+series (No. 7), and to summarise, hysteresis is generally either caused
+by excessive static friction, or by mechanical play, or by a
+combination of both. Figure 1 illustrates how hysteresis is determined.
+In general a valve should not have hysteresis exceeding 1%.</p>
+                <p><img id="Picture2" src="case_history_92_files/cashis_92_Fig1.jpg" alt="cashis 92 Fig1" title="cashis 92 Fig1" align="top" border="0" height="365" hspace="0" vspace="0" width="550"></p>
+                <p><i>Figure 1</i></p>
+                <p>Hysteresis
+has different effects on self-regulating processes, and on integrating
+processes. In the former class of processes it slows down the control
+and increases the control variance, but it does not cause continuous
+cycling. In the latter case of integrating processes, continuous
+cycling will always be encountered, except in the rare instances where
+the I (integral) term is not used in the controller.</p>
+                <p>It
+should be noted, and of particular interest, is the fact that on
+reversing a valve, the output of the controller has to move completely
+back through the hysteresis band, before the valve can physically start
+moving in the opposite direction.</p>
+                <p>Figure
+2 is of a flow loop in automatic where a setpoint change has firstly
+been made up, and then when the flow had settled out at the new
+setpoint, the setpoint was moved back down to its original value.&nbsp;
+It can be clearly seen that although the controller's output started
+moving immediately on the second setpoint change, it took quite a long
+time before the flow itself starts changing. What has happened is that
+the valve has excessive hysteresis, and it was necessary for the
+controller output to reverse through approximately 18.6% before the
+valve started moving.&nbsp; This obviously will affect control
+performance and will increase the control variance.&nbsp; In certain
+instances it could cause major problems in critically important control
+loops.</p>
+                <p><img id="Picture3" src="case_history_92_files/cashis_92_Fig2.jpg" alt="cashis 92 Fig2" title="cashis 92 Fig2" align="top" border="0" height="444" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>Figure
+3 shows something fairly similar. This was a cascade secondary flow
+loop on the top temperature control of a distillation column.&nbsp; In
+this particular case the valve was only "sticky" when opening. In the
+figure it can be seen that when the setpoint was decreased, the flow
+came down to the new setpoint fairly slowly, but without any apparent
+problem.&nbsp; However on increasing the setpoint the valve didn't move
+and stuck. The integral action in the controller then took over and
+ramped up trying to eliminate the error.&nbsp; Eventually there was
+enough energy in the actuator to get the valve to break free.&nbsp;
+However by then the controller's output had partially "wound up", and
+had moved too far, resulting in a large overshoot on setpoint. This
+occurred on every occasion that the valve had to reverse to the opening
+direction. In this particular application with a relatively slow
+primary temperature loop, it is not serious, but it could cause
+problems in other applications.</p>
+                <p><img id="Picture4" src="case_history_92_files/cashis_92_Fig3.jpg" alt="cashis 92 Fig3" title="cashis 92 Fig3" align="top" border="0" height="433" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>When
+loops cycle in automatic about 98% of people are convinced that it is
+definitely due to bad tuning, and it is often very difficult to
+convince them otherwise.&nbsp; In fact bad tuning is in fact only one
+of quite few reasons why loops can be cycling.&nbsp; The last two
+examples illustrate this point.</p>
+                <p>As
+mentioned earlier, hysteresis on integrating processes always results
+in continuous cycling when using P+I control. Figure 4 gives an example
+of this on a bottom level control in a distillation column.&nbsp; In
+this case it was quite serious as this loop interacted with several
+other control loops, and resulted in cycles appearing in several places.</p>
+                <p><img id="Picture5" src="case_history_92_files/cashis_92_Fig4.jpg" alt="cashis 92 Fig4" title="cashis 92 Fig4" align="top" border="0" height="442" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>One
+of the more unusual reasons why a loop may cycle is because of signal
+"aliasing".&nbsp; An aliased signal is where the original signal has
+been distorted, which could be due to various reasons. One of these is
+when a signal coming in from the field has some noise on it.&nbsp; (We
+define "noise" as a random fluctuation in the signal around a mean
+level. Typically it may be caused by things going on in the process,
+like ripples in a tank level, or it may be in the measuring system,
+like turbulence in a flow). The signal complete with noise arrives at
+the controller's PV input. In most instances the frequency components
+in the noise are of relatively high frequencies, typically with periods
+less than a second.</p>
+                <p>Digital
+industrial feedback controllers have scan rates that are generally
+quite slow. Many default to a 1 second scan rate. However some are
+slower. Some makes are set to about 2 seconds, and some are even
+longer. To give an extreme example, a particular well known make of DCS
+from Japan has scan rates that vary according to the speed of the
+process.&nbsp; This is judged by the value of the integral values set
+in the control block when the controller is tuned for a particular
+process.&nbsp; (The detailed reasons for this are beyond the scope of
+this article.&nbsp; However it is mainly to allow more accurate
+integral calculations.)&nbsp; If the integral value inserted in the
+controller exceed a value of 1,200 seconds/repeat, the scan rate of the
+control block is automatically adjusted to 32 seconds. In other words
+the control algorithm is then only calculated at a rate of less than
+twice per minute!</p>
+                <p>What
+then happens is that every time it does its calculation the controller
+switches on, looks at the PV signal, performs the computation and sets
+the new value in the controller's output.&nbsp; Now the value of the PV
+as seen by the controller will be the actual value at that instant of
+time.&nbsp; The resulting signal then that the controller works on ends
+up as a signal with the noise on it with the same amplitude as the
+original signal, but now with very much slower frequency components in
+it. This because the frequencies in the aliased signal have
+mainly&nbsp; resulted from the scan rate of the controller.&nbsp; In
+other words the original signal with high noise frequencies has been
+changed into a signal with much lower noise frequencies in it.</p>
+                <p>If
+the controller had a very fast scan rate the original higher
+frequencies in the PV signal would have passed straight through it (via
+the P gain amplifier) and out to the valve. Pneumatically actuated
+valves (which are used in the vast majority of control loops
+world-wide) have quite a bit of "inertia" or natural damping built into
+them, because of relatively large air volumes, and they will not be
+able to respond to high frequency signals coming in. However if such a
+signal is first aliased in the controller to give a signal with slower
+frequencies, then it is very possible that the valve can respond to
+these lower frequencies, and follow them. </p>
+                <p>This
+will result in shortening the valve life, and if the process is fast
+enough, it too may start responding to the low frequency signals, and
+make it appear as if the loop has gone unstable.&nbsp; This will of
+course also result in increased control variance.</p>
+                <p>The
+example shown in Figure 5, is similar. The figure shows a closed loop
+test with a setpoint change being made on the control of a bottom level
+in a distillation column.&nbsp; These "bottoms" are used as the feed to
+the next column. The level is controlled via a control valve on the
+output of the pump which feeds the downstream column Now in this case
+keeping the level constant was of secondary importance to keeping the
+flow out of the bottom as constant as possible.&nbsp; The process
+people would far rather have had fluctuations in the level, than in the
+flow.&nbsp; Therefore the level controller has been tuned relatively
+slowly as can be seen in the control response in the figure.</p>
+                <p><img id="Picture6" src="case_history_92_files/cashis_92_Fig5.jpg" alt="cashis 92 Fig5" title="cashis 92 Fig5" align="top" border="0" height="432" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p>A
+strange little cycle with an amplitude of 0.8% and period of 20 seconds
+can be seen on the PV of the level.&nbsp; No one in the plant was quite
+sure where this cycle was coming from. There was a reciprocating
+compressor used somewhere in the system, and I have seen very similar
+cycles on flows being caused by such a device, but I have no idea on
+how it could appear on the level PV.</p>
+                <p>In
+any event the cycle was entering the level controller which was in one
+of the Japanese DCS systems discussed earlier. The tuning parameters
+for the loop was a P gain of 8, and an I setting of 1,012
+seconds/repeat.&nbsp; This integral value resulted in the controller's
+scan rate being automatically set to 16 seconds. The tuning and scan
+rate resulted in the little cycle on the controller being aliased, and
+resulted in a cycle on the controller's output with an amplitude of 8%
+with a dominant frequency component in it with a period of 67 seconds,
+which caused a strong cycle.&nbsp; This can be seen in the figure.</p>
+                <p>The
+valve will easily follow such a slow cycle.&nbsp; However in this case
+it will not affect the level control, which can not react quickly
+enough to the cycle. However it would definitely cause unnecessary, and
+really undesirable wear on the valve, thus shortening its life, and of
+course the last thing one wants is for the feed to a column to have
+such a cycle on it. You really need the inflow to be constant and very
+steady.</p>
+                <p>The
+solution to this would be to ideally find out exactly how the cycle was
+getting onto the level measurement, and then try and eliminate it there
+at its source, but this can be very time consuming and possible
+expensive. The other alternative is to filter the PV signal to prevent
+the cycle from getting into the controller.&nbsp; Now I have often
+written about the undesirable effects and problems that can be
+encountered with filtering, but sometimes you have to use them to
+overcome bigger problems, such as this one.&nbsp; In actual fact the
+control of slow integrating processes are not so badly affected by
+filtering as are fast self-regulating ones, and it is possible to get
+away with relatively large filters without too bad an effect on the
+control. In this case a 50 second filter eliminated the cycle, and
+resulted in a smooth control allowing a relatively constant feed to the
+next column.</p>
+                <p>Hopefully
+this article has shown some examples of problems loops where solutions
+have been found that have nothing to do with retuning the loop.</p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

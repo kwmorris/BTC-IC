@@ -1,0 +1,11 @@
+/* CSS definition file containing sitestyle stylesheets */
+BODY { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(0,0,0); background-color: rgb(255,255,255);}
+ A:active { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,51,51);}
+ A:link { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(204,0,51);}
+ UL { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; font-weight: normal; font-style: normal;}
+ A:visited { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(204,0,51);}
+ .TextObject { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small;}
+ P { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small;}
+ .TextNavBar { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; font-weight: normal; font-style: normal;}
+ A:hover { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,51,51);}
+ 

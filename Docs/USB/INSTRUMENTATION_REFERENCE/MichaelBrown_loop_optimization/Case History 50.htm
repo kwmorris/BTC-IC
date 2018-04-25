@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0073)http://www.controlloop.co.za/Articles/Case_History_50/case_history_50.htm -->
+<HTML><HEAD><TITLE>Case History 50</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Case History 50_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 src="Case History 50_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Case History 50_files/banneroct2002.jpg" width=765 
+    border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Case History 50_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Case History 50_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=691><IMG height=1 src="Case History 50_files/clearpixel.gif" 
+      width=691 border=0></TD>
+    <TD width=18><IMG height=1 src="Case History 50_files/clearpixel.gif" 
+      width=18 border=0></TD>
+    <TD width=13><IMG height=1 src="Case History 50_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Case History 50_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Case History 50_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=9></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=691>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#cc0000>Control Loop 
+      Case History 50</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica>Sometimes you have to use a 
+      filter</FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>In previous articles 
+      the author has warned about the indiscriminate use of process variable 
+      filters.&nbsp; Apart from the possibility of causing severe overshoot on 
+      setpoint changes on self regulating loops, they can also severely distort 
+      the true process response as seen by the operator.&nbsp; In general 
+      filters should be avoided if possible, and if really necessary, then they 
+      should be kept as small as possible.&nbsp; The only exception to this rule 
+      is the use of a small anti-alias filter which should be placed on 
+      transmitters as standard practice. This will filter out high frequency 
+      noise which otherwise may get aliased by a digital controller, producing 
+      lower frequency components which may well affect control variance and 
+      shorten valve life.
+      <P>When are filters in fact really necessary?&nbsp; The answer to this is 
+      that a filter should only be used where noise frequency components are 
+      being passed through the controller and causing the output (PD signal) to 
+      move around, and also if the valve does actually respond to these 
+      fluctuations.&nbsp; Even then, and if possible, it would be better to try 
+      and eliminate noise at its source, for example by using good installation 
+      practice.
+      <P>The proportional unit in the controller acts as the path for the noise 
+      through the controller.&nbsp; The proportional gain plays an important 
+      part in determining the size of the noise that will appear on the 
+      controller output.&nbsp; If the gain is less than unity, the noise 
+      amplitude will be diminished, and if greater than unity, it will be 
+      amplified.&nbsp; Therefore in processes like flows, and small volume 
+      pressure controls, which are tuned with very small gain (and fast 
+      integral), one can get away in most cases with even large noise amplitudes 
+      on the PV, as the noise is diminished in the controller.&nbsp; However on 
+      processes like level controls and other integrating processes, one often 
+      tunes the controllers with very high gains.&nbsp; Typically most level 
+      controls end up with gains between 5 and 20.&nbsp; Thus even relatively 
+      small amplitude noise signals will be amplified greatly in the controller. 
+      Most digital control systems today have a scan rate of around 1 
+      second.&nbsp; This may result in the noise being aliased, and most 
+      pneumatic control valves can react to signals at the sort of frequencies 
+      resulting, thus leading to valve cycling. Thus control variance may be 
+      increased, and valve life shortened.&nbsp; 
+      <P>In these situations it does become necessary to reduce the noise by 
+      placing a filter on the PV signal.&nbsp; As mentioned above, it is 
+      generally best to try and keep the filter to a minimum.&nbsp; However it 
+      should be noted that one can get away with less serious effects on 
+      integrating loops using large filters.&nbsp; David Ender of Techmation 
+      Inc. of the USA, a world leading expert on loop optimisation, has 
+      postulated that one should in fact completely filter out the noise on 
+      integrating loops, and then use the derivative term in the controller set 
+      to the filter time constant, as this will cancel out the filter.&nbsp; The 
+      author has tried this in a few cases with rather poor results, but it is 
+      still a possibility.
+      <P>The example given here, which was taken from some optimisation work 
+      being performed in a South African process plant, is of a very noisy level 
+      loop.&nbsp; Figure 1 shows the response to a setpoint change being made 
+      with the original "as found" tuning. </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 1
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture40 height=368 alt="Figure 1" 
+            src="Case History 50_files/cashis50-1.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The resulting slow 
+      and protracted out cycle is typical of the poor tuning generally seen on 
+      such processes.
+      <P>Digressing slightly, the author has found that very few people have any 
+      understanding or "feel" on how to tune integrating processes.&nbsp; On a 
+      recent course on loop optimisation presented in a large South African 
+      petro-chemical refinery, the Chief Control Engineer remarked that he 
+      firmly believed that there was not a single well tuned integrating loop in 
+      his plant.
+      <P>Figure 2 shows the Protuner loop analysis report.&nbsp; Note the small 
+      proportional bands (high gains) for the various responses.</FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+2</FONT></B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture41 height=368 alt="Figure 2" 
+            src="Case History 50_files/cashis50-2.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Figure 3 shows the 
+      closed loop test where setpoint changes are being made. 
+      <P></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture42 height=368 alt="Figure 3" 
+            src="Case History 50_files/cashis50-3.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The tuning used was:
+      <P>P=12%.
+      <P>I=2.8 minutes/repeat.
+      <P>The response and control is good, but note the noise in the PD.&nbsp; 
+      Noise at low frequencies like this could well result in increased control 
+      variance, and shorten valve life.&nbsp; Therefore it was decided to try a 
+      filter on the PV.
+      <P>Figure 4 shows the response with a filter of 0.3 minutes. </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+4</FONT></B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture43 height=368 alt="Figure 4" 
+            src="Case History 50_files/cashis50-4.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The response is still 
+      just as good as before, and it can be seen that the PD is much smoother 
+      and almost noise free.
+      <P>The tuning with the filter was:
+      <P>P=13.9%
+      <P>I=2.8 minutes/repeat
+      <P>This is a good example of an application where a filter is appropriate.
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to articles</FONT></A>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton127',1)" 
+            onmouseout="F_roll('NavigationButton127',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton127 height=19 alt=Home 
+            src="Case History 50_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton127></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton128',1)" 
+            onmouseout="F_roll('NavigationButton128',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton128 height=19 alt=Training 
+            src="Case History 50_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton128></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton129',1)" 
+            onmouseout="F_roll('NavigationButton129',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton129 height=19 alt=Consulting 
+            src="Case History 50_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton129></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton130',1)" 
+            onmouseout="F_roll('NavigationButton130',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton130 height=19 alt=Protuner 
+            src="Case History 50_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton130></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton131',1)" 
+            onmouseout="F_roll('NavigationButton131',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton131 height=19 alt="Contact us" 
+            src="Case History 50_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton131></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton132',1)" 
+            onmouseout="F_roll('NavigationButton132',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton132 height=19 alt=Articles 
+            src="Case History 50_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton132></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Case History 50_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

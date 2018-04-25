@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures P2-10</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(LoopSignaturesP210Layout, 750, 3995))" style="text-align: center;" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-10_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-10_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-10_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-10_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-10_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="loop_signatures_p2-10_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b>10. DYNAMICS OF SIMPLER PROCESSES</b></p>
+                <p><b>Pure deadtime, self-regulating process</b></p>
+                <p>In the <a href="http://www.controlloop.co.za/Loop_signatures/Loop_Signatures_P2-9/loop_signatures_p2-9.html">previous article</a>
+in this series, the tuning of a simple first order lag, deadtime,
+self-regulating process was discussed. The transfer function of such a
+process is: </p>
+                <p><img id="Picture2" src="loop_signatures_p2-10_files/loopsig2-10_eq1.gif" alt="loopsig2-10 eq1" title="loopsig2-10 eq1" align="top" border="0" height="64" hspace="0" vspace="0" width="160"></p>
+                <p>The term "controllability factor" was defined in a previous article as <b>DT/TC</b>,
+and it was mentioned that the larger it gets, the more difficult it is
+to control, and as it gets smaller, the easier the control. A deadtime
+dominant process is defined as one where the deadtime is greater or
+equal to the time constant.</p>
+                <p>As a general note many, if not most of the tuning packets and methods can only work on processes that are not deadtime dominant.</p>
+                <p>The
+example in the previous article was for a controllability factor less
+than unity.&nbsp; In this article and the next, we will look at cases
+where the controllability factor is at either of the two extremes. In
+this one we will deal with a process where the factor is infinity.
+Effectively this is a process with zero lags.&nbsp; I have called it "a
+pure deadtime self-regulating process".</p>
+                <p><img id="Picture3" src="loop_signatures_p2-10_files/loopsig2-10_eq2.gif" alt="loopsig2-10 eq2" title="loopsig2-10 eq2" align="top" border="0" height="27" hspace="0" vspace="0" width="114"></p>
+                <p>I
+have read quite a few articles and textbooks where the authors state
+that that such a process cannot be controller with a PID
+controller.&nbsp; Possibly this is true if the "D" term is used, but it
+definitely can be controlled by a PI controller.</p>
+                <p>There
+are in fact special deadtime controllers on the market, often referred
+to as model predictive controllers, and one in particular, called the
+"Smith Predictor", is well known.&nbsp; Most of these try and cancel
+out the deadtime by inserting a delay block in the feedback leg. I have
+never yet met anyone who has had much success with such controllers.
+One consulting control engineer at one of the UK's largest steel
+companies told me that he has tried them on quite a few occasions, and
+that the problem he found was that the process' dynamics change around
+too much, so the model is no good.</p>
+                <p>In
+practice it would be almost impossible to exactly find a
+self-regulating process with only a gain and a deadtime in a real
+plant, as nearly all processes will also have some other additional
+response like a lag or a ramp.&nbsp; However I have come across some
+controls on conveyor belt feeders where the deadtime is so much larger
+than any other dynamics like lags and ramps, so that they can be
+considered as pure deadtime self -regulating processes.</p>
+                <p>Figure
+1 illustrates such a dynamic with a process gain of 1, and a deadtime
+of 20 seconds.&nbsp; This is quite an interesting process in practice,
+as the PV (process variable) exactly follows every movement of the PD
+(controller output) one deadtime later.</p>
+                <p><img id="Picture4" src="loop_signatures_p2-10_files/loopsig2-10Fig1.jpg" alt="loopsig2-10Fig1" title="loopsig2-10Fig1" align="top" border="0" height="445" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>The
+Bode open plots shown in Figure 2 are also very interesting. The gain
+plot (on the bottom) is a line running horizontally from low frequency
+and stops when the phase lag (top curve) reaches -180º.&nbsp; In the
+previous article on the example with the controllability factor less
+than one, the Bode gain plot dropped off due to the lag in the process
+and ended off at -180º phase lag with a slope of &#8211;20db/decade.</p>
+                <p><img id="Picture5" src="loop_signatures_p2-10_files/loopsig2-10Fig2.jpg" alt="loopsig2-10Fig2" title="loopsig2-10Fig2" align="top" border="0" height="443" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>This
+is certainly quite serious from the tuning point of view, because it
+means that the proportional gain in the controller must be severely
+reduced in order to allow sufficient gain margin for safety when the
+loop is in automatic. It must also be noted that the D term must not be
+used, as it will lift up the right hand side of the plot even further.
+(When it comes to deadtime dominant processes the D term does stand for
+"DO NOT USE").</p>
+                <p>Figure
+3 shows the Bode closed loop gain plot with a Protuner tuning of P =
+0.23 and I = 6.4 seconds/repeat. It can be seen that the shape is not
+perfect pole cancellation, with a slight upward bend on the right hand
+side. This means that theoretically the response will be slightly
+slower than ideal.</p>
+                <p><img id="Picture6" src="loop_signatures_p2-10_files/loopsig2-10Fig3.jpg" alt="loopsig2-10Fig3" title="loopsig2-10Fig3" align="top" border="0" height="443" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>The
+actual control response to a setpoint step change with this tuning is
+shown in Figure 4. It is in fact really excellent, with the process
+reaching setpoint in roughly two deadtimes.&nbsp; (The Protuner does in
+fact contain some special "tricks" when it comes to tuning deadtime
+dominant processes, and as quite a lot of control people will attest,
+there are many such processes, previously always in manual, now running
+in automatic thanks to this tuning ability).</p>
+                <p><img id="Picture7" src="loop_signatures_p2-10_files/loopsig2-10Fig4.jpg" alt="loopsig2-10Fig4" title="loopsig2-10Fig4" align="top" border="0" height="442" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>Figure
+5 shows the response to a step change in setpoint with a Ziegler
+Nichols tuning which gives P = 0.45 and I = 33.2 seconds/repeat. It is
+not good at all, and is many times slower than the Protuner's
+tuning.&nbsp; However to be completely fair, Ziegler and Nichols did
+say in their article on their tuning methods, that they did not know
+how to deal with deadtime dominant processes.</p>
+                <p><img id="Picture8" src="loop_signatures_p2-10_files/loopsig2-10Fig5.jpg" alt="loopsig2-10Fig5" title="loopsig2-10Fig5" align="top" border="0" height="444" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p>To
+conclude it can be definitely said that reasonable tuning can be
+obtained on very deadtime dominant processes using P+I controllers.
+However the controller does have to be detuned (P gain reduced) for
+stability. Derivative should never be used on such processes. In
+general the main problem found with such processes is when load changes
+occur too frequently to catch with the possible tuning.&nbsp; In such
+cases alternative control strategies must be considered.</p>
+                <p><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; <a href="mailto:michael.brown@pixie.co.za">michael.brown@pixie.co.za</a></span></b></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

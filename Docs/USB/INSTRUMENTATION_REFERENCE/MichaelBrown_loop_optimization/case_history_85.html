@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 85</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="751">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_85_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+            <td width="1"><img src="case_history_85_files/clearpixel.gif" alt="" border="0" height="1" width="1"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_85_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="117"><img src="case_history_85_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_85_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="120"><img src="case_history_85_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="751">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="1"><img src="case_history_85_files/clearpixel.gif" alt="" border="0" height="1" width="1"></td>
+            <td width="750"><img src="case_history_85_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 85</span></b></p>
+                <p style="text-align: left;"><b>pH PROBLEMS AT AN AUSTRALIAN MINE</b></p>
+                <p style="text-align: left;">I
+recently received an enquiry from the instrument and control engineer
+on an Australian mine who has been having fairly severe problems trying
+to control the pH in his flotation plant.&nbsp;He has requested that
+his name be withheld, and for the article I will give him the
+fictitious name of Tom.</p>
+                <p style="text-align: left;"><b><i>This is Tom's email to me:</i></b></p>
+                <p style="text-align: left;"><b>Feed water pH control</b></p>
+                <p style="text-align: left;">It
+should be noted that in order for the frother and collector to be
+chemically efficient the pH of the water that the reagents are dosed
+into has to be tightly controlled. </p>
+                <p style="text-align: left;">The
+circuit I am using is as follows. The water circuit in is as seen in
+Figure 1.4. From said circuit it should be noted that the water
+returning from the dam is very acidic and that the thickener overflow
+water is fairly neutral. It should also be noted that in order for the
+reagents dosed at the flotation circuit to operate effectively the pH
+of the solution in said circuit had to be between 8.5 and 9.0 </p>
+                <p style="text-align: left;"><img id="Picture9" src="case_history_85_files/cashis85_fig102.jpg" alt="cashis85 fig102" title="cashis85 fig102" align="top" border="0" height="402" hspace="0" vspace="0" width="657"></p>
+                <p style="text-align: left;"><b>Figure 1.4</b></p>
+                <p>My
+first attempt at controlling the Mill Water Return Sump (MWRS) was a
+simple pH control algorithm that operated as per Figure 1.5. A pH probe
+and transmitter (A) and a control valve (D) were fitted to the MRWS.
+The output from this transmitter was used as the measured variable in a
+two-term controller. Depending on the controller setpoint (B) an output
+was sent to a lime dosing valve and the pH in the sump maintained at
+the required value.</p>
+                <p>Unfortunately
+I found it to be exceedingly difficult to maintain the required pH
+levels at the flotation circuit.&nbsp; Having looked at the dosing
+circuit I realised that the MWRS which was basically being used as
+Reaction Vessel&nbsp;(i.e. the vessel in which the reaction between the
+process stream and reagent, in this case lime, takes place) was not
+large enough. In fact the required reaction was taking place as the
+water passed through the pipes enroute to the floatation bank. Simple I
+thought I will either increase the size of the MRWS or improve
+agitation in the vessel and that will be the end of my problems.
+Unfortunately both these options would involve plant down time and
+would also require a fair amount of capital.</p>
+                <p><img id="Picture10" src="case_history_85_files/cashis85_fig202.jpg" alt="cashis85 fig202" title="cashis85 fig202" align="top" border="0" height="280" hspace="0" vspace="0" width="563"></p>
+                <p>In
+order to come up with an inexpensive but reliable solution I realised
+that I would have to do some test work. Through a campaign of sampling
+and dosing I was able to ascertain that the correct pH could be
+achieved if my dosing control strategy was changed.&nbsp;</p>
+                <p><b>Cascade control loop</b></p>
+                <p>The control philosophy finally decided upon was a cascade system.</p>
+                <p>The cascade control loop that I eventually employed is as seen in Figure 1.6.</p>
+                <p>Controller
+tuning proved difficult, however through a process of trial and error I
+found that the master control loop had to be set to be much less
+responsive than the slave, which was set to react rapidly to changes.
+The reasoning behind this was that the master controller had to
+compensate for the delay that existed between the reagent flow being
+adjusted and the time it took for the chemical reaction as a result of
+these adjustments to occur. </p>
+                <p><img id="Picture11" src="case_history_85_files/cashis85_fig302.jpg" alt="cashis85 fig302" title="cashis85 fig302" align="top" border="0" height="254" hspace="0" vspace="0" width="468"></p>
+                <p>Referring
+to Figure 1.5 I divided the water circuit into two definite areas. The
+first area was the MRWS where the neutralising reagent lime was dosed
+and the second was the Flotation bank where flocculent was added. As
+mentioned previously these flocculants only operated effectively within
+a stable pH band. During test work I found that there could be large
+differences between pH values measured at the MRWS compared to readings
+taken at the flotation banks.&nbsp;This indicated to me that the lime
+and water were still reacting with each other after they had left the
+MRWS. (Precipitation was taking place in the pipes.) Bearing this in
+mind I decided that by placing pH sensors in strategic points across
+the water circuit i.e. the MRWS and the flotation banks I would be able
+to come up with a vastly improved control strategy, maybe!!</p>
+                <p><img id="SiteStyleLine1" src="case_history_85_files/Line.gif" alt="" align="top" border="0" height="4" hspace="0" vspace="0" width="600">&nbsp;</p>
+                <p><b><i>This is my reply to Tom</i></b></p>
+                <p><b><u><span style="font-family: 'Times New Roman',Times,Serif; font-size: 12pt;"></span></u></b>Dear Tom,</p>
+                <p style="text-align: left;">Listing the possibilities that could affect your pH control:</p>
+                <p style="text-align: left;">1. One of the most basic and essential requirements for any pH control is that the reagent and product must be 
+                    properly mixed before it reaches the pH sensor.&nbsp;You will have serious problems if it is not.</p>
+                <p style="text-align: left;">2. Another problem I have encountered in similar applications is that the lime slaking solution process is 
+                    sometimes not automated, and is performed manually, so that the lime solution pH itself varies.&nbsp;</p>
+                <p style="text-align: left;">3. Load variations caused by changes in the ore feed to the mill.</p>
+                <p style="text-align: left;">4. pH load variations caused by other things being added into the milling circuit like dilution water).</p>
+                <p style="text-align: left;">5.
+pH variations caused by different types of ore.&nbsp;(I am not sure how
+much this could affect the pH, but I am trying to list all
+possibilities).</p>
+                <p style="text-align: left;">6.
+Various valve problems (e.g. non-linear installed characteristics,
+hysteresis, etc.) in the lime solution dosing valve.&nbsp;Note that
+valve problems cause 85% of all loop problems.</p>
+                <p style="text-align: left;">7.
+Incorrect controller set-up.&nbsp;(Typically about 75 &#8211; 80% of all
+plants I have been in using PLC controllers have the controllers set-up
+incorrectly so that scientific tuning is impossible).</p>
+                <p style="text-align: left;">8. Poor controller tuning.</p>
+                <p style="text-align: left;">It
+would appear based on the testing you have done, that the primary
+problem is indeed that insufficient mixing is occurring.&nbsp;However
+your original control loop had the pH probe inside the MWRS.&nbsp;This
+was not a good spot for the reason given in point 1 above, particularly
+as you say the agitation is not good..&nbsp;Ideally the measurement
+should have been after the MWRS's pump outlet, probably at the inlet to
+the mill, where you would have a much better chance of getting a truly
+representative pH reading.&nbsp;</p>
+                <p style="text-align: left;">If
+you do perform tests and find that the mixing is still not complete
+there, then I imagine it would be complete after the transit of the
+mixture through the mill, the mill sump, and then through the mill sump
+pump.&nbsp;If so, you would be better off measuring the pH there (which
+is probably the same as you are now doing by measuring it directly in
+what I would assume is the first flotation tank).</p>
+                <p style="text-align: left;">The
+disadvantage of this measuring point is that you dramatically
+increasing the deadtime and lags which will be generated by the
+residence time of the mill, which I assume may be extensive.&nbsp;It
+will also possibly be affected by mill dilution water and any other
+additions into the mill like returns, etc.&nbsp;With the slower
+dynamics introduced by the mill, control tuning must perforce be
+correspondingly slower, thus increasing the time to correct load
+changes.</p>
+                <p style="text-align: left;">If
+you are getting significant load changes in the mill for the reasons
+given above and if you are loosing a lot of money through poor pH
+control in your flotation, and if you the mixing is not complete after
+the MWRS, then I believe it is essential that you reconsider trying to
+improve mixing in the MWRS.&nbsp;I would also specifically suggest
+trying improving the agitation first, before going to the expense of a
+larger vessel.&nbsp;If mixing is then fine , and then with a pH
+measurement just after the MWRS's pump outlet, you should get
+relatively better control as far as the pH of the water entering the
+mill is concerned, as you only have the dynamics of the MWRS to take
+into account when tuning.</p>
+                <p style="text-align: left;">After that you could put a pH measurement into the first floatation tank feeding a master controller, just like 
+                    you are currently doing, and then send the output to the setpoint of the MWRS pH controller.</p>
+                <p style="text-align: left;">There
+is however a disadvantage in cascade control of two slow systems like
+yours as you have already discovered.&nbsp;This is because they are
+interactive.&nbsp;Ideally the secondary loop should be at least 10
+times faster than the primary.&nbsp;This is very unlikely to be the
+case here.&nbsp;Therefore it will be necessary to tune the secondary as
+fast as possible (but leaving sufficient robustness to avoid
+instability if anything changes) and slow the tuning of the primary
+down very dramatically.</p>
+                <p style="text-align: left;">Another
+possibility is to leave the MWRS loop alone, and add a second "fine"
+control, by injecting caustic solution, into the mill sump.&nbsp;(This
+is assuming that satisfactory mixing could be achieved in the
+sump).&nbsp;However this would need quite a lot more thinking about and
+discussion.</p>
+                <p style="text-align: left;">If
+you don't have load changes happening quickly in the mill, which in
+reality (and ideally) should not occur if you are milling at constant
+load, then you will be better off with a single loop with the
+measurement in the first flotation tank.&nbsp;The cascade will not help
+that much, and will probably actually give slower control as the
+primary controller has to be detuned.</p>
+                <p style="text-align: left;">I
+would also suggest you should also examine the other possible problem
+causes listed above.&nbsp;If any of them are likely to be occurring in
+your plant, then solutions to them will be found by studying my "Basic
+Trouble Shooting and Loop Tuning" CD, which you are ordering.</p>
+                <p style="text-align: left;">Hope this helps.</p>
+                <p style="text-align: left;">Kind regards,</p>
+                <p><i>Mike Brown</i></p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

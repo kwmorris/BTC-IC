@@ -1,0 +1,39 @@
+Of course you may reproduce it for educational purposes.
+
+If you need a more formal permission statement, send an email 
+to Steve Todd (stodd@miinet.com) and he'll give you a more 
+official version.
+
+We have two other fieldbus papers you might want to include on the CD.
+
+Implementing FOUNDATION Fieldbus H1 Networks in Hazardous Areas
+June 2007
+Many engineers today find themselves questioning which bus technology to implement in their facility. As if that topic isn't difficult enough to resolve, the subject is further complicated by implementing your chosen bus in a hazardous area. Authored by project engineer C. Bruce Bradley, PE, of Boehringer Ingelheim Chemicals, Inc. in Petersburg VA, this white paper provides insight into the process for safely implementing FOUNDATION fieldbus in a classified area of your facility.
+View Article (PDF, 461K)
+ 
+
+Using MODBUS for Process Control and Automation
+June 2007
+MODBUS is the most popular industrial protocol being used today, for good reasons. It is simple, inexpensive, universal and easy to use. Even though MODBUS has been around for nearly 30 years, almost all major industrial instrumentation and automation equipment vendors continue to support it in new products. This white paper discusses how MODBUS works and a few clever ways it can be used in new and legacy plants.
+View Article (PDF, 709K)
+ 
+
+If your CD covers topics other than fieldbus, you'll find more 
+materials at
+
+http://www.miinet.com/whatsnew/in_the_news.shtml
+
+Is there any other way we can assist you?
+
+Do you need anything?
+
+ 
+Rich Merritt
+Director Marketing Communications
+Moore Industries-International, Inc.
+The Interface Solution Experts
+Tel:       319-892-0557
+E-FAX:  866-729-1874
+E-mail:  rmerritt@miinet.com
+www.miinet.com 
+

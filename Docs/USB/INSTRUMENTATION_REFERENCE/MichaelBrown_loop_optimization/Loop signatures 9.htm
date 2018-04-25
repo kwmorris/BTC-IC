@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0077)http://www.controlloop.co.za/Articles/Loop_signatures_9/loop_signatures_9.htm -->
+<HTML><HEAD><TITLE>Loop signatures 9</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 9_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 9_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 9_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 9_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 9_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=679><IMG height=1 src="Loop signatures 9_files/clearpixel.gif" 
+      width=679 border=0></TD>
+    <TD width=30><IMG height=1 src="Loop signatures 9_files/clearpixel.gif" 
+      width=30 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 9_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 9_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 9_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=7></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=679>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica>Loop Problem Signatures No 
+      9</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Digital controllers - 
+      Part I<BR>Introduction to the "simple" PID controller </FONT></B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <P>There is a commonly held belief in control circles, that all PID 
+      controllers are similar, and relatively simple.&nbsp; This is a very 
+      dangerous fallacy.&nbsp; Our experience has shown that the vast majority 
+      of&nbsp; people in plants (even very experienced I&amp;C personnel), have 
+      little real understanding of the controllers they use. 
+      <P>Incorrect controller usage can, and has cost plants very dearly in 
+      terms of time and money.&nbsp; For example, a plant in the UK recently 
+      lost nearly £2,000,000 in under-production, simply because they did not 
+      choose a more suitable option which was available as standard in their 
+      DCS!&nbsp; Operators often make changes on control systems manually rather 
+      than in automatic, because the controllers have not been configured 
+      correctly for the application, even though they may have been reasonably 
+      well tuned.
+      <P>If you wish to optimise the controls in your plant to obtain the most 
+      effective control, it is really essential that you really gain a full 
+      understanding of your controllers.
+      <P>The first and very important point to realise is that there is no such 
+      thing as a standard PID controller.&nbsp; Each manufacturer produce their 
+      controllers entirely the way they wish, and as a result their controllers 
+      are different to those of any other manufacturer.&nbsp; Not only that, but 
+      I have found that some controller manufacturers do not even have their own 
+      proper internal&nbsp; standards, and every time a new version of the 
+      controller software is released things may differ quite substantially from 
+      earlier versions of that software.&nbsp; This is probably due to changes 
+      in staff amongst the programmers who write the controller software.&nbsp; 
+      Also it a sad thing, but one finds that even amongst some very reputable 
+      manufacturers, the people who write the controller software, and also 
+      those who produce the technical manuals on the controllers, often display 
+      an alarming lack of knowledge of practical control themselves, so as a 
+      result they do some really stupid things.&nbsp; This will be become 
+      clearer as this series of loop signatures on controllers progresses.
+      <P>It also amazes me that most manufacturers generally do not provide any 
+      form of training so that their clients can understand and operate the 
+      controllers correctly, and be able to choose and apply the options 
+      available. As mentioned above, I believe it essential that people do 
+      acquire an in-depth understanding of the operation of their controllers if 
+      they are to successfully optimise their plants, but many manufacturers 
+      appear to share the common belief that their controllers are a standard 
+      simple thing, and that there is no need to provide training, or produce 
+      decent technical manuals on these products.&nbsp; I was once told by the 
+      chief training officer of one of the biggest companies making DCS control 
+      systems, that their job was not to train people on how to use PID 
+      controllers which any instrument and control person should already 
+      understand, and he was quite offended when I said to him that their 
+      controllers were different to any other make of controller, and that in 
+      over 50 plants employing their DCS system, I had never yet met any of 
+      their users who really understood the controllers.
+      <P>One of the reasons for the lack of understanding of the basic PID 
+      controller, is that the modern digital controller generally has a host of 
+      complex features and options available which are important to understand, 
+      if one is to use the controller to the best advantage.&nbsp; 
+      <P>It is my intention to provide a fairly detailed and in-depth 
+      explanation of controller operation and of the possible features and 
+      options that may be available in them, in the following series of Loop 
+      Signature articles. The subjects to be covered will include:
+      <P>* Testing controller operation.<BR>* The controller algorithm 
+      (equation) used to provide the PID action.<BR>* Digital implementation of 
+      the PID algorithm.<BR>* The operation of each of the three controller 
+      actions, P, I, and D.<BR>* Reset windup and its prevention (both internal 
+      and external).<BR>* Controller scan rate.<BR>* The derivative filter.<BR>* 
+      Controller responses to errors arising from setpoint changes, as opposed 
+      to load changes.
+      <P>Some controllers offer more features than others.&nbsp; In general at 
+      the current stage of development, DCS systems usually offer many more 
+      features and options than most PLC's, which (with a very few exceptions) 
+      are normally very limited in the analogue regulatory control features they 
+      offer.&nbsp; In a recent article I did mention why I personally find that 
+      DCS systems are far better for regulatory control than PLC's, and will not 
+      repeat these points here.&nbsp; However in retrospect, I think it fair to 
+      point out that the people building PLC's on the whole have extremely 
+      limited experience in regulatory control systems, as opposed to DCS 
+      manufacturers who have in many cases been supplying such control equipment 
+      for many decades.
+      <P>The remarks above do come down pretty hard on the manufacturers, and it 
+      is only fair to point out that the users themselves, on their side, often 
+      are also lacking badly, as they generally display little interest in the 
+      PID controllers they purchase.&nbsp; In fact, frequently in specifications 
+      put out by prospective purchasers of control systems, which often contain 
+      copious and detailed requirements of things like man-machine interfaces, 
+      redundancy and hot back-up, and many other important things, one usually 
+      finds very little about the PID controllers themselves.&nbsp; I believe it 
+      is essential that users of control systems should acquaint themselves with 
+      the "pros and cons" of the equipment that they are buying to run the 
+      regulatory controls in their plants.&nbsp; To illustrate this point, I 
+      will mention later in this series of articles the hard to believe, and 
+      little known fact, that the majority of PID controllers in the world are 
+      configured in such a way that it is virtually impossible to practically 
+      tune derivative action into them.&nbsp; Even though D action is probably 
+      only really effective in one in several hundred control loops,&nbsp; the D 
+      term can increase speed of response by up to a factor of 4, if the right 
+      process dynamics are present.&nbsp; If I was a control engineer in a plant 
+      purchasing control equipment, I wouldn't dream of buying a controller that 
+      would not allow me to properly use the D term in it.
+      <P>Lack of knowledge about your controllers&nbsp; can cost you dearly in 
+      terms of poor control and productivity.&nbsp; The following articles in 
+      this Loop Signature series will explain why.
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A></P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton67',1)" 
+            onmouseout="F_roll('NavigationButton67',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton67 height=19 alt=Home 
+            src="Loop signatures 9_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton67></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton68',1)" 
+            onmouseout="F_roll('NavigationButton68',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton68 height=19 alt=Training 
+            src="Loop signatures 9_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton68></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton69',1)" 
+            onmouseout="F_roll('NavigationButton69',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton69 height=19 alt=Consulting 
+            src="Loop signatures 9_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton69></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton70',1)" 
+            onmouseout="F_roll('NavigationButton70',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton70 height=19 alt=Protuner 
+            src="Loop signatures 9_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton70></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton71',1)" 
+            onmouseout="F_roll('NavigationButton71',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton71 height=19 alt="Contact us" 
+            src="Loop signatures 9_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton71></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton72',1)" 
+            onmouseout="F_roll('NavigationButton72',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton72 height=19 alt=Articles 
+            src="Loop signatures 9_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton72></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 9_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

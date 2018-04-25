@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+<title>Case History 58</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="Microsoft FrontPage 4.0">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<link rel="STYLESHEET" type="text/css" href="case_history_58_files/style.css">
+<link rel="STYLESHEET" type="text/css" href="case_history_58_files/site.css">
+</head><body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="63"><img id="Picture1" src="case_history_58_files/Michael_Brown.gif" alt="" width="750" height="63" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="117"><img src="case_history_58_files/clearpixel.gif" alt="" width="117" height="1" border="0"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_58_files/clearpixel.gif" alt="" width="116" height="1" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="120" height="2"><img src="case_history_58_files/clearpixel.gif" alt="" width="120" height="1" border="0"></td>
+            <td>
+              <p align="center"><a href="http://www.controlloop.co.za/Case_histories/CDpromo.html">Educational
+              CDs</a></p></td>
+            <td width="119"><img src="case_history_58_files/clearpixel.gif" alt="" width="119" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="28"><img src="case_history_58_files/clearpixel.gif" alt="" width="750" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 58</span></b></p>
+                <p><b><span style="font-size: small;">Problems in an interactive combustion oil control system</span></b></p>
+                <p>The
+author was recently requested to investigate the control system for the
+combustion oil feed to a furnace used in a manufacturing
+process.&nbsp;Oil is fed into the furnace through various ports and the
+flow through each port is individually adjusted via the setpoint on its
+controller.&nbsp;A schematic of the system showing a few of the oil
+feeds is given in Figure 1. </p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture40" src="case_history_58_files/cashis58-1.gif" alt="Figure 1" title="Figure 1" width="550" height="412" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <b><span style="font-size: xx-small;">Figure 1</span></b></p>
+                <p>The
+oil feeds are alternated approximately every 20 minutes between the
+opposite sides of the furnace to avoid overheating of the furnace
+walls.&nbsp;The flow controls are extremely important to keep
+temperature in the furnace constant at the required temperature.</p>
+                <p>The
+system is inherently highly interactive.&nbsp;A change in the pressure
+will affect the flows, and a change in an individual flow will affect
+the pressure in the header and hence all the other flows.</p>
+                <p>There
+are only 2 ways to deal with interactive feedback systems.&nbsp;The
+first way is to try and tune the individual loops in the system to have
+minimum effect on each other, and the other way is to use decoupling
+(or multivariable control).&nbsp;The latter method in essence employs
+multiple feedforward controls to decouple the individual loops from
+each other.&nbsp;This is generally not an option due to complexity and
+expense on a system such as this.</p>
+                <p>Decoupling by
+tuning entails tuning the loops to react at different
+speeds.&nbsp;Therefore one generally tries to tune the more important
+loops fast and the less important slowly.&nbsp;In this case the flows
+are important.&nbsp;However due to the fact that there are multiple
+flows, which will all be directly affected by changes in pressure, it
+becomes obvious that the pressure control is really vital, and if it
+can react to changes as fast as possible to keep the pressure as
+constant as possible, then there is a much better chance of being able
+to obtain overall good flow control on the individual flow
+loops.&nbsp;Also due to the fact that the individual flows are small in
+comparison with the total flow passing through the pressure control
+valve, the individual flows will have a much smaller interactive effect
+on the pressure than the pressure will have on them.&nbsp;Therefore the
+way that one would go about tuning a system like this is to tune the
+pressure controller fast and the individual flow controllers slower. </p>
+                <p>Figure 2 shows part of the initial closed loop "as found" test on the system. </p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture41" src="case_history_58_files/cashis58-2.gif" alt="Figure 2" title="Figure 2" width="550" height="368" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <b><span style="font-size: xx-small;">Figure 2</span></b></p>
+                <p>Only
+2 traces are shown here, one being the oil header pressure, and the
+other being one of the individual flows.&nbsp;A setpoint change has
+been made on the pressure controller.&nbsp;It can be seen that the
+pressure is tuned slowly and is reacting slowly, but the flow has been
+tuned extremely fast and is very cyclic, in fact almost
+unstable.&nbsp;This is completely the wrong way round.&nbsp;The test
+also shows how important the pressure control is, as it has a direct
+and marked effect on the flow.</p>
+                <p>As
+mentioned many times in these articles, most people mistakenly confuse
+optimisation of control loops with tuning.&nbsp;Tuning is the generally
+the last process involved in optimisation.&nbsp;Generally tuning
+blindly is useless, and is probably successful only about 25% of the
+time.&nbsp;Proper optimisation examines all aspects of the system, the
+individual loops, and the problems associated with their internal
+components, and also involves gaining a full understanding of all these
+points and of the requirements of the control.&nbsp;To this end, one
+performs all sorts of tests and examinations before actually performing
+the tuning.</p>
+                <p>This
+is well illustrated in this case as many problems were found in the
+individual loops making up the system. A few of these will be shown
+here.</p>
+                <p>The first case was in the pressure control
+loop which as mentioned above is critically important for the success
+of the whole oil feed system.</p>
+                <p>Figure 3
+illustrates an open loop test on the pressure, where the controller is
+in manual and step-changes are being made in output. </p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture42" src="case_history_58_files/cashis58-3.gif" alt="Figure 3" title="Figure 3" width="550" height="368" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <b><span style="font-size: xx-small;">Figure 3</span></b></p>
+                <p>It
+can be seen from the figure that the there are major problems
+associated with the control valve, which will mitigate against good
+control.</p>
+                <p>Firstly the size of the changes in the
+pressure resulting from the changes being made in the controller output
+are about 5 times larger than the size of the controller output
+changes.&nbsp;This means that the valve is about 5 times
+oversized.&nbsp;Previous articles have detailed the problems associated
+with oversized valves, but in essence the quality of control is roughly
+degraded directly proportional to the amount of oversizing. The ratio
+of the size of the steps is known as the process gain or open loop gain
+((PV/(PD).</p>
+                <p>Secondly
+one can see that the valve does not move immediately on a reversal in
+the controller output signal, and in fact the output has to move over
+5% in a reverse direction, before the valve starts moving.&nbsp;This is
+generally referred to as "valve hysteresis" which in actuality is the
+combined effect of both true hysteresis incurred by static friction on
+the valve stem, and deadband in the valve linkages.&nbsp;The overall
+effect of hysteresis is to slow down the control quite substantially,
+which again adversely affects the control variance.</p>
+                <p>Thirdly
+although the steps made in the controller output are all equal, the
+size of the resultant steps in the controller output are not.&nbsp;This
+is due to an incorrect inherent valve characteristic causing a
+non-linear installed characteristic.&nbsp;This effectively means that
+the process gain changes as the process variable moves over the
+measuring range.&nbsp;Thus as the proportional gain in a controller
+must be set to take the process gain into account, the tuning can be
+correct at only one point in the measuring range.</p>
+                <p>On
+a process as important as this, where the flows can only be as good as
+the pressure control, it is vital that all these points be corrected
+before better control can be obtained.</p>
+                <p>Tests on
+the flow loops also revealed that most of the valves are in a very
+sorry state.&nbsp;Figures 4 and 5 show tests on oil flow loop 4 and 5
+respectively.&nbsp;In both of these tests one can see that the valves
+can open quickly , but are terribly sluggish on closing.&nbsp;Both are
+oversized, and suffer from bad hysteresis.&nbsp;(As a general rule, the
+maximum acceptable hysteresis on a valve with positioner is 1%).</p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture43" src="case_history_58_files/cashis58-4.gif" alt="Figure 4" title="Figure 4" width="550" height="410" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <b><span style="font-size: xx-small;">Figure 4</span></b></p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture44" src="case_history_58_files/cashis58-5.gif" alt="Figure 5" title="Figure 5" width="550" height="410" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <b><span style="font-size: xx-small;">Figure 5</span></b></p>
+                <p>The
+actual tuning of all the loops was also way out.&nbsp;Bearing in mind
+that the tunings will have to be recalculated once the valves are
+sorted out, and tuning the pressure fast, and the flows relatively
+slowly, the tunings calculated on the existing dynamics were:</p>
+                <p>Pressure Control</p>
+                <p>The as found tuning was:</p>
+                <p>P=100%,</p>
+                <p>I=100 seconds/repeat</p>
+                <p>D=1 second</p>
+                <p>In addition there was a 1 second filter in the controller and a 9.6 second filter on the transmitter. </p>
+                <p>Much
+has been said about unnecessary filtering in previous articles, and
+this is another example of lack of understanding of
+filtering.&nbsp;There is certainly no need for any filters on this
+remarkably clean and noise free signal as can be seen in Figure
+3.&nbsp;In addition, the ridiculously large integral used in the
+controller on a process with such a fast response means that there is
+no way the control can deal speedily with slow and smallish load
+changes.&nbsp;It really is extremely bad tuning.</p>
+                <p>The
+desired tuning as calculated by the Protuner loop analyser and taking
+into account the large hysteresis, is as follows.&nbsp;(One tries to
+use a tuning with minimal overshoot on loops with unacceptable valve
+hysteresis to avoid unnecessary reversing of the valve, because every
+time the valve has to be reversed, the controller output has to move
+through the hysteresis band before the valve starts moving in the
+opposite direction).</p>
+                <p>P=1,300%,</p>
+                <p>I=2.1 seconds/repeat</p>
+                <p>No D term or filtering is required.</p>
+                <p>Unfortunately
+another adverse effect of oversized valves is that the gain in the
+controller must be reduced proportionally, and many controllers on the
+market cut off their low end gain at about 0.1 or 1000% proportional
+band. This was the case with the controllers in use in this plant, so
+the biggest proportional band that could be inserted in the controller
+was 999%. This is a little too cyclic for this application, but it had
+to do.</p>
+                <p>Flow Controls</p>
+                <p>The following settings are typical of those inserted in most of the oil flow controllers in the system.</p>
+                <p>The as found tuning was:</p>
+                <p>P=80%,</p>
+                <p>I=14 seconds/repeat</p>
+                <p>In addition there was a 1 second filter in the controller and a 9.6 second filter on the transmitter. </p>
+                <p>Again with the oversized and hysteresis plagued valves, the best tuning that could be used was:</p>
+                <p>P=999%,</p>
+                <p>I=1.3 seconds/repeat</p>
+                <p>No filtering is required.</p>
+                <p>One
+would like to have made the proportional band considerably bigger to
+slow the tuning down in view of the interaction, but again this was
+prevented by the limited proportional band range in the controller.</p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@mweb.co.za"><b><span style="font-size: xx-small;">michael.brown@mweb.co.za</span></b></a>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

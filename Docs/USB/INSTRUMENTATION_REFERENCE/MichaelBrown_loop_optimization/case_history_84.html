@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><title>Case History 84</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_84_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_84_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_84_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_84_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_84_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_84_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 84</span></b></p>
+                <p><b>DIFFICULT CONTROL LOOPS IN A BOARD FACTORY (PART 2)</b></p>
+                <p>I presented some interesting examples of relatively difficult control loops in a board factory in the previously published <a href="http://www.controlloop.co.za/Case_histories/Case_History_83/case_history_83.html">Case History</a>.&nbsp;Two more 
+                    examples of what in my opinion are rather unusual processes are given in this article.</p>
+                <p>The
+first is of a temperature process which is another part of the press
+discussed last time.&nbsp;I dealt then with the temperature control of
+the plattens in the middle of the press.&nbsp;The one given here is the
+control of the temperature of the top section of the press.&nbsp;This
+is also a very important control which is used to keep the boards
+straight and prevent bowing.</p>
+                <p>The
+interesting feature of this process which makes it apparently more
+difficult to control than usual is that the top section has a large
+thermal mass, and can be heated relatively quickly.&nbsp;However as
+there is no cooling system it takes much longer for the temperature to
+drop.</p>
+                <p>Other
+examples of similar processes are batch reactors without cooling
+systems, and several heating processes in the iron and steel industry
+such as soaking pits, where loads of steel billets are heated in a pit
+to a certain temperature and kept at that temperature for a predefined
+period.</p>
+                <p>The
+main characteristic of this type of processes where heating is much
+faster than cooling,&nbsp;is that they can absorb heat and hence act as
+integrating rather than self-regulating processes.&nbsp;Now an
+important point is that if one uses the integral term in the controller
+on an integrating process, you will get overshoot on setpoint
+change.&nbsp;(The reason why this occurs is beyond the scope of this
+article, but is mostly due to the complex phase relationship of the
+combined controller and process which now contains two integral terms).</p>
+                <p>Thus
+if you use the controller's I term you will get overshoot on SP change,
+and it will take a long time for the process to cool down again to the
+setpoint.&nbsp;For this reason, overshoot is unacceptable on most of
+these processes, as it is on this one. </p>
+                <p>An&nbsp;integrating
+process can only be kept constant, by balancing the input of the
+process against the output of the process, and in this case it means
+that the heat input must balance the heat output.&nbsp;Now what is
+unique on this particular type of process is that the heat output is
+effectively zero in the short term which means that the temperature can
+only remain constant (in the short term) when there is no heat input
+into the process.&nbsp;This means that the balance point on the PD
+(process demand, i.e. controller output) is also zero.&nbsp; Therefore
+the valve is shut at balance to keep the temperature constant.&nbsp;(In
+reality, the valve may be open just a tiny bit at balance to compensate
+for the relatively slow heat loss into the ambient, but for all intents
+and purposes it is as good as closed).</p>
+                <p>Thus
+when a SP change is made to increase the temperature, the controller
+must open the valve to allow only sufficient heat into the process to
+raise the temperature to the SP, and must then close.&nbsp;This sounds
+like quite a difficult "party" trick to achieve.&nbsp;</p>
+                <p>Fortunately
+for us mere mortals, the mathematics involved in producing feedback
+control theory (developed back in the 1930's by some of the world's
+greatest mathematicians of all time), can and does cope with the
+problem quite adequately.</p>
+                <p>The first thing
+to note is that for the reason discussed above we cannot use the I term
+in the controller.&nbsp;This leaves us with the P and the D
+terms.&nbsp;Now referring back to Loop Signature 13 on my CD on Basic
+Troubleshooting and Loop Tuning, which discusses when the D term can be
+used in a controller, it will be seen that the only time you should use
+the D term on an integrating process is when there is a large lag in
+the process. </p>
+                <p>Figure 1 shows the open loop
+test on this particular process.&nbsp;This is a test with the
+controller in manual, and with a step change being made on the
+PD.&nbsp;I have not shown the response "zoomed in" (so that it can be
+more easily compared with the closed loop responses shown in the next
+two figures), but when it is enlarged, one can see that although there
+is&nbsp;very long deadtime of approximately 400 seconds, the
+temperature then goes straight into the ramp.&nbsp;There is no "curve
+up" into the ramp which would have occurred if there had been a
+lag.&nbsp;</p>
+                <p><img id="Picture4" src="case_history_84_files/cashis84Fig1.jpg" alt="cashis84Fig1" title="cashis84Fig1" align="top" border="0" height="443" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>This
+means that we do not need the D term, and that leaves only the P
+term.&nbsp;So this is a case where we must use P only control.</p>
+                <p>Before
+discussing the tuning further, it must be noted that these processes
+are very difficult to test because of the fact that they are so
+terribly slow.&nbsp; Typically it can take an hour or two just to
+successfully record the result of a single step change on the
+controller output.&nbsp;Before you can do that, you have to get the
+process into balance which can take several hours.&nbsp;Once you have
+done your tuning test you will probably need to need to perform several
+final tests to obtain the best possible performance.&nbsp;Each of these
+tests can take an hour or more.&nbsp;Whilst you are doing all this the
+Production people are sitting around getting very upset because they
+are not making product, and they are probably thinking of the bonus
+they are loosing.&nbsp;This means they get very impatient and upset
+with you, and are reluctant to give you the plant for so long.</p>
+                <p>Therefore
+to try and keep production disruption to the minimum it is advisable to
+perform as few tests as possible on the actual plant.&nbsp;My
+methodology on these is to completely dispense with the usual closed
+loop test "as found" where you make a SP change with existing
+tuning.&nbsp;(In reality in a case like this it is usually a waste of
+time as the tuning in normally so far out).&nbsp;I generally then
+perform one, or at the most two open loop tests so that I can obtain a
+good representative model from the test, and then I do the final tuning
+tests on my Protuner simulator.&nbsp;This works well and if I really
+got a truly representative model for the open loop test I can put the
+final tuning into the controller with 95% confidence of success.</p>
+                <p>How
+does one get the final tuning?&nbsp;Well it is relatively easy.&nbsp;We
+have seen from the above that only the P term can be used.&nbsp;Now
+thinking about this problem, we can deduce that with P only
+control,&nbsp;when&nbsp;a SP change is made, the process must always
+get to, or go over the new&nbsp;setpoint. It can never "undershoot"
+irrespective of how small a P value is used.&nbsp;The reason for this
+is that if you are below setpoint there will be an error which the P
+term will multiply and thus keep the valve open, and the temperature
+must then carry on rising (until such time when the valve is fully
+shut, which can only occur when there is no error between SP and
+PV).&nbsp;</p>
+                <p>So
+what value of P should you use?&nbsp;A very small value will get you
+there, but maybe very slowly.&nbsp;Too big a value will cause
+overshoot.&nbsp;How do we determine the optimum value?</p>
+                <p>A
+good tuning package like the Protuner, may be fine and give a
+reasonably good indication of the final P tuning value, but as the
+software always calculates figures which will be safe, one may, and
+usually can, increase the P value to give a faster response.&nbsp;This
+is where the experimental bit comes in, and where one can try various
+values of P to get the fastest response.</p>
+                <p>Figure
+2 illustrates the closed loop response with the original tuning of P =
+8, and I = 13.3 minutes/repeat.&nbsp;One can see the huge overshoot
+that occurs on a setpoint change caused by the I term.</p>
+                <p><img id="Picture5" src="case_history_84_files/cashis84Fig2.jpg" alt="cashis84Fig2" title="cashis84Fig2" align="top" border="0" height="444" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>Figure
+3 is the final tuning with a P only control with a P value of 30 in the
+controller.&nbsp;One can see what a fantastic response is obtained.</p>
+                <p><img id="Picture6" src="case_history_84_files/cashis84Fig3.jpg" alt="cashis84Fig3" title="cashis84Fig3" align="top" border="0" height="446" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>So
+in actual fact what appeared initially to be a complex control problem
+can actually be solved very easily, once you understand the dynamics
+and how the control should work.&nbsp;</p>
+                <p>The
+second example which is of interest is of a control adjusting the
+amount of feed of the mixed core components being fed into the board
+machine via a variable speed conveyor belt.&nbsp; The measurement is
+the height of the load on the belt, and is varied by adjusting the belt
+speed.</p>
+                <p>This
+loop had never worked well and was normally run in manual.&nbsp;A
+closed loop "as found" test with the existing tuning parameters of P =
+0.2 and I = 0.02 minute/repeat was conducted.&nbsp;Although not shown
+here, the control was completely unstable, with the controller PD
+swinging wildly between the output limits.&nbsp;</p>
+                <p>Bearing
+in mind the maxim that levels are always integrating except for levels
+where the product is passing over a weir, experience would have told us
+that the above tuning parameters would be most unlikely to work, as
+they would be more applicable to a simple flow self regulating type
+process.</p>
+                <p>Figure
+4 shows the open loop test on this process.&nbsp;Analysis of the test
+using either the Protuner or the graphical technique given in Loop
+Signature 3 on the Basic Troubleshooting and Loop Tuning CD shows the
+process gain has a value of roughly 0.004.&nbsp;This using the tuning
+rules given in Loop Signature 27, would show that with a P gain of 0.2,
+an I value of at least 83 minutes/repeat would be needed for stable
+control.&nbsp;The tiny integral of&nbsp;0.02 minute/repeat was
+guaranteed to make the control unstable!</p>
+                <p><img id="Picture7" src="case_history_84_files/cashis84Fig4.jpg" alt="cashis84Fig4" title="cashis84Fig4" align="top" border="0" height="445" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>A
+P gain value of 0.2 is also really far too small for use on a process
+with a gain of 0.004, and would give terribly slow control.&nbsp;The
+Protuner tuning gives a suggested P gain of 1.6 and an integral of 10
+minute/repeat.&nbsp;These were used in the controller and the
+tremendously improved control is shown in a final closed loop test in
+Figure 5.</p>
+                <p><img id="Picture8" src="case_history_84_files/cashis84Fig5.jpg" alt="cashis84Fig5" title="cashis84Fig5" align="top" border="0" height="446" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p>Incidentally&nbsp;a
+lot of people would immediately put a PV filter on this loop to take
+out the noise which can be seen in both figures.&nbsp;In actual fact
+filters should only ever be used if necessary, which is if the noise
+is&nbsp; actually causing the final control element to jump
+around.&nbsp;In a case like this the noise actually coming through the
+controller and appearing on the PD will have no effect on the variable
+speed drive, and it is not necessary to filter it.</p>
+                <p>I
+hope these two examples give a good idea of how really understanding
+the basics allow one to gain satisfactory control of processes.</p>
+                <p><i>Remember that the true magic in control is to fully understand what you are doing.&nbsp;</i></p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

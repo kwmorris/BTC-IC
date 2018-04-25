@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0073)http://www.controlloop.co.za/Articles/Case_History_68/case_history_68.htm -->
+<HTML><HEAD><TITLE>Case History 68</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Case History 68_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 src="Case History 68_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Case History 68_files/banneroct2002.jpg" width=765 
+    border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Case History 68_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Case History 68_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=678><IMG height=1 src="Case History 68_files/clearpixel.gif" 
+      width=678 border=0></TD>
+    <TD width=31><IMG height=1 src="Case History 68_files/clearpixel.gif" 
+      width=31 border=0></TD>
+    <TD width=13><IMG height=1 src="Case History 68_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Case History 68_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Case History 68_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=12></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=678>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#cc0033>CONTROL LOOP 
+      CASE HISTORY 68<BR><BR></FONT><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica>Control mayhem on a mine</FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>I have often written 
+      about the dearth of understanding of practical control which is largely 
+      due to the generally purely theoretical teaching of process control at 
+      educational institutions. I have also mentioned that control is generally 
+      much worse in plants running their analogue controls in PLC's 
+      (Programmable Logic Controllers), as opposed to DCS's (Distributed Control 
+      Systems).&nbsp; 
+      <P>PLC's are far more flexible in their programming than DCS's.&nbsp; In 
+      the DCS the manufacturers generally enforce a strict programming 
+      structure, which in fact protects the users from making errors, and more 
+      or less forces them to do things correctly.&nbsp; There is no such 
+      structuring in PLC's.&nbsp;&nbsp; Users can do anything they like, and 
+      very often they do things wrong.&nbsp; This was driven home to me again 
+      during the practical session in a recent training course I gave at a large 
+      mine.
+      <P>The mine uses a popular make of PLC.&nbsp; In passing it should be 
+      mentioned that it does make more sense in most mining applications to go 
+      the PLC route, rather than use DCS's.&nbsp; Apart from cost 
+      considerations, the digital IO count is very much bigger than the number 
+      of analogue loops.&nbsp; Many mining people also think that they don't 
+      need the features and sophistication of a DCS.&nbsp; However this is 
+      incorrect.&nbsp; I have found that mining applications in fact often call 
+      for quite complicated control strategies generally available as standard 
+      in most DCS's.&nbsp; Many PLC's do not offer these features, and as a 
+      result the controls are sometimes severely compromised.
+      <P>I have found it necessary the first time I go into a plant that uses 
+      PLC's for control, to test their PID blocks to ensure they are functioning 
+      correctly.&nbsp; In at least 60 - 70% of cases I find that in fact they 
+      are not right.&nbsp; In this mining plant both the proportional gain and 
+      the integral terms in the PID blocks were completely incorrect.&nbsp; (It 
+      is seldom necessary to check the D term, as it is hardly ever used, 
+      particularly in processes encountered in mining applications).
+      <P>If the proportional gain is incorrect, then this is often due to 
+      incorrect interfacing and/or scaling between the SCADA (Supervisory 
+      Control and Data Acquisition) and the PLC.&nbsp; If the integral term is 
+      wrong, it usually means that the person who originally programmed the PLC 
+      has not set up the triggering of the PID blocks correctly.&nbsp; Integral 
+      and derivative are completely time dependent.&nbsp; Therefore the PID's 
+      need to be triggered in the PLC by an accurate and repeatable timed 
+      interrupt, and the scan rate of the interrupt must then must be entered 
+      correctly in the PID block's parameter information area correctly.&nbsp; 
+      <P>In this case it was extremely difficult to correct the problem, as the 
+      original programming of the controllers had been very badly done, and the 
+      execution of the PID's was performed in such a way that all the timing was 
+      completely dependent on the actual programme scan time of the PLC. (PLC 
+      scan times are variable as they are affected by miscellaneous interrupts 
+      that can occur in the programme from time to time).&nbsp; To change it 
+      completely would have virtually meant a major rewrite of the whole PLC 
+      programme.&nbsp; Fortunately, the Senior Electrical and Instrument 
+      Technician in the plant was a bright and highly competent programmer, and 
+      he managed to write some clever software that gave reasonably repeatable 
+      PID execution times.&nbsp; (As a general rule in practical control 
+      absolute accuracy to multiple decimal points is not at all critical).
+      <P>A couple of the loops that were examined are of interest:
+      <P>Figure 1 shows the performance of a slurry flow control loop on the "as 
+      found" closed loop test.&nbsp; It can be seen that the loop was 
+      effectively completely unstable.&nbsp; Once the controllers had been set 
+      up correctly, and the loop tuned properly, it behaved very well. It is 
+      quite fascinating that one can find loops operating like this in working 
+      plants.
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture84 height=409 alt="Figure 1" 
+            src="Case History 68_files/cashis68-1.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <DIV align=center><B>Figure 1</B></DIV>
+      <P>The second loop, which is the control of a secondary crusher, is an 
+      excellent example of how people can do things incorrectly on PLC's, and 
+      also how little understanding there is of practical control.&nbsp; Figure 
+      2 shows the set-up of the crusher.&nbsp; Ore is fed from a -bin to the 
+      crusher via a belt feeder equipped with a variable speed drive.
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture85 height=426 alt="Figure 2" 
+            src="Case History 68_files/cashis68-2.jpg" width=500 
+        border=0></TD></TR></TBODY></TABLE></DIV><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <DIV align=center><B>Figure 2</B></DIV>
+      <P>Crushers of this type are generally operated by controlling the level 
+      of the ore in them.&nbsp; However in this case the crusher motors were 
+      undersized, and the motors tended to overheat and trip, particularly on 
+      harder ores.&nbsp; To try and prevent this the metallurgists had come up 
+      with a strategy so that the control of the crusher swapped over from the 
+      level controller to a power controller when the motor power exceeded a 
+      high limit.&nbsp; The problem with this was that under power control the 
+      level in the crusher had to drop to below 50% before there was any 
+      noticeable reduction in the power. (The power remained more or less 
+      constant once the level was above 50%).
+      <P>Apart from this being very non-linear, the crushing efficiency also 
+      dropped drastically at lower crusher levels.&nbsp; In actual fact it we 
+      also quickly ascertained that in reality there was no real way that stable 
+      control could be obtained in the power control mode.
+      <P>Figure 3 shows a closed loop test with the control was swapping 
+      backwards and forwards between the power and level controllers on a cycle 
+      of about 2 minutes. As can be seen it is very bad.&nbsp; It is noteworthy 
+      that the mine has been trying for years to set the tuning of the 
+      controllers to get good control.&nbsp; (One of the common fallacies in 
+      process control is that "all control problems can be sorted out by 
+      tuning").
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture86 height=409 alt="Figure 3" 
+            src="Case History 68_files/cashis68-3.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <DIV align=center><B>Figure 3</B></DIV>
+      <P>Essentially the problem is process related and is not a control 
+      problem.&nbsp; Either the crusher motors are underrated, or the crusher is 
+      not right for the application, and a solution can not be obtained by 
+      trying to control both power and level (which in particular is unworkable 
+      in this instance).
+      <P>Another fault in the set-up of the control loop was that if the level 
+      in the crusher ever went too high, the belt feeder was stopped by 
+      literally forcing the output signal from the controller to zero.&nbsp; 
+      When this happened the programmer left the controller in automatic.&nbsp; 
+      This resulted in the controller output value winding up.&nbsp; In addition 
+      the dynamics of the level process had a very long deadtime of about 15 
+      seconds, and an extremely large process gain for an integrating process of 
+      about 0.2 (equivalent to a tank retention time of about 5 seconds!).&nbsp; 
+      This means that once the level started moving, it could change extremely 
+      quickly, making control very difficult.&nbsp; The correct tuning required 
+      for these dynamics results a very small gain, and long integral.&nbsp; 
+      Therefore when the interlock was released, the integral had wound up the 
+      output so far that huge process bumps were caused the with big overshoots 
+      or undershoots. In this case the overshoots were so large that they were 
+      causing the trips to occur again.&nbsp; As a result the control loop was 
+      effectively cycling on and off.&nbsp; This is shown in Figure 4.&nbsp; A 
+      better approach in a situation when one must force the controller's output 
+      to a different value, is to put the controller in manual so reset wind-up 
+      can not occur.&nbsp; There are also other solutions.
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture87 height=409 alt="Figure 4" 
+            src="Case History 68_files/cashis68-4.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <DIV align=center><B>Figure 4</B></DIV>
+      <P>I have come across this type of interlock numerous times in systems 
+      controlled by PLC's.&nbsp; The people who do this programme have little 
+      understanding of controllers, and of the damage that can be caused to 
+      control systems by incorrectly interfering with the operation of a control 
+      loop.&nbsp; In one remarkable case on a ferrochrome furnace pressure 
+      control, the PLC programmer had no idea how to achieve balanceless - 
+      bumpless transfer between Automatic and Manual, and had programmed the 
+      controller so that when it was switched to Automatic it first set the 
+      controller's output to zero.&nbsp; On that particular process, it caused 
+      an explosion which ruptured all the emergency blow-out disks, resulting in 
+      a direct cost to the plant of over R100,000 - not to mention 72 hours lost 
+      production).
+      <P>Another interesting thing discovered by accident on this same loop in 
+      the mine, was that when the PD (controller's output) varied from 18% to 
+      38%, the feeder belt speed varied between 1 and 100% - see test shown in 
+      Figure 5.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture88 height=410 alt="Figure 5" 
+            src="Case History 68_files/cashis68-5.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <DIV align=center><B>Figure 5</B></DIV>
+      <P>This is effectively like having a 5 times oversized control 
+      valve.&nbsp; Apparently one of the metallurgists had felt that faster 
+      control could be obtained if the speed of the hydraulic variable speed 
+      drive was made faster.&nbsp; To achieve this the plant had replaced the 
+      hydraulic control valve on the drive with a larger one.&nbsp; This meant 
+      that no control action was being achieved over 80% of the controller's 
+      output range.&nbsp; This type of thing can also badly affect the control.
+      <P>In general it is apparent that people need to get a much better 
+      understanding of the practicalities of control.&nbsp; It is also essential 
+      that optimisation of control systems can only be successful when the 
+      various departments including process experts and instrumentation and 
+      control people work together with a mutual understanding&nbsp; of the 
+      objectives and requirements for the control.<BR><BR><B>Addendum<BR></B>I 
+      was finishing off this article one evening after spending a day optimising 
+      control loops in a leading manufacturing company's paint plant.&nbsp; The 
+      control of the process is critical.&nbsp; If the temperature deviates from 
+      setpoint by more than one degree Centigrade the product worth many tens of 
+      thousands of Rands is actually scrapped.&nbsp; The control is done on a 
+      well known make of German PLC, and the programming was done in 
+      Germany.&nbsp; I was horrified to learn that there was no way that one 
+      could place the controllers into manual.&nbsp; The control blocks had been 
+      blocked from access, and there was no-one in South Africa who knew how to 
+      get in to modify them.&nbsp; I can understand that the designers didn't 
+      want plant operators to be able to normally run the plant in manual, but 
+      how on earth did they think that the technical specialists would be able 
+      to tune the controllers?&nbsp; It is essential to be able to make step 
+      changes in manual when performing loop analysis and tuning!&nbsp; Once 
+      again it shows that world wide, people doing regulatory controls on PLC's 
+      have very little knowledge of what they are doing.<BR><BR></FONT><A 
+      href="http://www.controlloop.co.za/Articles/Index_to_articles/index_to_articles.htm"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to articles</FONT></A>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A><BR>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton19',1)" 
+            onmouseout="F_roll('NavigationButton19',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton19 height=19 alt=Home 
+            src="Case History 68_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton19></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton20',1)" 
+            onmouseout="F_roll('NavigationButton20',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton20 height=19 alt=Training 
+            src="Case History 68_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton20></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton21',1)" 
+            onmouseout="F_roll('NavigationButton21',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton21 height=19 alt=Consulting 
+            src="Case History 68_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton21></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton22',1)" 
+            onmouseout="F_roll('NavigationButton22',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton22 height=19 alt=Protuner 
+            src="Case History 68_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton22></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton23',1)" 
+            onmouseout="F_roll('NavigationButton23',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton23 height=19 alt="Contact us" 
+            src="Case History 68_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton23></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton24',1)" 
+            onmouseout="F_roll('NavigationButton24',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton24 height=19 alt=Articles 
+            src="Case History 68_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton24></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Case History 68_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

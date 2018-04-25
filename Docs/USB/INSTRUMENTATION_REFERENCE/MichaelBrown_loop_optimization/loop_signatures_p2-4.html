@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures P2-4</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-4_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-4_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-4_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-4_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-4_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="loop_signatures_p2-4_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b><span style="font-size: small;">Feedforward control - part 3</span></b></p>
+                <p>In
+the previous articles in this series, the basic theory behind
+feedforward control was discussed, and it was also shown how to apply
+feedforward in practice.&nbsp;In this article it will be shown how well
+feedforward can work in practice, by giving a couple of examples.</p>
+                <p>The
+first example is with extremely simple process and load transfer
+functions, having very simplistic first order lag, dead time,
+self-regulating dynamics.&nbsp;I know this is not really practical, and
+that one would be unlikely in real life to be applying feedforward to
+such simple systems, but the reason I have used this is to "prove by
+example" that feedforward theory in reality is 100% correct, and how
+well it can work.&nbsp;</p>
+                <p>The
+second example will be a system with much more complicated dynamics,
+and will again show how even imperfect feedforward really improves
+matters.</p>
+                <p><b>Example 1: Simplistic Dynamics</b></p>
+                <p>Figure 1 shows the open loop test performed on the system.</p>
+                <p><img id="Picture2" src="loop_signatures_p2-4_files/loopsig2-4Fig1.jpg" alt="loopsig2-4Fig1" title="loopsig2-4Fig1" align="top" border="0" height="448" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>Firstly
+keeping the LD (load) constant, a step was made on the PD (process
+demand, i.e. feedback controller output).&nbsp;Next with a constant PD,
+a step was made on the LD.&nbsp;From this test it is easy to determine
+the gain, the deadtime and the time constant for both the test of the
+PV vs. the PD, and for the test of the PV vs. the LD.&nbsp;(The
+dynamics can be obtained either graphically as described in Chapters 2,
+3, and 4 of my Basic Troubleshooting and Loop tuning CD, or else
+Protuner users can get them directly from the Loop Signature of the
+tuning report.&nbsp;The tuning of the feedback controller was obtained
+from the Protuner, and was of course taken from the PV vs. the PD test.)</p>
+                <p>The dynamics were found to be:</p>
+                <p>
+                    <table nof="TE" align="left" border="0" cellpadding="0" cellspacing="0" width="650">
+                        <tbody><tr>
+                            <td>
+                                <table id="Table1" border="0" cellpadding="2" cellspacing="0" height="160" width="100%">
+                                    <tbody><tr height="20">
+                                        <td width="321">
+                                            <p><b>P(s) - Process Transfer Function</b></p>
+                                        </td>
+                                        <td width="321">
+                                            <p><b>L(s) - Load Transfer Function</b></p>
+                                        </td>
+                                    </tr>
+                                    <tr height="24">
+                                        <td>
+                                            <p>PG<sub>P</sub> = 1</p>
+                                        </td>
+                                        <td>
+                                            <p>PG<sub>L</sub> = 2</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="24">
+                                        <td>
+                                            <p>DT<sub>P</sub> = 5 seconds</p>
+                                        </td>
+                                        <td>
+                                            <p>DT<sub>L</sub> = 10 seconds</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="24">
+                                        <td>
+                                            <p>TC<sub>P</sub> = 10 seconds</p>
+                                        </td>
+                                        <td>
+                                            <p>TC<sub>L</sub> = 5 seconds</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="20">
+                                        <td>
+                                            <p>Controller P gain = 1.2</p>
+                                        </td>
+                                        <td>
+                                            <p>&nbsp;</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="20">
+                                        <td>
+                                            <p>Controller I = 10 sec./repeat</p>
+                                        </td>
+                                        <td>
+                                            <p>&nbsp;</p>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>Now from the previous articles the tuning of the feedforward controller will be:</p>
+                <p>&nbsp;Gain = PG<sub>L</sub>/PG<sub>P</sub> = 2/1 = 2</p>
+                <p>&nbsp;Lead = TC<sub>P</sub> = 10 seconds</p>
+                <p>&nbsp;Lag = TC<sub>L</sub> = 5 seconds</p>
+                <p>&nbsp;Delay = DT<sub>L </sub>&#8211; DT<sub>P</sub> = 10 &#8211; 5 = 5 seconds</p>
+                <p>Figure
+2 shows a test without the feedforward.&nbsp;A setpoint change was
+first made and the PV followed it fairly well.&nbsp;Then a 10% step was
+made in the load disturbance.&nbsp;It caused a huge upset with a big
+fluctuation of the PV.&nbsp;The feedback control could not deal with it
+at all well.</p>
+                <p><img id="Picture3" src="loop_signatures_p2-4_files/loopsigp2-4Fig2.jpg" alt="loopsigp2-4Fig2" title="loopsigp2-4Fig2" align="top" border="0" height="448" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>The
+same test is repeated in Figure 3, but this time the feedforward has
+been switched on.&nbsp;It is absolutely incredible!&nbsp;There was not
+the slightest deviation in the PV when the load step was
+made.&nbsp;This illustrates how perfectly feedforward works in ideal
+conditions.</p>
+                <p><img id="Picture4" src="loop_signatures_p2-4_files/loopsigp2-4Fig3.jpg" alt="loopsigp2-4Fig3" title="loopsigp2-4Fig3" align="top" border="0" height="448" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>To
+give an even better idea of the power of feedforward refer to Figure
+4.&nbsp;This is a test on the same system, but in this case the load
+change is being introduced as a cycle with a period equal to the
+ultimate period of the process.&nbsp;In Chapter 22 of the above
+referenced CD, a description was given as to how feedback control loops
+respond to cyclical disturbances at different frequencies.&nbsp;It will
+be remembered that the variance in automatic can be as much as twice
+the variance in manual with disturbances at frequencies near the
+ultimate period of the loop.</p>
+                <p><img id="Picture5" src="loop_signatures_p2-4_files/loopsigp2-4Fig4.jpg" alt="loopsigp2-4Fig4" title="loopsigp2-4Fig4" align="top" border="0" height="447" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>At
+the start of the test shown in Figure 4, the feedback controller is in
+manual, and feedforward is off.&nbsp;It can be seen what a large cycle
+occurs on the PV.&nbsp;After a while the controller is switched into
+automatic.&nbsp;The effect is really bad.&nbsp;The amplitude of the
+cycle on the PV has doubled, showing how the feedback control is
+completely unable to cope with the cycle at that frequency.&nbsp;A
+little later the feedforward is switched on.&nbsp;It immediately caught
+the disturbance and the PV trace is now a straight line.&nbsp;A short
+while later a setpoint change was made. The PV responds exactly as it
+would have if there was no cyclic disturbance occurring.</p>
+                <p>This is a really dramatic illustration of exactly how powerful feedforward is.</p>
+                <p>&nbsp;</p>
+                <p><b>Example 2: Complex Dynamics</b></p>
+                <p>In
+this example the process transfer function has five first order lags of
+equal magnitude.&nbsp;Later on in this series it will be shown how
+difficult it is for PID to control this type of dynamic really
+well.&nbsp;It is a very difficult class of dynamics.&nbsp;The load
+transfer function has three first order lags.&nbsp;Also not nice.</p>
+                <p>Figure 5 shows the open loop tests performed to make the models and get the feedback tuning.</p>
+                <p><img id="Picture6" src="loop_signatures_p2-4_files/loopsigp2-4Fig5.jpg" alt="loopsigp2-4Fig5" title="loopsigp2-4Fig5" align="top" border="0" height="449" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p>Now
+using exactly the same simplistic first order modelling as was used for
+the previous very simple example, the following dynamics and tunings
+were obtained:</p>
+                <p>
+                    <table nof="TE" align="left" border="0" cellpadding="0" cellspacing="0" width="660">
+                        <tbody><tr>
+                            <td>
+                                <table id="Table2" border="0" cellpadding="2" cellspacing="0" height="186" width="100%">
+                                    <tbody><tr height="20">
+                                        <td width="326">
+                                            <p><b>P(s) - Process Transfer Function</b></p>
+                                        </td>
+                                        <td width="326">
+                                            <p><b>L(s) - Load Transfer Function</b></p>
+                                        </td>
+                                    </tr>
+                                    <tr height="24">
+                                        <td>
+                                            <p>PG<sub>P</sub> = 1</p>
+                                        </td>
+                                        <td>
+                                            <p>PG<sub>L</sub> = 1.25</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="24">
+                                        <td>
+                                            <p>DT<sub>P</sub> = 32 seconds</p>
+                                        </td>
+                                        <td>
+                                            <p>DT<sub>L</sub> = 8.5 seconds</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="24">
+                                        <td>
+                                            <p>TC<sub>P</sub> = 26.1 seconds</p>
+                                        </td>
+                                        <td>
+                                            <p>TC<sub>L</sub> = 46.2 seconds</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="21">
+                                        <td>
+                                            <p>Controller P gain = 0.4</p>
+                                        </td>
+                                        <td>
+                                            <p>&nbsp;</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="20">
+                                        <td>
+                                            <p>Controller I = 19.6 sec./repeat</p>
+                                        </td>
+                                        <td>
+                                            <p>&nbsp;</p>
+                                        </td>
+                                    </tr>
+                                    <tr height="21">
+                                        <td>
+                                            <p>Controller D = 4.9 seconds</p>
+                                        </td>
+                                        <td>
+                                            <p>&nbsp;</p>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>The tuning of the feedforward controller will be:</p>
+                <p>&nbsp;Gain = PG<sub>L</sub>/PG<sub>P</sub> = 1.25/1 = 1.25</p>
+                <p>&nbsp;Lead = TC<sub>P</sub> = 26.1 seconds</p>
+                <p>&nbsp;Lag = TC<sub>L</sub> = 46.2 seconds</p>
+                <p>&nbsp;Delay = DT<sub>L</sub> &#8211; DT<sub>P</sub> = 8.5 &#8211; 32 = - 23.5 seconds.&nbsp;<i><u>But we have to set this delay equal to zero</u></i>, <i>as we cannot have negative time .</i></p>
+                <p>In
+this example we have to be very careful of the action of the
+feedforward controller.&nbsp;The process is actually very similar to
+the heat exchanger shown in the previous two loop
+signatures.&nbsp;Referring to the open loop tests shown in Figure 5, we
+see that when the PD (steam valve) was stepped up, the PV (temperature)
+increased.&nbsp; When the LD (process flow through the exchanger) was
+stepped up, the PV (temperature) decreased.&nbsp;</p>
+                <p>Therefore
+when we have an increase in load, we must ensure the feedforward action
+opens the steam valve to increase the temperature.&nbsp;In Figure 6 the
+feedback controller is in automatic.&nbsp;Initially the feedforward is
+off.&nbsp; When a load disturbance occurred (LD signal not shown),
+there was large excursion of the PV from setpoint, as the feedback
+control could not catch the disturbance.&nbsp;Next, the feedforward was
+switched on, and another load disturbance made, but the feedforward
+action was applied incorrectly, so the valve started closing initially,
+instead of opening.&nbsp;As a result the control variance is much worse
+in this case with the feedforward on.</p>
+                <p><img id="Picture7" src="loop_signatures_p2-4_files/loopsigp2-4Fig6.jpg" alt="loopsigp2-4Fig6" title="loopsigp2-4Fig6" align="top" border="0" height="448" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 6</i></p>
+                <p>Figure
+7 shows the same test but this time the feedforward action has been
+applied correctly.&nbsp;And it can be seen that although not perfect,
+the feedforward has really improved matters, probably by at least an
+order of a magnitude.</p>
+                <p><img id="Picture8" src="loop_signatures_p2-4_files/loopsigp2-4Fig7.jpg" alt="loopsigp2-4Fig7" title="loopsigp2-4Fig7" align="top" border="0" height="449" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 7</i></p>
+                <p>Remember
+that in this case the process has five lags and the load has three. We
+have tried to cancel out the effects of load changes with really
+simplistic first order lag, deadtime models.&nbsp;To make matters
+worse, the delay could not be used, as it was negative.&nbsp;However in
+spite of all these difficulties, the feedforward really helped.</p>
+                <p>Just
+out of interest, the vast majority of feedforward systems implemented
+in real life don't even bother with leads, lags and delays, but only
+use feedforward with a gain element.</p>
+                <p>The moral
+of the story is that in cases where the feedback control cannot deal
+with the effects of load changes, normally even some feedforward is
+better than none!</p>
+                <p>It should be pointed out that
+if you have the tools available that can help you make more complex
+models, like the Protuner with its modelling feature, there is nothing
+to stop you creating much more powerful feedforward compensators, with
+as many leads and lags as you like.&nbsp;Good modern control equipment,
+like most DCS systems, allows you to insert as many of these blocks as
+you wish.</p>
+                <p>To summarise; feedforward offers the following great advantages:</p>
+                <ul>
+                    <li>It does not change the feedback tuning </li>
+                    <li>Feedforward can operate much faster than feedback</li>
+                    <li>It cannot cause the system to go unstable</li>
+                    <li>It will reduce load upsets typically by an order of magnitude</li>
+                    <li>On loops with slow response to load upsets, even poorly tuned feedforward is usually much better than none</li>
+                </ul>
+                <p>A
+final point to note is that feedforward is not limited to a single type
+of load upset.&nbsp;You can feedforward as many load signals as may be
+required, but obviously the load upsets must be measurable.</p>
+                <p><span style="font-size: 10pt;"></span><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a><br>&nbsp;</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>
