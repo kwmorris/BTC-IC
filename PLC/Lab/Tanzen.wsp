@@ -2,12 +2,12 @@
 APIVERSION=(100)
 VERSION=(2,2,1,14)
 [FRAME]
-PLACEMENT=(44,2,3,-1,-1,-1,-1,26,26,1178,619)
+PLACEMENT=(44,2,3,-32000,-32000,-1,-1,26,26,1178,619)
 FRAME DATA=(1,1,0,0)
 [FRAME DATA]
 1=(44,2,3,0,582,-8,-31,78,78,847,343)
 [Ladder Views]
-F1V1=(95,52,-16,7,16,5,55,1,30000,0,1)
+F1V1=(95,1,0,7,16,5,36,2,15,0,1)
 [Ladder Frame 1]
 Ladder View 1z=(0,0,1511,612)
 ModuleSegment=6
@@ -15,6 +15,7 @@ ModuleSegment=6
 1=3
 [TAB INFO]
 Tab0=3,$Main
+Tab1=9,Documentation Editor
 [DISPLAY MODE]
 DoMDIRestore=0
 [SYSTEM NAME]
