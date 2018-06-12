@@ -668,7 +668,7 @@ $tBottomOfScan,40,TASK,0000FF09
 // name, heap-id, DM-structure-data-type, GUID
 #END
 
-#BEGIN DM_NICKNAMES D6D12ED3
+#BEGIN DM_NICKNAMES 28EAE5AF
 // nickname, data-type, DM-element, User-BuiltIn-Block-Heap-Type, block-name-or-heap-item-name
 RED_PB,DISCRETE,X0,BBLOCK,X
 GRN_PB,DISCRETE,X1,BBLOCK,X
