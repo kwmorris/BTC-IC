@@ -1,0 +1,896 @@
+// Options: Export entire program; Code Block delimiter instructions;
+// Unformatted Rung Comments; Element Documentation Database;
+// System Configuration; Memory Configuration/Devices with Built-In Types and User Add-Ons;
+// use Element names (no NickNames); rung/address annotations;
+// <TAB> parameter delimiter; 
+// Write/overwrite file C:\Users\kwmor\Documents\BTC-IC\Projects\Tanzen\PLC\Tanzen_EXPORT_DMD.txt
+
+PLC H2-DM1E
+
+// Do not modify SYS_CONFIG block!
+#BEGIN SYS_CONFIG
+4f1c797aff6cc5b58c7e6f5484235881d505b2301d7c59738209b7e438fc571769b4d32ab88f559c
+a417d3899fcba525c3cb780a3c2eacf9ac2a37f81f80b837eecdff534f6dd1662a117a316e11b9c7
+5017ef0809d5bdecb44ee96879c6a6c24e9c7940e7bec34937262a9b42fd4a67cf5e046074ea2429
+4970423f22e5eaffa35ef316179e124fd6bbb5e69d8d08f36b6ec1d489a7a597fadfba099b17428f
+517e3641679db11064b2d4d3cd34e9da73b99c624639f667937322393ba80e625c61b6e16641546f
+c83c6f8b81ad4e1ededfa0be1887aac9748ce5ec9fa8ef31ea4832971057ed3dc883786bf2892c79
+4927fcef8a5c85aaba4b1daac7e7d613b7153826d37fab862a2d48466c29508530be6b8b9dc67522
+071e5d88bccc35af9620d3f98a97593d340387b05f615aae0fec6a0602a988428935b3e4c5c54b88
+3658a82605e63ded76c25cbd7397927c061d93ed7b27e7b5f599dfa13ace89b7d25e5ed47c97231c
+0ecd05d5e28b6f5b7e01f8268755eeda43a6f0560ae158f5e941022ce930936305d07fdf8efc3e32
+316ee556bce3a7c255fc4eff8718c559a265c5585139c81046981b1cd525b9bac09f9c5bbe21427a
+c7e12e70becfb8d8ecadc7c9ec2cb4ba22c2750194f95f9cc17fcd382d3b209f2bdae2838866286a
+53ecfafc31124add67abebc8eb9cfeba83682ed77f62fb2ed51d57a4d22df88edb4e4314571cbf92
+7d33c9b237520dc92bff24b3d8ec6e2d73b96e5da0d8bf646f1fac7cf95be0079c9b8801e6c585eb
+1ab9c256000822a473f33d919c7de58b247e0547b3a42fcbbde035fddefbc741f419988fbedd20e7
+d9aa155ddfc4326314cda2789e5498570c1e23837040f2236c4a9a158f66793f7a5977589dc2bad6
+07a81f5012d40de4512c7209413a8348e6ab3255a08c74a7e1f640de33a68a848fcda15735e62b41
+ee5a09a4daffa212014ed8f1306e47ad5163ade0fd33a287cef1d605cb683801f0e08dd3e38ff976
+93c3411d2559534afe958fe5f6ee20fc0b61b90c8d29454b20a83cccd7b74170fa9f6d841255986d
+e0d11014d69679e96ece049701f675a2d1a3a180c64b6d55e54301a575032b5f506a400d6bb49fd6
+fe17866324e6f8ccae3ffc042ab8234b77a7430949b1c511d90c8b21c62b9a0ece9bad39ca54b951
+1ea0225aa2db9503face68171d7eecb9097f1dc66b94583e2d3fd21322bbb2df3e4ec8ce681f157e
+f3ed779267182aabf4805070cbe4437d92f6dd2d3fd7f9149244927c45ab8c348f2dbe017482ba84
+c81eaa54753a8f923a037da22fa7d0fb2dd5c696ee9e941efb5e83ad51b66ed3a11a8e9aca8ecb95
+8a7ba3c37615005c357fe07c131f1d3244ca4b447c141c443102b9c62da19f983e826e95bfe36fe7
+ac434a06a7bd773673d179441e6cc3609bae4825697b162f52c19d120d5fc88bc20b5067d8d3a743
+d5c5b47286c77d68043b0e31e17c6ee75ff48117fcd4a73c69e358f40a6054bb27a50b87ab2b3b71
+6f93ceab52da0edda52c0d377f1b0a51d5edb8250dbf37085f9ecacc343b71520d5e204a2d4e7476
+e0c193baed32a9a474a7403fadb494b11f6c6f2893b50e50516935d012ab0c0d903a0a3745a1799f
+09182ff2fe315282e315ae9642e1d36a646d2214380ce445f3ea64b3119c075d0ec151ce8e91cda6
+83f9450b1a48e646d0babf68481d62554e080484c4fd0196e925d3170de076580ae4b88535c05be0
+f66f261379344d8076b2a853c5b7e3175513dbd257c26c2b98ed87cab37e884cd6774c842c394c7d
+96b792bd5206521c7c79e5d5ef172405830a9e6c4d8a1f0a68eed0eef84f6788fc66c75da901b60d
+21b3f4ae68e3e487b1dad9cdf182717c2825884b74360d148f2643eca70fb03f506e1573c7cda794
+c278a9442f30bd90ced3c5fafabe8297bfc3336852f2114969b219ba802f63867e571dc76b9b0caf
+c1c9821af92d7ed646e6b072714a4f2e2cbf17a0c6434604c1efedfb9cb303c9176ef4f26e78c705
+6d845d86ebe84b1060cc0b77275b476c7cda15e3eaeae0a3daf3e73164cd7857564abbb82800ce46
+c45c3a5b9c45c3376335c2c30b803a4c567e08307dfce4e54fdcaa53187e3825ba1ec2e7311da2dc
+c64cbb335dfba63c95a79dfd5b17569fd4d591adb07c7f90cdc4413ab50cd3539844487bb3df7920
+ab01ea8cd4d97764c019f810a678024029c7e45ff790773663224caa2c6cc4630127bb90bce15d7e
+f7f366442b094c288f833e43238ab8c5e6c063ad01e34249bebfa39ffa765245b7b7c7d7a123e5c8
+20498cee341318beb8622a84d22ee27e3b22951c99bb3747ad90f414ab83a70ec47faf4d49c73839
+4ffda970d0b637095b22147548fb95c260cfcea804612f5ee5708efea256f288fbb90ad5dede3fd8
+d6594fcc3832f0b04d8866743f594ddc02ea79bbca08a1823ac462592f495434a0ec637a3b8ce132
+b69a97803a3af2322affdd751fba32fa1b4e72dd2e0f13ae7321b2cdfc06a05c23fb5b0d8c96c49f
+8f9137d10b11ff8f431573631f5d6815a156f170956edb2dbfa61073a699123acd022d8461536560
+0d1529b835cb9eb018af6baf9b621c76be5acbe7c9b060dedce3981413841cfb73f4ae0f9abddc86
+ba292ead9ce299c35493d9b4a4b3d076de15a4163bb125a6079383f75d654f91a80aabe55d3d1781
+a3f7a4bb8590b77eb11ed3d9f2d81b67ea1a82cb62803a1610e9a5cc35e7069daa60e1c49d5892fd
+f0efc21c728e56c6616acbd0820d0b9e909c863a2f7cfa0276928d23eab21ff379c3e3a18c1b66e0
+674b00cfa0dd3ff7d3b620af131c3d0cbde8208620a35bfdfd64bd203dc544d98a952185c78fb32e
+ea565f8a6304cf5d82834e0cfa8de974b3c1ef31d1f9be824a4fe3d8e357920390d764555d4ea5b9
+0866a0d7c843af859a7564961fcfd41064bca821642d6be77053d8a20a440798e56ca29a34444f00
+2de6c5cceead13fd85aab4f2a36f52d01bf787cf188b4e08e65bf1b8165c2826e9252b85a7149aef
+30d111afa689f89968e0fcac593d468ce74cc610cd92506d4abc8e2ab10194f8b0465310886039c0
+b5e3c6acadb5466c48a504e8d5771f637298dd5c94ffd5734c363eb81b65917aca5b307065dbe9f1
+e31b486bfe475192c242781200e7e1add2682cb59b084241295782cba24fc680f859d18831840ff3
+94a1d2ab47df172f0dd62cfe4915a57fe531b80e76ff5c575d384ab8b81f52d23afa8ea0922e1647
+64f1c8f49b3714bf247fbfb2e842a07e982dcf3c903a13567f515c81211b0ef602e1e9a82748c33c
+0eac46d4b7d1705255b146eef2cc0d549a8f65b5f9a61f2986b4d83f402ab036c5d73e1e2e7c3b5c
+41d6f25b98e0fa2def2956fbe80416b2f1fb8d06e672c247794361129de0631c1bff982282781f31
+2f35d0cfb689d406c91f08e349dc5cfea89f6ca0b629f5d6b0dbad3f00771ff1ac38c84c00951408
+32d0b164ffcbee04c4eadf2b1af3708e14ff182c2e2832e7cee97d013d537cf94cec30f108641dad
+0b870ff7e5d50cbe4fa349368b1786cd6fd3a6094f294a96ae5e84aea3130aabd4d33bdc1ce9e6b8
+d89a9121cb0b390cce01d7c04be1062c6441c1e23a2cb36f3056139b369d2b320b540034e1cd643a
+e41980a1b0b1374036b958ffad8a89eb7e8e3af784ef0c75be4dc9ff292ba24dbd0aaa50b79ab0e3
+53b9795c01593c0064443eb79a12f3e476247e74d558a236f19cbf029252b886d05be56b336a3705
+cfe2d06c23f6a2bdf94025197dc5bf0edaad1c9586b297530cd745b87abe0aaa7697ce93b95c653a
+f1ba1a80850d3e9a8a0a30fe7a1281c2a8cdc3cd8d94eecd70f75f4a8bc283fbcdc3201592fb72b9
+c5b5d760db27d2dd8383c1b4522db67472cc55165a811b984d3a8b1a48f71ebef6786eb4c2506ff0
+d9f499083065a01c4e9564ab312a192dc8b72c96d3ee7734783be0880d2ff0b02270035c083cc33f
+be8432d40cbd3a05d3d1b85ba63ecbc49abaf8495353e059bc80db73ecd133e000288fc5ae029ebd
+fcd8edb6e886658be4bbe23bedc101b07bc237e35543d160dc4cc8f34784bba0555dcb42ce8eb6d8
+78afde4c8d7c99ab44b49f1668f10ab0ad975dd160d574d87e17a9a434c24caca3d9b20a07ade403
+12e476f20a8a5c6ebf16a0f79371366dd870225aa9bd39ebb866c4305838ca3bc52fcae2ec1febae
+31f69867aab1ae18ff4f3fbda67388b078753b5a863306a99799ceaab8874c85426faec0a72a7ad6
+cbf9dba86712824dbbf13a419a02311ffa0c550cd1ae627226dffcc1c0ac84aa5f8e2cc621341ea2
+16dc1c2e1bbf03400d36afc42d5bf13fade863d03b9b59d444eff2c0225b8efb6ba452b03b5b6dd4
+ddbdbeca7ee8b9527a83015ccb0326e1fdecbc521282b214d9cc437be5c4ff52ce09d116f91b5043
+3bbef88f0d86a3f03a1539b66769f7549afc6ed56e4fdf0f461af196df974a1000df60773b5d9c4a
+8b29d261054d68979d293f475d3080ec6299c01d978c8a56f499415845e2b74b76f8c7ec971ea85e
+800c007e9cb0d9cc8eeaa97dc12e0250e65cb10143bb0368ec7086b8e4f1a3238e10c730b2edab1a
+34576f94c74d9c0740c5bb2d86dbdcbb23ae9b3a666762a592d5066706b1ccac457dfddee2c4ad7d
+b63a3619f1c99e46b6ac1af127b93a61be2585b455321a52ff7f29d5c197650ebe6fc12c4c17db12
+2dd6495c613e4d4babfa1509998901c6b0df5ee20e302b4fc8eb04313df971c5cf49fb5eb49de49b
+ea620bf41d8fd25e6b6d0b3fab1bb294fac6b30e9bb14bb1a1f7b7c5d2428df14573e7afbcf53f41
+20ee49fef9fac056166c3f39903b9cedbef6e5ac6630affa575e40d512968e80877edebfa52d37c8
+85b998a2ca6c03e518802cf7bdbcc21906b0f91340a2b3c9f36930bf64e92ef75a35bae19a1fa208
+b4c81c681485b3726f22090201f18be1885f4ccfa2849027cd5a166c1f29a7829656164164b03eab
+06dafb78b99efda855ba821833144f3cf9f81b2dff1d1f3b2548c8f20754d891ac4847c9fb1732ce
+16f517835da948ad1c8a9c2550fdd600b4897ba58fa2fa12d5d4a94de352130f61b1ad392f199764
+16f31f45af48ee1a81962362efeda761187f0f0f179950ff81bff248284b42764af2d12445ae5794
+e26e87859b4b84db2c65d3547acbdce19570d33f13e43351d348b31c7524429088d2dc5818fed4b0
+c8fb5303512a64751286e9bd90882033940a877f94b837cd36f2fe509f1dc6467677fdb6592cbbb0
+7cb9851de0bb308014ee024905648d32800a2c7e539cd527c4d2f709e205604196e3268ba6765e94
+29efe9566b7b86dccb6a1a775299adb5c34670cd5503d6e61c6c8011b8785c88a5416eeb8c9a9081
+87c3987a505bd3cd75605984078bf91c20cf735baa0f19269fb9d6bb63c3aed01ad5c73896ae9305
+32986e28f169adf48b30a1a185a992de7652a0e090ff626998b9add05c85d7343ce629e5eafcf578
+2d27ad0158250a4d5080fc290a59b476630406de6f82fd83895f6cc23e12eb8a584900467c2b5a69
+292e69852508775d57fdce9daf54e58dba740d884485d7e5b011fc9b1fa93f829ff322a3d6f084d8
+0adf87ec65f8e78f9f8cd457d1de02625aae426920d6ca517102b3645e6b0f6863a5cd11dfd0ba86
+e0c458ea1ec0cf95ac13ac355ae5c25752a8ea904400b805203a41a2bc34b721c02056d532085869
+4730b16ce6556cc1e6ee500d8e2c3ac052c4e60983a17538df072bc58b2b9d7635ed9aa2877e6388
+90bdef6b1b117f20aec1ddfe6037214e2fffbe98c2a1b2a4c364651337fb5f15805075e0a15ba097
+0cdda6bed0712f883d324b47e4b9c3f134770606532f4f3f2a26b276b0feb8c314ffbf53873aa851
+e384d96b7f04119de12776356b802b225960290a4b1517fe6bf8b542b39a06e38344c13fc159459a
+fc1bd9fedfbce2cc585ba72912855bf9745929f35c2ba2dbfb13ac51cf132a4b6d2b9f66b2221aea
+c8fe838698be8be98e58eae79450d57dee8fdb6e46236521c74272368ed7f3203a580ec68bf3eaa6
+4c03f79443f3afe5a353edff657d47d54fda5435e63fd014f8c90656e3b9966e18d2edb18a606959
+ab7a8ef5022db7a4e2a130129445ab54cab4a3045c38f030dd7919dd0e356538e24373a52218dc50
+e2b88e06031d937a4e4a3e284218e70ef4e0870eb58269952429407b442acbc2d934de9599ea3851
+affde69dfd48c70cc73c7c8d4991371612e49a8957a4dba165e553291f53f77f9ddd7515d9ac7013
+3f22b5e7aff213c0e26ebebce0178cc148f52c02e79a1d5c1beb9a4ac4c8e48dfaf5ab3278af6f38
+878b1019ea06eb226039d858d1db9fe9110c3aac92061b21c5cd5141b84ea17b2ecd9a739fe23b5b
+39008cd10423bcae6532ef5e91b8f8bd354334afa7122357a5d1a75df841da11ac61f2824fe54fcb
+039a61b7f793e82caf8dc2070ae35457fe957ab5d2d49bcfd82a213400f6807aff3d86c261b68fd0
+a1d60ba4ed43f14246db838d23018d159aeeaed5a644af73eaed0c6bb932a4f97dcebd86c4c96545
+d1ce992a87957a0b55ff52bf1f09b34c113631efe8d3edf9d81dfdeb1e5bde8a1b37faf0a9a01937
+5e636bd5d6f35c9c88f8658cd583f43e775f9a2ab6a1daaba5aef87e6a45efcc03f08e5cb965e87b
+5502af3a8433d8056a61e51c70203053f7f39ae02da13a3ce6aeab83a768949a0e84b61d333a3db7
+2f6a2116bf9e876a84af8b6ecbbab9dad4cc9c9161f57568065900e016b9d84822dd2ea8b0788148
+9d72e1970c302a5baf7f1fd4ad35ace72a77bdffe84bf742a00449b09a64def0652ccb0f1ce52d5e
+5add3fd1e4c2324d7e0014b27810c1a07e7bb6ff902a037bf6e0f0dffac6f9f2964bedb25d913c4e
+c8b3fdb170f5ce3c73bd28dd447f01e8bc7b8a819b0e31eef622154bda018d6d639d4ee3af9167c9
+29d473f7d10261703b66536b3bf6966e858a3ec10172d5143ff69f640f51eaebea47f3678661198e
+3cc104a43c258e2542eb8a20aba2914db8cb72417ba2bb42b34eb80fc1622fd4dfc744844a3f047c
+3dd6f0e32652158e5fd8736eb32083ee937d410fc66213d7f111c55e8ccb3183ad939f48e4f3d377
+bd991687992ebe98e6864b38bd557f8ce451e939f4586113f749b5c3e60f0057d2a7e5493c078381
+7efb9d236d9d8c835b4e3860626c69fff611e28e6f2dfd620bc118aa02723ae80634c263bc30360c
+124792e2730b2f0993b29f83a25f933e2e8651ce3cb9d66fe98111525def64af8a875424044139ee
+028cb49bc098ea212edfa9c5d145fe2c7d7a19c61811c6e31cf0a7f57cc0990dd375593168c6cc88
+7dba2e75767ff4c8faad4ee4cf8e8d20e623b2be93730cf8f92aea4c245f5543bb170a5ca0eecf5e
+06155839db9d49292b6ac20231fbd35550a18230ff5ab1156488a88ea8d357502136879a6221905a
+95cfc6a7460238ef8039bfa99415d70286b9b30870245eade8c4e9b601318cf44097607d860e984d
+ea98c1b4eeb2768a6b03e7120e785770e4695cf4de0f89c0e94f434c61d120a3b9682f81203d0a32
+d14cb32089134e40a9d6fb3b12958347b9c7140f93db9dc0fedbe1da5a41d97a79119b3ea5c10945
+b6c84c6a8a2b56c5c614b9340b8d2e03da7a77c9d7b75410d7c8b248ab3184bdf3d0aa3048b1e7b8
+fa34445b47a60d6584a15ebe6f10abc8ad3be00f03bbe92c750c51d4b756e96643334d2731e66ccf
+56cdf85c45ec885e22c89aa90ec73a045e4664e33b3a7e7e25bfba5b79feff8f8706c986370005c6
+51cf187a25c9150a9114abdbccdb1598045664f37b1922025181f942ef451659e9a7419d3e1c9044
+e72cd10f17f82465b8139a6fc1a9e80020d822badd26b082985ff1038960a421bee74b7da3fa9c47
+8823e696bd180c503e40fc2c074f07e82894fa7206dfb86d910083fba2f87dcb2f126ce813faaa0c
+563fab65ea66ec98ef28a86ccee57ac573308aabc49aeae6d37a5713fc002260e39914acff903b4d
+39ccf829dec8349521d011d540f4dcad56c9176441eef7b3a01117b2e67890cbd0b48d2c9ebc53a1
+a50c2bbb1405a27ee651fff8d2f7303c221b5d85c0c64d6262888175695423c305b2e7c8f9d2f243
+cd5013e54906bb04d5e4d14e834f346b4ee06dc5b1b5ea9570155319a207a19d2edf9ba9db5fa611
+a3360cb87c3a264620ced9dcd35630fabe6dc322a0aa8805b7e879bd1fa20a9523e7c94031fae905
+c8deaf41725fa5e5c6abc389584c412b3865facdf82604966d7c0a25087e96f1c73df367053a0f94
+f00553773bcc18b5bd4c03b6941671472e1d82617694e97969484458508b3c00675ec94ba4dfa955
+c13e1e30e7ffa25f5de3e6d25eb23c09896ed4b5465c192c13ba78c3a3373adcd3b6385005e70bf8
+8315445dd12f1ec52557be03574f5f87fa1770adfc987290b8ed447811f88946af4bb7a136309dee
+6f58cc654b5f3b97f83f7c296a95eca7b96c98a00d4cde8e9787891df85821c67dae62b21cb0a4c6
+a2275575459452b76fddb4b2fd15e3c91c2b0581c878d733df1606916a0239dc42e6298c8a19617c
+2fa376fd855af2f9829756b04f8f2eec5fa89fe692022ca7e136e291526e9bbdc0968a386566ab0d
+fde72bfb7d526eae27b57551bfbe3f4a13c4987363998d222611db64f03112393db18537a1c391c9
+d38c4b83b90b9f7f5c78cf53654736afb586d6baf6a1a4f1a43d8591918f93d55b2feb6fe07aea9d
+76583796db1b40d77a49dc5a2d73acb424c5a86bfe41f0117569ccd906394c4514caf63517988f71
+b2b58fda634d6c58e5aa4df89d7d489aa1eff1d7875c46eda773ec022c4bd9149a305db28ef00921
+67a7c37bb1d39d659b44f434d3180743f087fe180b32c8099d4d3203b52df122d8b8ebcf86c2e6d4
+e95c045d5e0db2a8357f55e1f2dc8ab43cd05f218b7c790e34de56f30fd38de032163351190dbbf4
+0338df4c481d106c481290deab8a7bc0c71fe42b38b55776a40dcc2c725c4c769ca30b4d4e8f5003
+5f301b96c97ee9728e6812797b1cedf16c1691ec57118fb9f0f61b087dddcd3b513c6c03f3ef3aba
+41cedfa0377264e8455ecbdc5e0cab878b29edd41b414562ce2b6f137d51f79bfbd8c1d9ea0231ad
+d2b3162bc4c6c7fcb2c407e32254b5cb37c7f74c3ae4351cbba09abb227a8de65ad40dee4efdd1ac
+aef433f27ebd106cc706e0bef03ff4ee785556f06838566464a6545c301294b27645b6585d5b5f3d
+48b6133d54f9d578bd8375768258e3bda0fb179e974928ef5e075b71d11aac2382ac4d8b3bf2a3e4
+05539659d2494b320947a72949b88b239861bf4ff7af926d60861c58094791ad48f42b8a1d42424e
+579b2ef976176004828f56a1d8beee75bf9aefccfa170993f34c7dafed850cc1d498472cab08569a
+cdb6ec1d022267ad985d231ebdc3bae3b9bda62a2e71028c3421919376f877f1bf220b389aadcae3
+60175cb6b3353ae7241e7c5f393fa1ba7773c4f5abc78fdb6de936414742c2ac928daa755abe6371
+68a6d0b0fc29f9d21175e669d843255c6bd69f1f0e7e9c08e60c198a40c8cc339cc154c6a6fb7296
+58b0eb689defb60e99f2b2b1bc9222d323589c82bedf2d379bf7
+#END
+
+#BEGIN DEVICE
+	@LocalIOMaster, 12, 27
+	@RamFS, 1, 1
+	@UserLog, 7, 11
+	@IntEthernet, 4, 2
+	@DMLogger, 5, 10
+	@IntModTCPClient, 9, 14, 1000, 2, 60
+	@IntEIPClient, 22, 31, 1000, 2, 60
+	@IntEthDMPPClient, 23, 32, 50, 250, 2
+	@IntSerial, 10, 15
+#END
+
+#BEGIN MEM_CONFIG
+	X	BIT	decimal	2048	-1
+	Y	BIT	decimal	2048	-1
+	WX	SWORD	decimal	256	-1
+	WY	SWORD	decimal	256	-1
+	C	BIT	decimal	2048
+	V	UWORD	decimal	4096
+	N	SWORD	decimal	4096
+	D	SDWORD	decimal	4096
+	R	REAL	decimal	4096
+	T	TIMER	decimal	256
+	CT	COUNTER	decimal	256
+	SS	STRING	decimal	128
+	SL	STRING	decimal	64
+	UDT	DATETIME	decimal	32
+	PL	UWORD	decimal	256
+	DLX	BIT	octal	01000	-1
+	DLY	BIT	octal	01000	-1
+	DLC	BIT	octal	01000
+	DLV	UWORD	octal	04000
+	MI	BIT	decimal	1024
+	MC	BIT	decimal	1024
+	MIR	SWORD	decimal	2048
+	MHR	SWORD	decimal	2048
+	RX	REAL	decimal	256	-1
+	RY	REAL	decimal	256	-1
+	movement	BIT	decimal	256
+	MSG	STRING		0
+	ERR	STRING		0
+	SysName	STRING		0
+	SysDesc	STRING		0
+	SerialNum	STRING		0
+	PartNum	STRING		0
+#END
+
+// Beginning of Code Block $Main
+$PRGRM	$Main
+
+// Rung $Main#1
+// Offset 0
+#BEGIN COMMENT 
+"These first two rungs contain the Score and Error Counters. They are incremented separately further into the program."
+#END
+
+STR	ST2
+STR	ST2
+CNT	CT0	0
+
+// Rung $Main#2
+// Offset 4
+#BEGIN COMMENT 
+"These first two rungs contain the Score and Error Counters. They are incremented separately further into the program."
+#END
+
+STR	ST2
+STR	ST2
+CNT	CT1	5
+
+// Rung $Main#3
+// Offset 8
+#BEGIN COMMENT 
+"This rung triggers on the Red Push Button's Rising Edge (One-Shot Rising)."
+""
+"Rising/Falling Edge contacts don't properly work in Stages, thus it's here."
+#END
+
+STRPD	X0
+OUT	C10
+
+// Rung $Main#4
+// Offset 11
+#BEGIN COMMENT 
+"This rung triggers on the Green Push Button's Rising Edge (One-Shot Rising)."
+""
+"Rising/Falling Edge contacts don't properly work in Stages, thus it's here."
+#END
+
+STRPD	X1
+OUT	C11
+
+// Rung $Main#5
+// Offset 14
+#BEGIN COMMENT 
+"This rung triggers on the Amber Push Button's Rising Edge (One-Shot Rising)."
+""
+"Rising/Falling Edge contacts don't properly work in Stages, thus it's here."
+#END
+
+STRPD	X2
+OUT	C12
+
+// Rung $Main#6
+// Offset 17
+#BEGIN COMMENT 
+"The next three rungs generate ""random"" nuimbers ranging between zero and six."
+""
+"Zero to six include the blank, all the single bit, and all the double bit combinations, but exclude the triple combionation."
+""
+"This rung energizes C0 as long as at least one button is pressed."
+#END
+
+STR	X0
+OR	X1
+OR	X2
+OUT	C0
+
+// Rung $Main#7
+// Offset 21
+#BEGIN COMMENT 
+"This rung times how long C0 is HIGH."
+#END
+
+STR	C0
+STRPD	C0
+TMRA	T0	0
+
+// Rung $Main#8
+// Offset 26
+#BEGIN COMMENT 
+"When C0 switches LOW (all buttons released) this rung stores the remainder of the Button Press time devided by 7."
+#END
+
+STRND	C0
+MATH	N0	"T0.Acc % 7"
+
+// Rung $Main#9
+// Offset 36
+#BEGIN COMMENT 
+"The Amber Lamp Falling bit is HIGH when the Amber Lamp Output switches LOW."
+""
+"This is used to count Light Flashes for teh Start and End of the game."
+#END
+
+STRND	Y0
+OUT	C20
+
+// Rung $Main#10
+// Offset 39
+#BEGIN COMMENT 
+"This rung calculates the On and Off times for the Flasher functions. The On time is currently fixed, though the Off time is discrete based on the LS_Flash (V1:6) bit."
+#END
+
+STR	ST1
+MATH	V2	"V1:6 * 250"
+MATH	V3	"500"
+
+// Rung $Main#11
+// Offset 54
+#BEGIN COMMENT 
+"The next six rungs contain the Flasher functions for the Light Outputs."
+""
+"The bit asignments for V1 are:"
+"(MSB) LS_Flash; LS_RED_BL; LS_GRN_BL; LS_AMB_BL; LS_RED_L; LS_GRN_L; LS_AMB_L (LSB)"
+#END
+
+STR	V1:0
+FLASHER	V3	V2	Y0
+
+// Rung $Main#12
+// Offset 59
+STR	V1:1
+FLASHER	V3	V2	Y1
+
+// Rung $Main#13
+// Offset 64
+STR	V1:2
+FLASHER	V3	V2	Y2
+
+// Rung $Main#14
+// Offset 69
+STR	V1:3
+FLASHER	V3	V2	Y5
+
+// Rung $Main#15
+// Offset 74
+STR	V1:4
+FLASHER	V3	V2	Y4
+
+// Rung $Main#16
+// Offset 79
+STR	V1:5
+FLASHER	V3	V2	Y3
+
+// Rung $Main#17
+// Offset 84
+#BEGIN COMMENT 
+"The Start Stage - First active stage"
+#END
+
+SG	$Main.S0
+
+// Rung $Main#18
+// Offset 86
+#BEGIN COMMENT 
+"Sets the HMI screen to the Start Screen and instructs the Green Button Light (V1:4) to Flash (V1:6)."
+#END
+
+STR	ST1
+MATH	V9	"1"
+MATH	V1	"(2 ** 6) + (2 ** 4)"
+
+// Rung $Main#19
+// Offset 105
+#BEGIN COMMENT 
+"The the Green Push Button is released, or the HMI start button is pressed the Start Stage is deactivated, the Start Up Stage is activated, the HMI screen is changed to the Start Up Screen and the three Lamps (V1:0, V1:1, V1:2) are instructed to Flash (V1:6)."
+#END
+
+STRND	X1
+OR	C9
+JMP	$Main.S1
+MATH	V9	"10"
+MATH	V1	"(2 ** 6) + (2 ** 2) + (2 ** 1) + (2 ** 0)"
+
+// Rung $Main#20
+// Offset 135
+#BEGIN COMMENT 
+"Holding the Red and Amber Buttons for three seconds enables the High Score Reset Button on teh HMI."
+#END
+
+STR	X0
+AND	X2
+TMR	T1	3000
+
+// Rung $Main#21
+// Offset 139
+#BEGIN COMMENT 
+"Pressing the High Score Reset Button on the HMI resets the High Scores to zero."
+#END
+
+STR	T1.Done
+AND	C1
+MATH	V10	"0"
+MATH	V11	"0"
+MATH	V12	"0"
+
+// Rung $Main#22
+// Offset 159
+#BEGIN COMMENT 
+"The Start Up Stage - count down to game start."
+#END
+
+SG	$Main.S1
+
+// Rung $Main#23
+// Offset 161
+#BEGIN COMMENT 
+"This Counter counts out three Lamp Flashes before triggering the next rung."
+#END
+
+STRND	Y0
+STR	CT2.Done
+CNTDN	CT2	4
+
+// Rung $Main#24
+// Offset 166
+#BEGIN COMMENT 
+"This rung deactivates the Start Up Stage, activates the Play Stage, sets all the Lights to Off, resets the Score and Error Calculators to zero, changes the HMI screen to the Play Screen, and resets the Game Step Duration to two seconds."
+#END
+
+STR	CT2.Done
+JMP	$Main.S2
+MATH	V1	"0"
+MATH	CT0.Acc	"0"
+MATH	CT1.Acc	"0"
+MATH	V9	"20"
+MATH	V0	"(1250 / ((CT0.Acc / 2) + 1)) + 750"
+
+// Rung $Main#25
+// Offset 206
+#BEGIN COMMENT 
+"The Play Stage - where ""The Magic"" happens"
+#END
+
+SG	$Main.S2
+
+// Rung $Main#26
+// Offset 208
+#BEGIN COMMENT 
+"These three rungs activate the processing stages for their associated buttons being pressed. They DO NOT disable the Play Stage when doing this."
+#END
+
+STR	C10
+SGSET	$Main.S20
+
+// Rung $Main#27
+// Offset 210
+STR	C11
+SGSET	$Main.S21
+
+// Rung $Main#28
+// Offset 212
+STR	C12
+SGSET	$Main.S22
+
+// Rung $Main#29
+// Offset 214
+#BEGIN COMMENT 
+"This timer initiates all game progression."
+""
+"It only runs while the Play Stage is active."
+""
+"It is reset if the Play Stage is deactivated or self-resets when it's preset is reached."
+#END
+
+STRN	T20.Done
+TMR	T20	V0
+
+// Rung $Main#30
+// Offset 217
+#BEGIN COMMENT 
+"The Step Expired Stage is activated when the Game Step timer completes, and the game's Step Duration is recalculated."
+"This DOES NOT disable the Play Stage."
+#END
+
+STR	T20.Done
+SGSET	$Main.S29
+MATH	V0	"((1250 + (CT1.Acc * 100)) / ((CT0.Acc / 2) + 1)) + 750"
+
+// Rung $Main#31
+// Offset 237
+#BEGIN COMMENT 
+"These two rungs keep either Player action flag HIGH for the length of one Flash, then reset them LOW."
+#END
+
+STR	C21
+OR	C22
+ONDTMR	T2	V3	C23
+
+// Rung $Main#32
+// Offset 242
+STR	C23
+RST	C21
+RST	C22
+
+// Rung $Main#33
+// Offset 245
+#BEGIN COMMENT 
+"The Step Expired Stage - where ""The Magic"" actually happens"
+#END
+
+SG	$Main.S29
+
+// Rung $Main#34
+// Offset 247
+#BEGIN COMMENT 
+"If any of the Button Lights are lit when the Step expires then the Step Expired Stage is deactivated and the Player Error Stage is activated."
+#END
+
+STR	V1:3
+OR	V1:4
+OR	V1:5
+JMP	$Main.S99
+
+// Rung $Main#35
+// Offset 251
+#BEGIN COMMENT 
+"When this rung is reached in the scan-cycle the bit values for teh lamps are moved to their respective Button Light bits and any ""extra"" is trimed off."
+#END
+
+STR	ST1
+MATH	V1	"(V1 << 3) % 64"
+
+// Rung $Main#36
+// Offset 262
+#BEGIN COMMENT 
+"If the RANDal number is negative (no button press since last step expiration) then it is made positive and changed slightly but still kept between zero and six, to produce a ""new"" RANDal number."
+#END
+
+STRLT	N0	0
+MATH	N0	"(-N0 + 2) % 7"
+
+// Rung $Main#37
+// Offset 277
+#BEGIN COMMENT 
+"If the RANDal number is not negative, its value is wrtten to the bits for the Lamp lights and it is changed slightly and made negative."
+""
+"Then the Step Expired Stage is deactivated."
+#END
+
+STR	ST1
+MATH	V1	"V1 | N0"
+MATH	N0	"-(N0 + 1)"
+SGRST	$Main.S29
+
+// Rung $Main#38
+// Offset 296
+#BEGIN COMMENT 
+"The Red Button Pressed Stage"
+#END
+
+SG	$Main.S20
+
+// Rung $Main#39
+// Offset 298
+#BEGIN COMMENT 
+"If the Red Button Light is energized, the Red Pressed Stage is deactivated, the Player Score Stage is activated, and the Red Button Light (V1:5) is instucted to turn off."
+#END
+
+STR	Y3
+JMP	$Main.S23
+MATH	V1	"V1 & ~(2 ** 5)"
+
+// Rung $Main#40
+// Offset 311
+#BEGIN COMMENT 
+"If the Red Button Light is NOT energized, the Red Button Pressed Stage is deactivated and the Player Error Stage is activated."
+#END
+
+STRN	Y3
+JMP	$Main.S99
+
+// Rung $Main#41
+// Offset 313
+#BEGIN COMMENT 
+"The Green Button Pressed Stage"
+#END
+
+SG	$Main.S21
+
+// Rung $Main#42
+// Offset 315
+#BEGIN COMMENT 
+"If the Green Button Light is energized, the Green Pressed Stage is deactivated, the Player Score Stage is activated, and the Green Button Light (V1:4) is instucted to turn off."
+#END
+
+STR	Y4
+JMP	$Main.S23
+MATH	V1	"V1 & ~(2 ** 4)"
+
+// Rung $Main#43
+// Offset 328
+#BEGIN COMMENT 
+"If the Green Button Light is NOT energized, the Green Button Pressed Stage is deactivated and the Player Error Stage is activated."
+#END
+
+STRN	Y4
+JMP	$Main.S99
+
+// Rung $Main#44
+// Offset 330
+#BEGIN COMMENT 
+"The Amber Button Pressed Stage"
+#END
+
+SG	$Main.S22
+
+// Rung $Main#45
+// Offset 332
+#BEGIN COMMENT 
+"If the Amber Button Light is energized, the Amber Pressed Stage is deactivated, the Player Score Stage is activated, and the Amber Button Light (V1:3) is instucted to turn off."
+#END
+
+STR	Y5
+JMP	$Main.S23
+MATH	V1	"V1 & ~(2 ** 3)"
+
+// Rung $Main#46
+// Offset 345
+#BEGIN COMMENT 
+"If the Amber Button Light is NOT energized, the Amber Button Pressed Stage is deactivated and the Player Error Stage is activated."
+#END
+
+STRN	Y5
+JMP	$Main.S99
+
+// Rung $Main#47
+// Offset 347
+#BEGIN COMMENT 
+"The Player Score Stage - when you're feeling ""The Magic"""
+#END
+
+SG	$Main.S23
+
+// Rung $Main#48
+// Offset 349
+#BEGIN COMMENT 
+"The Score count is incremented, the Player Score flag is set HIGH, the Player Erred flag is reset LOW, and the Player Score Stage is deactivated."
+#END
+
+STR	ST1
+INC	CT0.Acc
+SET	C21
+RST	C22
+SGRST	$Main.S23
+
+// Rung $Main#49
+// Offset 354
+#BEGIN COMMENT 
+"The Player Error Stage - actually, some of ""The Magic"" happens here too!"
+#END
+
+SG	$Main.S99
+
+// Rung $Main#50
+// Offset 356
+#BEGIN COMMENT 
+"During the first scan-cycle since the Player Error Stage is activated this rung deactivates the Play Stage (reseting the Step timer), increments the Error counter, instructs the three Lamps (V1:0, V1:1, V1:2) to Flash (V1:6), resets the Player Scored flag LOW, and sets the Player Erred flag HIGH."
+#END
+
+STRPD	ST1
+SGRST	$Main.S2
+INC	CT1.Acc
+MATH	V1	"(2 ** 6) + (2 ** 2) + (2 ** 1) + (2 ** 0)"
+RST	C21
+SET	C22
+
+// Rung $Main#51
+// Offset 382
+#BEGIN COMMENT 
+"When the Amber Lamp finishes its Flash and the Error counter has not reached its preset, this rung instructs the lights to turn off, deactivates the Player Error Stage and activates the Play Stage."
+#END
+
+STR	C20
+ANDN	CT1.Done
+MATH	V1	"0"
+JMP	$Main.S2
+
+// Rung $Main#52
+// Offset 391
+#BEGIN COMMENT 
+"When the Amber Lamp finsihes its Flash and the Error counter reached its preset, this rung deactivates the Player Error Stage, activates the End Stage, chages the HMI screen to the Game Over Screen, instructs all three Lamps (V1:0, V1:1, V1:2) to Flash (V1:6), and resets the Error counter to 0."
+#END
+
+STR	C20
+AND	CT1.Done
+JMP	$Main.S3
+MATH	V9	"30"
+MATH	V1	"(2 ** 6) + (2 ** 2) + (2 ** 1) + (2 ** 0)"
+MATH	CT1.Acc	"0"
+
+// Rung $Main#53
+// Offset 426
+#BEGIN COMMENT 
+"The End Stage - Game Over man!"
+#END
+
+SG	$Main.S3
+
+// Rung $Main#54
+// Offset 428
+#BEGIN COMMENT 
+"When the End Stage is active this timer counts down. The Math function converts the millisecond value of the counter to seconds for the HMI to display."
+#END
+
+STR	ST1
+TMRDOWN	T3	10000
+MATH	V30	"T3.Acc / 1000"
+
+// Rung $Main#55
+// Offset 439
+#BEGIN COMMENT 
+"This counter counts the number of finished Lamp Flashes. When the accumulated value reaches four, the done bit energizes, reseting the counter on the next scan-cycle."
+#END
+
+STRND	Y0
+STR	CT3.Done
+CNT	CT3	4
+
+// Rung $Main#56
+// Offset 444
+#BEGIN COMMENT 
+"When the counter's done bit is energized the lights are instructed to turn off."
+#END
+
+STR	CT3.Done
+MATH	V1	"0"
+
+// Rung $Main#57
+// Offset 451
+#BEGIN COMMENT 
+"If the player Score is greater than or equal to the lowest High Score, the High_Score Stage is activated, the Score is written to the lowest High Score, and the High Score Flag is set HIGH."
+#END
+
+STRGE	CT0.Acc	V12
+ANDN	C30
+SGSET	$Main.S30
+MATH	V12	"CT0.Acc"
+SET	C30
+
+// Rung $Main#58
+// Offset 464
+#BEGIN COMMENT 
+"When the Game Over timer reaches zero, the End Stage is deactivated, the Start Stage is activated, and the High Score Flag is reset LOW."
+#END
+
+STR	T3.Done
+OR	C39
+JMP	$Main.S0
+RST	C30
+
+// Rung $Main#59
+// Offset 468
+#BEGIN COMMENT 
+"The High Score Stage - for when you were really feeling ""The Magic"""
+#END
+
+SG	$Main.S30
+
+// Rung $Main#60
+// Offset 470
+#BEGIN COMMENT 
+"If the lowest High Score value is greater than the middle High Score value they are swapped."
+#END
+
+STRGT	V12	V11
+MATH	V11	"V11 + V12"
+MATH	V12	"V11 - V12"
+MATH	V11	"V11 - V12"
+
+// Rung $Main#61
+// Offset 498
+#BEGIN COMMENT 
+"If the middle High Score value is greater than the highest High Score value they are swapped."
+#END
+
+STRGT	V11	V10
+MATH	V10	"V10 + V11"
+MATH	V11	"V10 - V11"
+MATH	V10	"V10 - V11"
+
+// Rung $Main#62
+// Offset 526
+#BEGIN COMMENT 
+"Once the previous rungs are complete, the High Score Stage is deactivated."
+#END
+
+STR	ST1
+SGRST	$Main.S30
+
+// End of Code Block $Main
+$PGMEND	$Main
+
+#BEGIN ELEMENT_DOC
+"X0","RED_PB","",""
+"X1","GRN_PB","",""
+"X2","AMB_PB","",""
+"Y0","AMB_L","",""
+"Y1","GRN_L","",""
+"Y2","RED_L","",""
+"Y3","RED_BL","",""
+"Y4","GRN_BL","",""
+"Y5","AMB_BL","",""
+"C0","Button_Pressed","",""
+"C1","HMI_HS_Reset","",""
+"C9","HMI_Start","",""
+"C10","RPB_Rising","",""
+"C11","GPB_Rising","",""
+"C12","APB_Rising","",""
+"C20","AL_Falling","",""
+"C21","HMI_Player_Score","",""
+"C22","HMI_Player_Erred","",""
+"C23","Player_Flag_Clr","",""
+"C30","High_Score_Flag","",""
+"C39","HMI_End","",""
+"C99","Debug","",""
+"V0","Step_Duration","",""
+"V1","Lights_Set","",""
+"V1:0","LS_AMB_L","",""
+"V1:1","LS_GRN_L","",""
+"V1:2","LS_RED_L","",""
+"V1:3","LS_AMB_BL","",""
+"V1:4","LS_GRN_BL","",""
+"V1:5","LS_RED_BL","",""
+"V1:6","LS_Flash","",""
+"V2","Flash_Off_Time","",""
+"V3","Flash_On_Time","",""
+"V9","HMI_Screen","",""
+"V10","High_Score_0","",""
+"V11","High_Score_1","",""
+"V12","High_Score_2","",""
+"V30","HMI_End_Timer","",""
+"N0","RANDal","",""
+"T0","Button_Press","",""
+"T0.Acc","Press_Duration","",""
+"T1","High_Score_Reset","",""
+"T2","Player_Status","",""
+"T3","Game_Over_Timer","",""
+"T20","Game_Step","",""
+"T20.Done","Game_Step_Done","",""
+"CT0","Score_Counter","",""
+"CT0.Acc","HMI_Score","",""
+"CT1","Error_Counter","",""
+"CT1.Acc","HMI_Errors","",""
+"CT1.Done","Game_Over","",""
+"CT2","Startup_Flash","",""
+"CT3","Game_Over_Flash","",""
+"$Main.S0","Start_Stage","",""
+"$Main.S1","StartUp_Stage","",""
+"$Main.S2","Play_Stage","",""
+"$Main.S3","End_Stage","",""
+"$Main.S20","RED_Pressed","",""
+"$Main.S21","GRN_Pressed","",""
+"$Main.S22","AMB_Pressed","",""
+"$Main.S23","Player_Score","",""
+"$Main.S29","Step_Expired","",""
+"$Main.S30","High_Score_Stage","",""
+"$Main.S99","Player_Error","",""
+#END
+
