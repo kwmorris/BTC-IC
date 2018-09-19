@@ -1,0 +1,67 @@
+Hello Mr. Kuphaldt,
+
+Yes, please feel free to use these manuals in the
+manner that you described.
+
+The PLC manuals are pretty long (we're just 
+updating the DL06 manual and it's almost 1,000 
+pages long!), and the download time would be 
+pretty long.  Putting them on CD would be much 
+faster.  For classroom use, you might want to 
+consider purchasing some hardcopy versions of 
+some of our manuals.  They are coil-bound and 
+not terribly expensive.
+
+Steve Cleary, Documentation Team Captain
+
+------------------------------------------------- 
+
+From: Tony Kuphaldt [mailto:tonyval@gmail.com]
+Sent: Saturday, January 20, 2007 12:07 PM
+To: Cleary, Steve; Store; Store
+Subject: Permission to copy and distribute product literature
+
+ 
+
+Hello,
+
+I am an instructor of Instrumentation at Bellingham 
+Technical College in Bellingham, Washington.  My 
+students use some of your products in the lab, 
+including the DirectLogic line of progrmamable logic 
+controllers.  I am seeking permission from you to 
+download user manual documentation in PDF format 
+from your website, copy these manuals onto CD-ROM 
+media, then distribute to my students for their 
+convenient reference.  I would like to do this 
+because many of my students lack high-speed 
+internet access, and some do not have internet 
+access at all in their homes.  My teaching 
+strategy is to use industry manuals such as these 
+whenever possible, rather than textbooks, with 
+the goal of students learning to teach themselves 
+(just as they will have to do on the job) as 
+they encounter new equipment and technologies.  
+In order to do this effectively, students must 
+have convenient, individual access to said manuals.
+
+These CD-ROM disks will only be used for 
+educational purposes and they will not be sold.  
+If these terms are agreeable to you, please reply 
+with permission for me to copy and distribute 
+this documentation as described.  AutomationDirect 
+will be credited as the authors and copyright 
+holders of the documents on the CD-ROM.
+
+Thank you.
+
+Sincerely,
+
+Tony Kuphaldt
+Instructor, Instrumentation and Control Technology
+Bellingham Technical College
+3028 Lindbergh Avenue
+Bellingham, WA 98225-1599
+(360)-752-8477
+tkuphald@btc.ctc.edu
+

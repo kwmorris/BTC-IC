@@ -1,0 +1,11 @@
+PTRM-B16/17
+PTRD-B18/19
+B16-J9 blk-pur
+B17-J10 red-gry
+B18-J11 blk-blk
+B19-J12 gry-wht
+JB13-CP3
+C1-A5 pur-blk
+C2-A4 gry-red
+C3-A8 blk-blk
+C4-A7 wht-gry

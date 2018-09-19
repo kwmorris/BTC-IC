@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0073)http://www.controlloop.co.za/Articles/Case_History_52/case_history_52.htm -->
+<HTML><HEAD><TITLE>Case History 52</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Case History 52_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 src="Case History 52_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Case History 52_files/banneroct2002.jpg" width=765 
+    border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Case History 52_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Case History 52_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=690><IMG height=1 src="Case History 52_files/clearpixel.gif" 
+      width=690 border=0></TD>
+    <TD width=19><IMG height=1 src="Case History 52_files/clearpixel.gif" 
+      width=19 border=0></TD>
+    <TD width=13><IMG height=1 src="Case History 52_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Case History 52_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Case History 52_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=11></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=690>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#cc0000>Control Loop 
+      Case History 52</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica>Dynamics can suddenly change 
+      in a control loop </FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>It is important that 
+      one understands the dynamics of a process when optimising a control loop, 
+      as the tuning is entirely dependent on those particular dynamics.&nbsp; 
+      However it should always be borne in mind that those dynamics might change 
+      for a variety of possible reasons.&nbsp; If one can predict the changes 
+      then a technique like "gain scheduling" (using different sets of 
+      appropriate tuning parameters), can be employed as the changes 
+      occur.&nbsp; If this is not possible then the only options open are to 
+      retune, or tune robustly (safely) enough for all conditions, or if at all 
+      possible, to employ a self tuning controller that continuously retunes 
+      itself.&nbsp; It should be noted that the latter option is seldom 
+      successful, and the author has only encountered two instances where this 
+      has been successful in several hundred plants.
+      <P>An interesting example of changing dynamics was recently encountered by 
+      the author when optimising a cascade level-to-flow loop in a South African 
+      chemical plant.&nbsp; 
+      <P>The secondary loop (flow loop here) is always optimised first when 
+      tuning a cascade loop. It was found that as often is the case the tuning 
+      of the flow loop was extremely slow.&nbsp; Figure 1 illustrates the closed 
+      loop as found test on the loop with the original tuning.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture40 height=368 alt="Figure 1" 
+            src="Case History 52_files/cashis52-1.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 1</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The process response 
+      to a step change of setpoint is shown. The tuning was poor with far too 
+      much proportional gain which caused an initial cycle on setpoint change, 
+      and integral far too slow.&nbsp; The loop took over 3 minutes to respond 
+      fully to a 10% step in setpoint.&nbsp; This is pathetically slow.&nbsp; In 
+      actuality a cascade loop can only operate really effectively if the 
+      secondary loop operates at least 10 times faster than the primary.&nbsp; 
+      If this is not the case the loops tend to interact.&nbsp; 
+      <P>The author has often been told by instrumentation and control personnel 
+      on plants that flow loops need not be tuned fast, as the actual operation 
+      of the plant is slow.&nbsp; This assertion is often incorrect.&nbsp; Many 
+      flow loops (such as cascade secondary loops) should in fact be tuned 
+      reasonably fast to allow other controls to do their jobs properly, which 
+      is to keep variance to a minimum at all stages of production.
+      <P>Figure 2 is the open loop test. 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture41 height=368 alt="Figure 2" 
+            src="Case History 52_files/cashis52-2.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 2</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>This shows the valve 
+      responding extremely well with good repeatability&nbsp; to controller 
+      output changes.&nbsp; The only slight fault that can be seen is the large 
+      process gain (i.e. ratio of PV change to PD change), which shows the valve 
+      to be rather oversized.&nbsp; However this should not create a problem, as 
+      the valve has virtually negligible hysteresis.
+      <P>Figure 3 shows the new tuning.&nbsp; The tuning gives a response with 
+      no overshoot, and is&nbsp; robust, meaning it is safe and stable. The 
+      response to a 10% setpoint change is now only 7 seconds as compared with 
+      the original response of 3 minutes.
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture42 height=368 alt="Figure 3" 
+            src="Case History 52_files/cashis52-3.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 3</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The flow controller 
+      was then put in auto-cascade, with its setpoint being the output of the 
+      master level controller.&nbsp; A closed loop as-found test was then 
+      performed on the level controller.&nbsp; A portion of this test is 
+      illustrated in Figure 4.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture43 height=368 alt="Figure 4" 
+            src="Case History 52_files/cashis52-4.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 4</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The response to a 
+      setpoint change on the level controller started pretty much as one often 
+      finds on these types of integrating processes, which are generally badly 
+      tuned.&nbsp; Typically the level changes slowly and cyclically.&nbsp; 
+      However as can be seen in the figure, some 15 minutes into the test, the 
+      flow loop suddenly went into an unstable cycle.&nbsp; This was most 
+      unexpected, for as mentioned above the tuning of the flow loop was 
+      relatively robust.
+      <P>The flow loop was then subjected to another open loop test to ascertain 
+      why it should be behaving so strangely.&nbsp;&nbsp; This is shown in 
+      Figure 5. 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture44 height=368 alt="Figure 5" 
+            src="Case History 52_files/cashis52-5.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 5</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>It can be seen that 
+      the dynamics of the valve had changed completely and utterly from the 
+      previous test, with huge overshoots occurring every time the valve 
+      moved.&nbsp; A trip to inspect the valve in the field showed that a 
+      problem had occurred on the follower of the feedback cam.&nbsp; After this 
+      was corrected, the valve operated properly again.
+      <P>This example illustrates nicely how changes in the process dynamics of 
+      a control loop can cause problems.
+      <P>Another very interesting thing was observed when finalising the testing 
+      of the level loop.&nbsp; In a previous article it was mentioned that it is 
+      a good thing to put an output limit on a controller when there is an 
+      oversized valve in the loop, with the limit set at the output point where 
+      the process variable has reached a maximum, and further opening the valve 
+      can not produce a further increase in the PV.&nbsp; The reason for this is 
+      that most controllers use the output limit as a point to trigger their 
+      anti-reset windup mechanism and "freeze" the integral.&nbsp; Also it 
+      prevents "mechanical windup" of the valve (i.e. the valve having to move 
+      in and out of a region where it can have no further effect on the 
+process).
+      <P>As mentioned earlier the valve controlling the flow was 
+      oversized.&nbsp; When performing the final closed loop test on the level 
+      control system, and on making a setpoint change in the level, the output 
+      of the level controller, which is coupled to the setpoint of the flow 
+      controller asked for maximum flow.&nbsp; The output of the flow controller 
+      opened up and the flow reached a maximum, at which point the controller 
+      output was at about 81%.&nbsp; However as the anti-reset windup limit on 
+      the controller, which had been set for full output, had not been reached, 
+      the flow controller then commenced winding up until the valve was fully 
+      open.&nbsp; This is beautifully illustrated in Figure 6. 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture45 height=368 alt="Figure 6" 
+            src="Case History 52_files/cashis52-6.gif" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 6</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Although not shown in 
+      the figure, the result of this is that a large undershoot under setpoint 
+      occurred in the level, when the level process variable reached the new 
+      setpoint, a typical result of reset windup.
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to articles</FONT></A>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A></P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton139',1)" 
+            onmouseout="F_roll('NavigationButton139',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton139 height=19 alt=Home 
+            src="Case History 52_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton139></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton140',1)" 
+            onmouseout="F_roll('NavigationButton140',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton140 height=19 alt=Training 
+            src="Case History 52_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton140></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton141',1)" 
+            onmouseout="F_roll('NavigationButton141',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton141 height=19 alt=Consulting 
+            src="Case History 52_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton141></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton142',1)" 
+            onmouseout="F_roll('NavigationButton142',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton142 height=19 alt=Protuner 
+            src="Case History 52_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton142></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton143',1)" 
+            onmouseout="F_roll('NavigationButton143',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton143 height=19 alt="Contact us" 
+            src="Case History 52_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton143></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton144',1)" 
+            onmouseout="F_roll('NavigationButton144',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton144 height=19 alt=Articles 
+            src="Case History 52_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton144></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Case History 52_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

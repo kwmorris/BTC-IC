@@ -1,0 +1,41 @@
+
+<html>
+<body>
+
+<h1>Allen-Bradley MicroLogix PLCs</h1>	
+
+<p>
+The default setting for the MicroLogix PLC's Ethernet communications port (``channel 1'') is for some external server device to assign it an IP address so that it may communicate on a network.  The protocol for doing this is called ``BOOTP'' because it is a protocol designed to work at ``boot'' time when the PLC is first turned on.  Rockwell provides a BOOTP server utility to do this, but it's kind of finicky about the sequence, so I've decided to provide a step-by-step procedure guaranteed to work.
+</p>
+
+<br>
+
+<ol>
+<li>Begin with all devices powered down, and unplugged from each other.</li>
+<li>Start up your personal computer and give Microsoft Windows time to boot up.  Windows, as a general rule, sucks as an operating system and deserves to be cold-started in order to ensure it doesn't have a bunch of applications already running on it that might tax its little brain and foul up communication with your PLC.</li>
+<li>Ensure that your personal computer's wireless (Wi-Fi) access is turned off, because this has been known to cause problems when trying to set the IP address of the computer's port.</li>
+<li>Power up your Allen-Bradley MicroLogix 1100 PLC.  This will take much less time to boot than your personal computer.</li>
+<li>Plug an 8-pin Ethernet cable from your personal computer's Ethernet port to the PLC's Ethernet port.  A green LED on the PLC's port should illuminate, indicating a good electrical connection between the two devices.</li>
+<li>Navigate to the place in Microsoft Windows where you set the IPv4 address of the Ethernet port.  Sadly, the location seems to change with every new version of Windows, each iteration becoming increasingly hard to find.  I recommend setting the IP address to a fixed value of <tt>192.168.0.1</tt> with a netmask value of <tt>255.255.255.0</tt>.  Know that you must close out all the windows used to navigate to this place in order for your changes to take effect, even after clicking all the "OK" buttons.  Just one more thing about Windows that sucks.</li>
+<li>Open up a command-line terminal (``cmd.exe'' is the application) and run the <tt>ipconfig</tt> command to verify your new IP address and netmask settings have taken effect.</li>
+<li>Start the Rockwell BOOTP Server application.  It will immediately prompt you to enter some network parameters, but the only one you need to complete is the subnet mask (<tt>255.255.255.0</tt>).  After entering this information, it will show a screen where you get to view any devices waiting to be assigned an IP address.</li>
+<li>One device should appear in the BOOTP Server window listing, matching the MAC address of your PLC.  You can check this by scrolling to the Ethernet settings screen on your MicroLogix 1100 PLC's graphic display.  The MAC address should already be there (from manufacture) but the IP address will be a set of dashed lines.</li>
+<li>Click on the MAC address in the BOOTP Server listing corresponding to your PLC, and then click on the ``Add to Relation List'' button.</li>
+<li>This should appear as a new entry in the Relation List window.  Click on that, then click on the ``Enable BOOTP'' button.   The BOOTP Server program will prompt you for the desired IP address of the PLC, and you should enter some IP address compatible with (but not identical to) your personal computer's IP address.  I recommend <tt>192.168.0.2</tt> </li>
+<li>Shortly after completing this step, the graphic display on the PLC should display the new IP address (in the Ethernet parameters screen), and you will be ready to use RSLinx to communicate with it!</li>
+<li>As a final verification, you may go back to the command-line terminal application in your personal computer and try a test communication with the PLC called ``ping''.  To do this, simply enter <tt>ping 192.168.0.2</tt> (or whatever IP address you put into the PLC) and see if you get successful replies.</li>
+</ol>
+
+<br>
+
+<p>
+This is obviously a laborious process, and one worth avoiding in the future if you can help it.  My recommendation is once you've got RSLogix Micro Starter Lite running and you can edit the PLC's program, go to the ``Channel Configuration'' object underneath the ``Controller'' folder underneath the ``Project'' folder in the file listing and un-check the BOOTP box so that the PLC will always maintain the IP address you just set.  This will make the PLC's IP address part of the program you download to it, so that the next time it powers up it will already know what its address is.
+</p>
+
+<p>
+Be warned that if you start a brand-new PLC program, RSLogix defaults to the BOOTP option, which if downloaded to your PLC will reset its IP address to blanks and force you to re-do this whole process.  A good way to avoid this is to save a copy of a blank PLC program with the IP address included in it under some easy-to-find filename such as <tt>00_template.rss</tt> and then always open up this file and re-save to a different name when starting a new program.
+</p>
+
+</body>
+</html>
+

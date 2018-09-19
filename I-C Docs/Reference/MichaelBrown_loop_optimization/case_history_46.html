@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case history 46</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(Casehistory46Layout, 750, 4831))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_46_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_46_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_46_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_46_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_46_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_46_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 46</span></b></p>
+                <p><b>ANALYSIS UNCOVERS CONTROL PROBLEMS IN A PROCESS PLANT</b></p>
+                <p>At
+the start of courses on practical feedback control held in the actual
+plant, the author normally asks the delegates for their estimates as to
+what percentage of their control loops they think are working
+reasonably well. The last two days of the course are spent in
+optimising live loops in the plant, and at the end it is interesting to
+count how many loops actually were working reasonably well prior to
+optimisation.</p>
+                <p>On
+a recent course in a South African plant, the estimates ranged between
+40 and 60%.&nbsp; Nine loops were analysed and optimised when possible,
+during the practical work session. The delegates were fascinated by the
+fact that <i>not even one</i> of the nine loops was working anywhere
+near to what could be termed "reasonable". Quite a few major equipment
+and process design problems were also encountered, some of which will
+be covered here and the remainder in subsequent articles. Similar
+estimates and findings have also occurred in virtually every one of the
+many hundreds of local and foreign plants where the author and his
+colleagues have presented these courses. </p>
+                <p>The reason that people in
+most plants have no real idea why the majority of their loops are
+generally completely ineffective in automatic is because until now,
+there have been no truly practical training courses on control loop
+optimisation, including being able to judge if a loop is working well
+or not.&nbsp; A lot of people feel the control is good if the
+controller is in automatic, and the process is on setpoint.&nbsp;
+However the majority of process plants are running most of the time
+under steady state conditions, where very few large changes normally
+occur. Under these conditions the process will generally get to
+setpoint sooner or later, and look good, even with poor tuning.&nbsp;
+However if a sudden load upset occurs, then the controller usually
+cannot catch it, and the operator then switches to manual to deal with
+it. Operators also normally make process changes in manual, and only
+switch back to automatic when the process is steady again. </p>
+                <p><b>General Comments on Tests at the Plant</b></p>
+                <p>Nearly
+all loops tested were generally found to be tuned with all three
+parameters, viz. P, I and D. This is most unusual (see previous
+articles on the use of the derivative term). The reason for it is that
+the DCS system in the plant has a self-tuning function, which like many
+of its type has insufficient intelligence to apply the D term
+correctly. In addition none of the loops had good tuning. Flow loops
+had far too much gain, and too slow an integral.&nbsp; Integrating
+loops had too low a gain, and too fast an integral. Some loops were
+tuned pretty close to instability. Apart from this most loops had
+relatively heavy process variable filters.&nbsp; (Refer previous
+articles on the dangers of filtering). </p>
+                <p>It should be noted that the
+flowmeters used on all the loops tested were magnetic flow meters. This
+is mentioned as the most of the loops worked on had to control over a
+wide range, which would not have been possible with differential head
+type meters, such as orifice plates and d.p. cells.</p>
+                <p>Analytical
+tests carried out on loops normally consist of 3 types. In the first
+test the controller is in automatic with the existing "as found"
+parameters, and a setpoint change is made.&nbsp; This test allows one
+to judge how well the control is working with those parameters, as well
+as occasionally illuminating problems. The second test is in open loop
+(controller in manual), and step changes are made in the controller
+output, the number of steps made depends on whether the process is self
+regulating or integrating. This is the main analytical test which
+reveals equipment and other problems. Tuning is also calculated from
+this test.&nbsp; If the loop can be optimised, then a final close loop
+test is conducted to judge the performance with new tuning parameters
+as calculated from the open loop test. </p>
+                <p><b>Oil Flow Control Loop F0102</b></p>
+                <p>This loop is very important for product quality.  The existing tuning parameters were:</p>
+                <p>P = 230%</p>
+                <p>I = 0.77m</p>
+                <p>D = 0.15m</p>
+                <p>PV filter =0.3m</p>
+                <p>Figure
+1 shows the first test. The controller was initially in manual.&nbsp;
+It can be seen that there is an oscillation of some 3% amplitude on the
+process variable (PV). On placing the controller in automatic the
+amplitude of the cycle increased to 11%.&nbsp; The amplitude of the
+cycle on the controller output (PD) was 2.5%. </p>
+                <p><img id="Picture2" src="case_history_46_files/CASHIS_46_FIG1.jpg" alt="CASHIS 46 FIG1" title="CASHIS 46 FIG1" align="top" border="0" height="402" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>To
+digress a little, the reason for the increase in amplitude when in
+automatic is that the period of the cycle is approximately 10 seconds,
+and the ultimate period of the loop (determined in the tuning analysis)
+is 6.8 seconds .&nbsp; The ultimate frequency of a feedback control
+loop is effectively the natural resonant frequency of the loop.&nbsp;
+Therefore any external cyclic disturbance affecting the loop with a
+period between roughly 0.2 and 6 ultimate periods, will cause the loop
+to react with increased variance in automatic.&nbsp; (Refer previous
+article). Also of interest is the fact that the amplitude of the cycle
+on the PV is much larger than that on the PD. This is because the valve
+is very badly oversized &#8211; see later.</p>
+                <p>Of
+even more interest was the fact that previously the operators and
+C&amp;I people had no idea that there was a significant cycle on the
+loop, the reason being the large filter on the PV.&nbsp; Figure 2
+illustrates the same test with a 0.3 minute filter on the PV. The
+filtered signal is what was actually seen on the plant operating
+screens.&nbsp; (Figure 2 is very enlarged and the cycle would not
+appear so obvious on the screen with its lower resolution and slow
+update time.&nbsp; The cycle can also be clearly seen on the controller
+output (PD), but people doing tuning seldom pay attention to that
+signal, which is a pity as the PD is also very important).&nbsp; </p>
+                <p><img id="Picture3" src="case_history_46_files/cashis_46_FIG2.jpg" alt="cashis 46 FIG2" title="cashis 46 FIG2" align="top" border="0" height="402" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>Why
+was the loop cycling? One would firstly suspect that some external
+effect could be responsible.&nbsp; The oil flow is fed off a header
+which has a back-pressure control on it to keep constant header
+pressure. A second oil flow is also fed off the header. It would
+account for the cycle if either of these other loops was unstable. Both
+the other loops were then placed in manual to try and stop the cycle,
+but it still persisted.&nbsp; The control valve was then examined and
+it was found that its positioner was unstable! </p>
+                <p>In
+another closed loop test "as found" (not shown here), it was
+ascertained that with the existing tuning, it took approximately 4
+minutes for the controller to complete a 10% setpoint change, which is
+very slow for a flow loop. </p>
+                <p>Figure 3 shows the open loop
+test. Equal step changes on the PD resulted in much larger but unequal
+steps on the PV, indicating that the valve was hugely oversized
+(approximately 7 times), with non-linear installed characteristics. It
+can be also be seen that the positioner cycle is not always occurring,
+and is erratic.&nbsp; Another problem associated with very oversized
+valves is that they of necessity, have to operate very close to
+seat.&nbsp; This is very bad as valves are often very non-linear, and
+sometimes unstable near seat. A general "rule of thumb" is that valves
+should under normal control conditions operate with more than 20% of
+flow passing through them.</p>
+                <p><img id="Picture4" src="case_history_46_files/cashis_46_FIG3.jpg" alt="cashis 46 FIG3" title="cashis 46 FIG3" align="top" border="0" height="402" hspace="0" vspace="0" width="600"></p>
+                <p>Figure 3</p>
+                <p>Very
+little can be done to obtain really good control with a valve with
+these problems.&nbsp; However as it is not possible in most cases to
+immediately fix or replace faulty valves, one tries to tune the
+controller with parameters that will allow the most suitable control
+performance with relevant sufficient robustness (i.e. safety), to be
+performed until something can be done about the valve. On a loop with a
+valve like this, one would attempt to use a tuning that is robust
+enough to cater for the oversizing and non-linearity, and with as small
+as possible gain to keep cycling of the PD resulting in the PV cycle
+being amplified through the proportional gain amplifier in the
+controller as small as possible.&nbsp; At the same time as performance
+is critical in this case, the response should be as fast as possible.</p>
+                <p>Figure
+4 shows the Protuner loop analysis report with a choice of pole
+cancellation tunings which meet the requirements pretty well.&nbsp;
+Note the huge proportional bands of several thousand percent! &nbsp;
+This is typical tuning for flow loops with largely oversized
+valves.&nbsp; Many manufacturers do not allow one to insert such big
+proportional bands into their controllers, many well known makes having
+a high limit at 999%. </p>
+                <p><img id="Picture5" src="case_history_46_files/cashis_46_FIG4.jpg" alt="cashis 46 FIG4" title="cashis 46 FIG4" align="top" border="0" height="448" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>In Figure 5 which shows part of the final closed loop test, the following parameters had been inserted in the controller:</p>
+                <p>P = 3000%</p>
+                <p>I = 0.02m</p>
+                <p>D = Off</p>
+                <p>PV filter = Zero</p>
+                <p><img id="Picture7" src="case_history_46_files/cashis_46_FIG5.jpg" alt="cashis 46 FIG5" title="cashis 46 FIG5" align="top" border="0" height="402" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p>It
+is quite fascinating to compare these figures with the original tuning.
+The integral is now 38 times faster than the original, and now caters
+for really fast setpoint tracking, whilst the proportional gain is so
+small, that the positioner cycle on the PV will cause minimum effect on
+the PD.&nbsp; The tuning is in fact relatively slow to allow extra
+robustness for the positioner cycle, and for the non-linearity.&nbsp;
+Even so, the figure shows how the controller responded to a 10%
+setpoint change bringing the PV to the new setpoint in less than a
+minute. A little later a large load change was induced in the loop and
+the good response can be seen.</p>
+                <p>The
+loop was now performing much faster and better than previously, but now
+the human side entered the story. The day following the optimisation a
+complaint was received that the night operators had found the loop
+wildly unstable in automatic, and they had placed it in manual.&nbsp;
+The reason of course was that the PV was previously filtered, and the
+signal fluctuations and cycling were completely obscured. As soon as
+filters are removed from signals and the true PV seen then there is a
+panic. It is vital that operating and process staff also receive a
+little training on aspects of practical control, and understand that
+heavily damped signals are completely misleading. </p>
+                <p>Subsequent articles will highlight interesting problems found on other loops in the same plant.</p>
+                <p style="text-align: justify;"><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

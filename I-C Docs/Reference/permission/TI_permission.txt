@@ -1,0 +1,175 @@
+ 
+Date:  Mon, 30 Dec 2002 11:28:18 -0600 
+From:  "Bassuk, Larry" <l-bassuk@ti.com> 
+Subject:  RE: GEN, Email Technical Support, www.ti.com, datasheets 
+To:  "'tonykuphaldt@lycos.com'" <tonykuphaldt@lycos.com> 
+ 
+
+Dear Tony,
+
+Thank you for your interest in Texas Instruments.
+
+We are happy to explicitly grant the permission you request in your e-mail
+below.
+
+We effectively grant this e-mail through our posting at 
+
+http://www.ti.com/corp/docs/legal/copyright.htm
+
+Regards,
+Larry Bassuk
+Copyright Counsel
+972-917-5458
+
+
+
+From:  tonykuphaldt@lycos.com
+Sent:  12/29/02 4:22:14 PM
+To:  "support@ti.com" <support@ti.com>
+Subject:  GEN, Email Technical Support, www.ti.com, datasheets
+
+This Email Sent From: Email Technical Support
+http://www.ti.com/cgi-bin/sc/comments.cgi
+
+DATE / TIME (UTC): Sun, 29 Dec 2002 21:22:16 UTC
+CUSTOMER'S REGIONAL LOCAL TIME: Sunday, December 29, 2002 1:22:16 PM
+
+NAME : Tony  Kuphaldt
+
+                FIRST NAME: Tony
+                 LAST NAME: Kuphaldt
+                     TITLE: Instructor
+                   COMPANY: Bellingham Technical College
+                     EMAIL: tonykuphaldt@lycos.com
+                     PHONE: (360)-738-3105 x477
+                       FAX:
+                   ADDRESS1:
+                   ADDRESS2:
+                      CITY:
+                     STATE:
+               POSTAL CODE:
+                   COUNTRY: USA
+PART NUMBER or DESCRIPTION: datasheets
+             END EQUIPMENT:
+               APPLICATION:
+              DESIGN STAGE:
+       PRODUCTION QUANTITY:  units/mo
+
+
+PROBLEM:
+To Whom it may concern,
+
+I am an instructor of Instrumentation at Bellingham Technical College, and
+am in the process of compiling a set of tutorial and product datasheet files
+for student reference on CD-ROM.  Some of the literature provided for free
+download on your website is of interest to my students, and I would like to
+formally request permission to copy and distribute these electronic
+documents on CD-ROM media.  Specifically, I am interested in many of your
+semiconductor device datasheet and application note files.
+
+The reason for doing this is to provide off-line references for students to
+take home and view on their own computers.  Many students lack internet
+service, or are restricted to slow dial-up connections, and so cannot
+effectively make use of your free technical resources on line.
+
+Please understand that these CD-ROMs will be used strictly for academic
+purposes, and will not be used in commercial applications of any sort.  If
+this is acceptable to you, please send me written permission to copy and
+distribute these electronic documents by way of email, and I will include
+this letter of permission on the CD-ROMs along with the downloaded
+documents.
+
+Thank you for your time and attention in this matter.
+
+
+
+Sincerely,
+
+Tony Kuphaldt
+Instructor, Instrumentation
+Bellingham Technical College
+3028 Lindbergh Avenue
+Bellingham, WA 98225-1599
+(360)-738-3105 x477
+tkuphald@btc.ctc.edu
+tonykuphaldt@lycos.com
+
+
+-----------------------------------------------------
+
+    COPYRIGHTS
+
+Texas Instruments is pleased to provide the information on 
+these pages of the World Wide Web. We encourage you to 
+read and use this information in developing new products.
+
+TI grants permission to download, print copies, store 
+downloaded files on a computer and reference this 
+information in your documents only for your personal and 
+non-commercial use. But remember, TI retains its 
+copyright in all of this information. This means that you 
+may not further display, reproduce, or distribute this 
+information without permission from Texas Instruments. 
+This also means you may not, without our permission, 
+"mirror" this information on your own server, or modify 
+or re-use this information on another system. 
+
+TI further grants permission to non-profit, educational 
+institutions (specifically K-12, universities and 
+community colleges) to download, reproduce, display and 
+distribute the information on these pages solely for use 
+in the classroom. This permission is conditioned on not 
+modifying the information, retaining all copyright 
+notices and including on all reproduced information the 
+following credit line: "Courtesy of Texas Instruments". 
+Please send us a note describing your use of this 
+information under the permission granted in this paragraph.
+Send the note and describe the use according to the 
+request for permission explained below.
+
+Please send requests for permission, beyond the preceding 
+two grants, to make copies of the information on these 
+pages to:
+
+copyrightcounsel@list.ti.com, or
+
+Texas Instruments Incorporated
+Attn: Copyright Counsel
+P.O. Box 655474, MS 3999
+Dallas, Texas 75265
+
+Please identify:
+
+Your company or organization name,
+
+The information you want to copy,
+
+The number of copies you plan on making, and
+
+The intended use of the information.
+
+These permissions terminate if the use of this information
+under these limited permissions adversely affects the 
+reputation of TI, as determined solely by TI. These 
+permissions also terminate if you breach any of these terms
+and conditions. Upon termination you agree to destroy all
+copies of information downloaded from this site.
+
+Copyright laws and other intellectual property laws in the
+United States and other countries protect the information 
+presented on these pages. Use of any of this information 
+beyond these limited permissions is expressly prohibited by
+law, and may result in civil and criminal penalties. Except
+as stated herein, the information on these pages of the 
+World Wide Web may not be copied in any form or by any 
+means without TI's prior written consent.
+
+Some photos courtesy of PhotoDisc, Inc. Those photos 
+Digital Imagrery © Copyright 2002 PhotoDisc, Inc.
+
+Some photos courtesy of Digital Vision, Ltd. Those photos
+© Copyright 2002 Digital Vision ® Ltd.
+ 
+ 
+ 
+ 

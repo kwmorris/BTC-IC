@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0073)http://www.controlloop.co.za/Articles/Case_History_67/case_history_67.htm -->
+<HTML><HEAD><TITLE>Case History 67</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Case History 67_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 src="Case History 67_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=816 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Case History 67_files/banneroct2002.jpg" width=765 
+    border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Case History 67_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=40><IMG height=1 src="Case History 67_files/clearpixel.gif" 
+      width=40 border=0></TD>
+    <TD width=680><IMG height=1 src="Case History 67_files/clearpixel.gif" 
+      width=680 border=0></TD>
+    <TD width=12><IMG height=1 src="Case History 67_files/clearpixel.gif" 
+      width=12 border=0></TD>
+    <TD width=13><IMG height=1 src="Case History 67_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Case History 67_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=50><IMG height=1 src="Case History 67_files/clearpixel.gif" 
+      width=50 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=11></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=680>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#cc3300>CONTROL LOOP 
+      CASE HISTORY 67<BR><BR></FONT><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica>Problems encountered in level 
+      controls</FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-1></FONT></B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1> 
+      <P>This article deals with a few of the more difficult problems 
+      encountered in level controls.&nbsp; Before going into them it would be 
+      appropriate to summarise a few important points on integrating processes 
+      as previously given in my Loop Signature series.
+      <P>1. Levels are generally integrating (or ramping) processes.
+      <P>2. Very few people have any feeling, understanding, or idea on how to 
+      tune these loops properly, mainly due to a huge lack of training by 
+      educational institutions on such processes.
+      <P>3. Integrating processes are always "balancing" processes wherein the 
+      process variable can only stay constant if the input and output of the 
+      process are at the same value.&nbsp; In the case of a level control, the 
+      level can only stay at the same value if the inflow and outflow are the 
+      same.&nbsp; If they are not at the same value, the level will be ramping 
+      up or down - as the case may be.
+      <P>4. Integrating loops tend to be very cyclic either due to poor tuning, 
+      or if valve problems like hysteresis exist, particularly if the Integral 
+      term is used in the controller.&nbsp; In fact as a general rule, you need 
+      good valves on these processes or really bad control can result.&nbsp; 
+      (Hysteresis is caused by a combination of static friction, and mechanical 
+      play, or deadband, arising when a valve is reversed).
+      <P>5. The response of the control is very dependant on a strict 
+      relationship between the process gain, the controller's proportional gain, 
+      and the controller's integral value.
+      <P>Figure 1 illustrates a simple tank level in a petro-chemical plant, 
+      with tuning as typically encountered in the first "as-found" closed loop 
+      test.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture76 height=396 alt="Figure 1" 
+            src="Case History 67_files/cashis67fig1.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 1</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The process was 
+      relatively stable until a step change in setpoint was made.&nbsp; As can 
+      be seen, the process responded in a very cyclic fashion with large over 
+      and undershoots, and then took a very long time to settle out.
+      <P>After correct tuning for "tight" level control, the response to a 
+      setpoint change can be seen in Figure 2.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture77 height=396 alt="Figure 2" 
+            src="Case History 67_files/cashis67fig2.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 2</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The process moved up 
+      to setpoint extremely fast.&nbsp; After a single small overshoot it 
+      settled out at setpoint in a very short time.&nbsp; 
+      <P>This example illustrates how important it is to tune an integrating 
+      process like a level correctly if really bad control is to be avoided.
+      <P>As mentioned above bad valves can also create havoc on the control of a 
+      level loop.&nbsp; Figure 3 shows a closed loop recording of a well tuned 
+      level control loop cycling in automatic.&nbsp; (Note that no setpoint 
+      changes were made during the test).
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture78 height=396 alt="Figure 3" 
+            src="Case History 67_files/cashis67fig3.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 3</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The open loop test in 
+      Figure 4 shows how the valve exhibited tremendous hysteresis.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture79 height=396 alt="Figure 4" 
+            src="Case History 67_files/cashis67fig4.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 4</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>At the commencement 
+      of the test the process was in balance.&nbsp; A step change was made on 
+      the PD (controller output).&nbsp; However the level only started ramping 
+      about 13 seconds later which would indicate that the valve was sticking 
+      for quite a while before the actuator overcame the hysteresis.&nbsp; Once 
+      the level had ramped down a bit, the PD was brought back to the balance 
+      point.&nbsp; However the level kept on steadily ramping down.&nbsp; This 
+      meant that the valve had not moved at all.&nbsp; The PD was then lowered 
+      in a further four 2% steps, but still the valve would not move.&nbsp; 
+      Eventually the operator shut the valve fully to get the level back up 
+      again.
+      <P>There is no way that one can properly control level with a valve in 
+      this state.&nbsp; When the loop was placed in automatic it started cycling 
+      as shown in Figure 3.&nbsp; Essentially the cycle is being caused by the 
+      fact that the controller can not get the valve to reverse quickly 
+      enough.&nbsp; The valve is sticking and when it finally does reverse and 
+      move, it goes too far, thus swinging the level the other way.&nbsp; As 
+      mentioned earlier, and very unfortunately, integrating loops do require 
+      good valves, or problems of this nature can be easily encountered.
+      <P>Remarkably one of the technicians in the plant reasoned that if one was 
+      to keep the valve continuously reversing at a fast rate then reasonable 
+      control could probably be obtained until the next plant shutdown when the 
+      valve could be repaired.&nbsp; To achieve this he added a little derivative to the controller.&nbsp; This reacted sharply with the noise on 
+      the loop to keep the valve moving up and down.&nbsp; To my amazement it 
+      actually worked extremely well.&nbsp; The control with setpoint changes 
+      up, and then down is shown in Figure 5.&nbsp; (Note the setpoint signal is 
+      not shown in this recording).&nbsp; However it must be noted that a valve 
+      subjected to this treatment for too long will have its life severely 
+      shortened.
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture80 height=396 alt="Figure 5" 
+            src="Case History 67_files/cashis67fig5.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 5</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The third and last 
+      example in this article is level control of a cryogenic fluid.&nbsp; 
+      Figure 6 shows an open loop test on a level of such a fluid.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=550 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture81 height=399 alt="Figure 6" 
+            src="Case History 67_files/cashis67fig6.jpg" width=550 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <DIV align=center><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>Figure 6</FONT></B></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The interesting thing 
+      about this process is that each time a step change is made on the PD, the 
+      level responds firstly with a kick before starting the ramp.&nbsp; This 
+      response is sometimes known as a "positive lead integrator".&nbsp; This is 
+      a very unusual phenomenon on level controls.&nbsp; Positive lead 
+      integrators are a particular class of dynamics and require a special 
+      tuning technique.
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to articles</FONT></A>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A><BR>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton229',1)" 
+            onmouseout="F_roll('NavigationButton229',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton229 height=19 alt=Home 
+            src="Case History 67_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton229></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton230',1)" 
+            onmouseout="F_roll('NavigationButton230',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton230 height=19 alt=Training 
+            src="Case History 67_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton230></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton231',1)" 
+            onmouseout="F_roll('NavigationButton231',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton231 height=19 alt=Consulting 
+            src="Case History 67_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton231></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton232',1)" 
+            onmouseout="F_roll('NavigationButton232',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton232 height=19 alt=Protuner 
+            src="Case History 67_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton232></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton233',1)" 
+            onmouseout="F_roll('NavigationButton233',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton233 height=19 alt="Contact us" 
+            src="Case History 67_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton233></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton234',1)" 
+            onmouseout="F_roll('NavigationButton234',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton234 height=19 alt=Articles 
+            src="Case History 67_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton234></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Case History 67_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 93</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory93Layout, 750, 2039))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_93_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_93_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_93_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_93_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_93_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_93_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 93</span></b></p>
+                <p><b>SPECIFYING A DIGITAL FEEDBACK CONTROLLER - part 1</b></p>
+                <p>Musa
+Mtshali, a C&amp;I technician with a pulp company in Swaziland,
+recently asked me to write a Case History article listing all the
+important points that should be included in the specifications when a
+company requests tenders for a DCS or PLC control system. Here it is,
+Musa.</p>
+                <p>As
+mentioned many times in past articles, I have been in hundreds of
+plants situated across many countries around the world, and still I
+have never met anyone in these plants who really understands the
+operation, the various features, and the options generally available in
+their digital control system (normally a DCS or PLC system). As a
+result many of these plants are not working as well as they could, as
+the control systems are not configured optimally. This poor control
+can, and has resulted in sometimes huge loss in potential extra profits.</p>
+                <p>To site just a few examples from plants I have worked in: </p>
+                <ul>
+                    <li>A
+pharmaceutical plant in the UK is under-producing by some £14,000,000
+p.a. as the D term is not being used correctly because of an incorrect
+choice of controller options. They cannot now change this as their
+manufacturing process is "sealed" by drug authorities in the various
+countries where they sell their products, and it is now practically
+impossible to get the specifications changed. </li>
+                    <li>A big mining plant
+had been running for over 8 years, with a "homemade" PID algorithm
+written by the PLC programmer.&nbsp; Unfortunately it didn't work and
+the controllers tuning parameters could not be changed.</li>
+                    <li>Many
+plants all around the world using certain top range DCS control systems
+have never ever been able to properly tune loops because the default
+configuration of the controllers in these systems is such that there is
+only integral response on setpoint change.&nbsp; (Even more amazing is
+the fact that the "experts" in these plants were not aware of this, and
+even more amazing is that they have never been told about it by the
+equipment manufacturers, or their representatives). In South Africa
+these plants include leading petrochemical, chemical, and paper
+companies.</li>
+                    <li>Over
+80% of all PLC control systems I come across being used for feedback
+control have their control blocks incorrectly configured, so the
+control cannot work properly.</li>
+                    <li>A&nbsp; PLC
+on a ferrochrome furnace had been incorrectly programmed so that it
+caused a pressure control valve to first shut, when it was switched
+from manual to automatic.&nbsp; This resulted in oxygen being sucked
+into the furnace and caused an explosion.</li>
+                </ul>
+                <p>Many
+people do not believe me when they read things like this, but I come
+across similar situations all the time.&nbsp; The main problem is that
+as I have repeatedly said, very few people really understand the
+practicalities of feedback control systems, as they have never been on
+courses that teach these things.&nbsp; Practical control teaching is
+very different from the studies most people do when they learn control
+at an academic institution.</p>
+                <p>Anyway these are the things I believe a prospective purchaser of a control system should specify or certainly investigate:</p>
+                <p><b>Basic Controller Algorithm</b></p>
+                <p>The
+Series algorithm is in my opinion the preferred, as I have found that
+the D term operates more efficiently than the others, and offers better
+cancellation on certain process dynamics. </p>
+                <p>Series:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img id="Picture3" src="case_history_93_files/cashis_93_eq1.gif" alt="cashis 93 eq1" title="cashis 93 eq1" align="top" border="0" height="90" hspace="0" vspace="0" width="300"></p>
+                <p>Where K<sub>P</sub> is controller gain, T<sub>i</sub> is integral time in seconds/repeat, T<sub>D</sub> is derivative time in seconds, and S is the Laplace operator.</p>
+                <p>The
+Ideal algorithm unfortunately appears to becoming the most popular on
+most systems.&nbsp; However, although not as good as the Series, it is
+not too bad, and if the Series is not available, then it can be used.</p>
+                <p>Ideal (ISA): &nbsp;  <img id="Picture4" src="case_history_93_files/cashis_93_eq_2.gif" alt="cashis 93 eq 2" title="cashis 93 eq 2" align="top" border="0" height="95" hspace="0" vspace="0" width="250"></p>
+                <p>The
+Parallel algorithm which is the default algorithm offered by some very
+well known makes of PLC's, and also by at least one well know make of
+DCS should never be used.&nbsp; The problem with it is that integral
+and derivative terms are effectively altered every time the P gain is
+changed, which makes tuning a nightmare.&nbsp; (See <a href="http://www.controlloop.co.za/Loop_signatures/Loop_Signatures_12/loop_signatures_12.html">article P1-12</a> in my first Loop Signature series for an explanation).
+                </p>
+                <p>Parallel:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img id="Picture6" src="case_history_93_files/cashis_93eq3.gif" alt="cashis 93eq3" title="cashis 93eq3" align="top" border="0" height="87" hspace="0" vspace="0" width="210">
+                </p>
+                <p><b>Implementation of the PID Algorithm</b></p>
+                <p>The
+preferred form of digitisation of the PID algorithm is definitely the
+positional implementation. It is generally more accurate, but does use
+more processing power than the other, the incremental (or velocity)
+implementation.&nbsp; If the incremental implementation is used, then
+you should ensure that you can switch off the I term on occasions when
+only P or PD control is required. Also ensure that integral windup can
+be prevented with the incremental implementation. This is also very
+important when using the controller as the primary controller in a
+cascade control system, or as a controller in a selective control
+system, where integral must be frozen from an external signal under
+certain conditions.</p>
+                <p><b>Tuning Parameters</b></p>
+                <p>Some
+manufacturers limit the PID tuning settings which may limit the
+settings needed for certain conditions. The following are suggested
+ranges for the tuning parameters:</p>
+                <p>
+                    <table id="Table1" border="1" cellpadding="1" cellspacing="1" width="100%">
+                        <tbody><tr height="19">
+                            <td align="left" valign="top" width="205">
+                                <p style="text-align: left;"><b><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">TERM</span></b></p>
+                            </td>
+                            <td align="left" valign="top" width="205">
+                                <p><b><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">UNITS</span></b></p>
+                            </td>
+                            <td align="left" valign="top" width="205">
+                                <p><b><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">RANGE</span></b></p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td align="left" valign="top">
+                                <p style="text-align: left;"><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt; color: rgb(0, 0, 0);">Proportional</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">P gain</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">0.01 to 100</span></p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td>
+                                <p style="text-align: left;">&nbsp;</p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">PB%</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">10,000% to 1%</span></p>
+                            </td>
+                        </tr>
+                        <tr height="16">
+                            <td>
+                                <p style="text-align: left;">&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td align="left" valign="top">
+                                <p style="text-align: left;"><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt; color: rgb(0, 0, 0);">Integral</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">Seconds/repeat</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">0.2 to 10,000</span></p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td>
+                                <p style="text-align: left;">&nbsp;</p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">Repeats/second</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">5 to 0.0001</span></p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">Minutes/repeat</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">0.003 to 170</span></p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">Repeats/minute</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">300 to 0.006</span></p>
+                            </td>
+                        </tr>
+                        <tr height="16">
+                            <td>
+                                <p style="text-align: left;">&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td align="left" valign="top">
+                                <p style="text-align: left;"><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt; color: rgb(0, 0, 0);">Derivative</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">Seconds</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">1 to 1800</span></p>
+                            </td>
+                        </tr>
+                        <tr height="19">
+                            <td>
+                                <p style="text-align: left;">&nbsp;</p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">Minutes</span></p>
+                            </td>
+                            <td align="left" valign="top">
+                                <p><span style="font-family: 'Times New Roman',Times,Serif,serif; font-size: 12pt;">0.01 to 1800</span></p>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </p>
+                <p>This article will be concluded in the next Case History article which should be published in two months time.</p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

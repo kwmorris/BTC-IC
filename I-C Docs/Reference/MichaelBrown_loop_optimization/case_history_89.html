@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 89</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory89Layout, 751, 3479))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="751">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_89_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+            <td width="1"><img src="case_history_89_files/clearpixel.gif" alt="" border="0" height="1" width="1"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_89_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="117"><img src="case_history_89_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_89_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="120"><img src="case_history_89_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="751">
+        <tbody><tr align="left" valign="top">
+            <td height="29" width="1"><img src="case_history_89_files/clearpixel.gif" alt="" border="0" height="1" width="1"></td>
+            <td width="750"><img src="case_history_89_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 89</span></b></p>
+                <p><b>CONVEYOR START-UP PROBLEMS</b></p>
+                <p>I
+was recently in a plant which is having problems with controlling the
+start-up of several large conveyors each of which are driven by several
+large motors. I was asked for advice, and the following is taken from
+my report to the client.</p>
+                <p><b>Description of Control Systems</b></p>
+                <p>(Refer to Figure 1)</p>
+                <p><img id="Picture2" src="case_history_89_files/cashis89fig1.jpg" alt="cashis89fig1" title="cashis89fig1" align="top" border="0" height="542" hspace="0" vspace="0" width="750"></p>
+                <p>The
+control system on each conveyor was designed to facilitate the start-up
+of a conveyor without causing excessive stress and overheating on the
+drive motors.&nbsp; Each conveyor has three or four drive motors, some
+of them being in pairs which are hard-coupled by a drive shaft; the
+motors in a pair being on either side of the conveyor.&nbsp; A fluid
+coupling connects each motor to the conveyor drive roller, its purpose
+being to allow the motor to take up the load at a relatively slow ramp
+rate.</p>
+                <p>The
+fluid couplings are the type which effectively consist of two
+concentric cylinders, the one driving the other at a speed which is
+dependent on the amount of oil between the cylinders.&nbsp; "Scoops" or
+vanes (as I will call them hereafter), which are positioned by a vane
+guide arm, regulate the flow of oil into the space between the
+cylinders. </p>
+                <p>The
+vane guide arm is positioned by an actuator which is a reversible
+electric motor driven by pulses in the one direction or the other.</p>
+                <p>A
+controller block in a well known make of PLC has been specially
+designed to drive normal electric actuators was used for the
+control.&nbsp; The PV input to the controller is motor power in
+KW.&nbsp; The setpoint input is from a ramped programme written in the
+PLC. The outputs from the control block are directly in "raise" or
+"lower" pulse trains.</p>
+                <p>There
+is no position feedback signal of vane arm position, and there are no
+end-limit switches to stop the drive at when the arm reaches its end
+positions.</p>
+                <p>The client was having many problems
+with this control system, and it seemed to need retuning very often.
+There were many complaints about it from operational staff.</p>
+                <p><b>Problems Encountered with Existing Set-up</b></p>
+                <p><i>1.  Fluid Coupling Problems</i></p>
+                <p>Probably
+the worst problems are with the set-up of the fluidic coupling. The
+purpose of any final control element (FCE) is to "translate" what the
+controller wants into the actual physical input into the process, which
+in this case is power. If it cannot do what the controller asks it,
+then the controller has to try and correct for its shortcomings, as
+well as to try and control the actual process.&nbsp; Unfortunately the
+controller is tuned for the dynamics of the actual process, and it
+cannot handle the problems encountered with the FCE very well, which
+will make the control poor.</p>
+                <p>Fluidic
+couplings are notorious for problems which include, hysteresis,
+deadband, and non-repeatability, particularly if the oil level in them
+is not kept constant.&nbsp; The latter in particular is very important,
+as it means that the dynamics of the coupling change with differing oil
+levels.&nbsp; It must be noted that the controller which controls the
+position of the vanes in the coupling can only normally be tuned for
+one particular set of dynamics of the coupling. If these change one has
+to retune the controller.</p>
+                <p>Apparently
+various people, including some not in the automation and control
+department, are frequently working on the couplings, refilling oil, and
+readjusting the vane mechanical limits. This is unacceptable for good
+control. </p>
+                <p>Another major problem is that
+the vane lever position is not measured, so that the controller cannot
+know its true exact position - see also below.&nbsp; There are also no
+limit switches on the vane lever to stop its drive motor from trying to
+move it out of limits.</p>
+                <p>Another
+bad problem in the control of the power is that the vanes only start
+taking effect and allow the motor to start putting power into the drive
+when the vanes have moved considerably from the bottom limit -
+apparently as much as 80% on some units. The result of this is that
+there is a considerable period of deadtime when starting the drives and
+ramping up the power setpoint, before the vanes start taking effect.</p>
+                <p>A final problem is that it appears that the relationship between vane position and power is probably very non-linear.</p>
+                <p><i>2.  Motors with Differing Characteristics</i></p>
+                <p>It
+appears that in some instances different drive motors are used on the
+same conveyor, even with different power ratings. This is definitely
+not good practice.&nbsp; Ideally motor characteristics should be
+matched as closely as possible for all motors on a particular conveyor.
+They need this to share the load as equally as possible.</p>
+                <p><i>3.  Controller Problems</i></p>
+                <p>The
+PLC control block which was used, and as mentioned earlier, has been
+specially written for control systems like this with pulse
+outputs.&nbsp; Unfortunately there are some severe drawbacks in this
+block particularly when there is no actuator position feedback signal,
+which makes scientific tuning almost impossible.&nbsp; The PLC
+manufacturer themselves in the manual state that the control is
+"approximate" as the controller has to "simulate" the actuator
+position.&nbsp; The manual on this controller is also impossible to
+understand. Even some of the parameters are given in a foreign
+language.&nbsp; It is very unlikely that anyone apart from experts in
+the company manufacturing the PLC, which is overseas, would really be
+able to fully understand this controller.&nbsp; A lot of the features
+in the controller are blocked from user input and one cannot make
+adjustments.</p>
+                <p><b>Recommendations</b></p>
+                <p><i>1. Fluid Coupling</i></p>
+                <ul>
+                    <li>A
+special procedure needs implementation to ensure couplings are set-up
+properly, filled with the correct amount of oil, and vane movement
+calibrated properly.&nbsp; The responsibility for this should be
+clearly defined and assigned to a group of people who have a good
+understanding of the control requirements. Nobody else should be
+allowed to touch these units. No readjustments should ever be allowed
+to be made under normal operating conditions.</li>
+                    <li>The
+vane movement should be set up, so that the vane is set to start
+allowing power take up within a few percent of the movement from the
+"zero" position.</li>
+                    <li>A good displacement
+transducer should be mounted and calibrated accurately to reflect vane
+position. The transducer should be hysteresis free, and obviously must
+be capable of withstanding operating conditions.&nbsp; (Experience has
+shown that potentiometers are not ideal in this application.) </li>
+                    <li>High and low limit switches should be mounted to interlock vane drive movement when the limits are reached.</li>
+                    <li> A planned maintenance schedule should be set-up to check the units and the calibration at regular intervals.</li>
+                </ul>
+                <p><i>2. Main Conveyor Drive Motors</i></p>
+                <ul>
+                    <li>Ideally
+all motors on the same conveyor should be of the same power rating and
+matched if possible.&nbsp; However this may be difficult to implement
+at this stage due to cost.</li>
+                </ul>
+                <p><i>3. Control Strategy (Refer to Figure 2)</i></p>
+                <p><img id="Picture3" src="case_history_89_files/cashis89fig2.jpg" alt="cashis89fig2" title="cashis89fig2" align="top" border="0" height="428" hspace="0" vspace="0" width="750"></p>
+                <ul>
+                    <li>The
+existing controller block and structure should be scrapped.&nbsp; It
+would be far better to use the standard continuous controller block in
+the PLC, which is extremely versatile, and which is far easier to
+understand, set-up, and tune.</li>
+                    <li>Two
+of these control blocks would be used, the one to control the vane
+position, and the other to control the power. The reason for this is
+that both of these processes have entirely different dynamics, and each
+controller would be tuned to deal with the specific individual dynamic.
+The output of the power controller, referred to as the master
+controller, would set the setpoint of the vane "slave" controller. A
+good way to think of this is that the slave controller is specifically
+tuned to deal with the dynamics and inherent problems of the fluid
+coupling, and thus will ensure that the coupling provides the power
+into the system as demanded by the master controller.</li>
+                    <li>The
+master power controller can now be tuned relatively slowly to ensure
+robustness (safety of tuning), for varying conditions that will occur
+such as varying belt load at start-up.&nbsp; A slow tune is a robust
+(safe) tune, which is fine, as it not necessary to start-up a belt
+quickly, and it has the twin-fold advantages of ensuring that the two
+control systems don't interact, and also that tuning should not need
+changing very often, even with dynamics in the coupling changing with
+time, temperature, and differing oil viscosity.</li>
+                    <li>The
+purpose of the bias power adjust is to allow very easy adjustment of
+load sharing between the various drive motors on a conveyor,
+particularly when running after start-up.&nbsp; Such adjustment can be
+done manually from the SCADA or else if the system is really
+successful, and the load sharing varies a lot, then a not too difficult
+programme could be written in the PLC to perform it automatically.</li>
+                    <li>The
+power lineariser block is to linearise the relationship between vane
+position and motor power. This allows a single tuning in the power
+controller to be optimal across the entire range of vane position.</li>
+                    <li>Virtually
+the entire control strategy shown in Figure 2 can be implemented in the
+two controller blocks. The pulse output is a standard option in the
+controller. The bias&nbsp; power adjust can be performed through the
+"disturbance variable" input in the power controller, and there is
+provision in the system to incorporate a lineariser block in the vane
+position controller.</li>
+                    <ul>
+                    </ul>
+                </ul>
+                <p>This
+proposed new system will definitely be far more effective and stable
+than the existing one, provided it is implemented correctly.</p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

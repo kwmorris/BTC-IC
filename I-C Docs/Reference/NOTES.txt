@@ -1,0 +1,18 @@
+Instructions for making CD-ROM archive 
+
+When invoking "mkisofs" to create the filesystem to go on 
+the CD-ROM, be sure to enter the command as such (from the
+home directory):
+
+    mkisofs -r -J -f -o cd_image instref/
+
+The options mean:
+
+    -r (Use Rock Ridge extensions in the filesystem)
+
+    -J (Create Joliet directory records for MS-Windoze)
+
+    -f (Tell mkisofs to "follow" symbolic links)
+
+    -o (Specify name of output filesystem image)
+

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case history 30</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(Casehistory30Layout, 750, 4243))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_30_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_30_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_30_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_30_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_30_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_30_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 30</span></b></p>
+                <p><b>USING DERIVATIVE ON INTEGRATING LOOPS</b></p>
+                <p>In
+a previous article it was mentioned that the "D" term should be used on
+integrating processes where a large lag is present.&nbsp; The example
+used here (which is also taken from the oil rig in the North Sea),
+illustrates this beautifully. </p>
+                <p>The process
+in question is the control of the level in a deaerator, with which
+problems had been experienced.&nbsp; Large load disturbances occurred
+occasionally, and the control was too slow to catch them, and the plant
+would trip.&nbsp; </p>
+                <p>Figure 1
+shows the closed loop "as found" test with the original tuning in the
+controller. As can be seen in the figure, the loop is in a continuous
+cycle. This is pretty typical of integrating loops, and is generally
+caused by poor setting of the I term. Also hysteresis in the valve
+together with the I term cause continuous cycling.&nbsp; </p>
+                <p><img id="Picture2" src="case_history_30_files/cashis30FIG1.jpg" alt="cashis30FIG1" title="cashis30FIG1" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>Before
+one can perform an open loop test on an integrating process, it is
+necessary to ascertain the balance point of the controller output
+(process demand), so that on switching to manual, the process variable
+(level signal) remains constant and does not run away.&nbsp; It is much
+easier to find the balance point in automatic than in manual, as a well
+tuned controller will always brings the process demand to the balance
+point. Therefore it is mandatory that the cycling be eliminated
+first.&nbsp; This is easily accomplished in most cases merely by
+switching off the I and D terms in the controller. </p>
+                <p>Figure
+1 shows how quickly the cycling stopped once the I and D term were
+switched out.&nbsp; The balance point is the value of the process
+demand after the cycling has stopped.</p>
+                <p><img id="Picture3" src="case_history_30_files/cashis30FIG2.jpg" alt="cashis30FIG2" title="cashis30FIG2" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>Figure
+2 shows a portion of the open loop test.&nbsp; The process was
+initially at balance with the process variable being nice and steady.
+The output of the controller was then stepped up.&nbsp; After a
+significant deadtime of approximately 18 seconds the level started
+rising. Such a long deadtime is most unusual in a level process.
+Another most surprising and unexpected development is the way the level
+actually stared moving. It curved up slowly into the ramp.&nbsp; Such a
+curve is the result of a large first order lag normally associated with
+batch temperature and gas pressure type integrating processes. It is
+usually only found in level processes where large filters have been
+placed on the process variable, either in the transmitter or on the
+input to the controller. In this case there were no filters configured
+in either place.&nbsp; Normally one would try to find out exactly why
+such unusual process responses were occurring, but time constraints on
+the rig prevented this.&nbsp; The author would be happy to hear from
+readers who may be able to shed some light on these responses, as they
+are unusual for a deaerator</p>
+                <p>Apart from these
+characteristics, the actual ramp rate of the level was extremely
+fast.&nbsp; This means that the process gain of the deaerator was
+relatively large.&nbsp; Combined with a long deadtime and large lag, it
+makes the process extremely difficult to control.&nbsp; </p>
+                <p>Figure
+3 is the Protuner Loop Analysis Report. It should be noted in the "Loop
+Signature" in the bottom left portion of the report, that the analyser
+determined that the process had a gain of 0.087, a deadtime of 21.5
+seconds, and a dominant lag of 18 seconds. Also in the PID tuning
+parameters it can be seen that the D term has been set equal to 18
+seconds.&nbsp; When it is set equal to the process lag in an
+integrating process the derivative and the lag cancel each other.&nbsp;
+Therefore wherever possible, the D term should be used if a lag is
+present in an integrating process. </p>
+                <p><img id="Picture4" src="case_history_30_files/cashis30FIG3.jpg" alt="cashis30FIG3" title="cashis30FIG3" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>Integrating
+processes are best controlled without the I term if possible, as has
+been discussed in a previous article. However it can also be observed
+that the Protuner had calculated a tiny proportional gain for the
+controller of less than 0.2. This is because the process gain was very
+high for an integrating process. Such a small proportional gain makes
+the use of the I term mandatory, in order to prevent impossibly large
+offsets on load change.</p>
+                <p>Figure 4 has
+been put in for interest as it shows how the Operator vainly tried to
+get the loop back to balance in manual, after the step open loop test
+had been performed. Eventually after much persuasion he put it back
+into automatic with only the P term in the controller. Once again the
+loop rebalanced itself.</p>
+                <p><img id="Picture5" src="case_history_30_files/cashis30FIG4.jpg" alt="cashis30FIG4" title="cashis30FIG4" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>To
+illustrate the effectiveness of the D term in this process, Figure 5
+shows the response of the process to a 10% load change with P+I tuning,
+and Figure 6, the response with P+I+D tuning. These tests were
+performed on the Protuner simulator, as for obvious reasons the rig
+personnel were very reluctant to try it on the real process.&nbsp; The
+control could not catch the load upset with P+I,&nbsp; but just managed
+to hold it with P+I+D.</p>
+                <p><img id="Picture6" src="case_history_30_files/cashis30FIG5.jpg" alt="cashis30FIG5" title="cashis30FIG5" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p><img id="Picture7" src="case_history_30_files/cashis30FIG6.jpg" alt="cashis30FIG6" title="cashis30FIG6" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 6</i></p>
+                <p style="text-align: justify;"><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

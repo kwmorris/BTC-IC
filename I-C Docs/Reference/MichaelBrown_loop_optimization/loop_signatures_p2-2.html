@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures p2-2</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-2_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-2_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-2_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-2_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-2_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="loop_signatures_p2-2_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b>Feedforward control - part 1</b></p>
+                <p>Feedforward
+control is a powerful technique that can dramatically improve control
+variance in cases where load changes cause big deviations from setpoint
+and the actual process dynamics are too slow to allow the feedback
+controller to operate fast enough to catch these disturbances.&nbsp;I
+have come across many instances in plants where feedforward could have
+been used successfully, but has not been employed as the control people
+do not know how to implement it properly.&nbsp;Once again it all comes
+back to lack of education on practical control in educational
+institutions.</p>
+                <p>Figure
+1 shows a heat exchanger that is used to heat a process fluid.&nbsp;The
+main problem in this particular process is that the process fluid flow
+through the exchanger can vary intermittently and very quickly.&nbsp;As
+seen in the figure, there is no control system.&nbsp;</p>
+                <p><img id="Picture2" src="loop_signatures_p2-2_files/loopsigsp2-2Fig1.jpg" alt="loopsigsp2-2Fig1" title="loopsigsp2-2Fig1" align="top" border="0" height="356" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>Imagine
+that the operator has got the process to the right temperature by
+manually adjusting the steam control valve.&nbsp;Suddenly the process
+fluid flow increases instantly by say 10%.&nbsp; As temperature is a
+slow process with a long lag, the temperature PV on the exchanger's
+output will slowly decrease to a lower value.</p>
+                <p>The
+normal way of trying to keep the temperature constant at setpoint would
+be to use feedback control.&nbsp;This is shown in Figure 2.</p>
+                <p><img id="Picture3" src="loop_signatures_p2-2_files/loopsigsp2-2Fig2.jpg" alt="loopsigsp2-2Fig2" title="loopsigsp2-2Fig2" align="top" border="0" height="403" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>However
+there is a big problem here with feedback control, because as described
+in the first Loop Signature Series, one must tune the feedback
+controller to match the dynamics of the actual process.&nbsp;In this
+case the process will very likely have a large first order lag with a
+time constant that may be many minutes long.&nbsp;The integral in the
+controller will then have to be set close or equal to this time
+constant. This means that the controller can only respond slowly to
+changes, particularly to slow PV (process variable) changes.&nbsp;Also
+remember that a feedback control system can only start making
+corrections after an error is picked up in the controller.&nbsp;The
+overall result as seen in the figure, will be that a large deviation
+from setpoint will occur before the feedback controller can get the
+process back to setpoint.</p>
+                <p>Imagine
+for the moment, that when the step load change occurs we move the
+control valve in such a manner that will increase the temperature in an
+exactly equal and opposite way to the drop in temperature being
+experienced by the increased process flow through the
+exchanger.&nbsp;If this could be achieved, then we would actually
+cancel out the effect of the load change, so that there would be no
+deviation at all from setpoint. This is exactly what feedforward
+control attempts to do. Theoretically zero control variance is possible
+with feedforward!</p>
+                <p>Figure
+3 shows a basic feedforward control scheme to accomplish
+this.&nbsp;(The feedback control system has been removed). The signal
+from the flowmeter measuring the flow of process fluid, is sent to a
+module known as a feedforward (FFW) module or feedforward
+controller.&nbsp;The output from this is connected directly to the
+control valve.</p>
+                <p><img id="Picture4" src="loop_signatures_p2-2_files/loopsigsp2-2Fig3.jpg" alt="loopsigsp2-2Fig3" title="loopsigsp2-2Fig3" align="top" border="0" height="397" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>The
+transfer function of a feedforward module usually contains a number of
+different adjustable dynamic constants, most commonly a gain, a lead, a
+lag, and a time delay (deadtime).&nbsp;(In the simplest form of
+feedforward module, provided as standard in many feedback controllers,
+only a gain is provided).&nbsp;We will return to more on these dynamics
+a little later.&nbsp;</p>
+                <p>To
+tune the feedforward, one attempts to set the dynamic constants in the
+module so that the effect of the load change as measured on the
+flowmeter will send a signal to the control valve that will result in
+increasing the temperature in&nbsp;an equal and opposite&nbsp;manner to
+the dropping temperature effect that will occur from the load
+change.&nbsp;</p>
+                <p>To
+explain how this can be achieved we need to look at a little
+mathematics, but for those whose maths is really rusty don't
+despair.&nbsp;This is only an explanation.&nbsp;You don't need to be
+able to do maths to use feedforward.</p>
+                <p>Simple control
+theory is best explained using Laplace mathematics (which is a
+convenient form of maths for working in both time and frequency
+domains).&nbsp;We mentioned in the last article in this Part 2 series
+that transfer functions would be used a lot in the series.&nbsp;(It may
+be worth your while to revise the sections on simple dynamics in the
+Part 1 series where you will see the transfer function equations for
+various simple transfer functions given in the relevant
+figures).&nbsp;Anyway to reintroduce a few of the main terms that you
+may find in transfer functions that will be used throughout this
+series:&nbsp;</p>
+                <ul>
+                    <ul>
+                        <li>A constant by itself is a gain.&nbsp;Typically <b>PG</b> is the process gain of the transfer function of a process.</li>
+                        <li>The letter <b>S</b> is known as the Laplace operator. </li>
+                        <li><b>1/S</b> means the process is integrating.&nbsp;</li>
+                        <li><b>e<sup><span style="font-size: xx-small;">-DTS</span></sup></b>&nbsp;is a delay or deadtime, where <b>DT</b> is the deadtime in seconds.</li>
+                        <li><b>KS+1</b> above the line is a lead.&nbsp;<b>K</b>
+is a constant (normally in seconds), and is known as the lead time
+.&nbsp;Remember in the Part 1 series that on a controller with a series
+algorithm, the derivative term was <b>T<sub><span style="font-size: xx-small;">D</span></sub>S+ 1</b>.&nbsp;(<b>T<sub><span style="font-size: xx-small;">D</span></sub></b> is the derivative value in seconds).&nbsp;Derivative is a lead.</li>
+                        <li><b>KS+1</b> below the line is a lag, where the constant <b>K</b>, (normally in seconds), is the time constant of the lag.</li>
+                    </ul>
+                </ul>
+                <p>Back to our feedforward control story: </p>
+                <p>The
+feedforward control system can be redrawn in the block format as shown
+in Figure 4.&nbsp;FFW is the feedforward module, L(S) is the transfer
+function of the effect of the LD (load change) on the PV (process
+variable), and P(S) is the transfer function of the actual process;
+i.e. effect of PD (process demand) change on the PV.</p>
+                <p><img id="Picture10" src="loop_signatures_p2-2_files/loopsigsp2-2Fig4.jpg" alt="loopsigsp2-2Fig4" title="loopsigsp2-2Fig4" align="top" border="0" height="404" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>Now mathematically if we wish to cancel out the effect of the load change on the process then we must set the FFW as follows:</p>
+                <p><img id="Picture5" src="loop_signatures_p2-2_files/loopsigsp2-2eq1.gif" alt="loopsigsp2-2eq1" title="loopsigsp2-2eq1" align="top" border="0" height="65" hspace="0" vspace="0" width="125"></p>
+                <p>For
+the present let us assume that both the load and process functions are
+of the simple first order lag, deadtime, self-regulating
+type.&nbsp;(Now I know that in the previous Loop Signature series I did
+say that simple models like that would not allow good feedback
+controller tuning on many processes.&nbsp;However I will show later
+that feedforward tuning is in fact much more forgiving than feedback
+tuning, and even these simplistic models give good results in actual
+practice.)</p>
+                <p>The full equation in Laplace format is then:</p>
+                <p><img id="Picture6" src="loop_signatures_p2-2_files/loopsigsp2-2eq2.gif" alt="loopsigsp2-2eq2" title="loopsigsp2-2eq2" align="top" border="0" height="68" hspace="0" vspace="0" width="270"></p>
+                <p>Where PG is gain, TC is time constant of the lag, and DT is deadtime.</p>
+                <p>This can be simplified as follows:</p>
+                <p><img id="Picture8" src="loop_signatures_p2-2_files/loopsigsp2-2eq3.gif" alt="loopsigsp2-2eq3" title="loopsigsp2-2eq3" align="top" border="0" height="67" hspace="0" vspace="0" width="354"></p>
+                <p>This may look slightly complicated, but it is in fact incredibly simple because:</p>
+                <p><img id="Picture9" src="loop_signatures_p2-2_files/loopsigsp2-2eq4.gif" alt="loopsigsp2-2eq4" title="loopsigsp2-2eq4" align="top" border="0" height="98" hspace="0" vspace="0" width="650"></p>
+                <ul>
+                </ul>
+                <p>So
+far this all looks very good, but unfortunately the control scheme as
+shown in Figure 3 will probably not work very well in real life.&nbsp;
+Feedforward is great as it compensates for measurable load changes
+before they can upset the controlled variable, as opposed to feedback
+control which can only make corrections after the upset has occurred to
+the controlled variable.&nbsp;However feedforward does suffer from a
+major disadvantage in that it cannot compensate for unmeasured upsets,
+or deal with any non-linearities in the system, or for that matter
+correct for any problems that may occur in the valve.&nbsp;Therefore
+using feedforward by itself will probably not result in the process
+staying at setpoint all the time.</p>
+                <p>Consequently
+as feedforward control by itself is not completely satisfactorily, it
+becomes necessary to also use a feedback control system to overcome the
+other problems mentioned above.&nbsp;Feedback and feedforward must
+always be used together.</p>
+                <p>In the settings given above for the FFW module there are two things that you must be careful about:</p>
+                <p>Firstly
+the gain of the FFW must be set to give the correct control
+action.&nbsp;In the case of this heat exchanger, the feedforward must
+act to open&nbsp;the valve if the flow increases, and not close
+it.&nbsp;Even more variance than before feedforward was employed will
+result if the valve moves the wrong way.&nbsp;</p>
+                <p>Secondly if the term (DT<sub><span style="font-size: xx-small;">L</span></sub> &#8211; DT<sub><span style="font-size: xx-small;">P</span></sub>)
+is negative because the deadtime of the load is less than the deadtime
+of the process, then set the delay in the FFW to zero.&nbsp;(There are
+ways of trying to compensate for this situation by trying to
+incorporate a deadtime predictor in the feedback loop, but this is
+usually overcomplicated, affects the feedback tuning, and usually does
+not work very well in practice.) </p>
+                <p>In
+the next article in this series it will be shown how to set up the full
+control system, and an explanation will be given of how easy it is to
+obtain the two models needed for load and process transfer functions.</p>
+                <p><span style="font-size: 10pt;"></span><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a><br>&nbsp;</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

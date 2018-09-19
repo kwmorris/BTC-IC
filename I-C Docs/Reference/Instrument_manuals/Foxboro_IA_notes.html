@@ -1,0 +1,230 @@
+<html>
+<body>
+
+
+<h2>INSTRUCTIONS FOR MAKING A COMPOUND</h2>
+
+<hr>
+
+<p>
+In the Foxboro I/A system, control functions are implemented by way of function "blocks," similar to the way some brands of single-loop controller are configured.  Clusters of blocks are grouped together into units called "compounds."  So, when we create a "compound" in the Foxboro I/A system, we are creating a place for one or more "blocks" to reside, and then we connect those blocks together to perform a useful control or measurement function.
+</p>
+
+<p>
+You will create your own compound corresponding to a PID controller: an analog input block, PID block, and analog output block.  Also essential to the function of your controller are the ECB ("Equipment Control Block") compounds, which tell the system what actual I/O hardware (input and output modules) will be handling the real signals.  Don't worry about configuring any ECB blocks, as these have already been done for you.
+</p>
+
+<p>
+The procedure of configuring a PID controller in the Foxboro system may be roughly summarized as such:
+</p>
+
+<ul>
+<li> Create a new compound </li>
+<li> Create the blocks in that compound </li>
+<li> Configure the blocks </li>
+<li> Save the compound to the "Buffer" memory </li>
+<li> Transfer the "buffered" compound to a control processor, where it will run </li>
+</ul>
+
+<br>
+<hr>
+
+<p>
+<b>First, be sure you are logged in as either a "Process Engineer" or "Software Engineer."</b>  Any login ID of lesser authorization will not permit you to edit blocks or compounds at all.
+</p>
+
+<p>
+From the FoxView window, click on "Config" and select "Control_Cfg", then "CIO_config".  A grey-and-blue "Integrated Control Configurator" screen will appear.  This is the window in which you will do all the compound and block configuration work.  You might note that this window does not resemble a typical Microsoft Windows screen: this is because the "Integrated Control Configurator" utility is actually a UNIX program, and is able to run on the Windows computer only because of some "emulation" software that's been installed (the "Exceed" X-window server).  In layman's terms, the configuration utility was made to run on a Real Operating System, but is forced to run on this piece of junk instead.  Not that I hold any strong opinions on the subject or anything . . .
+</p>
+
+<p>
+You can always return to this main screen of the "Integrated Control Configurator" utility by clicking on the word "NEW" in the top bar of the window.  You may exit this configurator entirely by clicking on the word "EXIT" at the far right of the top bar.
+</p>
+
+<p>
+<i>Read Configuration Guide, page 1-13</i>
+</p>
+
+<p>
+Click on the "OK" button at the bottom-center of the configurator screen.  The screen will change, showing you all the compounds stored in the "volwork" area of the computer (as shown by the "VOL = volwork" telltale near the upper-right of the screen).  This area is used for compounds that are in-progress.  You will build your compound here first before transferring to a control processor where it can run.
+</p>
+
+<p>
+Select "END *****" on the compound list.
+</p>
+
+<p>
+Select "Insert new compound" from the list of options.
+</p>
+
+<p>
+Enter the name of your compound.  This will be a temporary name, to be changed later, so it doesn't really matter what you call it.  I recommend the name "JUNK", since it will be thrown away later.  Type the name, then press the [Enter] key, then click on the green word "Done" (if needed).  By the way, it is a good habit to press [Enter] as well as click "Done", because some operations in the configurator utility require BOTH steps, not just one!
+</p>
+
+<p>
+<i>Read Configuration Guide, page 1-14</i>
+</p>
+
+<p>
+Select your new compound from the list of compound names.
+</p>
+ 
+<p>
+Select "Edit compound parameters" from the list of options.
+</p>
+
+<p>
+Type in a meaningful description of your compound in the "DESCRP" field at the top of the "Compound Definition" list, then press [Enter].
+</p>
+
+<p>
+Configure "PERIOD", "ON", "INITON", and all alarm parameters as described in the Configuration Guide, pages 1-14 to 1-17.
+</p>
+
+<br>
+<hr>
+
+<p>
+<b>Now you're ready to add some blocks to your newly configured compound.</b>  Return to the main configurator page by clicking the word "NEW".
+</p>
+
+<p>
+Select your new compound from the "Compound Selection" list, and click on the "OK" button near the bottom of the screen.
+</p>
+
+<p>
+Select "View blocks/ECB compounds in this area".
+</p>
+
+<p>
+Select "Insert new block/ECB".
+</p>
+
+<p>
+Decide on the identity of the first block for your compound, and enter a meaningful name for it, then press [Enter].
+</p>
+
+<p>
+Now you will need to enter a "type" for the block.  You may enter the abbreviation for the block type, but it must be exact!  To be safe, I recommend clicking on the word "SHOW", then "Block Type Names" to bring up a list of block names on the right-hand side of the screen.  By selecting one of these names straight from the list, you don't risk making a typographical error.
+</p>
+
+<p>
+Click on the green word "Done".
+</p>
+
+<p>
+Repeat the last three steps until all the blocks you need have been specified.
+</p>
+
+<br>
+<hr>
+
+<p>
+<b>After all the blocks have been specified, it is time to configure them.</b>  This includes linking them together.  To do this, you will need to select each block, one at a time, from the list on the left-hand side of the configurator screen, and then click on "Edit all block/ECB parameters" to bring up the screen where the parameters will be set.  I will not provide all the details in this tutorial, but leave you to read the following pages of the Configuration Guide gives fairly detailed instructions on how to do this.
+</p>
+
+<p>
+<i>Read Configuration Guide, pages 1-18 through 1-30</i>
+</p>
+
+<p>
+There are some differences, though, between what the Configuration Guide tells you and what you need to do to build a real PID controller compound.  The examples given in the Guide are for a controller that interfaces with a "virtual" process, not real 4-20 mA signals.  Therefore, the configuration you make will differ a bit from that.
+</p>
+
+<p>
+For the analog input and analog output blocks, parameter "IOMOPT" will need to be set to "1" and not to "0" as the Guide recommends.  This parameter, when set to "1", tells the block it is communicating with a real I/O module.
+</p>
+
+<p>
+For the analog input and analog output blocks, parameter "IOM_ID" needs to be set to represent the analog input/output module that will be used.  For the Foxboro system at Bellingham Technical College, this "letterbug" code is AO0401.
+</p>
+
+<p>
+For the analog input and analog output blocks, parameter "PNT_NO" represents what "point" number on the analog I/O module will be used to input and output a 4-20 mA signal, respectively.  Points 1 through 4 on Bellingham Technical College's AO0401 module are 4-20 mA inputs.  Points 5 through 8 on the same module are 4-20 mA outputs.  Sorry: only 4 inputs and 4 outputs on this system!
+</p>
+
+<p>
+For the analog input module, leave parameter "MEAS" set to "0.0" instead of the "TANK2_PROC:LEVEL_MEAS.OUT" recommended by the Guide.  The instructions in the Configuration Guide are for configuring the analog input to "connect" to a virtual process.  This is also why the Guide says to set parameter "IOMOPT" to 0 instead of 1.
+</p>
+
+<p>
+For the analog input and analog output blocks, the "SCI" and "SCO" parameters, respectively, must be set to "3" rather than "0" as the Guide recommends.  "3" tells the block that the input/output mode is 4-20 mA.  "0" does not specify any signal conditioning at all, which is what the virtual process in the Guide tutorial needs.  You, however, will be connecting your controller to a REAL process (I hope!), so choose "3" for "SCI" and "SCO".
+</p>
+
+<p>
+After setting all the block parameters and connections, you are ready to "paste" the compound to the Buffer area.  This is a temporary memory area in the Integrated Control Configurator software: a kind of "halfway point" to the compound becoming a real, functioning controller.
+</p>
+
+<br>
+<hr>
+
+<p>
+<b>Go to the first page of the Configurator by clicking on the word "NEW" at the top of the window.</b>
+</p>
+
+<p>
+Select your compound name ("JUNK") from the list and click on the "OK" button.
+</p>
+
+<p>
+Select "Copy to past buffer" from the list of options.  Here you will be prompted to enter a new, permanent name for your compound.  This new name must be different from the old name ("JUNK") used to build the compound.  When entering the new compound name, you MUST both press [Enter] AND click on the "DONE" buttton.  Just doing one of these steps is not enough!
+</p>
+
+<p>
+Select "BUFFER" at the top of the window.
+</p>
+
+<p>
+Select "View blocks/ECBs in this compound", to verify that all the blocks you configured are actually in this new, renamed compound.
+</p>
+
+<p>
+Go to the first page of the Configurator by clicking on the word "NEW" at the top of the window.
+</p>
+
+<p>
+The renamed compound is now stored in the Buffer, waiting to be moved to an active processor, where it may run.  The next step is to designate the active area where the block will run.  To do this, you must choose a compound that resides in the area you want your compound to go.
+</p>
+
+<br>
+<hr>
+
+<p>
+<b>From the first page of the Configurator window, select a compound you know is running in the processor you want your compound to go.</b>  I highly recommend choosing the Micro I/A processor as the home for your new compound, rather than the workstation PC.  On Bellingham Technical College's system, the Micro I/A processor is named "OMC001", while the Gateway brand PC is named "AWNT98".  One compound I suggest choosing is "OMC001_ECB", which just happens to be the compound specifying the I/O module names and configurations.  Select "OMC001_ECB" and click on the "OK" button.
+</p>
+
+<p>
+Select "END *****" from the list of compound names on the left-hand side of the window.  This tells the system where you want your new compound to be placed on this list.
+</p>
+
+<p>
+Select "Paste from Paste Buffer" to place your new compound in this active area.  Your compound's name should now appear in the left-hand column of compound names.
+</p>
+
+<p>
+You may now exit from the Integrated Control Configurator program by clicking on the word "EXIT" in the upper-right hand corner of the window.
+</p>
+
+<br>
+<hr>
+
+<p>
+<b>Access the "FoxSelect" utility window from the main "FoxView" window</b>, by clicking on the "FoxSelect" button, or by clicking on the word "File" and then the word "FoxSelect".  This utility allows you to view compounds residing in different processors in the system.
+</p>
+
+<p>
+Double-click the "OMC001" compound icon.  This will expose a list of compounds active in this processor.  Your new compound should appear at the bottom of this list.
+</p>
+
+<p>
+Presently, your new compound is not yet turned on.  This is indicated by a blue circle and slash mark (the universal symbol for "no") around the icon.  Select your compound's icon with the mouse, then click on the word "Compound" near the top of the window, and click on "Compound ON" to turn it on.  The blue circle and slash mark should go away when you do this, indicating that your compound is now running.
+</p>
+
+<p>
+Now, click on the compound icon to show all the blocks, in a window to the right.
+</p>
+
+
+</body>
+</html>
+

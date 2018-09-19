@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><title>Loop Signatures p2-3</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="751">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-3_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+            <td width="1"><img src="loop_signatures_p2-3_files/clearpixel.gif" alt="" border="0" height="1" width="1"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-3_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="117"><img src="loop_signatures_p2-3_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-3_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="120"><img src="loop_signatures_p2-3_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="751">
+        <tbody><tr align="left" valign="top">
+            <td height="29" width="1"><img src="loop_signatures_p2-3_files/clearpixel.gif" alt="" border="0" height="1" width="1"></td>
+            <td width="750"><img src="loop_signatures_p2-3_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b><span style="font-size: small;">Feedforward control - part 2</span></b></p>
+                <p>In the <a href="http://www.controlloop.co.za/Loop_signatures/Loop_Signatures_p2-2/loop_signatures_p2-2.html">previous Loop Signature article</a>
+it was shown how feedforward operates.&nbsp;It will be necessary to
+generate models of the process, and of the load transfer functions in
+order to tune the feedforward compensator.&nbsp;As will be shown in the
+next article, feedforward control tuning is not nearly as critical as
+feedback tuning, and fairly simple models are usually fine for the
+purpose in hand. </p>
+                <p>It is relatively easy to
+obtain such models.&nbsp;Figure 1 shows the connections needed for
+recording the tests that must be performed to do this.&nbsp;One needs
+to record the signals coming from:</p>
+                <ul>
+                    <li>LD,
+the load variable, being the process fluid flow passing through the
+heat exchanger as measured by the flow transmitter.&nbsp;(It must be
+noted that feedforward can only be employed if it is possible to
+measure the load variable.&nbsp;Also to generate the models none must
+be able to generate a step change in the LD).</li>
+                    <li>PD, the temperature feedback controller output.</li>
+                    <li>PV, the process variable, being the output of the temperature transmitter.</li>
+                </ul>
+                <p><img id="Picture19" src="loop_signatures_p2-3_files/loopsigP2-3Fig1.jpg" alt="loopsigP2-3Fig1" title="loopsigP2-3Fig1" align="top" border="0" height="387" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p>Once
+the connections have been made to the recorder, the feedback controller
+must be placed in manual, and the feedforward (FFW) must be switched
+off, or frozen.&nbsp;(An easy way of accomplishing this is to switch
+the FFW gain to zero, but be careful not to bump the process).</p>
+                <p>Tests
+are then performed. Firstly a step change is made on the PD, and the PV
+is allowed to stabilise, and then secondly the LD is stepped, and once
+again one must wait for the PV to stabilise.&nbsp;Figure 2 shows an
+example of such tests.&nbsp;These tests must be performed in the area
+where the process is normally operated.</p>
+                <p><img id="Picture20" src="loop_signatures_p2-3_files/loopsigp2-3Fig2.jpg" alt="loopsigp2-3Fig2" title="loopsigp2-3Fig2" align="top" border="0" height="447" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>One
+must then make simple models of the first order lag, deadtime type,
+discussed in the previous article.&nbsp;The first model will be the PV
+vs. the LD, and the second one the PV vs. the PD.&nbsp;These models can
+be made using the simple graphical techniques shown in Loop Signatures
+3 and 4 on my <a href="http://www.controlloop.co.za/Loop_signatures/CD/cd.html">CD "Basic Troubleshooting and Loop Tuning"</a>, or else if you have a Protuner, the information is available on the Loop Signature section of the tuning 
+                    report, or on the more detailed modelling page given in a separate section of the loop analyser.</p>
+                <p>It
+may be queried why only single steps (up and down) were made when doing
+the tests, as previously under the Loop Signature articles in the
+previous series, it was stressed that on a self-regulating process, at
+least 2 steps up, 3 down, and one back should be made.&nbsp;In this
+series however, it will be assumed that the practitioner will have done
+all the basic troubleshooting and analysis as detailed in the previous
+series, so that elementary loop problems are ironed out before starting
+on more advanced practices like feedforward.&nbsp;This is
+essential.&nbsp;</p>
+                <p>One
+exception to a single step change would be if the system is very
+non-linear, and if the load changes are going to occur over a very wide
+range. It may then be necessary to establish models at different
+points, as various feedforward tunings may be required as the load
+varies over the range.&nbsp;(This is similar to gain scheduling, or
+adaptive tuning, as used on feedback control systems). </p>
+                <p>Once
+the models have been obtained the feedforward tuning can be calculated
+as per the formula derived in the last article, which was:</p>
+                <p><img id="Picture21" src="loop_signatures_p2-3_files/loopsigp2-3eq1.jpg" alt="loopsigp2-3eq1" title="loopsigp2-3eq1" align="top" border="0" height="75" hspace="0" vspace="0" width="356"></p>
+                <p>The values to be inserted in the feedforward module will be:</p>
+                <ul>
+                    <li>PG<sub><span style="font-size: xx-small;">L</span></sub>/PG<sub><span style="font-size: xx-small;">P</span></sub> is the gain of FFW</li>
+                    <li>The FFW's lead is set equal to TC<sub><span style="font-size: xx-small;">P</span></sub>.</li>
+                    <li>The FFW's lag is set equal to TC<sub><span style="font-size: xx-small;">L</span></sub>.</li>
+                    <li>And (DT<sub><span style="font-size: xx-small;">L</span></sub> &#8211; DT<sub><span style="font-size: xx-small;">P</span></sub>) is the value to which the delay is set to in the FFW module.</li>
+                </ul>
+                <p><b>Two points to note very carefully:</b></p>
+                <ol>
+                    <li>If DT<sub><span style="font-size: xx-small;">P</span></sub> &gt; DT<sub><span style="font-size: xx-small;">L</span></sub> (which would result in a negative delay), then set the FFW delay to zero. You cannot have 
+                        negative time.</li>
+                    <li>It
+is most important that the FFW's action is set correctly so as to drive
+the valve in the right direction on a load change.&nbsp;If it is set
+incorrectly the valve will move in the wrong direction and then the
+feedback control will have to also correct for this, which means that
+the system will be worse with feedforward than without.</li>
+                </ol>
+                <p>One
+of the more difficult things to understand when implementing a
+feedforward system is how to practically set up the adder where the
+feedback and feedforward signals are combined before the valve, as seen
+in Figure 1.&nbsp; Essentially it must be realised that we have two
+completely separate control systems, one being the feedforward, and the
+other the feedback. Both of these will be simultaneously operating the
+same valve.</p>
+                <p>The
+problem with this is very practical.&nbsp;We have two process demand
+(PD) signals each with a range of 0 &#8211; 100%, and the valve itself can
+only move 0 &#8211; 100%.&nbsp;Therefore if both PD's were at 100%, and if we
+used a straight adder then its output would be 200%, and the valve can
+only move to 100%.&nbsp;How can we deal with this?</p>
+                <p>The
+best method of combining the two PD signals is given in Figure
+3.&nbsp;This avoids inserting anything additional in the loop that can
+multiply or divide, which would change the loop gain, and hence affect
+the control responses to both of the controllers.&nbsp;</p>
+                <p><img id="Picture22" src="loop_signatures_p2-3_files/loopsigp2-3Fig3.jpg" alt="loopsigp2-3Fig3" title="loopsigp2-3Fig3" align="top" border="0" height="314" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 3</i></p>
+                <p>As
+an aside, it should be noted at this point, that in general one should
+be careful of using multipliers and dividers in control loops as it can
+result in non-linearity.&nbsp;For example in ratio control sometimes
+people divide the one PV by the other to get a ratio, and then feed
+this signal to the controller.&nbsp;This does cause
+non-linearity.&nbsp;It is better to put the ratio signal on the
+setpoint of the controller and not inside the loop.</p>
+                <p>Going
+back to Figure 3 one sees that a third input, which is an adjustable
+bias, has been placed on the input to the adder.&nbsp;The way to set it
+up is now described:&nbsp;</p>
+                <p>To try and understand
+it easily, imagine that if a perfect world existed, so that if the
+feedforward was so perfectly tuned so that it could absolutely cancel
+out the effects of load changes, and if there were no other types of
+load changes occurring from anything else in the whole system, and if
+the valve operated perfectly and was completely linear, then there
+would be no need at all for a feedback control.&nbsp;The feedforward
+would correct perfectly every time as the load changed.&nbsp;However a
+bias would still be necessary to be able to get the process to any
+particular setpoint.&nbsp;</p>
+                <p>In reality, in the <i>practical</i>
+real world of control things are far from perfect.&nbsp;Valves as we
+know, have all sort of problems associated with them.&nbsp;The
+feedforward models will never in reality be completely correct however
+simple the process dynamics, and in fact most process dynamics in
+systems where you need to use feedforward are likely to be more complex
+than the simple ones we are using here.&nbsp;Models seldom remain
+constant for all sorts of reasons, and systems are seldom completely
+linear.&nbsp;This means that the feedforward will never in the real
+world give perfect cancellation.&nbsp;There are all sorts of things
+that may also cause other load disturbances, as in this case of the
+heat exchanger there may be changes in the steam pressure, and in the
+temperature of the process fluid.&nbsp;</p>
+                <p>Therefore
+as mentioned in the previous article, feedforward control cannot be
+used by itself, and is in fact always used in conjunction with feedback
+control.&nbsp;One should think of the feedforward as being the "master"
+control system, and the feedback as being a "trim".</p>
+                <p>Returning
+to setting up the bias, one would try and operate at mid-range load
+conditions.&nbsp;At such a condition it would be nice to have the
+feedback controller's output at about 50%, so as it to allow it to
+equally apply trim adjustments in both directions. Therefore one would
+adjust the bias to get the feedback controller's output to about 50%.</p>
+                <p>The final
+control system is shown in Figure 4.&nbsp;One change in it is the
+addition of a secondary cascade steam flow controller. This is to
+ensure that all valve problems are eliminated from the control schemes,
+and that the control valve will in fact deliver the steam flow as
+demanded by both the feedback and feedforward controllers.&nbsp; The
+reasons for this are given in Loop Signature 17 in the above referenced
+CD.&nbsp;It is really mandatory to use a cascade flow loop in
+sophisticated and important control systems that have slow process
+dynamics.</p>
+                <p><img id="Picture23" src="loop_signatures_p2-3_files/loopsigp2-3Fig4.jpg" alt="loopsigp2-3Fig4" title="loopsigp2-3Fig4" align="top" border="0" height="409" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>One
+point to note with this, is that the feedforward must be added to the
+output of the feedback controller so the adder's output goes to the
+setpoint of the cascade secondary flow controller.&nbsp;I have on
+occasion seen people adding it onto the output of the secondary
+controller.&nbsp;This is wrong.&nbsp;It is equally important that the
+feedforward control's output also feeds a "perfect" valve.</p>
+                <p>The
+next article in this series will show some tests done on feedforward
+systems, and will illustrated how well feedforward can work</p>
+                <p><span style="font-size: 10pt;"></span><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a><br>&nbsp;</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

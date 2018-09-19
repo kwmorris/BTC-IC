@@ -1,0 +1,21 @@
+/* CSS definition file containing site wide stylesheets */
+A:active { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,51,51);}
+ .Subheads { font-family: 'Arial Black', 'Helvetica Bold', Charcoal, Sans-serif, sans-serif; font-size: x-small;}
+ .Quotes { font-family: 'Times New Roman', Times, Serif, serif; font-size: medium; font-style: italic;}
+ .Footnotes { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif; font-size: x-small;}
+ A:link { font-size: x-small; color: rgb(204,0,51);}
+ .Caption { font-family: Arial,Helvetica,Geneva,Sans-serif,sans-serif; font-size: x-small; font-style: italic;}
+ .Code { font-family: 'Courier New', 'Lucida Console', Courier, Monaco, Monospace, monospace; color: rgb(0,0,0);}
+ A:visited { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(204,0,51);}
+ .Credits { font-family: 'Times New Roman', Times, Serif, serif; font-size: x-small; font-weight: bold; text-align: center;}
+ H1 { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ H2 { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ P { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ H3 { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ A { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small;}
+ H4 { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ ADDRESS { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ H5 { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ H6 { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif;}
+ A:hover { font-family: Verdana,Tahoma,Arial,Helvetica,Sans-serif,sans-serif; font-size: x-small; color: rgb(255,51,51);}
+ 

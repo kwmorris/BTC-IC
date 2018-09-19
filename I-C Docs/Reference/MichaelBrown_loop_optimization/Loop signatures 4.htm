@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0077)http://www.controlloop.co.za/Articles/Loop_signatures_4/loop_signatures_4.htm -->
+<HTML><HEAD><TITLE>Loop signatures 4</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 4_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 4_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 4_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 4_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 4_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=696><IMG height=1 src="Loop signatures 4_files/clearpixel.gif" 
+      width=696 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 4_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 4_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 4_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 4_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=13></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=696>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica>Loop Problem Signatures No 
+      4</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Problem 
+      "Signatures"<BR>Process dynamics - deadtime and simple lags</FONT></B> 
+      <FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <P>In the previous article dealing with process dynamics, process gain was 
+      discussed. Two further important dynamic factors occurring in the majority 
+      of process responses are deadtime and the first order lag.
+      <P>Deadtime in a process is defined as the amount of time after a change 
+      is made in the input to the process before there is any change in the 
+      process output measurement. Deadtime in processes are typically the result 
+      of transportation delay.&nbsp; Figure 1 depicts a mass feeder conveyor, 
+      where the belt is moving at a given rate.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+1</FONT></B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=470 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture40 height=353 alt="Figure 1" 
+            src="Loop signatures 4_files/loopsig4fig1.gif" width=470 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>The process deadtime 
+      is the time taken from when the material leaves the hopper until it 
+      reaches the measurement transmitter. Processes with long deadtimes 
+      compared to the process time lags (see below), require relatively fast 
+      integral times and very small proportional gains in the controllers.
+      <P>Deadtime is the "enemy" of feedback control, as it results in phase 
+      lag, and hence possible instability in a loop that is tuned too 
+      fast.&nbsp; To counter deadtime one has to insert less gain in the 
+      controller.&nbsp; This means deadtime dominant loops (see definition 
+      below), have to be tuned more slowly.&nbsp; This is a reason&nbsp; why the 
+      D (derivative) parameter should never be used in the control of such 
+      processes.
+      <P>In fast processes, like flow and low capacity or hydraulic pressure 
+      loops, the controller scan rate adds deadtime to the process. Therefore 
+      controllers with slow scan rates, when used on fast processes, can make 
+      these types of processes act as deadtime dominant loops, resulting in the 
+      need to detune the controller.
+      <P>There is a common misconception that deadtime dominant processes cannot 
+      be controlled with PID controllers.&nbsp; This is completely 
+      incorrect.&nbsp; A PID controller on such a process can be tuned so that 
+      the process can fully respond to a step change in setpoint within 
+      approximately two deadtimes.&nbsp; However, in reality, if the deadtime is 
+      long, this is slow.
+      <P>In real life situations, the majority of controllers are there to deal 
+      with load changes as opposed to set point changes, and the problem that 
+      often occurs in deadtime dominant processes is that load changes occur too 
+      frequently and too fast for the controller to be able to catch these 
+      changes.&nbsp; In such situations it may be necessary to re-examine the 
+      control strategy and to try and find alternatives.
+      <P>A first order lag is illustrated in Figure 2.</FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 2</FONT> 
+      </B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=470 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture41 height=352 alt="Figure 2" 
+            src="Loop signatures 4_files/loopsig4fig2.gif" width=470 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>It is an exponential 
+      response to a step change on the process input. The lag is measured by its 
+      "time constant".&nbsp; A pure lag reaches 63.2% of its total change in one 
+      time constant. The time constant value is not affected by the size of the 
+      step.
+      <P>Lags in a response are a function of the resistance and capacitance of 
+      the process.&nbsp; In this example, the resistance is the orifice in the 
+      valve restricting the gas flow, and the capacitance is the volume of pipe 
+      the gas must fill to increase the pressure.
+      <P>On fast processes like flow, the process dynamics are largely 
+      determined by the valve dynamics.&nbsp; Most pneumatically operated valves 
+      respond to step changes exponentially, as opposed to electric motor driven 
+      valves which respond in a ramp fashion.
+      <P>The first order lag response is very common, and the vast majority of 
+      processes found in industrial control generally incorporate at least one 
+      such lag.
+      <P>The first order lag is also commonly used to provide a "filter" or 
+      "damping" function in control loops.&nbsp; Most process transmitters, and 
+      controllers offer a filter feature to allow one to&nbsp; reduce or 
+      suppress noise that has entered the process variable measurement.&nbsp; It 
+      should be noted that when a filter function is employed in the 
+      transmitter, or controller, to "smooth" the recorded process variable 
+      measurement signal, the controller does not act on the true response of 
+      the process, as the filter adds lag time to the PV signal.&nbsp; Much will 
+      be said about the potential disadvantages and dangers of using filters in 
+      a later article in this series.
+      <P>The relationship between time constant and deadtime is very 
+      important.&nbsp; Generally processes with deadtimes smaller than the time 
+      constant of the dominant lag are easier to control.&nbsp; A process with 
+      the deadtime smaller than one tenth of the dominant lag, may classed as a 
+      "pure lag only" process which is a&nbsp; deadtime free process.
+      <P>Without any deadtime, a pure lag process cannot become unstable as the 
+      phase angle can never reach -180<SUP>o</SUP>.&nbsp; This means it can be 
+      can be virtually tuned as fast as one wishes.&nbsp; Typically pure 
+      lag&nbsp; processes are encountered in real life on certain self 
+      regulating temperature processes where one lag is significantly larger 
+      than any other.
+      <P>Processes with a deadtime longer than the time constant of the dominant 
+      lag are said to be "deadtime dominant", and are considered more difficult 
+      to control.&nbsp; This is due to the fact that one must "detune" deadtime 
+      dominant processes for reasons of stability as discussed above.
+      <P>It is of significant interest to note that after 5 years of intensive 
+      empirical research in the 1930's, Ziegler and Nicholls only managed to 
+      come up with fairly "rough" tuning methods for simple self regulating 
+      processes with process gain, deadtime, and lag, and where the lag was 
+      larger than the deadtime.&nbsp; Even today, many of the published tuning 
+      methods, self tuning controllers, and commercial tuning packages on the 
+      market can only deal with similar simple dynamics.
+      <P>On integrating processes like level controls, the lags are usually 
+      insignificant and play little role in the dynamics of the process.&nbsp; 
+      However on certain types of integrating processes, particularly like large 
+      capacity pressure control systems, and in certain types of integrating 
+      temperature processes like end-point control (also commonly referred to as 
+      batch temperature processes), a large lag is present which has a 
+      significant effect on the dynamics.
+      <P>Figure 3 illustrates such a process.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 3
+      <P></FONT></B>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=470 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture42 height=352 alt="Figure 3" 
+            src="Loop signatures 4_files/loopsig4fig3.gif" width=470 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Instead of the 
+      integrating process going straight into a ramp when the balance is 
+      disturbed, as in a level loop, it slowly curves up into the ramp as seen 
+      in the diagram.&nbsp; This is due to the lag.
+      <P>A noteworthy point is that this is one of the only two cases of process 
+      dynamics where one should use the D term in the controller.&nbsp; In this 
+      particular case, the D can make a really significant improvement to the 
+      control response, typically increasing the speed of response by as much as 
+      a factor of four.&nbsp; The value of D is set equal to the time constant 
+      of the lag, and this effectively cancels the lag, particularly if the 
+      controller is using a series algorithm.&nbsp; See article on controller 
+      algorithms later in the series.
+      <P>As mentioned in the previous article in this series, there are many 
+      other types of more complicated dynamic responses that are commonly found 
+      in industrial processes.&nbsp; These include multiple lags, higher order 
+      lags, and positive and negative leads which all play a significant part in 
+      the control of such processes. These dynamic factors are beyond the scope 
+      of these articles.&nbsp; However it is essential that people who are 
+      serious about optimisation study techniques in dealing with the control of 
+      processes with such difficult dynamics. (Our Part 2 course on practical 
+      control deals extensively with this subject).
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton37',1)" 
+            onmouseout="F_roll('NavigationButton37',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton37 height=19 alt=Home 
+            src="Loop signatures 4_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton37></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton38',1)" 
+            onmouseout="F_roll('NavigationButton38',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton38 height=19 alt=Training 
+            src="Loop signatures 4_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton38></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton39',1)" 
+            onmouseout="F_roll('NavigationButton39',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton39 height=19 alt=Consulting 
+            src="Loop signatures 4_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton39></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton40',1)" 
+            onmouseout="F_roll('NavigationButton40',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton40 height=19 alt=Protuner 
+            src="Loop signatures 4_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton40></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton41',1)" 
+            onmouseout="F_roll('NavigationButton41',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton41 height=19 alt="Contact us" 
+            src="Loop signatures 4_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton41></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton42',1)" 
+            onmouseout="F_roll('NavigationButton42',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton42 height=19 alt=Articles 
+            src="Loop signatures 4_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton42></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 4_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

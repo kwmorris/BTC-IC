@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures P2-6</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <div align="center">
+    <table>
+        <tbody><tr>
+            <td>
+                <center>
+                <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+                    <tbody><tr align="left" valign="top">
+                        <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-6_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+                    </tr>
+                </tbody></table>
+                <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr align="left" valign="top">
+                        <td width="117"><img src="loop_signatures_p2-6_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+                        <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+                        <td width="116"><img src="loop_signatures_p2-6_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+                    </tr>
+                </tbody></table>
+                <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr align="left" valign="top">
+                        <td height="2" width="120"><img src="loop_signatures_p2-6_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+                        <td></td>
+                        <td width="119"><img src="loop_signatures_p2-6_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+                    </tr>
+                    <tr align="left" valign="top">
+                        <td></td>
+                        <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+                        <td></td>
+                    </tr>
+                </tbody></table>
+                <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+                    <tbody><tr align="left" valign="top">
+                        <td height="29" width="750"><img src="loop_signatures_p2-6_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+                    </tr>
+                    <tr align="left" valign="top">
+                        <td class="TextObject" width="750">
+                            <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                            <p><b><span style="font-size: small;">6. Basics of frequency plots &#8211; part 1</span></b></p>
+                            <p>The
+rest of this series of Loop Signature articles are going to be devoted
+to the dynamics of virtually every single type of process that you may
+encounter in industrial control analysis.&nbsp;The purpose of this is
+to allow you to identify the dynamics of any process and then to apply
+the most appropriate type of tuning for that particular process.&nbsp;I
+cannot over-emphasise how valuable this information can be to you. Many
+people who have attended our Part 2 courses have contacted me later,
+and proudly told me how they have managed to tune certain difficult
+processes in their plant, which had previously always been in manual,
+or else working extremely badly in automatic.</p>
+                            <p>To
+be able to understand this section of these articles, a very basic
+understanding of frequency plots is very useful.&nbsp;Most people who
+have studied control will have encountered frequency plot theory at
+some stage in their studies.&nbsp;However my experience has shown that
+very few people really understood very much what it was about, and even
+fewer have ever used the theory in real life.&nbsp;This is probably
+because it is impossible to generate frequency plots without the right
+loop analytical tools, for example the Protuner Loop Analysis software.</p>
+                            <p>It
+will be remembered that the basics of tuning theory was covered in Loop
+Signature No. 23, which is on my "Basic Trouble Shooting and Loop
+Tuning" CD.&nbsp;I am going to repeat that section here:</p>
+                            <p>Following
+the original ideas postulated by the early mathematicians who developed
+the theory, e.g. Nichols, one should perform a full frequency response
+test on a control loop.&nbsp; As illustrated in Figure 1, a sine wave
+is generated onto the input to the process (process demand).&nbsp;</p>
+                            <p><img id="Picture16" src="loop_signatures_p2-6_files/loopsig2-6_fig1.jpg" alt="loopsig2-6 fig1" title="loopsig2-6 fig1" align="top" border="0" height="295" hspace="0" vspace="0" width="500"></p>
+                            <p><i>Figure 1</i></p>
+                            <p>Initially
+the sine wave must be at a very low frequency.&nbsp;A sine wave of the
+same frequency will appear at the output of the loop (process
+variable).&nbsp;The amplitudes of the input and output sine waves are
+measured and their ratio calculated.&nbsp;This is called the dynamic
+gain.&nbsp;The phase difference is also measured.&nbsp;The test would
+then be repeated at a slightly higher frequency.&nbsp;This procedure is
+then repeated with higher and higher frequencies until the output lags
+the input by a phase difference of -180°.&nbsp;At this point if the
+control loop was closed, the contribution fed back to the process from
+the feedback would start pushing the valve in the wrong direction, and
+instability would result.&nbsp;The table shown in Figure 2 is an
+example of such a test. </p>
+                            <p><img id="Picture17" src="loop_signatures_p2-6_files/loopsig2-6_fig2.jpg" alt="loopsig2-6 fig2" title="loopsig2-6 fig2" align="top" border="0" height="322" hspace="0" vspace="0" width="500"></p>
+                            <p><i>Figure 2</i></p>
+                            <p>The
+next step in the tuning procedure is to draw a frequency plot from the
+test data.&nbsp;The various mathematicians all came up with slightly
+different plots.&nbsp;A Bode open loop plot is shown in Figure 3, which
+consists of two graphs, firstly dynamic gain versus frequency, and
+secondly phase lag versus frequency.&nbsp;</p>
+                            <p><img id="Picture18" src="loop_signatures_p2-6_files/loopsig2-6_fig3.jpg" alt="loopsig2-6 fig3" title="loopsig2-6 fig3" align="top" border="0" height="348" hspace="0" vspace="0" width="500"></p>
+                            <p><i>Figure 3</i></p>
+                            <p>To obtain optimum tuning one manipulates the shape of the plots.&nbsp;This will be discussed later.</p>
+                            <p>Unfortunately
+this methodology for tuning cannot be used in real life, as it would
+take far too long, especially on processes with very slow dynamics,
+like temperature loops, and also as you would be not be allowed to
+place many critical loops in oscillation in a real plant.&nbsp;I would
+however like to assure you that this theory is not some mathematical
+"claptrap", but in fact is extremely accurate.&nbsp;If you could do the
+tests as discussed, and if no loop problems existed, you would be able
+to come up with really good tuning.&nbsp;Therefore please bear in mind
+that tools that can in fact generate accuracy frequency plots are in
+reality extremely valuable and useful.</p>
+                            <p>The
+first process type we are going to examine will be the simple one which
+we have already discussed quite a bit in this series, viz. the first
+order lag, deadtime, self regulating process, which are the type that
+many of our more simple processes in industrial plants more or less
+conform to.</p>
+                            <p><img id="Picture19" src="loop_signatures_p2-6_files/loopsig2-6_eq_1.gif" alt="loopsig2-6 eq 1" title="loopsig2-6 eq 1" align="top" border="0" height="75" hspace="0" vspace="0" width="200"></p>
+                            <p>We
+are now going to examine the Bode open loop plot of this process, which
+is the one shown in Figure 3 in more detail.&nbsp;(Incidentally, I am
+really only going to explain Bode plots in this series.)</p>
+                            <p>As
+mentioned above, the Bode consists of two graphs, firstly dynamic gain
+versus angular frequency (in radians/second), and secondly phase lag
+versus angular frequency.&nbsp;Dynamic gain is in decibels where:</p>
+                            <p><b>Gain (in db) = 20 x log<sub><span style="font-size: xx-small;">10</span></sub> ("absolute" gain)</b></p>
+                            <p>(I am calling the ratio of the two gains which are measured in percent of measurement range "absolute gain".)</p>
+                            <p>The phase lag is in degrees, and the horizontal frequency axis is a logarithmic scale.</p>
+                            <p>For
+this particular dynamics, working from lower frequencies on the left
+hand side to higher frequencies on the right hand side, the gain plot
+starts off horizontally and then starts dropping "off" and finishes up
+with a slope of &#8211;20 db/decade at the point where the phase plot reaches
+&#8211;180°.&nbsp;Purely as a matter of interest the slope would be &#8211;40
+db/decade if there had been two lags, and &#8211;60 db/decade for three lags,
+and so on.&nbsp;</p>
+                            <p>Notice too, that like all self-regulating processes, the phase plot also starts off horizontally at 0° and ends at<br>-180°. </p>
+                            <p>Certain information can be obtained from the open loop gain plot:</p>
+                            <p>Firstly
+the value of the gain where the plot intersects the vertical dynamic
+gain axis is actually the process gain , (which was obtained by making
+a step change on the controller PD, and which was also discussed in
+great detail in the Part1 Loop signature series).&nbsp;This is fairly
+logical because if the frequency is slow enough the dynamic gain must
+be the same as the process gain.</p>
+                            <p>Next
+the frequency where the phase lag reaches &#8211;180° is known as the
+crossover frequency.&nbsp;This is also known as the ultimate frequency,
+which will be discussed later.</p>
+                            <p>The
+next piece of interesting information can be obtained by moving down by
+&#8211;3 db from the intersection of the gain plot with the gain axis, and
+then drawing a horizontal line rightwards to intersect the gain plot it
+will do so at a frequency called the corner frequency, corner.&nbsp;The
+interesting thing about this is that we can then get the value of the
+lag time constant from this using the following formula:</p>
+                            <p><img id="Picture20" src="loop_signatures_p2-6_files/loopsig2-6_eq_2.gif" alt="loopsig2-6 eq 2" title="loopsig2-6 eq 2" align="top" border="0" height="33" hspace="0" vspace="0" width="229"></p>
+                            <p>The last piece of information we can easily get from this plot is the ultimate gain, which we will also come back to.</p>
+                            <p>In
+the meantime here are a couple of useful formulae, which you may have
+forgotten, but are very useful when working with frequency plots:</p>
+                            <p><img id="Picture21" src="loop_signatures_p2-6_files/loopsig2-6_eq_3.gif" alt="loopsig2-6 eq 3" title="loopsig2-6 eq 3" align="top" border="0" height="93" hspace="0" vspace="0" width="590"></p>
+                            <p><i>(To be continued in the next Loop Signature article)</i></p>
+                            <p><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                            <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>
+                                Tel (011) 486-0567<br>Fax (011) 646-2385<br>E-Mail:&nbsp;<a href="mailto:michael.brown@pixie.co.za">michael.brown@pixie.co.za</a></span></b></p>
+                            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+                </tbody></table>
+            </center></td>
+        </tr>
+    </tbody></table>
+    </div>
+</body></html>

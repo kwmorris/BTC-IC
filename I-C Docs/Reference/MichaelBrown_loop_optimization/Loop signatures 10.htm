@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0079)http://www.controlloop.co.za/Articles/Loop_signatures_10/loop_signatures_10.htm -->
+<HTML><HEAD><TITLE>Loop signatures 10</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 10_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 10_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 10_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 10_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 10_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=680><IMG height=1 src="Loop signatures 10_files/clearpixel.gif" 
+      width=680 border=0></TD>
+    <TD width=29><IMG height=1 src="Loop signatures 10_files/clearpixel.gif" 
+      width=29 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 10_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 10_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 10_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=14></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=680>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000>Loop problem Signatures No 10</FONT>
+      <P align=left><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>Digital controllers - Part 2<BR>Testing Operation</FONT></B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1>
+      <P align=justify>A controller responds to input changes with responses 
+      dependent on the way the P, the I and the D modules are configured.&nbsp; 
+      It is sometimes necessary to perform tests on a controller to ensure it 
+      does in fact respond correctly to changes on its input.&nbsp; This is 
+      particularly true for controllers in many digital systems, and even more 
+      so in the case of many PLC's, where controllers often do not actually 
+      respond correctly to input changes.&nbsp; (This may be due to a fault in 
+      the controller's software, but more often than not, it is because the user 
+      has set-up the controller incorrectly). 
+      <P align=justify>A test set-up is shown in Figure 1.&nbsp; 
+      <P align=center></FONT>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture69 height=360 alt="Figure 1" 
+            src="Loop signatures 10_files/loopsig10fig1.gif" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica color=#000000 size=-1><BR>
+      <DIV align=center></FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2><B>Figure 1</B></FONT></DIV>
+      <P align=justify><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>To perform the tests, the controller needs to be disconnected from 
+      the loop.&nbsp; The input 4-20 mA. PV signal is fed into the controller 
+      from a signal generator. The controller is on local setpoint, and the 
+      output (PD) 4-20 mA. signal is fed into a recorder, or the Protuner if you 
+      have one.
+      <P align=justify>Each test is performed with the controller in 
+      automatic.&nbsp; Before starting a test, the controller is switched to 
+      manual.&nbsp; The signal generator and the controller's outputs are set to 
+      50% (12 mA.).&nbsp; The setpoint is also set to 50%.&nbsp; When the 
+      controller is switched to automatic the output should remain running at a 
+      constant 50%.&nbsp; The tests can then be started.&nbsp; These will be 
+      discussed later in this series as each type of control action is 
+discussed.
+      <P align=justify><B>Controller PID Algorithms</B>
+      <P align=justify>A controller is essentially a mathematical calculating 
+      unit.&nbsp; It is important to know which algorithm (equation) it uses in 
+      performing its function.&nbsp; Although control academics are always 
+      presenting many specialised algorithms to help in dealing with the control 
+      of difficult or specific processes, commercial controllers generally 
+      employ one of three algorithms.&nbsp; Some manufacturers allow you to 
+      choose between two, or even between all three of these.
+      <P align=justify>All of these three algorithms essentially perform PID 
+      control more or less equally well.&nbsp; However what is not generally 
+      known is that different tuning would have to be set in each of them if one 
+      was to use P, I and D parameters to control a particular process, and also 
+      achieve the identical response from each controller.
+      <P align=justify>The basic format of the three algorithms are:
+      <P align=justify></FONT>
+      <TABLE cellSpacing=0 cellPadding=0 width=472 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture70 height=230 alt="Figure 2" 
+            src="Loop signatures 10_files/loopsig10fig2.gif" width=472 
+          border=0></TD></TR></TBODY></TABLE>
+      <P align=left><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>Although the names I have used for these algorithms are in fairly 
+      common usage, there are as always, no standards, and many of the 
+      manufacturers use other, and often confusing nomenclature.&nbsp; The names 
+      given here will be used throughout this series to identify a particular 
+      algorithm.
+      <P align=justify>Historically it is not quite clear how, and by whom the 
+      algorithms were developed, but I suspect that the Ideal was the first, as 
+      it appeared many years ago in the Transactions of the ISA.&nbsp; Possibly 
+      it was formulated by the famous Nichols.&nbsp; Several articles I have 
+      read claim that the Ideal algorithm was not in fact suitable for use to 
+      manufacture the pneumatic controllers of that era, which they needed to 
+      build in modular form. This was because a full 3 term pneumatic PID 
+      controller was very expensive, and it was far more cost effective for 
+      users to order controllers with only the control terms that were required 
+      for the particular application.&nbsp; If at later date they did require an 
+      additional term or terms, then they could order a kit of parts, which 
+      could be easily added into the controller.&nbsp; It was easier to make 
+      such a modular controller by slightly modifying the algorithm.&nbsp; This 
+      was the Series algorithm.
+      <P align=justify>The Series algorithm effectively became the standard at 
+      that time, and with the possible exception of manufacturers of controllers 
+      in the electrical power industry, all controllers were made like 
+      this.&nbsp; When electronic analogue controllers were developed in the 
+      1960's the same algorithm was retained.
+      <P align=justify>Digital controller's appeared on the scene in the 
+      1980's.&nbsp; The old established instrumentation companies were entering 
+      the era of the DCS, and PLC manufacturers who up to that time were only 
+      interested in digital ON/OFF control, started expanding their products to 
+      include analogue control capabilities.
+      <P align=justify>The latter in particular had no little or no experience 
+      of feedback control, and their programmers in many instances probably 
+      acquired their knowledge from reading textbooks on PID.&nbsp; They found 
+      the Series and the Ideal algorithms, and not fully understanding why the 
+      mathematicians of old had bothered to multiply the I and D terms by the P 
+      gain, they also came up with the Parallel algorithm.&nbsp; This was termed 
+      the Independent algorithm by one of the large PLC manufacturers, who 
+      loudly proclaimed it as superior, as the I &amp; D terms were not affected 
+      by changing the P term.&nbsp; Although this sounds intelligent, it 
+      actually shows that the people who invented that algorithm had little 
+      practical knowledge of control. The reasons for this opinion of mine will 
+      be explained more fully in later articles in this controller series.
+      <P align=justify>Initially quite a few of the PLC manufacturers used only 
+      the Parallel algorithm in their products, but with the exception of only 
+      one, the prominent DCS manufacturers stuck to the Ideal or Series 
+      algorithms.&nbsp; However in recent years some of them now also offer it 
+      as their default algorithm, or as an alternate.&nbsp; Again in my view, 
+      people who programme controllers into computers and who offer the Parallel 
+      algorithm as a default, again display that they have very little 
+      understanding of practical aspects of control.
+      <P align=justify>It is of significance to note that although many of the 
+      digital controller manufactures who originally employed the Parallel 
+      algorithm, all of them, as far as I am aware, now offer a choice of at 
+      least one of the others; mainly because of the unfavourable user reaction 
+      to the Parallel.
+      <P align=justify>The main problem with it is in the tuning.&nbsp; The 
+      Parallel algorithm is generally much harder to tune by trial and error 
+      than Series or Ideal.
+      <P align=justify>To understand this, one must realise that at least 98% of 
+      all loops worldwide are tuned by "trial and error", or if you prefer, 
+      playing with the knobs.&nbsp; In general, very few people actually are 
+      really capable of achieving good tuning this way, but there are some who 
+      have over the years developed a wonderful "touch" for trial and error 
+      tuning, and have become extremely proficient in this art.&nbsp; Now this 
+      experience has generally been gained on controllers that are equipped with 
+      Series or Ideal algorithms.&nbsp; The tuning for both of these is 
+      identical for P + I tuning.&nbsp; It only differs for P + I + D 
+      tuning.&nbsp; (An inspection of the equations above will explain why this 
+      is so, because when D is set to zero the equations become identical).
+      <P align=justify>If you were to take one of these highly experienced 
+      tuning wizards and ask him (or her) to tune a loop that had a controller 
+      with a Parallel algorithm, the result would be catastrophic, as the "feel" 
+      that the person had developed using the Series or Ideal algorithm is of no 
+      use whatsoever when tuning a Parallel controller.&nbsp; It works 
+      completely differently.&nbsp; For example if you had a loop that contained 
+      a Series or Ideal controller, and the loop was cycling badly in automatic, 
+      you would generally reduce the proportional gain to try and stop the 
+      cycle.&nbsp; However if you were to do this on a loop controlled by a 
+      Parallel controller, the loop would actually cycle more. 
+      <P align=justify>Reasons for the strange behaviour of the Parallel 
+      algorithm and why it is so difficult to use, will be given when the I term 
+      is described later in this controller series, and also when tuning is 
+      covered, which will be much later in the Loop Signature series.</FONT>
+      <P align=justify><A 
+	      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P align=justify><B><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      color=#000000 size=-2>Michael Brown is a specialist in control loop 
+      optimisation, with many years of experience in process control 
+      instrumentation. His main activities are consulting, and teaching 
+      practical control loop analysis and optimisation. He gives training 
+      courses which can be held in clients' plants, where students can have the 
+      added benefit of practising on live loops. His work takes him to plants 
+      all over South Africa, and also to other countries. He can be contacted 
+      at: <BR>Tel (011) 486-0567<BR>Fax (011) 646-2385<BR>E-Mail: </FONT><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-2></FONT></B><A 
+      href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A></P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton73',1)" 
+            onmouseout="F_roll('NavigationButton73',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton73 height=19 alt=Home 
+            src="Loop signatures 10_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton73></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton74',1)" 
+            onmouseout="F_roll('NavigationButton74',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton74 height=19 alt=Training 
+            src="Loop signatures 10_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton74></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton75',1)" 
+            onmouseout="F_roll('NavigationButton75',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton75 height=19 alt=Consulting 
+            src="Loop signatures 10_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton75></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton76',1)" 
+            onmouseout="F_roll('NavigationButton76',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton76 height=19 alt=Protuner 
+            src="Loop signatures 10_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton76></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton77',1)" 
+            onmouseout="F_roll('NavigationButton77',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton77 height=19 alt="Contact us" 
+            src="Loop signatures 10_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton77></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton78',1)" 
+            onmouseout="F_roll('NavigationButton78',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton78 height=19 alt=Articles 
+            src="Loop signatures 10_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton78></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 10_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

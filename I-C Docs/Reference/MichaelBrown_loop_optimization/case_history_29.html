@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 29</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory29Layout, 750, 3823))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_29_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_29_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_29_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_29_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_29_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_29_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 29</span></b></p>
+                <p><b>SCAN RATE PROBLEM IN A DCS ON A FAST LOOP</b></p>
+                <p>The
+control problem discussed here occurred on a large North Sea oil
+rig.&nbsp; The gas being extracted from the ocean bed is also used to
+power the generators and compressors on the rig. The gas comes into the
+rig in two streams at an extremely high pressure, which must be reduced
+to a lower level before it can be used. Figure 1 is a schematic of the
+control system.&nbsp; A single controller is used to control the
+pressure.&nbsp; The output of the controller is fed in parallel to the
+two valves via a ratio station in each leg to allow the operator to
+adjust the amount of gas being used in each stream. The 2 transmitters
+shown in the schematic are unnecessary. A single transmitter would have
+sufficed.&nbsp; The control system was a highly sophisticated, well
+known make of DCS. </p>
+                <p><img id="Picture2" src="case_history_29_files/CASHIS29fig_1.jpg" alt="CASHIS29fig 1" title="CASHIS29fig 1" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p>The
+problem being experienced was that the loop was not fast enough to keep
+the pressure under control when fast load changes, such as a compressor
+trip, occurred.&nbsp; In such an event the pressure fluctuated so
+widely that high pressure trips were activated and tripped the system,
+which shut down power for the whole rig. &nbsp; It could take up to 6
+hours to restart all the systems and get production back to normal.
+During this period whilst the rig was not producing, the potential
+loss, with penalties that could be levied by the gas distribution
+company, could be in the region of £1,000,000!</p>
+                <p>It
+is often difficult to determine if a pressure loop is a self regulating
+or an integrating process. (Refer previous articles on this subject).
+Generally pressure reducing systems are self regulating. However if
+there is a large volume of gas present downstream from the control
+valve, they can be integrating.&nbsp; In this case the process proved
+to be integrating, which was a disappointment as integrating loops are
+often more difficult to control, and suffer from cycling if there is
+any hysteresis in the valve. One of the valves in this system was in
+fact found to have 5% hysteresis. Figure 2 illustrates the resultant
+cycle. </p>
+                <p><img id="Picture3" src="case_history_29_files/CASHIS29fig_2.jpg" alt="CASHIS29fig 2" title="CASHIS29fig 2" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>A
+4 channel Protuner analyser was connected to read the signals from the
+transmitters, and from the output of each ratio station being sent to
+the valves. In the initial "closed loop test as found", where small
+setpoint changes are made with the existing tuning an extremely
+interesting observation was made which is shown in Figure 3.&nbsp; In
+the figure the 2 outputs are plotted on the same graph, and are shown
+when reacting to a setpoint change.&nbsp; As the outputs change, it can
+be seen that the one (Tag 31401) is operating at a scan rate of 1
+second, whilst the other (Tag 31400), is only operating at a scan rate
+of 4 seconds. Initial checks of the DCS programme showed that every
+module in the control loop was in fact set to a scan rate of 1 second,
+and there was no apparent reason why the one should be operating at
+such a slow scan rate. Many hours later and with much burning of
+midnight oil, and after poring into every available manual on the DCS,
+it was found that individual blocks in the control loops are configured
+in "library sections". One library section can only hold a maximum
+number of blocks, so when the section is full, one must move to another
+library section, and configure blocks there.&nbsp; In this case, all
+the blocks in the control system under review, with the exception of
+one ratio station, were in one library section.&nbsp; The ratio station
+was in a separate section.&nbsp; When linking blocks in separate
+library sections, it was ascertained that an "external scan rate" has
+to be set in each library section. This was found to be set to 4
+seconds.</p>
+                <p><img id="Picture4" src="case_history_29_files/CASHIS29fig_3.jpg" alt="CASHIS29fig 3" title="CASHIS29fig 3" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>Obviously
+this control needs to be as fast as possible, in view of the speed of
+the pressure surges. Unfortunately however, it was impossible to change
+the external scan rate with the system on line. It had to be shut down
+to do this, which was out of the question.&nbsp; Obviously it will be
+done the next time the rig is shut down.</p>
+                <p>In
+an attempt to get round the problem, the next step was to try and speed
+up the tuning of controller to try and catch the surges.&nbsp; Tuning
+tests were then performed and faster tuning inserted.&nbsp; Figure 4
+shows a portion of one of the tests, where step load changes were being
+induced. The control is remarkably good considering the expanded scale
+presented in the figure.&nbsp; However it may not be fast enough to
+catch really big disturbances like a compressor trip.</p>
+                <p><img id="Picture5" src="case_history_29_files/CASHIS29fig_4.jpg" alt="CASHIS29fig 4" title="CASHIS29fig 4" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>Whilst
+examining the one of the load tests, and whilst looking at the output
+of the ratio station (Tag 31401) that was scanning correctly at one
+second intervals, an interesting observation was made.&nbsp; This is
+shown in Figure 5.&nbsp; In this test, the load change was being
+induced by making a step change in the ratio value of the other ratio
+station (Tag 31400). This moved the associated valve quickly and
+affected the pressure measurement. The controller would then correct
+it.&nbsp; It can be seen in the figure that the pressure started
+responding to the step change within a second. The controller output as
+reflected on trace PD31401 should have also started moving within one
+second under the proportional action of the controller, to correct the
+load change.&nbsp; However it took no corrective action for 4 seconds,
+in spite of it having a scan rate of 1 second!&nbsp; The conclusion
+that was reached that the external scan rate of 4 seconds was somehow
+affecting the timing relationship of the whole loop.&nbsp; The
+recommendation was made to the client that the scan of the whole loop
+should be put on a fast scan of 100 ms., which is the fastest scan rate
+achievable on the DCS.</p>
+                <p><img id="Picture6" src="case_history_29_files/CASHIS29fig_5.jpg" alt="CASHIS29fig 5" title="CASHIS29fig 5" align="top" border="0" height="450" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p>It
+is obvious that this situation is untenable where one is trying to
+achieve extremely fast reaction and control on a very fast process.
+Again it is a good illustration of a lack of understanding of the
+complexities of modern control systems, which had cost the client
+possibly millions of pounds in lost revenue and penalties over the last
+few years. &nbsp; As mentioned in several previous articles, it is
+essential that you thoroughly understand your controllers if you wish
+to successfully optimise your control loops!</p>
+                <p style="text-align: justify;"><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

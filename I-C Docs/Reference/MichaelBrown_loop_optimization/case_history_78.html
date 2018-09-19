@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 78</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_78_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_78_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_78_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_78_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_78_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="29" width="750"><img src="case_history_78_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="color: rgb(204, 0, 0);">Control Loop Case History 78</span></b></p>
+                <p style="text-align: left;"><b><span style="font-size: small;">Problems in the control of steel reheat furnaces (continued)</span></b></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">In
+the previous article in this Case Histories series, which was published
+2 months ago, some of the control problems encountered on the first
+visit to optimise two reheat furnaces in a steel plant were
+described.&nbsp;It will be remembered that on that visit only open loop
+tests were performed on simple cascade secondary flow loops to
+establish valve problems, and in fact very serious problems were
+encountered.&nbsp;This article continues with some of the problems
+found on the second visit to finish optimising the controls.&nbsp;In
+the intervening period, the valves had been serviced, and the controls
+had been changed over to the new PLC system.&nbsp;</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Although
+most of the loops were optimised reasonably successfully during the
+second visit, many problems were still encountered with the valves, and
+also several process problems. Some of the more interesting ones are
+covered here.</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Figure
+1 shows an open loop step test on the furnace pressure control.&nbsp;It
+should be noted that the process gain (ratio of change in PV to change
+in PD) is about 0.2 which is very small.&nbsp;This means that
+relatively large changes on the controller output result in only very
+small changes in pressure.&nbsp;In this case the implication is that
+the pressure can only be controlled over a very small limited
+range.&nbsp;</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture53" src="case_history_78_files/cashis78Fig1.jpg" alt="Figure 1" title="Figure 1" border="0" height="408" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    </span></p>
+                <p style="text-align: center;"><i><span style="font-size: 10pt;">Figure 1</span></i></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Also
+of interest are the large regular fluctuations of pressure of about 20%
+amplitude, with a period of about 110 seconds.&nbsp;The reason for this
+is the opening and closing of doors to push billets out of the
+furnace.&nbsp;There is no way that the feedback control can be tuned
+fast enough to catch these fluctuations. </span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Temperature
+in the various zones are also effected by furnace pressure, but cannot
+vary fast enough to follow the pressure cyclic fluctuations in any
+significant way.</span>
+                </p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">The
+pressure is in fact quite a fast loop, so tuning the pressure
+controller in the normal way would have resulted in the controller
+trying to aggressively compensate for the fluctuations, which would
+have resulted in extreme shortening of the valve life.&nbsp;Therefore a
+special tuning was used consisting of almost purely integral only
+control, which effectively "averages" out the fluctuations and attempts
+to keep the average pressure at setpoint.&nbsp;This is quite a slow
+tune, but it worked quite effectively as can be seen in the step change
+of setpoint test shown in the closed loop test in Figure 2.&nbsp;It can
+be seen that the tuning is relatively slow but does keep the average
+pressure at setpoint, and it certainly does work relatively well.</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture54" src="case_history_78_files/cashis78Fig2.jpg" alt="Figure 2" title="Figure 2" border="0" height="409" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    </span></p>
+                <p style="text-align: center;"><i><span style="font-size: 10pt;">Figure 2</span></i></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Figure
+3 is an open loop test on the temperature control in the Preheat Zone
+on one of the furnaces.&nbsp;One can see how well the pressure kept to
+its setpoint even under the large load changes being caused by step
+changes in the gas and air flow loops being made during the test.</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture55" src="case_history_78_files/cashis78Fig3.jpg" alt="Figure 3" title="Figure 3" border="0" height="411" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    </span></p>
+                <p style="text-align: center;"><i><span style="font-size: 10pt;">Figure 3</span></i></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">In
+addition one can also see a severe stick-slip cycle on the gas flow
+loop.&nbsp;Stick-slip cycles have been described quite a few times in
+previous articles.&nbsp;To summarise they are due to a valve problem
+and NOT to bad tuning, as many people seem to believe.&nbsp;The result
+is that we often find loops suffering from this problem terribly
+detuned, which results in very bad control.&nbsp;Although such cycles
+are not nice, it is better to tune the cascade secondary flow loop fast
+so that good temperature control can be achieved.&nbsp;Even with the
+stick-slip cycle, the average flow through the valve meets the
+temperature controller's demand requirements.&nbsp;(Stick-slip cycles
+can of course best be eliminated by slowing the integral down over a
+small gap around setpoint &#8211; see Loop Signature article no. 8).</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">An open loop test on the heating zone of one the furnaces is shown in Figure 4.&nbsp;</span></p>
+                <p style="text-align: left;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture56" src="case_history_78_files/cashis78Fig4.jpg" alt="Figure 4" title="Figure 4" border="0" height="410" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                </p>
+                <p style="text-align: center;"><i>Figure 4</i></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">This
+displays extremely interesting dynamics in the temperature response to
+a step test in the PD.&nbsp;The initial response in temperature is very
+fast, and then it slows down and starts ramping.&nbsp;This is sometimes
+referred to as "a positive lead integrator".&nbsp;What actually occurs
+is that when the step change is made on the demand, the sudden increase
+in combustion causes an initial fast rise of temperature directly in
+the ambient temperature inside the furnace.&nbsp;However the furnace
+load and walls are also starting to absorb heat and their temperature
+starts ramping up, which results in the overall temperature in the
+furnace also ramping up in an integrating fashion.&nbsp;This type of
+process requires a very special type of tuning which will be dealt with
+in a future issue in the Loop Signature series.&nbsp;If tuned
+correctly, normally spectacular improvements in performance are
+obtained, as compared to the original tuning usually encountered with
+this type of process dynamics. </span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Figure
+5 shows the temperature response to a setpoint change in a&nbsp;closed
+loop test on the same loop.&nbsp;This is really excellent, and shows
+just how good the tuning is.&nbsp;It is very, very much better than the
+original "as found" tuning which literally took about 50 times longer
+to respond to a step change of setpoint of the same magnitude.&nbsp;</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture57" src="case_history_78_files/cashis78Fig5.jpg" alt="Figure 5" title="Figure 5" border="0" height="408" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    </span></p>
+                <p style="text-align: center;"><i><span style="font-size: 10pt;">Figure 5</span></i></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Something
+of interest that can be seen in the figure is the airflow response when
+the setpoint is stepped down.&nbsp; It goes into a very short term
+cycle.&nbsp;However it does not do that when the setpoint is stepped
+up, and the response is very stable.&nbsp; This was in fact caused by
+an instability problem in the valve positioner.&nbsp;Even with this
+problem, the temperature control worked fine, once again proving the
+power of cascade control systems.&nbsp;If the temperature controller
+had been connected directly to the really poorly performing air and gas
+valves, it would only have been impossible to have such fine control.</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">Figure
+6 shows an open loop test on a temperature control loop in one of the
+other zones in the same furnace.&nbsp; In the test the controller
+output is moved from zero to 93%.&nbsp;The actual change in temperature
+over that range was a mere 2% of span which was equivalent to 20ºC
+movement.&nbsp;This shows there is a major process problem in this
+zone, and the temperature is effectively uncontrollable.</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture58" src="case_history_78_files/cashis78Fig6.jpg" alt="Figure 6" title="Figure 6" border="0" height="411" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    </span></p>
+                <p style="text-align: center;"><i><span style="font-size: 10pt;">Figure 6</span></i></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">The
+last and very interesting example which is shown in Figure 7 is of a
+gas flow loop.&nbsp;The valve which had purportedly been serviced
+between the two visits, was behaving even more badly on the second
+visit.&nbsp;In the figure one can see that the valve actually reversed
+direction whilst being opened!&nbsp;On reversing the controller output
+and trying to close the valve the valve more or less stuck at the same
+position for quite a while, and then suddenly opened further before
+starting to close.&nbsp;It is absolutely impossible to try and achieve
+any sort of control with a valve like this.&nbsp;</span></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture59" src="case_history_78_files/cashis78Fig7.jpg" alt="Figure 7" title="Figure 7" border="0" height="411" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    </span></p>
+                <p style="text-align: center;"><i>Figure 7</i></p>
+                <p style="text-align: left;"><span style="font-size: 10pt;">The
+above examples are typical of the many control problems and challenges
+found in the average plant.&nbsp;It still amazes me that people are
+generally not aware of these things, and very few plants make any
+effort at all to even try and make their control systems operate
+properly, in spite of the fact that those control systems cost them a
+huge amount&nbsp;of capital.</span></p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

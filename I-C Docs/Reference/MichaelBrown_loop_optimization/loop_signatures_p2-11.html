@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures P2-11</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(LoopSignaturesP211Layout, 750, 4348))" style="text-align: center;" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-11_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-11_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-11_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-11_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-11_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="loop_signatures_p2-11_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b>11. DYNAMICS OF SIMPLER PROCESSES</b></p>
+                <p><b>The pure LAG, self-regulating process</b></p>
+                <p>In
+the last two articles in this series, the tuning of simple first order
+lag, deadtime, self-regulating processes were discussed.&nbsp; The
+basic transfer function of such a process is:</p>
+                <p><img id="Picture9" src="loop_signatures_p2-11_files/loopsig_p2-11_eq_1.gif" alt="loopsig p2-11 eq 1" title="loopsig p2-11 eq 1" align="top" border="0" height="58" hspace="0" vspace="0" width="134"></p>
+                <p>The
+term "controllability factor" was defined as DT/TC, and it was
+mentioned that the larger it gets, the more difficult it is to control,
+and as it gets smaller, the easier the control. </p>
+                <p>The
+last article dealt with a controllability factor of infinity, which was
+called "a pure deadtime, self-regulating process".&nbsp; In this
+article we will go to the other extreme and deal with controllability
+factor of zero, which will be termed as a "<b>pure lag, self-regulating process</b>".  This is a process with no deadtime whatsoever.
+                </p>
+                <p><img id="Picture10" src="loop_signatures_p2-11_files/loop_sig_p2-11_eq_2.gif" alt="loop sig p2-11 eq 2" title="loop sig p2-11 eq 2" align="top" border="0" height="52" hspace="0" vspace="0" width="134"></p>
+                <p>The
+open loop response to a step change on the PD of such a process is
+shown in Figure 1.&nbsp; The process has a single time constant of 600
+seconds, and a process gain of one.&nbsp; The dead time is also zero.
+(This can be easily established by graphical analysis using the
+techniques shown in the first Loop Signature series, or by analysis
+using a Protuner Loop Analyser).</p>
+                <p><img id="Picture11" src="loop_signatures_p2-11_files/loop_sig_p2-11_Fig1.jpg" alt="loop sig p2-11 Fig1" title="loop sig p2-11 Fig1" align="top" border="0" height="444" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 1</i></p>
+                <p><i>Please
+note that the basic identification of the dynamic elements can be
+nearly all done by examining the open loop response to such a step
+change of PD</i>.&nbsp; Looking at Figure 1 for example, one can
+clearly see the typical PV exponential response with its sharp break
+away from the horizontal.&nbsp; It can also be seen that the deadtime
+is negligible.&nbsp; This response allows us to immediately recognise
+this as a pure lag, self-regulating process. </p>
+                <p>Where do you find such
+processes in real plants? They are typically sometimes found on
+temperature control loops where there is one lag in the process, which
+is so large, that any other lags and deadtime are insignificant in
+comparison. Towards the end of the article I will also discuss certain
+other processes, which may be equated to pure lag, self-regulating
+processes.</p>
+                <p><b>If you ever identify such a type of process, here is your chance to become a hero</b>,
+as for reasons that will become clear soon, you can probably tune it
+much faster than the tuning which may be suggested on a tuning packet. </p>
+                <p>To understand why this is so
+have a look at Figure 2, which is the open loop Bode plots of gain and
+phase versus frequency of this process as generated by the Protuner.
+The gain plot is the typical first order lag response dropping off by 3
+db at the corner frequency (which is the reciprocal of the time
+constant), and which would normally finish off at the crossover
+(ultimate frequency) at a slope of&nbsp; &#8211;20 db/decade.&nbsp; However
+the phase plot here is different and of extreme interest.&nbsp; It
+starts off as normal at 0º phase lag, but instead of carrying on down
+until it reaches -180º at the crossover frequency, it suddenly starts
+curving up again at about -60º and eventually ends up travelling
+parallel to the X axis at just above -90º phase angle.</p>
+                <p><img id="Picture12" src="loop_signatures_p2-11_files/loop_sig_p2-11_Fig2.jpg" alt="loop sig p2-11 Fig2" title="loop sig p2-11 Fig2" align="top" border="0" height="442" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 2</i></p>
+                <p>In <a href="http://www.controlloop.co.za/Loop_signatures/Loop_Signatures_P2-7/loop_signatures_p2-7.html">Loop Signature P2-7</a>
+you will remember that instability can only occur when unity, or
+greater gain is reached, and the phase angle is simultaneously at
+-180º.&nbsp; The ultimate gain was also defined as that gain which when
+added to the open loop gain produces a gain of unity (0db) at the -180°
+phase point on the Bode open loop plot.</p>
+                <p>In
+this particular case it means that the process can never go unstable,
+as the phase angle can never get to 180°.&nbsp; In other words, the
+ultimate gain of a pure lag, self-regulating process is infinity. This
+means that theoretically you can insert any tuning you wish into the
+controller and the loop would always remain stable in automatic!</p>
+                <p>I
+have mentioned before in earlier Loop Signature articles that it is the
+deadtime that really introduces phase lag, and this illustrates this.</p>
+                <p>Figure 3 shows the closed response of this process to a setpoint step change with the Protuner fast tune of<br>P = 6.7 and I = 597 seconds/repeat.&nbsp; It looks quite good.&nbsp; It takes over 12.5 minutes to get the process to 
+                    setpoint.</p>
+                <p><img id="Picture13" src="loop_signatures_p2-11_files/loop_sig_p2-11_Fig3.jpg" alt="loop sig p2-11 Fig3" title="loop sig p2-11 Fig3" align="top" border="0" height="443" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 3</i></p>
+                <p>How
+does the Protuner get its values in this case? Basically it sets the I
+equal to the process time constant as described in a previous Loop
+Signature.&nbsp; However the proportional gain is an arbitrary value,
+which has been based on the experience of the control engineer
+responsible for the Protuner's design. Many people do not like putting
+high gains in controllers and the designer has taken this into
+consideration.</p>
+                <p>However
+if you have a really slow pure lag self-regulating process, possibly
+one taking hours to responds, then there is nothing to stop you putting
+in much higher gains in the controller, if you wish to do so, without
+the process going unstable.&nbsp; (Note that if there is a lot of noise
+in the PV, then high gains could result in unacceptable valve wear due
+to amplification through the controller onto the PD. In such a case a
+relatively small filter will eliminate this).</p>
+                <p>Figure
+4 shows the closed loop response again, but this time with P = 80 and I
+= 597 seconds/repeat. The response is now about 4 times faster!&nbsp;
+On a really slow process this can be really significant and time saving.</p>
+                <p><img id="Picture14" src="loop_signatures_p2-11_files/loop_sig_p2-11_Fig4.jpg" alt="loop sig p2-11 Fig4" title="loop sig p2-11 Fig4" align="top" border="0" height="443" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 4</i></p>
+                <p>Now
+in reality, there is always some deadtime in a process control loop.
+The controller alone normally has a scan rate of 1 or 2 seconds.
+Therefore in a real loop like this one has to be careful of putting any
+gain whatsoever into the controller, because you will eventually get
+instability. However the following rule of thumb works extremely well
+and should be remembered:</p>
+                <p>&nbsp;<b>If DT&lt;0.1 x TC, then treat the process as a pure lag self regulating process. </b></p>
+                <p>This
+generally works well in practice. However care must be taken when doing
+the tuning.&nbsp; I generally do the open loop test and then model the
+process in the Protuner. If I am satisfied that this indeed a good
+model, and really representative of the true process, and that it can
+be treated as a pure lag self-regulating process, then I try the tuning
+in the Protuner's simulator until I get what I feel is the most
+appropriate tuning to meet the control requirements.</p>
+                <p>Now a
+very interesting point can be considered:&nbsp; It may be remembered in
+the very early Loop Signature articles in the first series (<a href="http://www.controlloop.co.za/Loop_signatures/CD/cd.html">Part 1, available on CD outside South Africa</a>),
+that the two classes of processes, viz. self -regulating and
+integrating, were discussed. It was mentioned that it was sometimes
+very difficult to decide which class certain processes encountered in
+plants belonged to. </p>
+                <p>One
+particular example was level control in a gravity feed tank, where
+there is no pump on the output of a tank, and the head of liquid in the
+tank provided the pressure for the outflow from the tank.&nbsp;
+Therefore as the level drops, the outflow rate will decrease, hence
+causing the process gain of the tank to change. If the change in PD,
+which caused the level to drop, was not too great, then the flows in
+and out of the tank would eventually balance themselves out and the
+level would come to stability.&nbsp; In the long term this would appear
+to be a self -regulating process. However it was then said that as the
+process started initially as an integrating process, you would tune it
+as an integrator, as you always tune a process in the class according
+to the way it <i>starts</i> 
+                    reacting to the change on PD.</p>
+                <p>In
+reality one can find many other examples similar to this such as large
+capacity pressure controls, and also with many temperature processes.
+None of these processes in the real world can ever carry on integrating
+to infinity.&nbsp; They must all eventually reach some equilibrium, or
+balance point.&nbsp; In the long term they appear to be
+self-regulating. However they may possibly be tuned better as
+integrators, as they start with a ramp that changes extremely slowly.</p>
+                <p>Now
+if one was to analyse the long term dynamics of all these processes,
+you would find that once they have reached equilibrium they in fact can
+be equated to pure lag self-regulating processes, which as shown above
+are very difficult to make unstable, and can be tuned within reason
+with any parameters and not go unstable.</p>
+                <p>Therefore
+it is quite acceptable in these cases to tune then as integrators
+taking the initial ramp into account to obtain the process gain
+required for the tuning.&nbsp; In fact many of the temperature
+controller manufacturers use integrating tuning as a standard in their
+self-tuning software.&nbsp; It works fine for many cases of slower
+temperature processes.</p>
+                <p>However
+a word of warning before trying this:&nbsp; Always ensure the deadtime
+is less than a tenth of the time constant.&nbsp; Also ensure that only
+a single dominant lag exists in the process, because multiple lags have
+the same effect as deadtime, as will be shown in the next Loop
+Signature article.</p>
+                <p>To
+summarise, if you do come across a process that equates to the dynamics
+described above, you may be able to really improve the control response
+dramatically by applying the principles detailed above.</p>
+                <p><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; <a href="mailto:michael.brown@pixie.co.za">michael.brown@pixie.co.za</a></span></b></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

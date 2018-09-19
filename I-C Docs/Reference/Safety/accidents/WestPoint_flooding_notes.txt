@@ -1,0 +1,11 @@
+West Point flooding report:
+
+* Overall PFD of plant shown on PDF page 453
+
+* Process trend graphs PDF pages 454-460
+
+* Float switch manuals PDF pages 462-466
+
+* Single-line electrical power diagrams PDF pages 44-47
+--> Include analysis in INST230 as well?
+-----> Arc flash NFPA70e analysis points?

@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 27</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory27Layout, 750, 4168))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_27_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_27_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_27_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_27_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_27_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_27_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="font-size: small; color: rgb(204, 0, 0);">Control Loop Case History 27</span></b></p>
+                <p><b>INTERESTING PROBLEMS IN A CASCADE LEVEL LOOP</b></p>
+                <p>Yours
+truly had just returned from a trip to the UK. One of the jobs
+performed was on board an oil rig situated some 200 kms. off the coast
+of Scotland. One of the loops investigated was a fairly critical level
+control system.&nbsp; The control layout is shown in the schematic in
+Figure&nbsp;1. A level transmitter (LT) measures the level in the tank
+and sends its signal to a level controller (LIC), the output of which
+cascades onto the setpoint of the secondary flow controller (FIC). This
+controller is there to ensure that the flow of product pumped out of
+the tank matches the dictates of the level controller. A very tight
+level control is required.&nbsp; The flow metering method used is an
+orifice plate with a differential pressure transmitter across it. </p>
+                <p><img id="Picture2" src="case_history_27_files/cashis27_fig_1.jpg" alt="cashis27 fig 1" title="cashis27 fig 1" align="top" border="0" height="451" hspace="0" vspace="0" width="600"></p>
+                <p>Cascade
+loops are usually a good control strategy when dealing with the control
+of slow processes like level, temperature, pH, and pressure. In
+general, one can think of a cascade secondary flow loop as "making the
+valve intelligent". There would be far fewer control problems if you
+could in fact have valves being able to measure and control the flow
+through them in accordance with the dictates of the master controller,
+rather than just trying to position the valve stem. </p>
+                <p>Cascade
+loops can largely alleviate most of the valve problems like hysteresis,
+backlash, and non-linearity. They can also quickly deal with problems
+like varying pressure in the flow line. It is difficult for the master
+controller to handle these problems on its own, as it is tuned to
+control a slow process, and it cannot make adjustments quickly enough
+to sort out these difficulties. It is really important however that the
+slave (or secondary) loop should be at least 7 times faster than the
+master (or primary) loop. If it is not, then cascade control can
+actually make things worse rather than improving them. This is due to
+the fact that cascade loops are generally interactive, and if the
+ultimate period of each of the loops is close to the other, then they
+will tend to "fight" each other.&nbsp; (Refer to a previous loop
+article dealing with disturbances at various frequencies).</p>
+                <p>One
+always starts on a cascade system by initially optimising the slave
+loop. The first test normally performed is a closed loop "as found",
+where a setpoint change of normally 5 to 10% is made, and after the
+process has again stabilised, the setpoint is returned to its original
+setting.&nbsp; The client's control system is a well known make of
+DCS.&nbsp; One of its features is that it allows one to put first order
+lag filters onto the process variable (measurement) signal with
+remarkable ease. In fact the basic controller "faceplate" offers
+effectively four knobs,
+P&nbsp;+&nbsp;I&nbsp;+&nbsp;D&nbsp;+&nbsp;FILTER. Previous articles
+have delved into the problems of filters, the "world's biggest
+liars".&nbsp; This is a lovely example of their misuse.&nbsp; People
+optimising loops often mistakenly believe that the filter sorts out all
+the problems, as bad things look much better on the operators'
+screens.&nbsp; Therefore when filters can be easily applied, they are
+often used both liberally and badly. This is such a case. </p>
+                <p>Figure
+2 displays recordings of this test and two traces are shown.&nbsp; The
+top one is the actual process variable (flow signal) as recorded on a
+Protuner analyser which was connected directly to the input of the DCS.
+A huge initial overshoot can be seen on the response to the step change
+in setpoint followed by a slow rise to finally get the flow to
+setpoint. This took nearly 4 minutes, for a measly 10% setpoint
+change!&nbsp; The overshoot is indicative of a huge filter on the DCS,
+and the slow response indicates poor tuning with too much gain and too
+long an integral. (The filter used was found to have a time constant of
+15&nbsp;seconds which is relatively massive for a flow signal).&nbsp;
+Apart from this, it can be seen that the actual signal was virtually
+noise free.&nbsp; So why use a filter at all?</p>
+                <p><img id="Picture3" src="case_history_27_files/cashis27_fig_2.jpg" alt="cashis27 fig 2" title="cashis27 fig 2" align="top" border="0" height="480" hspace="0" vspace="0" width="640"></p>
+                <p>The
+lower trace is in fact the same flow signal as recorded on the actual
+DCS, and then later downloaded onto the Protuner analyser. (The traces
+are vertically offset in the figure for clarity).&nbsp; Note that not a
+trace of an overshoot can be seen. Once again the filter plays its
+wonderful deceptive trick of suppressing peaks and troughs, and hides
+the "horrors of reality".</p>
+                <p>The
+open loop test on the flow loop is shown in Figure 3.&nbsp; In this
+test a series of step changes of equal size are made on the process
+demand (controller output) in both the positive and negative
+direction.&nbsp; These changes are made in the region where the flow is
+normally controlled.</p>
+                <p><img id="Picture4" src="case_history_27_files/cashis27_fig_3.jpg" alt="cashis27 fig 3" title="cashis27 fig 3" align="top" border="0" height="480" hspace="0" vspace="0" width="640"></p>
+                <p>Several
+problems were exposed here.&nbsp; Firstly the response of the valve to
+the changes is not consistent. On all the positive steps the valve
+responded with an overshoot, but on the negative steps the overshoot
+did not occur in every instance. This type of overshoot, which acts as
+a positive lead, is caused by excessive gain in the valve
+positioner.&nbsp; In most cases it does not cause a serious problem,
+but does require the controller to be detuned to quite a large extent
+for reasons of stability. From the control point of view it is not nice
+to have a valve that gives different responses at different times, as
+it adds to non-repeatability, and can effect the tuning.&nbsp; One must
+be very careful that you tune for the worst condition for safety
+reasons.&nbsp; This means that optimum fast tuning which is desirable
+on a cascade secondary loop can be compromised.</p>
+                <p>The
+second problem is that the flow which is in the normal operating
+region, is running between 10% and 25% of full scale. Orifice method
+measurement with a single transmitter is useless below 25% of full
+scale. (British Standards in fact recommend that it should be only used
+above 33% of full scale). Readings below 25% can be completely
+erroneous.&nbsp; The transmitter spanning is in fact twice to big. This
+is confirmed by calculating the process gain in the upper regions of
+the test, where it is approximately 0.5.&nbsp; Therefore the upper 50%
+of the flow span is completely wasted, and this is the very region
+where one should be working with orifice type measurements.&nbsp; (On a
+square root scale in fact, the top 50% of the flow range is provided by
+75% of the differential pressure transmitter's range).</p>
+                <p>The
+third problem revealed by the test, is that when the flow got down to
+about 10%, the process gain suddenly increased to over 2, an increase
+of some 400%.&nbsp; The reason for this is unclear. The installed
+linearity of the loop looks quite good in higher regions.&nbsp; It is
+probably due to the measurement problem, as one can not rely on the
+measurement at those low levels as discussed above.&nbsp; </p>
+                <p>The
+recommendation was made to the client that the transmitter should be
+rescaled, and then the test repeated.&nbsp; However this could not be
+done until the next plant shutdown. It was decided in the meantime to
+tune the loop in an area where the process gain was 0.5 and hope that
+the flow would not often get down to a lower region.&nbsp; If it had
+been tuned in the lower region with a process gain of 2, the control
+would have been far too slow.&nbsp; The final closed loop test with the
+new tuning parameters is shown in Figure 4. Two steps in setpoint were
+made. The response is far slower than desirable for a flow loop.
+Another factor which also became apparent from this test is that the
+valve suffered badly from slip-stick. (Also discussed in detail in
+previous articles).&nbsp; For these reasons and with the general non
+repeatability problem in the valve, it was also decided to replace the
+valve at the next shutdown. </p>
+                <p><img id="Picture5" src="case_history_27_files/cashis27_fig_4.jpg" alt="cashis27 fig 4" title="cashis27 fig 4" align="top" border="0" height="480" hspace="0" vspace="0" width="640"></p>
+                <p>The
+master level loop was then tuned.&nbsp; Details of this are not shown
+here as it was a straightforward procedure .&nbsp; However Figure 5
+showing the level responding to changes in setpoint. The bottom trace
+is the flow process variable.&nbsp; The slip stick cycling and
+instability at low flows can both be seen. However, excellent level
+control was being achieved in spite of the problems in the flow
+loop.&nbsp; It is a good example of how cascade control can really
+provide benefits even though the valve itself, and the flow measurement
+were far from ideal.</p>
+                <p><img id="Picture6" src="case_history_27_files/cashis27_fig_5.jpg" alt="cashis27 fig 5" title="cashis27 fig 5" align="top" border="0" height="480" hspace="0" vspace="0" width="640"></p>
+                <p style="text-align: justify;"><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

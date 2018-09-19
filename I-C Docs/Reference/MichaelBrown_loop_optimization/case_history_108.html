@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+<title>Case History 108</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Generator" content="Microsoft FrontPage 4.0">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<style>
+</style>
+</head><body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory93Layout, 750, 2039))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="63"><img id="Picture1" src="case_history_108_files/Michael_Brown.gif" alt="" width="750" height="63" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="117"><img src="case_history_108_files/clearpixel.gif" alt="" width="117" height="1" border="0"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_108_files/clearpixel.gif" alt="" width="116" height="1" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="120" height="2"><img src="case_history_108_files/clearpixel.gif" alt="" width="120" height="1" border="0"></td>
+            <td>
+              <p align="center"><a href="http://www.controlloop.co.za/Case_histories/CDpromo.html">Educational
+              CDs</a></p></td>
+            <td width="119"><img src="case_history_108_files/clearpixel.gif" alt="" width="119" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="28"><img src="case_history_108_files/clearpixel.gif" alt="" width="750" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td class="TextObject" width="750">
+                <h4><b><font size="4"><span style="color: rgb(204, 0, 0);">Control
+                Loop Case History 108<br>
+                </span></font></b>
+                </h4>
+                <b><u><font face="Univers">
+                <p align="CENTER"><font size="3" color="#ff0000">Successful
+                optimisation of interactive pressure loops</font></p>
+                </font></u></b>
+                <p>A previous article on tuning feedback controllers to decouple
+                interactive processes was published in South African
+                Instrumentation and Control in Loop Signature P2-5 in January
+                2006. (The series is also available on CD from the author for
+                persons outside Southern Africa). To recap, in general feedback
+                control loops do not work very well together in interactive
+                situations.</p>
+                <p>Two interactive loops can be decoupled to a certain extent by
+                tuning them in particular ways, but the best solution is to
+                decouple them dynamically which involves using feedforward
+                decouplers in each direction. The problem with tuning is that
+                all one can do is to tune the one loop as fast as possible, and
+                the other slowly. An excellent extreme example of this is often
+                found in plants in cases where two loops are very interactive.
+                The operators know exactly how to decouple them. They place the
+                one loop in manual. A loop in manual is effectively an
+                infinitely slow tune.</p>
+                <p>Another problem of decoupling loops by tuning is the fact
+                that if you were to tune each of the loops with the other in
+                manual, the dynamics of each loop alters as soon as the other
+                loop is placed in automatic. This is because the coupling
+                between the processes changes the dynamics of each loop when the
+                controllers are in automatic. Therefore it is actually necessary
+                to tune each loop with the other in automatic. This can create a
+                further problem insomuch that if they are now both tuned
+                properly to work with both in automatic, then if either loop is
+                placed in manual, then the other loop that is still in
+                automatic, could now react either very slowly, or very much
+                faster.</p>
+                <p>A good example of successful tuning two interactive loops was
+                found in a petro-chemical refinery where I recently performed
+                some optimisation.</p>
+                <p align="center"><img src="case_history_108_files/Fig_1.jpg" width="403" height="314" border="0"><br>
+                <i><font face="Arial">Fig. 1</font></i></p>
+                <p>As shown in Figure 1, the one process consists of an outlet
+                gas pressure control on the top of a distillation column. The
+                gas passes through the pressure control valve, and then goes
+                through a scrubber, the outlet pressure of which is also
+                controlled by another valve. Thus there are effectively two
+                pressure control valves in series. This system is only really
+                workable due to the fact that the scrubber has got quite a large
+                capacity, which slows down pressure changes between the two
+                valves.</p>
+                <p>With the loops being quite interactive, the original tuning
+                of both controllers was really terrible. Controller PC1 was
+                tuned very slowly but very cyclically, whilst Controller PC2 was
+                tuned so slowly that it took almost hours to react to a change.
+                Both controllers also had huge PV filters which as detailed in
+                the Loop Signature first series, is highly undesirable.</p>
+                <p align="center"><sub><img src="case_history_108_files/Fig_2.gif" width="842" height="493" border="0"><br>
+                </sub><font size="2" face="Arial"><sub><i>Fig. 2</i></sub></font></p>
+                <p>Figure 2 shows an open loop test with both controllers in
+                manual. A step change is made on the output of controller PIC1,
+                whilst the output of controller PIC2 is kept steady. The test
+                illustrated the following things:</p>
+                <blockquote>
+                  <blockquote>
+                    <p>Both loops reacted to the change, but Loop 1 is an
+                    integrating loop and Loop 2 is self regulating.</p>
+                    <p>Further analysis of Loop 1 shows the process is a simple
+                    deadtime integrator with very small deadtime of about 10
+                    seconds, and a process gain of 0.00057, which is equivalent
+                    to a retention time of almost 3 hours. (Purely out of
+                    interest this type of process was referred to in Loop
+                    Signature P2-19 as a "Slow Pure Integrator" which
+                    is very difficult to make unstable.)</p>
+                    <p>Process 2 is extremely fast compared with Process 1 &#8211;
+                    see analysis below.</p>
+                    <p align="center"><img src="case_history_108_files/Fig_3.jpg" width="800" height="467" border="0"><br>
+                    <i><font face="Arial">Fig. 3</font></i></p>
+                  </blockquote>
+                </blockquote>
+                <p>Figure 3 shows another open loop test with both controllers
+                in manual. A step change is made on the output of controller
+                PIC2, whilst the output of controller PIC1 is kept steady. This
+                test shows:</p>
+                <blockquote>
+                  <blockquote>
+                    <p>Both processes again react to the step change, but it
+                    takes a relatively long time for the pressure change to
+                    travel "backwards" through the scrubber and affect
+                    Process 1&#8217;s pressure.</p>
+                    <p>The analysis of Process 2shows it is basically a double
+                    lag, self-regulating process with a very small deadtime, and
+                    the two lags have time constant of about 40 seconds each. A
+                    process with these relatively simple dynamics is not
+                    difficult to control fairly quickly. It is also a very much
+                    faster process than Process 1.</p>
+                  </blockquote>
+                </blockquote>
+                <p>It was concluded from this, that if one was to tune
+                Controller 2 as quickly as possible, and then put in a medium
+                "slowish" tune on Controller 1, then interaction would
+                be minimised.</p>
+                <p>To achieve this it was necessary to tune Controller 2 first
+                using the step test shown in Figure 3. It was then placed in
+                automatic, and a further step test (not shown) was then
+                performed by stepping the output of Controller 1. Controller 1
+                was then tuned from this step. The response took the slightly
+                altered dynamics of Process 1into account, which resulted as
+                Controller 2 was in automatic. This enabled the tuning for
+                Controller 1 to cope with these altered dynamics.</p>
+                <p align="center"><img src="case_history_108_files/Fig_4.jpg" width="800" height="427" border="0"><br>
+                <i><font face="Arial">Fig. 4</font></i></p>
+                <p>The tunings worked wonderfully. Figure 4 shows a 16 hour
+                performance trend with the plant operating under normal
+                conditions. A trend like this where there are quite a few load
+                disturbances occurring, is very useful to judge control
+                performance. One can see the controllers&#8217; outputs moving
+                around to keep the PV&#8217;s on setpoint. In particular there was
+                an absolutely huge load disturbance which can be seen near the
+                end of the recording, where both outputs had to move
+                dramatically up to catch the disturbances. It is wonderful to
+                see how little variance occurred on the actual PV&#8217;s. Really
+                great, and highly impressive control performance. (It should be
+                noted that trends recorded when operating conditions are very
+                steady, are not useful as a means of judging of control
+                performance. It is only possible to judge the control in these
+                sorts of tests, if load changes occur.)</p>
+                <p>It is also quite interesting to realise that a control system
+                doesn&#8217;t ever eliminate variance. It just transfers it from the
+                one side of the process to the other, so the PV is kept
+                constant, and the variance now takes place on the PD (controller
+                output, which is the input to the process.)</p>
+                <p>Here are the "before and after" controller tunings:</p>
+                <table width="100%" border="0">
+                  <tbody><tr>
+                    <td width="33%"><b><u><font size="2" face="Arial">PARAMETER</font></u></b></td>
+                    <td width="33%"><b><u><font size="2" face="Arial">ORIGINAL
+                      TUNING</font></u></b></td>
+                    <td width="34%"><b><u><font size="2" face="Arial">FINAL
+                      TUNING</font></u></b></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><b><u><font size="2" face="Arial">Controller
+                      PIC1</font></u></b></td>
+                    <td width="33%"></td>
+                    <td width="34%"></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">P (Gain)</font></td>
+                    <td width="33%"><font size="2" face="Arial">2.5</font></td>
+                    <td width="34%"><font size="2" face="Arial">8.0</font></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">I (Minutes/
+                      repeat)</font></td>
+                    <td width="33%"><font size="2" face="Arial">5.0</font></td>
+                    <td width="34%"><font size="2" face="Arial">19.0</font></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">D (Minutes)</font></td>
+                    <td width="33%"><font size="2" face="Arial">0</font></td>
+                    <td width="34%"><font size="2" face="Arial">0</font></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">PV Filter
+                      (Minutes)</font></td>
+                    <td width="33%"><font size="2" face="Arial">0.48</font></td>
+                    <td width="34%"><font size="2" face="Arial">0</font></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><b><u><font size="2" face="Arial">Controller
+                      PIC2</font></u></b></td>
+                    <td width="33%"></td>
+                    <td width="34%"></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">P (Gain)&nbsp;</font></td>
+                    <td width="33%"><font size="2" face="Arial">2.1</font></td>
+                    <td width="34%"><font size="2" face="Arial">9.0</font></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">I(Minutes/
+                      repeat)</font></td>
+                    <td width="33%"><font size="2" face="Arial">4.96</font></td>
+                    <td width="34%"><font size="2" face="Arial">1.4</font></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">D (Minutes)</font></td>
+                    <td width="33%"><font size="2" face="Arial">0.35</font></td>
+                    <td width="34%"><font size="2" face="Arial">0</font></td>
+                  </tr>
+                  <tr>
+                    <td width="33%"><font size="2" face="Arial">PV Filter
+                      (Minutes)</font></td>
+                    <td width="33%"><font size="2" face="Arial">0.4</font></td>
+                    <td width="34%"><font size="2" face="Arial">0</font></td>
+                  </tr>
+                </tbody></table>
+                <p>&nbsp; One can see the vast differences between the old and
+                the new. Also it's a complete mystery as to why they had put
+                filters on the PV signals. There was absolutely no need for
+                them. It is also quite interesting to see that they had used a
+                relatively large derivative on the fast loop and not on the
+                slow. Once again it is obvious that the people who had done the
+                original tuning had not attended courses on practical control.</p>
+                <p><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p align="left"><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@mweb.co.za"><b><span style="font-size: xx-small;">michael.brown@mweb.co.za</span></b></a></p>
+    <center>
+                <p>&nbsp;</p>
+            </center></td>
+        </tr>
+    </tbody></table>
+</center></body></html>

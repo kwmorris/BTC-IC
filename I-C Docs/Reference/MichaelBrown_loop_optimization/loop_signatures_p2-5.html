@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures P2-5</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-5_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-5_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-5_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-5_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-5_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="29" width="750"><img src="loop_signatures_p2-5_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b><span style="font-size: small;">5. Interactive Control Systems</span></b></p>
+                <p>Feedforward
+control was explained in the previous loop signature articles.&nbsp;One
+of the examples used was feedforward control of load changes on a heat
+exchanger when variations occurred in the flow of the process fluid
+through the exchanger.&nbsp;A change of flow of the process fluid
+affects the temperature, and it was shown how feedforward control could
+immediately compensate for such a load change, and in fact, if it could
+be perfectly applied, it would operate with zero variance.</p>
+                <p>Figure
+1 shows a similar heat exchanger.&nbsp;In this case there is a flow
+control loop upstream of the exchanger, which could regulate the flow
+of the process liquid through the exchanger.&nbsp;The loop has been
+labelled in the dotted boundary line as Process 1.&nbsp;The actual
+temperature control loop in the exchanger has been labelled Process
+2.&nbsp;Now if Process 1 changes and the flow changes, it will have an
+effect on Process 2.&nbsp;It is said that Process 2 is "coupled" by
+Process 1.</p>
+                <p><img id="Picture9" src="loop_signatures_p2-5_files/loopsigp2-5Fig_1.jpg" alt="loopsigp2-5Fig 1" title="loopsigp2-5Fig 1" align="top" border="0" height="336" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 1</i></p>
+                <p>If
+we then play around with the steam valve in Process 2, it can have no
+effect on Process 1, the process fluid flow.&nbsp;Therefore Process 2
+does not couple Process 1.&nbsp;The system is referred to as a "1 x 2
+coupled system". </p>
+                <p>Now have a look at Figure
+2.&nbsp;Here two flows are joined together, the one being a product,
+and the other some sort of reagent to adjust some chemical property of
+the product.&nbsp;Let us say it is pH, which would be typical.&nbsp;
+There are two control loops in the system.&nbsp;The first, Process 1,
+measures and controls the total flow of the combined product and
+reagent leaving the system, and the second, Process 2, measures and
+controls the pH of the mixture.&nbsp;Now it is fairly obvious that if
+the valve of Process 1 changes, it will affect both the total flow and
+the pH.&nbsp;Similarly a change of the valve in Process 2 will also
+affect both the total flow and the pH.&nbsp;</p>
+                <p><img id="Picture10" src="loop_signatures_p2-5_files/loopsigp2-5Fig_2.jpg" alt="loopsigp2-5Fig 2" title="loopsigp2-5Fig 2" align="top" border="0" height="305" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 2</i></p>
+                <p>When
+two processes have a mutual affect on each other like this, they are
+coupled in both directions, and it is said that they are
+interactive.&nbsp;A system with like this one is referred to as a "2 x
+2 interactive system".</p>
+                <p>In general, interactive
+systems will tend to "fight" each other, particularly if both loops
+operate at the roughly the same speed.&nbsp;A very good measure of the
+loop speed is the ultimate period.&nbsp;It may be remembered that in
+the first Loop Signature series, <a href="http://www.controlloop.co.za/Loop_signatures/CD/cd.html">now available on CD</a>,
+it was shown in Loop Signature 22, that when a repetitive disturbance
+having a period between 0.2 and 6 times a feedback loop's ultimate
+period, interferes with the loop, the control variance is worse in
+automatic than manual.&nbsp;Loops that are very interactive generally
+have similar ultimate periods.</p>
+                <p>When
+we dealt with a 1 x 2 coupled system in the previous Loop Signature
+articles, we referred to the one process as "the process", and the
+other as the "load".&nbsp;This will not make much sense in an
+interactive system where we have two definite processes.&nbsp;Each of
+them could be referred to as the load on the other.&nbsp;Therefore we
+refer to the transfer functions of each process and each "load" on the
+other as "couplers".</p>
+                <p>In
+the block diagram shown in Figure 3, it can be seen how much easier to
+understand how the system works with the various couplers.&nbsp;PV1 is
+coupled by both PD1 and PD2 through couplers referred to as P11 and P12
+respectively, and similarly PV2 is coupled by both PD2 and PD1 through
+couplers referred to as P22 and P21 respectively.</p>
+                <p><img id="Picture11" src="loop_signatures_p2-5_files/loopsigp2-5Fig_3.jpg" alt="loopsigp2-5Fig 3" title="loopsigp2-5Fig 3" align="top" border="0" height="335" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 3</i></p>
+                <p>It
+must be realised that systems may interact with varying degrees of
+intensity.&nbsp;For example let us imagine that Flows 1 and 2 in Figure
+1 were in pipes of the same diameter, and were of comparable flow
+volumes.&nbsp;In this case the system would be highly
+interactive.&nbsp;A change in either valve would have a significant
+affect on the other's PV as well as on its own.&nbsp;However in
+reality, as in the case of pH control, the reagent is usually supplied
+in a pipe much smaller than the process flow's, and the volume through
+the reagent's valve is relatively tiny compared with the process
+flow.&nbsp;In such a case a change in the flow of reagent will have a
+large effect on the pH (Process 2), but will have a very small effect
+on the total flow (Process 1).&nbsp;Conversely a change in Process 1's
+valve will have a significant effect on both the total flow and
+pH.&nbsp;</p>
+                <p>This
+latter case would not present such a difficult control problem as the
+first case where the system is very interactive.&nbsp;It is therefore
+quite important to first establish the degrees of interaction between
+the processes.&nbsp;This can be accomplished simply in practice by
+putting both loops into manual, and then to step each PD alternatively,
+keeping the other one constant.&nbsp;(Just out of interest, the
+scientific way of establishing the degree of interaction is by using
+something called "a relative gain array".&nbsp;However, in practice, it
+is easier to use one's intelligence when dealing with a simple thing
+like a 2x2 coupled system.).</p>
+                <p>Interactive
+loops of various complexities are encountered very often in many types
+of plant.&nbsp;However one does find many interactive loops in
+particular plant types like boilers and distillation columns.&nbsp;Here
+many loops in different sections of the plant may interact.&nbsp;In
+fact in some cases it is so bad that if good control is required it
+becomes imperative to use advanced control techniques to decouple the
+interactive loops.&nbsp;One such technique is multi-variable
+control.&nbsp;The basics of this will be discussed a little later.</p>
+                <p>In
+most plants one often does encounter interactive loops.&nbsp;Examples
+of loops like this are the one shown in Figure 2, and another very
+common one is where a flow of a gas or steam first passes through a
+pressure control valve to control the downstream pressure, and then it
+passes through a flow control valve, as is often found in the case of
+steam or gas headers.&nbsp;Such a&nbsp;system is shown in Figure
+4.&nbsp; In most of these cases it would be uneconomic to purchase an
+advanced control scheme just to sort out these few
+loops.&nbsp;Therefore one generally tries to minimise the interaction
+by tuning.&nbsp;The technique for this will be discussed first.</p>
+                <p><img id="Picture12" src="loop_signatures_p2-5_files/loopsigp2-5Fig_4.jpg" alt="loopsigp2-5Fig 4" title="loopsigp2-5Fig 4" align="top" border="0" height="327" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 4</i></p>
+                <p><b>Decoupling by Tuning</b></p>
+                <p>Operators
+through the ages have quickly found that the best way to decouple
+interactive loops is to place one or more of them if necessary, into
+manual.&nbsp;They then can't fight each other any more.&nbsp;This is in
+fact the ultimate method of decoupling.</p>
+                <p>Unfortunately
+feedback control cannot deal effectively with interactivity.&nbsp;As
+mentioned earlier, if two or more loops are in a configuration where
+interaction can occur, and if they have similar ultimate periods, they
+will "fight" each other.</p>
+                <p>We are
+going to discuss a 2 x 2 interactive system. The only thing one can do
+to try and do to decouple the two loops by tuning is to make them
+respond at different speeds.&nbsp;Therefore the one loop has to be
+tuned fast and the other slowly.&nbsp;Remember that the slower a loop
+is tuned, the more we are tending to tune it into manual, which could
+be said to be the eventual ultimate slow tune.</p>
+                <p>One
+of the problems associated with interactive loops of which people are
+often not aware, is that the dynamics of each loop will change if the
+other loop is in automatic or in manual.&nbsp;To illustrate this refer
+again to Figure 4, which shows two potentially highly interactive
+control loops.&nbsp;High-pressure gas flows down a line.&nbsp;It passes
+firstly though a flow control loop to reduce the pressure to a useable
+level, and then secondly it goes through a flow control loop to keep
+the flow constant. As mentioned earlier, this is a fairly common
+arrangement often seen in plants, particularly when there are several
+flow loops being taken off a header.&nbsp;The loops can become very
+interactive if there is insufficient capacity in the line between the
+two valves to allow pressure and or flow changes to occur fairly slowly.</p>
+                <p>It
+can be seen in the figure if that an open loop step test is performed
+on the flow loop with the pressure controller (PIC) in manual, the PV
+responds as shown in Note 1.&nbsp;However if PIC is in automatic there
+will be a completely different response when the test is repeated on
+the flow loop as seen in Note 2.&nbsp;This means that really each loop
+has to be tuned with the other loop in automatic.&nbsp;It also means
+that if both loops are in automatic, and one is placed in manual, the
+other's response will change, getting either more sluggish or else
+faster; possibly instability could even occur.</p>
+                <p>The procedure for trying to decouple by tuning is as follows: (Reference is made to the system shown in Figure 2).</p>
+                <p>1. Decide which loop must be the fastest, say FIC in this case</p>
+                <p>2. Place both loops in manual, do normal analysis, and determine initial tuning for both</p>
+                <p>3. With FIC in auto, and AIC in manual, determine new tuning for AIC</p>
+                <p>4. With AIC in auto, put FIC into manual and retune it</p>
+                <p>5. If necessary slow down AIC even further with an input filter (maximum TC should not exceed 10 x DT of analyser loop)</p>
+                <p>6. Then repeat last 2 steps</p>
+                <p>This
+is all that can be done to decouple interactive loops by
+tuning.&nbsp;In reality one can get away with this type of approach in
+many cases.&nbsp;However in certain cases where the controls are very
+important, and possibly very interactive, a more drastic measure must
+be employed.&nbsp;This is known as dynamic decoupling, and is basically
+feedforwarding the changes occurring in each loop across to the other,
+as illustrated in Figure 5.</p>
+                <p><img id="Picture13" src="loop_signatures_p2-5_files/loopsigp2-5Fig_5.jpg" alt="loopsigp2-5Fig 5" title="loopsigp2-5Fig 5" align="top" border="0" height="330" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 5</i></p>
+                <p>Figure
+6 shows in a more easily understandable block diagram format.&nbsp;The
+feedforward modules FF12 and FF21 are referred to as "decouplers".</p>
+                <p><img id="Picture14" src="loop_signatures_p2-5_files/loopsigp2-5Fig_6.jpg" alt="loopsigp2-5Fig 6" title="loopsigp2-5Fig 6" align="top" border="0" height="327" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 6</i></p>
+                <p>The
+procedure to perform the tests needed to establish the transfer
+functions of the couplers and then to tune the decouplers, employs
+exactly the same techniques as shown in the preceding Loop Signature
+articles on feedforward.&nbsp;The tests are conducted as follows:</p>
+                <p>Referring
+to Figure 7, one records the response on both loops to step changes
+made on the outputs of each loop, one being changed at a time.&nbsp;</p>
+                <p><img id="Picture15" src="loop_signatures_p2-5_files/loopsigp2-5Fig_7.jpg" alt="loopsigp2-5Fig 7" title="loopsigp2-5Fig 7" align="top" border="0" height="323" hspace="0" vspace="0" width="500"></p>
+                <p><i>Figure 7</i></p>
+                <p>We
+now have the information to establish the following four transfer
+functions, which follow the exact simple procedures as described in
+Loop Signature P2-3:</p>
+                <p>1. P11 (PD1 vs. PV1)<br>2. P21 (PD1 vs. PV2)<br>3. P22 (PD2 vs. PV2)<br>4. P12 (PD2 vs. PV1)</p>
+                <p>The
+gain, the time constant, and the deadtime of each transfer function can
+then be determined by either simple graphical analysis or by using an
+analyser like the Protuner.</p>
+                <p><b>FF12 = P12/P11<br></b>K = PG12/PG11<br>Lead = TC11<br>Lag = TC12<br>Delay = DT12 - DT11</p>
+                <p><b>FF21 = P21/P22<br></b>K= PG21/PG22<br>Lead = TC22<br>Lag = TC21<br>Delay = DT21 - DT22</p>
+                <p>The huge advantages of using dynamic decoupling are:</p>
+                <ul>
+                    <li>Coupled loop are tuned with the interactive loops in manual.You only need to test the loops once.</li>
+                    <li>Loop gains do not change when interactive loop in manual.</li>
+                    <li>Both loops can be tuned fast.</li>
+                    <li>Control system operations are not interactive.</li>
+                </ul>
+                <p>One
+can employ exactly the same techniques to decouple more complex systems
+like 3 x 3 systems.&nbsp;One of the delegates on one of our courses in
+the United Kingdom who worked for a large steel company actually used
+these methods to decouple a 4 x 4 coupled system.&nbsp;It worked so
+successfully that he wrote a paper on it in a steel journal in
+Britain.&nbsp;However I personally think that when it starts getting to
+such complexities it may be worth while to invest in a commercially
+available advanced multivariable control system.</p>
+                <p><span style="font-size: 10pt;"></span><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a><br>&nbsp;</p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

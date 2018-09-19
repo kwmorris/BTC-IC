@@ -1,0 +1,129 @@
+<html>
+<body>
+
+<h1>Control Loop Optimization tutorials</h1>	
+
+<a href="../00_index_OPEN_THIS_FILE.html"><b>Back to main index</b></a>
+
+<br>
+	
+<p>
+These tutorials were freely provided by Michael Brown, a process control engineer based in South Africa, for educational use.  Mr. Brown has a wealth of practical knowledge and experience to share on the subject of control loop tuning and optimization.  One would do well to heed his many pieces of advice on how to wring the best performance out of PID-controlled loops!.
+</p>
+
+<p>
+The <a href="#casehistory">Case Histories</a> in particular are wonderful, showcasing real examples of poor control, faulty instrumentation, unworkable control strategies, and other process control blunders encountered in Mr. Brown's many years of consulting as a process control engineer.  Most importantly, these Case Histories demonstrate <i>how the problems were found</i> and <i>what was done to correct them</i>, not just what the problems were.  A virtual gold-mine of learning for those interested in becoming proficient at optimizing automatic control systems.
+</p>
+
+<hr>
+
+<h2>Loop Problem Signatures</h2>
+
+<ul>
+<li><a href="Loop problem signatures 1.htm">Loop problem signatures 1</a></li>
+<li><a href="Loop signatures 2.htm">Loop problem signatures 2: The two classes of processes</a></li>
+<li><a href="Loop signatures 3.htm">Loop problem signatures 3: Process dynamics -- process gain</a></li>
+<li><a href="Loop signatures 4.htm">Loop problem signatures 4: Process dynamics -- deadtimes and simple lags</a></li>
+<li><a href="Loop signatures 5.htm">Loop problem signatures 5: Final Control Elements -- introduction, sizing, and rangeability</a></li>
+<li><a href="Loop signatures 6.htm">Loop problem signatures 6: Final Control Elements -- characteristics</a></li>
+<li><a href="Loop signatures 7.htm">Loop problem signatures 7: Final Control Elements -- hysteresis and deadband</a></li>
+<li><a href="Loop signatures 8.htm">Loop problem signatures 8: Final Control Elements -- the infamous stick-slip cycle</a></li>
+<li><a href="Loop signatures 9.htm">Loop problem signatures 9: Digital controllers -- introduction to the "simple" PID controller</a></li>
+<li><a href="Loop signatures 10.htm">Loop problem signatures 10: Digital controllers -- testing operation</a></li>
+<li><a href="Loop signatures 11.htm">Loop problem signatures 11: Digital controllers -- the P term</a></li>
+<li><a href="Loop Signatures 12.htm">Loop problem signatures 12: Digital controllers -- the I term</a></li>
+<li><a href="Loop signatures 13.htm">Loop problem signatures 13: Digital controllers -- the D term (part 1)</a></li>
+<li><a href="Loop signatures 14.htm">Loop problem signatures 14: Digital controllers -- the D term (part 2)</a></li>
+<li><a href="Loop signatures 15.htm">Loop problem signatures 15: Digital controllers -- the D term (part 3)</a></li>
+<li><a href="Loop signatures 16.htm">Loop problem signatures 16: Digital controllers -- The Full PID Controller and Response to Setpoint or Load Changes</a></li>
+<li><a href="Loop signatures 17.htm">Loop problem signatures 17: Cascade control or "How to make a bad valve into a good valve"</a></li>
+<li><a href="Loop signatures 18.htm">Loop problem signatures 18: Digital controllers -- integral, or reset windup</a></li>
+<li><a href="Loop signatures 19.htm">Loop problem signatures 19: Noise -- nuisance or enemy?</a></li>
+<li><a href="Loop signatures 20.htm">Loop problem signatures 20: Filters -- the great deceivers</a></li>
+<li><a href="loop_signatures_31.html">Loop problem signatures 31: Non-linearity in control loops (part 2)</a></li>
+<li><a href="loop_signatures_p2-1.html">Loop problem signatures part 2-1: Loop signatures and process transfer functions</a></li>
+<li><a href="loop_signatures_p2-2.html">Loop problem signatures part 2-2: Feedforward control (part 1)</a></li>
+<li><a href="loop_signatures_p2-3.html">Loop problem signatures part 2-3: Feedforward control (part 2)</a></li>
+<li><a href="loop_signatures_p2-4.html">Loop problem signatures part 2-4: Feedforward control (part 3)</a></li>
+<li><a href="loop_signatures_p2-5.html">Loop problem signatures part 2-5: Interactive control systems</a></li>
+<li><a href="loop_signatures_p2-6.html">Loop problem signatures part 2-6: Basics of frequency plots (part 1)</a></li>
+<li><a href="loop_signatures_p2-7.html">Loop problem signatures part 2-7: Basics of frequency plots (part 2)</a></li>
+<li><a href="loop_signatures_p2-8.html">Loop problem signatures part 2-8: Basics of frequency plots (part 3)</a></li>
+<li><a href="loop_signatures_p2-9.html">Loop problem signatures part 2-9: Dynamics of simpler processes</a></li>
+<li><a href="loop_signatures_p2-10.html">Loop problem signatures part 2-10: Dynamics of simpler processes (continued)</a></li>
+<li><a href="loop_signatures_p2-11.html">Loop problem signatures part 2-11: Dynamics of simpler processes (continued)</a></li>
+</ul>
+
+<hr>
+
+<a name="casehistory"></a>
+
+<h2>Case Histories</h2>
+
+<ul>
+<li><a href="case_history_27.html">Case History 27: "Interesting problems in a cascade level loop"</a> including excessive transmitter filtering</li>
+<li><a href="case_history_29.html">Case History 29: "Scan rate problem in a DCS on a fast loop"</a> showing how excessively slow scan rate in the controller can adversely affect loop stability</li>
+<li><a href="case_history_30.html">Case History 30: "Using derivative on integrating loops"</a> using the D term of a controller is helpful in integrating loops with large lag times</li>
+<li><a href="case_history_46.html">Case History 46: "Analysis uncovers control problems in a process plant"</a> how oversized control valves and excessive filtering degrade loop performance</li>
+<li><a href="Case History 50.htm">Case History 50: "Sometimes you have to use a filter"</a> when PV filtering is not only appropriate, but hugely beneficial</li>
+<li><a href="Case History 51.htm">Case History 51: "Faulty positioner causes instability"</a> how a poorly-performing valve positioner can ruin loop stability all on its own</li>
+<li><a href="Case History 52.htm">Case History 52: "Dynamics can suddenly change in a control loop"</a> another example of a faulty valve positioner (and oversized trim) ruining your day</li>
+<li><a href="Case History 53.htm">Case History 53: "Another valve with weird characteristics"</a> a process with inconsistent gain</li>
+<li><a href="Case History 54.htm">Case History 54: "Unusual loops in a chemical plant"</a> problems including negative lead, unsymmetrical valve response, and low process gain</li>
+<li><a href="Case History 55.htm">Case History 55: "Control: perceptions versus reality"</a> typical problems found in industrial plants</li>
+<li><a href="Case History 56.htm">Case History 56: "Solution to a reagant addition control problem"</a> implementing a feedforward control strategy to achieve better control in a chemical process</li>
+<li><a href="Case History 57.htm">Case History 57: "Problems in a gas mixing system"</a> de-coupling interactive control loops through judicious PID tuning</li>
+<li><a href="Case History 58.htm">Case History 58: "Problems in an interactive combustion oil control system"</a> de-coupling interactive control loops through judicious PID tuning</li>
+<li><a href="Case History 59.htm">Case History 59: "The regulatory controls in most plants do not work properly"</a> a smorgasbord of control loop problems illustrated</li>
+<li><a href="Case History 60.htm">Case History 60: "Do mines have particularly bad control problems?"</a> yes</li>
+<li><a href="Case History 61.htm">Case History 61: "The case of the mysterious cycle on a paper machine"</a> malfunctioning valve positioners (again), piping problems, and excessive transmitter filtering</li>
+<li><a href="Case History 62.htm">Case History 62: "Are there problems in the control loops?"</a> adding cascaded flow control to improve performance, an overspanned transmitter, oversized valve, using output limits</li>
+<li><a href="Case History 63.htm">Case History 63: "Problems on a plant with no positioners on valves"</a> the title is self-explanatory</li>
+<li><a href="Case History 64.htm">Case History 64: "Control problem in an ammonium nitrate prilling plant"</a> unsymmetrical process response, thermal lag time</li>
+<li><a href="Case History 65.htm">Case History 65: "The only magic: understanding what you are doing"</a> poor implementation of PID algorithms in PLCs, poor documentation, leaking control valves, poor control strategy</li>
+<li><a href="Case History 66.htm">Case History 66: "A depressing day in the plant with no miracles"</a> sticky control valves</li>
+<li><a href="Case History 67.htm">Case History 67: "Problems encountered in level controls"</a> how to tune (and not tune) integrating processes!</li>
+<li><a href="Case History 68.htm">Case History 68: "Control mayhem on a mine"</a> poor implementation of PID algorithms in PLCs, poor control strategy</li>
+<li><a href="Case History 69.htm">Case History 69: "Some unusual integrating processes"</a> improper transmitter ranging, damage to valve caused by cycling, "positive lead integrating" process, "negative lead integrating" process, severe valve hysteresis</li>
+<li><a href="case_history_70.html">Case History 70: "Flow loops behaving badly"</a> lots of bad control valves and positioners, stick-slip cycling explained.</li>
+<li><a href="case_history_71.html">Case History 71: "The amazing problem free plant"</a> valve hysteresis, controller detuning, flow saturation</li>
+<li><a href="case_history_75.html">Case History 75: "Mould level control in continuous casting machines"</a> a case of interesting oscillations caused by ???</li>
+<li><a href="case_history_76.html">Case History 76: "Money being wasted: improve the performance of your base layer controls"</a> the costs of poor PID control</li>
+<li><a href="case_history_77.html">Case History 77: "Problems in the control of steel reheat furnaces"</a> poor performing control valves (stiction, non-repeatability, leakage, etc.)</li>
+<li><a href="case_history_78.html">Case History 78: "Problems in the control of steel reheat furnaces (continued)"</a></li>
+<li><a href="case_history_79.html">Case History 79: "Are smart positioners the answer to all valve problems?"</a> an array of problematic control valves</li>
+<li><a href="case_history_80.html">Case History 80: "Poor control performance is a world wide phenomenon"</a> poor control valve performance, challenging process dynamics, challenging labor structure</li>
+<li><a href="case_history_81.html">Case History 81: "Good control requires obedient valves"</a> excessive valve hysteresis</li>
+<li><a href="case_history_82.html">Case History 82: "Problems in a Canadian plant"</a> unusual controller behavior in the anti-reset windup feature, sticky valve, weird variable-speed pump, oversized and sticky valve</li>
+<li><a href="case_history_83.html">Case History 83: "Difficult control loops in a board factory (part 1)"</a> VFDs as final control elements, a case of high controller gain, how to open-loop test integrating processes, applying filtering to an interesting process</li>
+<li><a href="case_history_84.html">Case History 84: "Difficult control loops in a board factory (part 2)"</a> an application for proportional-only control on an integrating process, where integral cannot be used due to SP overshoot and derivative cannot be used because there is no lag</li>
+<li><a href="case_history_85.html">Case History 85: "pH problems at an Australian mine"</a> Michael Brown corresponds with an engineer on pH control problems</li>
+<li><a href="case_history_86.html">Case History 86: "Problems in controlling the pressure in an arc furnace"</a> interactive pressure controls necessitating a change in control strategy</li>
+<li><a href="case_history_87.html">Case History 87: "Problems beyond belief!"</a> the joys of bidding on optimization jobs, dueling control valves, sticking control valves, the value of investigating loop dynamics before tuning</li>
+<li><a href="case_history_88.html">Case History 88: "Instrument accuracy drift problems with ambient temperature changes"</a> sensing instrumentation problems (no loop optimization examples)</li>
+<li><a href="case_history_89.html">Case History 89: "Conveyor start-up problems"</a> variable speed motors with fluid couplings, controller (PLC) ambiguities, better control strategy</li>
+<li><a href="case_history_90.html">Case History 90: "Tuning is also important"</a> really slow tuning on a flow loop, slow tuning on a cascaded (slave) flow loop</li>
+<li><a href="case_history_91.html">Case History 91: "Mayhem in the mines"</a> problems with weighfeeder controls (noise, deadtime, hysteresis)</li>
+<li><a href="case_history_92.html">Case History 92: "The controller has gone out of tune!"</a> testing valves for hysteresis, a weird case of varying DCS scan time, judicious application of PV filtering</li>
+<li><a href="case_history_93.html">Case History 93: "Specifying a digital feedback controller (part 1)"</a> what control systems should offer for PID algorithms</li>
+<li><a href="case_history_97.html">Case History 97: "Monsters in a chemical plant"</a> rude awakening for a new engineer, an oversized control valve</li>
+<li><a href="case_history_98.html">Case History 98: "Flow signal reveals all"</a> useful diagnostic information from a non-controlling flowmeter, sticky control valves</li>
+<li><a href="case_history_100.html">Case History 100: "The 100th article!"</a></li>
+<li><a href="case_history_101.html">Case History 101: "Loop analysis uncovers problems"</a> weird valve behavior, arc furnace pressure control (monitoring flow through valve)</li>
+<li><a href="case_history_102.html">Case History 102: "How control systems differ in various industries (part 1)"</a> interesting comparisons of industries, integral-only controllers, oversized valves</li>
+<li><a href="case_history_103.html">Case History 103: "How control systems differ in various industries (part 2)"</a> managing large amounts of PV noise, dealing with PV noise in a ratio loop, ineffective control strategy, how to test tuning</li>
+<li><a href="case_history_104.html">Case History 104: "Never forget the fundamentals of process control"</a> interactive pressure control loops, de-coupling by tuning, sticky valve</li>
+<li><a href="case_history_105.html">Case History 105: "Airflow controls in mining flotation banks"</a> sticky valves causing flow problems, poor flow transmitters, saturated (under-sized) valve</li>
+<li><a href="case_history_106.html">Case History 106: "How process plants can succeed in these tough economic times"</a> complete with a quiz on how well your plant's controls are doing!</li>
+<li><a href="case_history_107.html">Case History 107: "The horrible flywheel effect"</a> odd control algorithms, slow integrating process control</li>
+<li><a href="case_history_108.html">Case History 108: "Successful optimization of interacting pressure loops"</a> good control achieved through proper tuning</li>
+<li><a href="case_history_116.html">Case History 116: Poor control strategy: minimum flow control</a> an attempt to use an odd set of split-ranges to maintain minimum flow on a pump</li>
+</ul>
+
+<hr>
+
+<a href="../index.html"><b>Back to main index</b></a>
+
+</body>
+
+</html>

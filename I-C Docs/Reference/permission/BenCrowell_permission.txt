@@ -1,0 +1,25 @@
+ 
+Date:  Tue, 10 Dec 2002 20:35:35 -0800 
+From:  Ben Crowell <crowell02@lightandmatter.com> 
+Subject:  Re: Redistribution of "Light and Matter" books 
+To:  tonykuphaldt@lycos.com 
+ 
+  
+
+Hi Tony,
+
+That sounds fine. Thanks for letting me know, but it's not a problem at all.
+
+BTW, I have two new books:
+
+ Simple Nature:
+      http://www.lightandmatter.com/area1sn.html
+
+ Discover Physics:
+      http://www.lightandmatter.com/area1dp.html
+
+Are these students engineering majors? If so, then Simple Nature might be more like
+the level they need. Simple Nature is also a real open-source project, with the source
+code available in LaTeX format.
+
+

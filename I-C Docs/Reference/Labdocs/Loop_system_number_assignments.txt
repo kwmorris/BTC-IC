@@ -1,0 +1,1129 @@
+
+Loop system number assignments
+
+
+Legend:
+[*] Finished (installed and labeled/configured)
+[+] Installed but not yet labeled and/or configured
+[ ] Does not yet exist
+
+
+-------------------------------------------------
+DMC LAB CONTROL PANELS
+
+[*] (South-most, left panel):  control panel 1 [CP1]
+[*] (Middle, center panel):    control panel 2 [CP2]
+[*] (North-most, right panel): control panel 3 [CP3]
+
+
+-------------------------------------------------
+DMC LAB JUNCTION BOXES
+
+[*] Main junction box north of North-Center rack: JB-1
+[*] Large enclosure bolted to turbocompressor rack: JB-2
+[*] Box on south wall of compressor room (outside): JB-3
+[*] Small enclosure on turbocompressor rack: JB-4
+[*] Medium junction box on west side of North-East rack: JB-5
+[*] Medium junction box on east side of North-Center rack: JB-6
+[*] Medium junction box on east side of North-West rack: JB-7
+[*] Medium junction box on west side of South-East rack: JB-8
+[*] Very large enclosure bolted to south end of east-side rack on north end of room: JB-15
+[*] Small enclosure bolted to east wall of compressor room, holding the lockout relay: JB-16
+[*] Medium enclosure bolted to north end of south-west rack, with a caSCADA RTU inside: JB-17
+
+
+-------------------------------------------------
+DMC LAB TERMINAL BLOCKS
+
+Inside control panel CP1:
+[+] 120 VAC power, front panel left: TB-10
+[*] Analog signals, rear panel left: TB-11
+[+] 24 VDC supply, rear panel right: TB-12
+[ ] Switch/lamp signals, front panel right: TB-13
+[*] DAQ analog signals, rear panel left: TB-29
+
+Inside control panel CP2:
+[+] 120 VAC power, front panel left: TB-20
+[*] Analog signals, rear panel left: TB-21
+[+] 24 VDC supply, rear panel right: TB-22
+[ ] Switch/lamp signals, front panel right: TB-23
+[*] DAQ analog signals, rear panel left: TB-29
+
+Inside control panel CP3:
+[+] 120 VAC power, front panel left: TB-30
+[*] Analog signals, rear panel left: TB-31
+[*] Analog signals, rear panel right: TB-32
+[ ] Switch/lamp signals, front panel right: TB-33
+[*] DAQ analog signals, rear panel left: TB-39
+
+Inside junction box JB-1:
+[*] Analog signals from controllers, left: TB-40
+[*] Analog signals to field instruments, right: TB-41
+
+Turbocompressor rack junction box JB-2:
+[*] Analog signals, left: TB-50
+[*] Analog signals, right: TB-51
+[ ] Discrete signals, right: TB-52
+[*] AC power distribution: TB-53
+[*] DC power distribution: TB-54
+
+Compressor room junction box JB-3:
+[+] Analog signals: TB-60
+[ ] Discrete signals: TB-61
+[ ] Networking signals: TB-62
+
+Compressor room lockout relay box JB-16:
+[*] Discrete signals: TB-105
+
+Turbocompressor rack junction box JB-4:
+[*] Analog signals: TB-70
+[*] Discrete signals: TB-71
+
+Lift station / compressor lockout control junction box JB-15:
+[+] 120VAC/discrete signals: TB-101 (underneath large PLC rack)
+[ ] 120VAC/discrete signals: TB-102 (underneath small PLC rack)
+[ ] TB-103 
+[ ] TB-104
+
+Inside junction box JB-5:
+[*] TB-92
+
+Inside junction box JB-6:
+[*] TB-93
+
+Inside junction box JB-7:
+[*] TB-95
+
+Inside junction box JB-8:
+[*] TB-99
+
+Inside junction box JB-9:
+[*] TB-98
+
+Inside junction box JB-10:
+[*] TB-91
+
+Inside junction box JB-11:
+[*] TB-94
+
+Inside junction box JB-12:
+[*] TB-96
+
+Inside junction box JB-13:
+[*] TB-100
+
+Inside junction box JB-14:
+[*] TB-97
+
+Inside junction box JB-17:
+[*] TB-98
+[*] TB-99
+
+DeltaV DCS-01 (north) cabinet:
+[*] Control signals, left: TB-80
+    Generic Loop #1 analog in: card 4, channel 1 -- TB80-1 and TB80-2
+    Generic Loop #1 analog out: card 6, channel 1 -- TB80-19 and TB80-20
+
+    Generic Loop #2 analog in: card 4, channel 2 -- TB80-3 and TB80-4
+    Generic Loop #2 analog out: card 6, channel 2 -- TB80-21 and TB80-22
+
+    Generic Loop #3 analog in: card 4, channel 3 -- TB80-5 and TB80-6
+    Generic Loop #3 analog out: card 6, channel 3 -- TB80-23 and TB80-24
+
+    Generic Loop #4 analog in: card 4, channel 4 -- TB80-7 and TB80-8
+    Generic Loop #4 analog out: card 6, channel 4 -- TB80-25 and TB80-26
+
+    Generic Loop #5 analog in: card 4, channel 5 -- TB80-9 and TB80-10
+    Generic Loop #5 analog out: card 6, channel 5 -- TB80-27 and TB80-28
+
+    Generic Loop #6 analog in: card 4, channel 6 -- TB80-11 and TB80-12
+    Generic Loop #6 analog out: card 6, channel 6 -- TB80-29 and TB80-30
+
+[ ] Control signals, right: TB-81
+
+DeltaV DCS-02 (south) cabinet:
+[*] DeltaV I/O control signals, upper east side: TB-82
+    Generic Loop #21 analog in: card 1, channel 1 -- TB82-1 and TB82-2
+    Generic Loop #21 analog out: card 4, channel 1 -- TB82-33 and TB82-34
+
+    Generic Loop #22 analog in: card 1, channel 2 -- TB82-3 and TB82-4 
+    Generic Loop #22 analog out: card 4, channel 2 -- TB82-35 and TB82-36 
+
+    Generic Loop #23 analog in: card 1, channel 3 -- TB82-5 and TB82-6 
+    Generic Loop #23 analog out: card 4, channel 3 -- TB82-37 and TB82-38 
+
+    Generic Loop #24 analog in: card 1, channel 4 -- TB82-7 and TB82-8 
+    Generic Loop #24 analog out: card 4, channel 4 -- TB82-39 and TB82-40 
+
+    Generic Loop #25 analog in: card 1, channel 5 -- TB82-9 and TB82-10 
+    Generic Loop #25 analog out: card 4, channel 5 -- TB82-41 and TB82-42 
+
+    Generic Loop #26 analog in: card 1, channel 6 -- TB82-11 and TB82-12 
+    Generic Loop #26 analog out: card 4, channel 6 -- TB82-43 and TB82-44 
+
+    Generic Loop #27 analog in: card 1, channel 7 -- TB82-13 and TB82-14 
+    Generic Loop #27 analog out: card 4, channel 7 -- TB82-45 and TB82-46 
+
+    Generic Loop #28 analog in: card 1, channel 8 -- TB82-15 and TB82-16 
+    Generic Loop #28 analog out: card 4, channel 8 -- TB82-47 and TB82-48 
+
+[*] DeltaV I/O field cables, lower east side: TB-83
+[*] PLC/DDC I/O field cables, left west side: TB-84
+[*] DDC I/O control cables, middle west side: TB-85
+[*] 24 VDC power terminals, right west side: TB-86
+[*] PLC I/O control cables, upper west side: TB-87
+
+
+-------------------------------------------------
+LOOP NUMBERS (permanently installed or reserved)
+
+Master loop number schedule:
+[*] DMC 122/123 loops =                1XX
+[ ] Main campus remote SCADA loops =   2XX
+[*] Perry Center hatchery loops =      3XX
+[ ] Whatcom Falls hatchery loops =     4XX
+[ ] Cedar Grove Park loops =           5XX
+
+[*] PT-101 (Compressed air pressure)
+    --> Rosemount 1151 analog transmitter
+    --> CTRL-01 (north) DCS node, card 1 channel 4
+    --> Range = 0 to 100 PSI
+
+[ ] TT-102 (Upper lab room 122 temperature)
+    --> Rosemount model 3044 smart transmitter
+    --> 100 ohm RTD sensor
+
+[ ] TT-103 (Lower lab room 122 temperature)
+    --> Rosemount model 3044 smart transmitter
+    --> 100 ohm RTD sensor
+
+[ ] TT-104 (Outside temperature, compressor room)
+
+[*] PT-105 (Compressor receiver tank pressure)
+    --> Rosemount 1151 smart transmitter
+    --> CTRL-01 (north) DCS node, card 1 channel 3
+    --> Range = 0 to 150 PSI
+
+[ ] LT-106 (Rain gauge level indicator -- electronic)
+
+[*] LT-107 (Rain gauge level indicator -- pneumatic)
+    --> Foxboro model 15 d/p cell
+
+[*] TT-108 (Outside temperature, roof -- DeltaV DCS loop)
+    --> Rosemount model 644 smart transmitter
+    --> 100 ohm RTD sensor
+    --> Range = -10 to 130 deg F
+    --> CTRL-02 (south) DCS node, card 3 channel 8
+
+[*] ??-109
+
+[ ] TT-110 (Convection Oven control loop)
+    --> TT-110 CTRL-01 (north) DCS node, card 1 channel 5
+    --> TV-110 CTRL-01 (north) DCS node, card 3 channel 1
+
+
+(Turbocompressor system)
+"RTU-TB1" remote terminal unit
+DAQ=169.254.8.121 ; Computer=169.254.8.123
+Netmask = 255.255.255.0 (all devices) 
+-------------------------------------------------------------------------------
+|  TAG   |    DESCRIPTION    |  LOCATION, RTU   |    I/O, CHANNEL, RANGE      |
+-------------------------------------------------------------------------------
+| ET-150 |    Loop power     |  Turbocompressor | LabJack T7 analog input 0   |
+|(FUTURE)|  supply voltage   |     RTU-TB1      | caSCADA f_channel_00        |
+|        |                   |                  | 0.0 to 30.0 volts DC        |
+-------------------------------------------------------------------------------
+| PT-151 |     Turbine       |  Turbocompressor | LabJack T7 analog input 1   |
+|(FUTURE)|  inlet pressure   |     RTU-TB1      | caSCADA f_channel_01        |
+|        |                   |                  | 0.0 to ??? inches WC        |
+-------------------------------------------------------------------------------
+| PT-152 |     Turbine       |  Turbocompressor | LabJack T7 analog input 2   |
+|(FUTURE)|  outlet pressure  |     RTU-TB1      | caSCADA f_channel_02        |
+|        |                   |                  | 0.0 to ??? inches WC        |
+-------------------------------------------------------------------------------
+| PT-153 |    Compressor     |  Turbocompressor | LabJack T7 analog input 3   |
+|(FUTURE)|  outlet pressure  |     RTU-TB1      | caSCADA f_channel_03        |
+|        |                   |                  | 0.0 to ??? inches WC        |
+-------------------------------------------------------------------------------
+| FT-154 |   Turbine flow    |  Turbocompressor | LabJack T7 analog input 4   |
+|(FUTURE)|   venturi tube    |     RTU-TB1      | caSCADA f_channel_04        |
+|        | Redundant xmtr 1  |                  | 0.0 to ??? inches WC        |
+-------------------------------------------------------------------------------
+| FT-155 |   Turbine flow    |  Turbocompressor | LabJack T7 analog input 5   |
+|(FUTURE)|   venturi tube    |     RTU-TB1      | caSCADA f_channel_05        |
+|        | Redundant xmtr 2  |                  | 0.0 to ??? inches WC        |
+-------------------------------------------------------------------------------
+| FT-156 |   Turbine flow    |  Turbocompressor | LabJack T7 analog input 6   |
+|(FUTURE)|   venturi tube    |     RTU-TB1      | caSCADA f_channel_06        |
+|        | Redundant xmtr 3  |                  | 0.0 to ??? inches WC        |
+-------------------------------------------------------------------------------
+| TT-157 |     Lube oil      |  Turbocompressor | LabJack T7 analog input 7   |
+|(FUTURE)|   temperature     |     RTU-TB1      | caSCADA f_channel_07        |
+|        |                   |                  | 0.0 to 100.0 degrees F      |
+-------------------------------------------------------------------------------
+| TT-158 |   Ambient air     |  Turbocompressor | LabJack T7 analog input 8   |
+|(FUTURE)|   temperature     |     RTU-TB1      | caSCADA f_channel_08        |
+|        |                   |                  | 0.0 to 100.0 degrees F      |
+-------------------------------------------------------------------------------
+| TT-159 |  Turbine inlet    |  Turbocompressor | LabJack T7 analog input 9   |
+|(FUTURE)|   temperature     |     RTU-TB1      | caSCADA f_channel_09        |
+|        |                   |                  | 0.0 to 150.0 degrees F      |
+-------------------------------------------------------------------------------
+| TT-160 |  Turbine outlet   |  Turbocompressor | LabJack T7 analog input 10  |
+|(FUTURE)|   temperature     |     RTU-TB1      | caSCADA f_channel_10        |
+|        |                   |                  | 0.0 to 150.0 degrees F      |
+-------------------------------------------------------------------------------
+| TT-161 | Compressor outlet |  Turbocompressor | LabJack T7 analog input 11  |
+|(FUTURE)|   temperature     |     RTU-TB1      | caSCADA f_channel_11        |
+|        |                   |                  | 0.0 to 150.0 degrees F      |
+-------------------------------------------------------------------------------
+| TT-162 |   Motor case      |  Turbocompressor | LabJack T7 analog input 12  |
+|(FUTURE)|   temperature     |     RTU-TB1      | caSCADA f_channel_12        |
+|        |                   |                  | 0.0 to 150.0 degrees F      |
+-------------------------------------------------------------------------------
+| FY-175 |   Turbine flow    |  Turbocompressor | caSCADA f_channel_15        |
+|(FUTURE)|   blower speed    |     RTU-TB1      | 0.0 to 60.0 Hz              |
+|        |    low select     |                  |                             |
+-------------------------------------------------------------------------------
+| FY-176 |   Turbine flow    |  Turbocompressor | caSCADA f_channel_16        |
+|(FUTURE)|   blower speed    |     RTU-TB1      | 0.0 to 60.0 Hz              |
+|        |   median select   |                  |                             |
+-------------------------------------------------------------------------------
+| FY-177 |   Turbine flow    |  Turbocompressor | caSCADA f_channel_17        |
+|(FUTURE)|   blower speed    |     RTU-TB1      | 0.0 to 60.0 Hz              |
+|        |    high select    |                  |                             |
+-------------------------------------------------------------------------------
+
+
+
+* BTC main campus remote SCADA instrument loops
+
+(Morse Center scrap metal yard)
+"RTU-MC1" remote terminal unit
+DAQ=169.254.8.1 ; Radio=169.254.8.2 ; Computer=169.254.8.3
+Netmask = 255.255.255.0 (all devices) 
+-------------------------------------------------------------------------------
+|  TAG   |    DESCRIPTION    |  LOCATION, RTU   |    I/O, CHANNEL, RANGE      |
+-------------------------------------------------------------------------------
+|        |    Loop power     | Scrap metal yard | LabJack T7 analog input 0   |
+| ET-200 |  supply voltage   |     RTU-MC1      | caSCADA f_channel_00        |
+|(FUTURE)|                   |                  | 0.0 to 30.0 volts DC        |
+-------------------------------------------------------------------------------
+|        |     Baghouse      | Scrap metal yard | LabJack T7 analog input 1   |
+| PT-201 |    differential   |     RTU-MC1      | caSCADA f_channel_01        |
+|        |    pressure       |                  | 0.0 to 3.0 inches WC        |
+-------------------------------------------------------------------------------
+|        |     Baghouse      | Scrap metal yard | LabJack T7 analog input 2   |
+| FT-202 |   exhaust duct    |     RTU-MC1      | caSCADA f_channel_02        |
+|        |   air velocity    |                  | Flow range 0.0 to 45.37 MPH |
+|        |                   |                  | DP range 0.0 to 1.0 inch WC |
+-------------------------------------------------------------------------------
+|        |                   | Scrap metal yard | LabJack T7 analog input 3   |
+| FT-203 |    Wind speed     |     RTU-MC1      | caSCADA f_channel_03        |
+|        |                   |                  | Flow range 0.0 to ??? MPH   |
+|        |                   |                  | DP range 0.0 to ??? inch WC |
+-------------------------------------------------------------------------------
+|        |     Baghouse      | Scrap metal yard | LabJack T7 analog input 4   |
+| AT-204 |     air CO2       |     RTU-MC1      | caSCADA f_channel_04        |
+|(FUTURE)|   concentration   |                  | 0.0 to 400.0 ppm            |
+-------------------------------------------------------------------------------
+|        |    Ambient air    | Scrap metal yard | LabJack T7 analog input 5   |
+| TT-205 |    temperature    |     RTU-MC1      | caSCADA f_channel_05        |
+|(FUTURE)|                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |  Ambient sound    | Scrap metal yard | LabJack T7 analog input 6   |
+| GT-206 |      level        |     RTU-MC1      | caSCADA f_channel_06        |
+|(FUTURE)|                   |                  | 50 to 120 dBA               |
+-------------------------------------------------------------------------------
+|        |     Sunlight      | Scrap metal yard | LabJack T7 analog input 7   |
+| RT-207 |     intensity     |     RTU-MC1      | caSCADA f_channel_07        |
+|(FUTURE)|                   |                  | 0 to 100 percent            |
+-------------------------------------------------------------------------------
+|        |    Baghouse       | Scrap metal yard | LabJack T7 analog input 8   |
+| TT-208 |  exhaust duct     |     RTU-MC1      | caSCADA f_channel_08        |
+|        |   temperature     |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+
+(Windmill shed)
+"RTU-WM1" remote terminal unit
+DAQ=169.254.8.11 ; Radio=169.254.8.12 ; Computer=169.254.8.13  
+Netmask = 255.255.255.0 (all devices) 
+-------------------------------------------------------------------------------
+|  TAG   |    DESCRIPTION    |  LOCATION, RTU   |    I/O, CHANNEL, RANGE      |
+-------------------------------------------------------------------------------
+|        |    Loop power     |  Windmill shed   | LabJack T7 analog input 0   |
+| ET-220 |  supply voltage   |     RTU-WM1      | caSCADA f_channel_00        |
+|        |                   |                  | 0.0 to 30.0 volts DC        |
+-------------------------------------------------------------------------------
+|        |                   |  Windmill shed   | LabJack T7 analog input 1   |
+| TT-221 | Outside air temp  |     RTU-WM1      | caSCADA f_channel_01        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |                   |  Windmill shed   | LabJack T7 analog input 2   |
+| TT-222 | Outside air temp  |     RTU-WM1      | caSCADA f_channel_02        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |                   |  Windmill shed   | LabJack T7 analog input 3   |
+| TT-223 | Outside air temp  |     RTU-WM1      | caSCADA f_channel_03        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        | Outside air temp  |  Windmill shed   | (no I/O assignment)         |
+| TY-224 |  (median select)  |     RTU-WM1      | caSCADA f_channel_14        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |                   |  Windmill shed   | LabJack T7 analog input 4   |
+| TT-225 |     Room temp     |     RTU-WM1      | caSCADA f_channel_04        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |                   |  Windmill shed   | LabJack T7 analog input 5   |
+| TT-226 |     Room temp     |     RTU-WM1      | caSCADA f_channel_05        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |                   |  Windmill shed   | LabJack T7 analog input 6   |
+| TT-227 |     Room temp     |     RTU-WM1      | caSCADA f_channel_06        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |     Room temp     |  Windmill shed   | (no I/O assignment)         |
+| TY-228 |  (median select)  |     RTU-WM1      | caSCADA f_channel_15        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |  Windmill shed   | LabJack T7 analog input 7   |
+| PDT-229|    DP sensor      |     RTU-WM1      | caSCADA f_channel_07        |
+|        |   (roof level)    |                  | 0.0 to 2.5 inches WC        |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |  Windmill shed   | LabJack T7 analog input 8   |
+| PDT-230|    DP sensor      |     RTU-WM1      | caSCADA f_channel_08        |
+|        |   (roof level)    |                  | 0.0 to 2.5 inches WC        |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |  Windmill shed   | LabJack T7 analog input 9   |
+| PDT-231|    DP sensor      |     RTU-WM1      | caSCADA f_channel_09        |
+|        |   (roof level)    |                  | 0.0 to 2.5 inches WC        |
+-------------------------------------------------------------------------------
+|        |  Roof wind speed  |  Windmill shed   | (no I/O assignment)         |
+| FY-232 |  (median select)  |     RTU-WM1      | caSCADA f_channel_16        |
+|        |                   |                  | 0.0 to ??? MPH              |
+-------------------------------------------------------------------------------
+|        |  Roof wind speed  |  Windmill shed   | (no I/O assignment)         |
+| FY-233 |     (average)     |     RTU-WM1      | caSCADA f_channel_17        |
+|        |                   |                  | 0.0 to ??? MPH              |
+-------------------------------------------------------------------------------
+|        |  Roof wind speed  |  Windmill shed   | (no I/O assignment)         |
+| FY-234 |   (high select)   |     RTU-WM1      | caSCADA f_channel_18        |
+|        |                   |                  | 0.0 to ??? MPH              |
+-------------------------------------------------------------------------------
+
+
+
+* Perry Center (Maritime Heritage Center salmon hatchery) instrument loops
+-------------------------------------------------------------------------------
+|  TAG   |    DESCRIPTION    |  LOCATION, LOOP  |    I/O, REGISTER, RANGE     |
+-------------------------------------------------------------------------------
+|        | Water temperature | Field panel 1    | Card 1, Channel 0, 4-20 mA  |
+| TT-301 | West side of west | + terminal = 21  | F8:0 floating-point type    |
+|        | egg tray trough   | - terminal = 11  | 32.0 to 80.0 degrees F      |
+|        | (Bank C West)     | "Wet lab" room   | PLC IP = 169.254.10.1       |
+-------------------------------------------------------------------------------
+|        | Water temperature | Field panel 1    | Card 2, Channel 0, 4-20 mA  |
+| TT-302 | East side of west | + terminal = 25  | F8:4 floating-point type    |
+|        | egg tray trough   | - terminal = 15  | 32.0 to 80.0 degrees F      |
+|        | (Bank C East)     | "Wet lab" room   | PLC IP = 169.254.10.1       |
+-------------------------------------------------------------------------------
+|        | Water temperature | Field panel 2    | Card 1, Channel 0, 4-20 mA  |
+| TT-303 | West side Center  | + terminal = 21  | F8:0 floating-point type    |
+|        | egg tray trough   | - terminal = 11  | 32.0 to 80.0 degrees F      |
+|        | (Bank B West)     | "Wet lab" room   | PLC IP = 169.254.10.2       |
+-------------------------------------------------------------------------------
+|        | Water temperature | Field panel 2    | Card 2, Channel 0, 4-20 mA  |
+| TT-304 | East side Center  | + terminal = 25  | F8:4 floating-point type    |
+|        | egg tray trough   | - terminal = 15  | 32.0 to 80.0 degrees F      |
+|        | (Bank B East)     | "Wet lab" room   | PLC IP = 169.254.10.2       |
+-------------------------------------------------------------------------------
+|        | Water temperature | Field panel 3    | Card 1, Channel 0, 4-20 mA  |
+| TT-305 | West side of east | + terminal = 21  | F8:0 floating-point type    |
+|        | egg tray trough   | - terminal = 11  | 32.0 to 80.0 degrees F      |
+|        | (Bank A West)     | "Wet lab" room   | PLC IP = 169.254.10.3       |
+-------------------------------------------------------------------------------
+|        | Water temperature | Field panel 3    | Card 2, Channel 0, 4-20 mA  |
+| TT-306 | East side of east | + terminal = 25  | F8:4 floating-point type    |
+|        | egg tray trough   | - terminal = 15  | 32.0 to 80.0 degrees F      |
+|        | (Bank A East)     | "Wet lab" room   | PLC IP = 169.254.10.3       |
+-------------------------------------------------------------------------------
+|        | Water flow rate   | Field panel 1    | Card 1, Channel 1, 4-20 mA  |
+| FT-307 | to egg trays,     | + terminal = 22  | F8:1 floating-point type    |
+|        | from West trough  | - terminal = 12  | 0.0 to 113.882 GPM          |
+|        | (Bank C)          | "Wet lab" room   | PLC IP = 169.254.10.1       |
+|        |                   |                  | Xmtr span = 6.6 inches sq.rt|
+|        |                   |                  | LRV = 9.4"WC URV = 16"WC    |
+-------------------------------------------------------------------------------
+|        | Water flow rate   | Field panel 2    | Card 1, Channel 1, 4-20 mA  |
+| FT-308 | to egg trays,     | + terminal = 22  | F8:1 floating-point type    |
+|        | from Center trough| - terminal = 12  | 0.0 to 113.882 GPM          |
+|        | (Bank B)          | "Wet lab" room   | PLC IP = 169.254.10.2       |
+|        |                   |                  | Xmtr span = 6.6 inches sq.rt|
+|        |                   |                  | LRV = 2.3"WC URV = 8.9"WC   |
+-------------------------------------------------------------------------------
+|        | Water flow rate   | Field panel 3    | Card 1, Channel 1, 4-20 mA  |
+| FT-309 | to egg trays,     | + terminal = 22  | F8:1 floating-point type    |
+|        | from East trough  | - terminal = 12  | 0.0 to 113.882 GPM          |
+|        | (Bank A)          | "Wet lab" room   | PLC IP = 169.254.10.3       |
+|        |                   |                  | Xmtr span = 6.6 inches sq.rt|
+|        |                   |                  | LRV = 12.9"WC URV = 19.5"WC |
+-------------------------------------------------------------------------------
+|        | Water pH          | Field panel 1    | Card 1, Channel 2, 4-20 mA  |
+| AT-310 | to egg trays,     | + terminal = 23  | F8:2 floating-point type    |
+|        | from West trough  | - terminal = 13  | 4.0 to 10.0 pH              |
+|        | (Bank C)          | "Wet lab" room   | PLC IP = 169.254.10.1       |
+-------------------------------------------------------------------------------
+|        | Water pH          | Field panel 2    | Card 1, Channel 2, 4-20 mA  |
+| AT-311 | to egg trays,     | + terminal = 23  | F8:2 floating-point type    |
+|        | from Center trough| - terminal = 13  | 4.0 to 10.0 pH              |
+|        | (Bank B)          | "Wet lab" room   | PLC IP = 169.254.10.2       |
+-------------------------------------------------------------------------------
+|        | Water pH          | Field panel 3    | Card 1, Channel 2, 4-20 mA  |
+| AT-312 | to egg trays,     | + terminal = 23  | F8:2 floating-point type    |
+|        | from East trough  | - terminal = 13  | 4.0 to 10.0 pH              |
+|        | (Bank A)          | "Wet lab" room   | PLC IP = 169.254.10.3       |
+-------------------------------------------------------------------------------
+|        | Dissolved O2      | Field panel 4    | Card 1, Channel 0, 4-20 mA  |
+| AT-313 | in fish tank,     | + terminal = 21  | F8:0 floating-point type    |
+|   (a)  | one of three      | - terminal = 11  | 0.0 to ???.? ppm            |
+|        | redundant probes  | "Wet lab" room   | PLC IP = 169.254.10.4       |
+|        | *** (FUTURE) ***  |                  |                             |
+-------------------------------------------------------------------------------
+|        | Dissolved O2      | Field panel 4    | Card 1, Channel 1, 4-20 mA  |
+| AT-313 | in fish tank,     | + terminal = 22  | F8:1 floating-point type    |
+|   (b)  | one of three      | - terminal = 12  | 0.0 to ???.? ppm            |
+|        | redundant probes  | "Wet lab" room   | PLC IP = 169.254.10.4       |
+|        | *** (FUTURE) ***  |                  |                             |
+-------------------------------------------------------------------------------
+|        | Dissolved O2      | Field panel 4    | Card 1, Channel 2, 4-20 mA  |
+| AT-313 | in fish tank,     | + terminal = 23  | F8:2 floating-point type    |
+|   (c)  | one of three      | - terminal = 13  | 0.0 to ???.? ppm            |
+|        | redundant probes  | "Wet lab" room   | PLC IP = 169.254.10.4       |
+|        | *** (FUTURE) ***  |                  |                             |
+-------------------------------------------------------------------------------
+|        | Water flow to     | Field panel 5    |                             |
+| FT-314 | Wet Lab (total)   |                  |                             |
+|        | *** (FUTURE) ***  |                  | 0.0 to 400.0 GPM            |
+|        |                   | 1st mech room    | PLC IP = 169.254.10.5       |
+-------------------------------------------------------------------------------
+|        | O2 concentration  | Field panel 6    |                             |
+| AT-315 | of boiler exhaust |                  |      *** (FUTURE) ***       |
+|        |                   |                  | 0.0 to 21.0%                |
+|        |                   | 2nd mech room    | PLC IP = 169.254.10.6       |
+-------------------------------------------------------------------------------
+|        | CO concentration  | Field panel 6    |                             |
+| AT-316 | of boiler exhaust |                  |      *** (FUTURE) ***       |
+|        |                   |                  | 0.0 to 30.0 ppm (?)         |
+|        |                   | 2nd mech room    | PLC IP = 169.254.10.6       |
+-------------------------------------------------------------------------------
+|        | NOx concentration | Field panel 6    |                             |
+| AT-317 | of boiler exhaust |                  |      *** (FUTURE) ***       |
+|        |                   |                  | 0.0 to 30.0 ppm (?)         |
+|        |                   | 2nd mech room    | PLC IP = 169.254.10.6       |
+-------------------------------------------------------------------------------
+|        | Air temperature   | Headbox at creek | TT-318.PV (WirelessHART)    |
+| TT-318 | near Whatcom Creek|                  | Modbus address 30001 (float)|
+|        | BTC tag # 69456   |                  | Internal device sensor      |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Air temperature,  | Light pole       | TT-319.PV (WirelessHART)    |
+| TT-319 | outside ambient   |                  | Modbus address 30003 (float)|
+|        | BTC tag # 69446   |                  | 3-wire Pt100 RTD (0.00385)  |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Water temperature | Surge tank       | TT-320.PV (WirelessHART)    |
+| TT-320 | Surge pond #0     |                  | Modbus address 30005 (float)|
+|        | BTC tag # 69459   |                  | 3-wire Pt100 RTD (0.00385)  |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Water temperature | East fish pond   | TT-321.PV (WirelessHART)    |
+| TT-321 | Fish pond #1      |                  | Modbus address 30007 (float)|
+|        | BTC tag # 69445   |                  | 3-wire Pt100 RTD (0.00385)  |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Water temperature | West fish pond   | TT-322.PV (WirelessHART)    |
+| TT-322 | Fish pond #2      |                  | Modbus address 30009 (float)|
+|        | BTC tag # 69447   |                  | 3-wire Pt100 RTD (0.00385)  |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Air temperature,  |                  | TT-323.PV (WirelessHART)    |
+| TT-323 | Wet Lab room      |                  | Modbus address 30011 (float)|
+|        | *** (FUTURE) ***  |                  | 3-wire Pt100 RTD (0.00385)  |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Water flow        | Weir at head of  | FT-324.PV (WirelessHART)    |
+| FT-324 | fish ladder       | fish channel     | Modbus address 30013 (float)|
+|        | *** (FUTURE) ***  |                  | 0.0 to 2400.0 GPM (?)       |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Fish counter      | Waterslide into  | QT-325.PV (WirelessHART)    |
+| QT-325 |                   | holding basin    | Modbus address 30015 (int)  |
+|        | *** (FUTURE) ***  |                  |                             |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Water conductivity| Field panel 1    | Card 1, Channel 3, 4-20 mA  |
+| AT-326 | West egg tray     | + terminal = 24  | F8:3 floating-point type    |
+|        | trough            | - terminal = 14  | 0.0 to ???.? S/cm           |
+|        | *** (FUTURE) ***  | "Wet lab" room   | PLC IP = 169.254.10.1       |
+-------------------------------------------------------------------------------
+|        | Water turbidity   | Field panel 2    | Card 1, Channel 3, 4-20 mA  |
+| AT-327 | Center egg tray   | + terminal = 24  | F8:3 floating-point type    |
+|        | trough            | - terminal = 14  | 0.0 to 10.0 NTU             |
+|        | *** (FUTURE) ***  | "Wet lab" room   | PLC IP = 169.254.10.2       |
+-------------------------------------------------------------------------------
+|        | Dissolved O2 in   | Field panel 3    | Card 1, Channel 3, 4-20 mA  |
+| AT-328 | East egg tray     | + terminal = 24  | F8:3 floating-point type    |
+|        | trough            | - terminal = 14  | 0.0 to ???.? ppm            |
+|        | *** (FUTURE) ***  | "Wet lab" room   | PLC IP = 169.254.10.3       |
+-------------------------------------------------------------------------------
+|        | Water temperature | Fish ladder      | TT-329.PV (WirelessHART)    |
+| TT-329 | Fish pond #3      |                  | Modbus address 30017 (float)|
+|        | BTC tag # 69457   |                  | 3-wire Pt100 RTD (0.00385)  |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+|        | Freezer           | Perry Center     | ???                         |
+| TT-330 | temperature       |                  |                             |
+|        | *** (FUTURE) ***  |                  |                             |
+|        |                   |                  |                             |
+-------------------------------------------------------------------------------
+|        | Barometric press  | Perry Center     | TT-331.PV (WirelessHART)    |
+| PT-331 |                   | "Wet lab" room   | Modbus address 30019 (float)|
+|        | BTC tag # 69448   | near Gateway     | Ranged in units of mmHgA    |
+|        |                   |                  | Gateway IP = 169.254.9.1    |
+-------------------------------------------------------------------------------
+
+
+* Whatcom Falls trout hatchery remote SCADA instrument loops
+
+"RTU-WF1" remote terminal unit
+DAQ=169.254.13.1 ; Radio=169.254.13.2 ; Computer=169.254.13.3 
+Netmask = 255.255.255.0 (all devices) 
+-------------------------------------------------------------------------------
+|  TAG   |    DESCRIPTION    |  LOCATION, RTU   |    I/O, CHANNEL, RANGE      |
+-------------------------------------------------------------------------------
+|        |    Loop power     |     Head box     | LabJack T7 analog input 0   |
+| ET-400 |  supply voltage   |     RTU-WF1      | caSCADA f_channel_00        |
+|        |                   |                  | 0.0 to 30.0 volts DC        |
+-------------------------------------------------------------------------------
+|        |   Intake water    |     Head box     | LabJack T7 analog input 1   |
+| TT-401 |   temperature     |     RTU-WF1      | caSCADA f_channel_01        |
+|        |                   |                  | 32.0 to 80.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |   Intake water    |     Head box     | LabJack T7 analog input 2   |
+| TT-402 |   temperature     |     RTU-WF1      | caSCADA f_channel_02        |
+|        |                   |                  | 32.0 to 80.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |   Intake water    |     Head box     | LabJack T7 analog input 3   |
+| TT-403 |   temperature     |     RTU-WF1      | caSCADA f_channel_03        |
+|        |                   |                  | 32.0 to 80.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |   Intake water    |     Head box     | (no I/O assignment)         |
+| TY-404 |   temperature     |     RTU-WF1      | caSCADA f_channel_14        |
+|        |  (median select)  |                  | 32.0 to 80.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |     Head box     | LabJack T7 analog input 4   |
+| PDT-405|    DP sensor      |     RTU-WF1      | caSCADA f_channel_04        |
+|        |                   |                  | 0.0 to 2.5 inches WC        |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |     Head box     | LabJack T7 analog input 5   |
+| PDT-406|    DP sensor      |     RTU-WF1      | caSCADA f_channel_05        |
+|        |                   |                  | 0.0 to 2.5 inches WC        |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |     Head box     | LabJack T7 analog input 6   |
+| PDT-407|    DP sensor      |     RTU-WF1      | caSCADA f_channel_06        |
+|        |                   |                  | 0.0 to 2.5 inches WC        |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |     Head box     | (no I/O assignment)         |
+| FY-408 |  (median select)  |     RTU-WF1      | caSCADA f_channel_15        |
+|        |                   |                  | 0.0 to ??? MPH              |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |     Head box     | (no I/O assignment)         |
+| FY-409 |    (average)      |     RTU-WF1      | caSCADA f_channel_16        |
+|        |                   |                  | 0.0 to ??? MPH              |
+-------------------------------------------------------------------------------
+|        |    Wind speed     |     Head box     | (no I/O assignment)         |
+| FY-410 |   (high select)   |     RTU-WF1      | caSCADA f_channel_17        |
+|        |                   |                  | 0.0 to ??? MPH              |
+-------------------------------------------------------------------------------
+|        |   Ambient air     |     Head box     | LabJack T7 analog input 7   |
+| TT-411 |   temperature     |     RTU-WF1      | caSCADA f_channel_07        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |   Ambient air     |     Head box     | LabJack T7 analog input 8   |
+| TT-412 |   temperature     |     RTU-WF1      | caSCADA f_channel_08        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |   Ambient air     |     Head box     | LabJack T7 analog input 9   |
+| TT-413 |   temperature     |     RTU-WF1      | caSCADA f_channel_09        |
+|        |                   |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |   Ambient air     |     Head box     | (no I/O assignment)         |
+| TY-414 |   temperature     |     RTU-WF1      | caSCADA f_channel_18        |
+|        |  (median select)  |                  | 0.0 to 110.0 degrees F      |
+-------------------------------------------------------------------------------
+|        |   Head box water  |     Head box     | LabJack T7 analog input 10  |
+| LT-415 |       level       |     RTU-WF1      | caSCADA f_channel_10        |
+|        |                   |                  | 309 to 3?? ft > sea level   |
+-------------------------------------------------------------------------------
+|        |    Bubble tube    |     Head box     | LabJack T7 analog input 11  |
+| FT-416 |    purge flow     |     RTU-WF1      | caSCADA f_channel_11        |
+|        |                   |                  | 0 to 200 bubbles/sec        |
+-------------------------------------------------------------------------------
+
+
+* Cedar Grove Park pond water quality remote SCADA instrument loops
+
+DAQ=169.254.14.1 ; Radio=169.254.14.2 ; Computer=169.254.14.3  
+Netmask = 255.255.255.0 (all devices) 
+-------------------------------------------------------------------------------
+|  TAG   |    DESCRIPTION    |  LOCATION, RTU   |    I/O, CHANNEL, RANGE      |
+-------------------------------------------------------------------------------
+|        |    Loop power     |   Clubhouse dam  | LabJack T7 analog input 0   |
+| ET-500 |  supply voltage   |     RTU-CG1      | caSCADA f_channel_00        |
+|        |                   |                  | 0.0 to 30.0 volts DC        |
+-------------------------------------------------------------------------------
+|        |   Pond surface    |   Clubhouse dam  | LabJack T7 analog input 1   |
+| TT-501 | water temperature |     RTU-CG1      | caSCADA f_channel_01        |
+|        |     (at dam)      |                  | 32.0 to 80.0 deg F          |
+-------------------------------------------------------------------------------
+|        |  Pond subsurface  |   Clubhouse dam  | LabJack T7 analog input 2   |
+| TT-502 | water temperature |     RTU-CG1      | caSCADA f_channel_02        |
+|        |     (at dam)      |                  | 32.0 to 80.0 deg F          |
+-------------------------------------------------------------------------------
+|        |      Ambient      |   Clubhouse dam  | LabJack T7 analog input 3   |
+| TT-503 |  air temperature  |     RTU-CG1      | caSCADA f_channel_03        |
+|        |     (at dam)      |                  | 0.0 to 100.0 deg F          |
+-------------------------------------------------------------------------------
+|        |   Pond surface    |   Clubhouse dam  | LabJack T7 analog input 4   |
+| TT-504 | water temperature |     RTU-CG1      | caSCADA f_channel_04        |
+|        |   (at bridge)     |                  | 32.0 to 80.0 deg F          |
+-------------------------------------------------------------------------------
+|        |  Pond subsurface  |   Clubhouse dam  | LabJack T7 analog input 5   |
+| TT-505 | water temperature |     RTU-CG1      | caSCADA f_channel_05        |
+|        |   (at bridge)     |                  | 32.0 to 80.0 deg F          |
+-------------------------------------------------------------------------------
+|        |      Ambient      |   Clubhouse dam  | LabJack T7 analog input 6   |
+| TT-506 |  air temperature  |     RTU-CG1      | caSCADA f_channel_06        |
+|        |   (at bridge)     |                  | 0.0 to 100.0 deg F          |
+-------------------------------------------------------------------------------
+|        | Outfall water pH  |   Clubhouse dam  | LabJack T7 analog input 7   |
+| AT-507 |     (at dam)      |     RTU-CG1      | caSCADA f_channel_07        |
+|        |                   |                  | 4.0 to 10.0 pH              |
+-------------------------------------------------------------------------------
+|        |  Outfall water    |   Clubhouse dam  | LabJack T7 analog input 8   |
+| AT-508 |   dissolved O2    |     RTU-CG1      | caSCADA f_channel_08        |
+|        |     (at dam)      |                  | 0.0 to ??? ppm              |
+-------------------------------------------------------------------------------
+|        |  Outfall water    |   Clubhouse dam  | LabJack T7 analog input 9   |
+| AT-509 |    turbidity      |     RTU-CG1      | caSCADA f_channel_09        |
+|        |     (at dam)      |                  | 0.0 to ??? NTU              |
+-------------------------------------------------------------------------------
+|        |    Pond water     |   Clubhouse dam  | LabJack T7 analog input 10  |
+| LT-510 |      level        |     RTU-CG1      | caSCADA f_channel_10        |
+|        |     (at dam)      |                  | 0.0 to ??? inches           |
+-------------------------------------------------------------------------------
+|        |   Outfall dam     |   Clubhouse dam  | LabJack T7 analog input 11  |
+| LT-511 |   crest level     |     RTU-CG1      | caSCADA f_channel_11        |
+|        |     (at dam)      |                  | 0.0 to ??? inches           |
+-------------------------------------------------------------------------------
+|        |   Outfall dam     |   Clubhouse dam  | LabJack T7 analog input 12  |
+| LT-512 |   crest level     |     RTU-CG1      | caSCADA f_channel_12        |
+|        |     (at dam)      |                  | 0.0 to ??? inches           |
+-------------------------------------------------------------------------------
+|        |   Outfall dam     |   Clubhouse dam  | LabJack T7 analog input 13  |
+| LT-513 |   crest level     |     RTU-CG1      | caSCADA f_channel_13        |
+|        |     (at dam)      |                  | 0.0 to ??? inches           |
+-------------------------------------------------------------------------------
+|        |   Outfall dam     |   Clubhouse dam  | (no I/O assignment)         |
+| FY-515 |   water flow      |     RTU-CG1      | caSCADA f_channel_15        |
+|        | (from LT 511-513) |                  | 0.0 to ??? GPM              |
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------
+STRUCTURED CABLING JACK ASSIGNMENTS (new as of 2016)
+
+These are the RJ-45 Ethernet jacks scattered around DMC building lab rooms.  Multiple 100 Mbit Ethernet switches located in the DMC building's Communications room connect all jacks within a cluster (e.g. General "shop" LAN) so that all those jacks may communicate with each other.  There is no connectivity whatsoever between clusters (e.g. no connection between the "shop" LAN and the Power system LAN).
+
+DeltaV Primary LAN
+--> 1-35 (North DCS cabinet DCS-01 @ column 6)
+--> 1-48a (Main control room, by hall window) "a" refers to one half of an RJ-45 splitter
+--> 2-4  (South DCS cabinet DCS-02 @ column 9)
+--> 3-25 (DMC 102 PTech lab NE column)
+--> 4-23 (DMC 108 PTech lab NE column)
+
+DeltaV Secondary LAN
+--> 1-36 (North DCS cabinet DCS-01 @ column 6)
+--> 1-48b (Main control room, by hall window) "b" refers to one half of an RJ-45 splitter
+--> 2-12 (South DCS cabinet DCS-02 @ column 9)
+--> 3-26 (DMC 102 PTech lab NE column)
+--> 4-24 (DMC 108 PTech lab NE column)
+
+General "shop" LAN (IP range 169.254.xxx.xxx ; i.e. subnet mask = 255.255.0.0)
+--> 1-17, 1-18 (JB-15 cabinet)
+--> 1-19, 1-20 (calibration bench)
+--> 1-25, 1-26 (JB-1 junction box @ column 4)
+--> 1-27, 1-28 (protective relay demo cabinet)
+--> 1-33, 1-34 (turbocompressor)
+--> 1-37 (North DCS cabinet DCS-01)
+--> 1-39, 1-40 (Stevens substation)
+--> 1-44, 1-46 (CP-2 control panel)
+--> 1-47 (Main control room, by hall window)
+--> 2-9 (South DCS cabinet DCS-02)
+--> 2-15, 2-16 (near sink)
+--> 3-5, 3-6 (DMC 102 PTech lab north wall)
+--> 4-11 (DMC 108 PTech lab bench on north wall)
+
+Power system LAN (IP range = 169.254.15.xxx ; i.e. subnet mask = 255.255.255.0)
+--> 1-15, 1-16, (JB-15 cabinet)
+--> 1-21, 1-22 (Bellingdale Valley generating station)
+--> 1-24 (Everest generating station)
+--> 1-29, 2-30 (Nooksack substation)
+--> 1-38 (Baker generating station)
+--> 1-41, 1-42 (Stevens substation and Chuckanut Bay generating station)
+--> 2-13, 2-14 (Sasquatch and Diablo Minor generating stations)
+
+
+
+-------------------------------------------------
+TCP/IP ADDRESSES FOR ETHERNET DEVICES
+
+Master IP address schedule:
+[*] DMC 122/123 control room PCs =            169.254.1.xxx
+[*] DMC 122/123 main panel PCs =              169.254.2.xxx
+[*] DMC 122/123 main panel instruments =      169.254.3.xxx
+[*] DMC 102/103 Process Technology network =  169.254.4.xxx
+[*] DMC 122/123 interfaces and HMIs =         169.254.5.xxx
+[*] DMC 122/123 DDC controllers =             169.254.6.xxx
+[*] DMC 122/123 PLC controllers =             169.254.7.xxx
+[*] Main campus SCADA nodes =                 169.254.8.xxx
+[*] Perry Center hatchery WirelessHART =      169.254.9.xxx  (jack 1-11 in wet lab)
+[*] Perry Center hatchery PLC controllers =   169.254.10.xxx (jack 1-05 in wet lab for FP1-FP3)
+[*] Perry Center hatchery HMI panels =        169.254.11.xxx (jack 1-12 in foyer)
+[ ] Whatcom Falls hatchery WirelessHART =     169.254.12.xxx
+[ ] Whatcom Falls hatchery SCADA nodes =      169.254.13.xxx (subnet 255.255.255.0)
+[ ] Cedar Grove Park SCADA nodes =            169.254.14.xxx (subnet 255.255.255.0)
+[ ] DMC 122/123 power grid SCADA nodes =      169.254.15.xxx (subnet 255.255.255.0)
+[ ] DMC lab team DAQ units =                  169.254.16.xxx (where "xxx" is the team number)
+[ ]                                           169.254.17.xxx
+[ ]                                           169.254.18.xxx
+[ ]                                           169.254.19.xxx
+[ ] DMC building web cameras =                169.254.20.xxx
+
+
+169.254.1.XXX -- Control room workstations
+[*] DeltaV server = 169.254.1.1 subnet 255.255.0.0 (located in DMC communications room)
+[*] DeltaV BTC_PPLUS = 169.254.1.4 subnet 255.255.0.0
+[*] Dell workstation = 169.254.1.5 subnet 255.255.0.0
+[*] Dell workstation = 169.254.1.6 subnet 255.255.0.0
+[*] PTech lab workstation (I|Ware) = 169.254.1.7 subnet 255.255.0.0
+
+
+169.254.2.XXX -- Control panel computers
+[*] Control panel CP1 = 169.254.2.1 subnet 255.255.0.0
+[*] Control panel CP2 = 169.254.2.2 subnet 255.255.0.0
+[*] Control panel CP3 = 169.254.2.3 subnet 255.255.0.0
+[*] Control panel (right-hand console) = 169.254.2.4 subnet 255.255.0.0
+[+] Control panel (left-hand console) = 169.254.2.5 subnet 255.255.0.0
+[+] Work table by PTech process = 169.254.2.6 subnet 255.255.0.0
+[+] Turbocompressor cabinet = 169.254.2.7 subnet 255.255.0.0
+[+] Work table in NW corner by door = 169.254.2.8 subnet 255.255.0.0
+
+
+169.254.3.XXX -- Control panel controllers and recorders 
+[*] Siemens 353 #01 = 169.254.3.1 subnet 255.255.0.0
+[*] Siemens 353 #02 = 169.254.3.2 subnet 255.255.0.0
+[*] Siemens 353 #03 = 169.254.3.3 subnet 255.255.0.0
+[*] Siemens 353 #04 = 169.254.3.4 subnet 255.255.0.0
+[*] Yokogawa DX200 recorder = 169.254.3.10 subnet 255.255.0.0
+
+
+169.254.4.XXX -- Process Technology (PTech) control network system
+[*] PCLU Allen-Bradley ML1100 PLC = 169.254.4.1 subnet 255.255.0.0
+[*] PCLU AutomationDirect C-More HMI = 169.254.4.2 subnet 255.255.0.0
+[*] DMC108 lab room AutomationDirect C-More HMI = 169.254.4.3 subnet 255.255.0.0
+[*] PTech lab PC = 169.254.4.100 subnet 255.255.0.0
+[+] Temperature process Allen-Bradley ML1100 PLC = 169.254.4.5 subnet 255.255.0.0
+[*] Ethernet port 4-12 (DMC 108 HMI panel) patched to 3-3 (DMC 102 process)
+
+
+169.254.5.XXX -- network interfaces/gateways
+
+Foundation Fieldbus interface (Rosemount model 3420 unit located in CP-2)
+[*] 169.254.5.1 subnet 255.255.0.0 (primary interface)
+[*] 169.254.5.2 subnet 255.255.0.0 (secondary interface)
+
+WirelessHART (legacy 900 MHz) interface base station (Rosemount model 1420 unit)
+[*] 169.254.5.3 subnet 255.255.0.0 (primary interface) 
+[*] 169.254.5.4 subnet 255.255.0.0 (secondary interface)
+
+WirelessHART (2.4 GHz) gateway in DMC 122/123 lab room
+[*] 169.254.5.12 subnet 255.255.0.0 (primary interface) 
+[*] 169.254.5.13 subnet 255.255.0.0 (secondary interface)
+
+C-More HMI panels for PLC network
+[*] 169.254.5.8 subnet 255.255.0.0 (located in CP-3)
+[*] 169.254.5.9 subnet 255.255.0.0 (located in CP-2 on left side)
+[*] 169.254.5.11 subnet 255.255.0.0 (located in CP-2 on right side)
+
+Wireless LAN router (D-Link) for "Instrumentation_wireless" network
+[*] 169.254.5.10 subnet 255.255.0.0
+
+
+169.254.7.XXX -- programmable logic controllers
+
+Automation Direct P3000 PLC (located in DMC 122/123 lab room)
+[*] below JB-1: 169.254.7.1 subnet 255.255.0.0 (Ethernet/IP protocol)
+
+Allen-Bradley MicroLogix1100 PLCs (located in DMC 122/123 lab room junction boxes)
+[*] JB-6: 169.254.7.6 subnet 255.255.0.0 (Ethernet/IP protocol)
+[*] JB-7: 169.254.7.7 subnet 255.255.0.0 (Ethernet/IP protocol)
+[*] JB-8: 169.254.7.8 subnet 255.255.0.0 (Ethernet/IP protocol)
+[*] JB-9: 169.254.7.9 subnet 255.255.0.0 (Ethernet/IP protocol)
+
+Automation Direct CLICK PLC (located in main control panel in DMC 122 lab room)
+[*] CP-3: 169.254.7.30 subnet 255.255.0.0
+
+169.254.8.XXX -- Main campus remote caSCADA nodes = 169.254.8.xxx
+[*] RTU-MC1 node (scrap metal yard) LabJack T7 DAQ =     169.254.8.1 subnet 255.255.255.0
+[ ] RTU-MC1 node (scrap metal yard) Wireless router =    169.254.8.2 subnet 255.255.255.0
+[*] RTU-MC1 node (scrap metal yard) Linux computer =     169.254.8.3 subnet 255.255.255.0
+[ ] RTU-WM1 node (windmill shed) LabJack T7 DAQ =        169.254.8.11 subnet 255.255.255.0
+[ ] RTU-WM1 node (windmill shed) Wireless router =       169.254.8.12 subnet 255.255.255.0
+[ ] RTU-WM1 node (windmill shed) Linux computer =        169.254.8.13 subnet 255.255.255.0
+[*] RTU-DCS02 node (DMC lab in DCS-02) LabJack T7 DAQ =  169.254.8.101 subnet 255.255.255.0
+[*] RTU-DCS02 node (DMC lab in DCS-02) Linux computer =  169.254.8.103 subnet 255.255.255.0
+[*] RTU-JB17 node (DMC lab in JB-17) LabJack T7 DAQ =    169.254.8.111 subnet 255.255.255.0
+[*] RTU-JB17 node (DMC lab in JB-17) Linux computer =    169.254.8.113 subnet 255.255.255.0
+[ ] RTU-JB2 node (DMC lab in JB-2) LabJack T7 DAQ =      169.254.8.121 subnet 255.255.255.0
+[ ] RTU-JB2 node (DMC lab in JB-2) Linux computer =      169.254.8.123 subnet 255.255.255.0
+[*] RTU-JB15 node (DMC lab in JB-15) LabJack T7 DAQ =    169.254.8.131 subnet 255.255.255.0
+[*] RTU-JB15 node (DMC lab in JB-15) Linux computer =    169.254.8.133 subnet 255.255.255.0
+
+
+169.254.10.XXX -- Perry Center PLC controllers (located in Perry Center fish hatchery building)
+[*] FP-1: 169.254.10.1 subnet 255.255.0.0 (Ethernet/IP protocol) -- Wet Lab, West trough
+[*] FP-2: 169.254.10.2 subnet 255.255.0.0 (Ethernet/IP protocol) -- Wet Lab, Center trough
+[*] FP-3: 169.254.10.3 subnet 255.255.0.0 (Ethernet/IP protocol) -- Wet Lab, East trough
+[ ] FP-4: 169.254.10.4 subnet 255.255.0.0 (Ethernet/IP protocol) -- Wet lab
+[ ] FP-5: 169.254.10.5 subnet 255.255.0.0 (Ethernet/IP protocol) -- 1st floor mechanical room
+[*] FP-6: 169.254.10.6 subnet 255.255.0.0 (Ethernet/IP protocol) -- 2nd floor mechanical room
+
+
+169.254.13.XXX -- Whatcom Falls Park hatchery remote caSCADA nodes
+[ ] RTU-WF1 (headbox) LabJack T7 DAQ =              169.254.13.1 subnet 255.255.255.0
+[ ] RTU-WF1 (headbox) Wireless router =             169.254.13.2 subnet 255.255.255.0
+[ ] RTU-WF1 (headbox) Linux computer =              169.254.13.3 subnet 255.255.255.0
+[ ] RTU-WF2 (b/w ponds #? and #?) LabJack T7 DAQ =  169.254.13.11 subnet 255.255.255.0
+[ ] RTU-WF2 (b/w ponds #? and #?) Wireless router = 169.254.13.12 subnet 255.255.255.0
+[ ] RTU-WF2 (b/w ponds #? and #?) Linux computer =  169.254.13.13 subnet 255.255.255.0
+
+
+169.254.14.XXX -- Cedar Grove Park remote caSCADA nodes 
+[ ] RTU-CG1 (under clubhouse) LabJack T7 DAQ =      169.254.14.1 subnet 255.255.255.0
+[ ] RTU-CG1 (under clubhouse) Wireless bridge =     169.254.14.2 subnet 255.255.255.0
+[ ] RTU-CG1 (under clubhouse) Linux computer =      169.254.14.3 subnet 255.255.255.0
+[ ] RTU-CG2 (middle of lake) LabJack T7 DAQ =       169.254.14.11 subnet 255.255.255.0
+[ ] RTU-CG2 (middle of lake) Wireless bridge =      169.254.14.12 subnet 255.255.255.0
+[ ] RTU-CG2 (middle of lake) Linux computer =       169.254.14.13 subnet 255.255.255.0
+
+
+169.254.20.XXX -- DMC building web cameras
+[ ] DMC 102 lab room =                              169.254.20.1 subnet 255.255.0.0  
+[ ] DMC 102 lab room =                              169.254.20.2 subnet 255.255.0.0  
+
+
+192.168.123.XXX -- Mobile toaster oven process (Tour Day Demo unit)
+[*] 192.168.123.1 subnet 255.255.255.0 AutomationDirect C-More HMI panel
+[*] 192.168.123.254 subnet 255.255.255.0 US Robotics Wi-Fi router (factory default)  Wireless network name RMT_OVEN
+[*] 192.168.123.99 subnet 255.255.255.0 Allen-Bradley SLC500 PLC
+
+
+
+-------------------------------------------------
+MODBUS ADDRESSES FOR MODBUS NETWORKS
+
+"Solo" (Automation Direct) loop controllers
+(19.2 kbps, RTU format, Com 2 on PC, no parity, 1 stop bit)
+[*] #1 (middle of CP1)
+[*] #2 (right-hand side of CP1)
+[*] #3 (middle of CP2)
+[*] #4 (left-hand side of CP3)
+[*] #5 (middle of CP3)
+
+
+"CLICK" PLCs used as PID loop controllers
+(38.4 kbps, RTU format odd parity, 1 stop bit)
+[*] #2 -- PLC in DCS02 cabinet
+[*] #8 -- PLC in JB-8 enclosure
+[*] #9 -- PLC in JB-9 enclosure
+
+
+
+=================================================
+SPECIAL DEVICE CONFIGURATIONS
+
+
+C-More HMI panel (in cabinet DCS-02)
+
+http://169.254.5.5
+
+MAIN WEB SERVER LOGIN
+    Login = btc
+    Password = btc
+
+    USER ACCOUNT (FULL CONTROL)
+    Login = admin
+    Password = deltav
+
+    USER ACCOUNT (VIEW + SCREEN CHANGE)
+    Login = user
+    Password = user
+
+    USER ACCOUNT (VIEW ONLY)
+    Login = view
+    Password = view
+
+-------------------------------------------------
+
+D-Link wireless router (installed in lab)
+
+Local Domain Name: instrumentation_wireless
+
+    Login = admin
+    Password = (none)
+
+This is a business-class router, with just one Ethernet port on it.
+
+
+-------------------------------------------------
+
+Distech DDC controller network and software
+
+License key code: o9fc5-30ncp-qgetj
+
+(the key code was sent to me in all caps, but I use lower-case here to clearly distinguish the letter "o" from a zero "0")
+
+PC host running EC-NET-AX software (BACnet address 10000)
+
+Ethernet / twisted-pair BACnet adapter (BACnet address 11000)
+
+
+EC-NET-AX "Platform" login and password:
+
+    Login = Administrator
+    Password = deltav
+
+
+EC-NET-AX "Station" login and password:
+
+    Login = admin
+    Password = (blank)
+
+-------------------------------------------------
+
+Echelon iLON-10 LonWorks interface adapter
+
+http://169.254.5.6/config
+
+    Login = ilon
+    Password = ilon
+
+-------------------------------------------------
+
+Rosemount WirelessHART gateways 
+
+
+2.4 GHz "Smart Wireless Gateway" (new as of April 2014) at Perry Center salmon hatchery
+
+Hostname = wihartgw (primary)
+IP = 192.168.1.10 
+Mask = 255.255.255.0
+
+Hostname = PerryCenterWH (secondary)
+IP = 169.254.9.1
+Mask = 255.255.0.0
+
+    Network Name = PerryCenter
+    Network ID = 944
+    Join Key (May 2017) = 35502881
+
+    ADMINISTRATOR-LEVEL USER ACCOUNT
+    Login = admin
+    Password = deltav
+    
+    MAINTENANCE-LEVEL USER ACCOUNT
+    Login = perry
+    Password = center
+
+
+Perry Center network security key for Wi-Fi Instrumentation network:
+
+    hopthetalltree8620
+
+
+
+
+2.4 GHz "Smart Wireless Gateway" (new as of May 2013) in DMC 123
+IP: 169.254.5.12 (primary) 
+IP: 169.254.5.13 (secondary)
+Mask: 255.255.0.0
+
+    Network Name = BTC_main_campus
+    Network ID = 943
+    Join Key (May 2013) = 35502880 00000000 00000000 00000000
+
+    Login = admin
+    Password = garvey00
+
+    Login = maint
+    Maint password = btc
+
+    Login = btc (maintenance-level privileges)
+    btc password = btc
+
+
+
+
+
+900 MHz gateway (old model 1420) in DMC 122
+IP: 169.254.5.3 (primary)
+IP: 169.254.5.4 (secondary)
+Mask: 255.255.0.0
+
+    Network Name = BTC_wirelessHART
+    Network ID = 19997
+    Join Key (Apr 2009) = 21261030 00000000 00000000 00000000
+
+    Login = admin
+    Password = deltav
+
+
+
+--------------------------------------------------------------------------
+
+Rosemount 3420 Fieldbus gateway (installed in lab)
+
+IP: 169.254.5.1 (primary)
+IP: 169.254.5.2 (secondary) -- DO NOT CONNECT!
+Mask: 255.255.0.0
+
+    Login = admin
+    Password = deltav
+
+
+--------------------------------------------------------------------------
+Yokogawa DX200 paperless chart recorder (installed in CP1)
+
+IP: 169.254.3.10 
+Mask: 255.255.0.0
+
+    Login = (none)
+    Password = (none)
+
+
+
+
+
+

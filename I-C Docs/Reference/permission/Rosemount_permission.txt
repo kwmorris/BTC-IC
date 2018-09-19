@@ -1,0 +1,75 @@
+Date:  Wed, 14 Aug 2002 13:21:04 -0500 
+From:  "Info, Rosemount [FRCO/RTC]" <Rosemount.Info@EmersonProcess.com> 
+Subject:  RE: Distributing technical manual .pdf's on CD-ROM 
+To:  "'tonykuphaldt@lycos.com'" <tonykuphaldt@lycos.com>  
+
+Dear Tony Kuphaldt: 
+
+Yes, you have permission to include Rosemount manuals on the CD-ROM that you
+plan to provide to your students.  Please note that our legal department
+requires that the notice at the bottom of this email message to be included
+on any CD that contains Rosemount technical documents. 
+
+I have also asked our literature warehouse to send you the latest copy of
+our Manuals CD-ROM.  It will probably be easier to copy the various PDF
+files from the CD, rather than downloading all of the files off our website.
+You should be receiving this CD within 1-2 weeks. 
+
+Best Regards, 
+
+James Schmidt
+Emerson Process Management, Rosemount Division  
+
+
+============================================================================
+==========
+Permission to use, copy and distribute documents and related graphics
+obtained from this Rosemount Inc. CD-ROM is hereby granted, provided that
+the copyright notice and this permission notice appear with all copies. All
+other rights reserved. The name of Rosemount Inc. or the Rosemount logo may
+not be used in advertising or publicity pertaining to distribution of this
+information without specific, written prior permission. Rosemount Inc. makes
+no representations about the suitability of this information for any
+purpose. It is provided "as is" without express or implied warranty.
+Rosemount Inc. disclaims all warranties with regard to this information,
+including all implied warranties of merchantability and fitness. In no event
+shall Rosemount Inc. be liable for any special, indirect, consequential
+damages or any damages whatsoever resulting from loss of use, data or
+profits, whether in an action of contract, negligence or other tortious
+action, arising out of or in connection with the use, content or performance
+of this information.
+============================================================================
+===========
+
+
+-----Original Message-----
+From: tony kuphaldt [mailto:tonykuphaldt@lycos.com]
+Sent: Tuesday, August 13, 2002 8:35 PM
+To: rosemount.info@emersonprocess.com
+Subject: Distributing technical manual .pdf's on CD-ROM
+
+To Whom it may concern,
+
+I teach Instrumentation at Bellingham Technical College, and am preparing
+curriculum for the 2002-2003 teaching year.  I would like to package many of
+your fine technical manual .pdf files onto CD-ROMs for my students, for
+their refernce off-line (many do not have internet access at home, and their
+homework will include research on several Rosemount products).
+
+In specific, I am referring to the ful-length technical manuals on the
+Rosemount 1151 DP, 3055 DP, 3144 Temperature, and other staple industrial
+measurement instruments in the Rosemount product line.  
+
+Given the fact that you have freely posted these files on the web, I assume
+there will be no problem with copying and distributing them on CD-ROM for my
+students.  Please inform me if there is any problem with this.  Your
+response, either positive or negative, will be greatly appreciated.
+
+
+Sincerely,
+
+Tony Kuphaldt
+Instructor, Instrumentation
+Bellingham Technical College
+3028 Lindbergh Avenue
+Bellingham, WA 98225-1599

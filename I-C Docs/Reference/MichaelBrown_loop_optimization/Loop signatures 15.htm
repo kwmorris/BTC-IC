@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0079)http://www.controlloop.co.za/Articles/Loop_signatures_15/loop_signatures_15.htm -->
+<HTML><HEAD><TITLE>Loop signatures 15</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 15_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 15_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 15_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 15_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 15_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=682><IMG height=1 src="Loop signatures 15_files/clearpixel.gif" 
+      width=682 border=0></TD>
+    <TD width=27><IMG height=1 src="Loop signatures 15_files/clearpixel.gif" 
+      width=27 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 15_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 15_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 15_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=12></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=682>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica>Loop Problem Signatures No 
+      15</FONT>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Digital controllers - 
+      Part 7<BR>The D term (final part)</FONT></B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>
+      <P>This last article on the subject of derivative will deal with choosing 
+      the right response in the controller if you wish the derivative action to 
+      work on setpoint changes as well as on load changes.&nbsp; (A load change 
+      can be defined as a change in the PV value caused by external effects on 
+      the loop, and not caused by movement in the output of the controller).
+      <P>A schematic of a simplified PID controller with a parallel algorithm is 
+      shown in Figure 1.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+1</FONT></B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture69 height=346 alt="Figure 1" 
+            src="Loop signatures 15_files/loopsigs15fig1.gif" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Either a step change 
+      in setpoint, or a step load change in the opposite direction, will both 
+      result in an identical step change in error.&nbsp; The error is then fed 
+      in parallel to the P, the I, and the D block.&nbsp; The response of each 
+      is shown in the diagram.&nbsp; These are then arithmetically added 
+      together and converted to a 4 - 20 mA current signal, which is the output 
+      of the controller (or process demand signal).&nbsp; As can be seen, the 
+      final result would cause the valve to kick open, and then back quite 
+      sharply, and this would then be followed by the normal integral response.
+      <P>This is not a desirable response in most processes.&nbsp; To understand 
+      this we must look at the average process where PID controllers are 
+      employed.&nbsp; The vast majority of controllers are used in continuous 
+      type process plants typified by petrochemical, chemical, paper, and other 
+      similar plants.&nbsp; Generally these plants have multiple processes where 
+      one process feeds the next, and so on down the line.&nbsp; The plants are 
+      often complex and difficult to start up.&nbsp; Once up and running, the 
+      object is to try and optimise them for maximum productivity, and then to 
+      keep them running in this state as smoothly as possible, and for as long 
+      as possible.&nbsp; If a valve, particularly near the beginning of the 
+      plant was to react as seen in Figure 1 when the plant is running steady 
+      state, then it is highly possible that everything downstream would react 
+      to the kick and cause considerable disruption to production, even to the 
+      extent of causing a trip.
+      <P>This gives rise to the popular belief that controllers are better 
+      detuned in continuous process plants to prevent "bumps".&nbsp; Many people 
+      are very unclear on this point.&nbsp; The author when about to optimise a 
+      loop, has been frequently told that the loop is critical to the plant 
+      performance and needs to really perform well, but on the other hand it 
+      must not be tuned fast so as to cause a downstream disturbance.&nbsp; 
+      (Talk about diametrically opposed requirements). We do in practice find 
+      that the vast majority of loops in such plants are completely and utterly 
+      detuned.&nbsp; However when we go into these plants we get told: 
+      <P>"Our controls are great.&nbsp; 99% of our controllers are in automatic 
+      and if you look at the trends, you will find they are all running on 
+      setpoint."
+      <P>What actually occurs in reality under steady state conditions is that 
+      generally for the vast majority of the time no changes are 
+      occurring.&nbsp; Therefore the controllers are not doing anything.&nbsp; 
+      In particular on self-regulating processes, if you tune a controller 
+      however slowly and put in some gain and a little integral, it will 
+      eventually get itself to setpoint.&nbsp; 
+      <P>This all sounds reasonable.&nbsp; So why do we even bother putting in 
+      controllers?&nbsp; David Ender of Techmation Inc. of the USA who is a 
+      world leading experts in loop optimisation, has defined the purpose of the 
+      regulatory control system as "minimising control variance at all stages of 
+      production".&nbsp; <BR>Control variance may be thought of very roughly as 
+      total integrated control error.&nbsp; The controllers are there to keep 
+      the process on setpoint as closely as possible under changing 
+      conditions.&nbsp; This is not going to be achieved if the controllers are 
+      detuned.&nbsp; Therefore we find that continuous process plants, whilst 
+      working well for a lot of the time, start swinging badly if conditions 
+      start changing.&nbsp;&nbsp; An excellent example of this is in plants that 
+      are exposed to atmospheric conditions like petro-chemical 
+      refineries.&nbsp; They are operating fine, and suddenly a rainstorm or a 
+      cold front hits them.&nbsp; The next minute everything starts drifting 
+      off.&nbsp; The controllers are so detuned they cannot respond quickly 
+      enough.&nbsp; The operators put loops into manual to try and catch the 
+      load changes, and it may take hours to get things back to optimum.
+      <P>Therefore to prevent this, what is needed to minimise control variance 
+      is in fact controllers that respond really quickly to load changes.&nbsp; 
+      Going back to the problem of the derivative kick, one must look at the 
+      difference between load changes on such plants and setpoint changes. Load 
+      changes in a continuous process plants are seldom step changes.&nbsp; 
+      Normally one finds the process variable drifting off from setpoint in a 
+      slow ramp fashion.&nbsp; We would like to correct this as quickly as 
+      possible, and if we use derivative on a process, it will not respond to 
+      the ramp with a big kick but with a little step. On process types where 
+      derivative is effective, you will get the process back to setpoint much 
+      quicker with it.&nbsp; 
+      <P>Setpoint changes on the other hand, are normally step changes.&nbsp; 
+      Why would one need to make setpoint changes under steady state operating 
+      conditions?&nbsp; The answer is that even when the plant is running 
+      steady, the operators often make small changes to optimise 
+      processes.&nbsp; The large derivative kick then is a problem as it occurs 
+      irrespective of the size of the step change.&nbsp; It is also apparent 
+      that fast response to setpoint changes is generally not needed.&nbsp; 
+      <P>Therefore we can in general propose that the controllers should respond 
+      slowly to setpoint changes, and quickly to load changes.
+      <P>When the electronic controllers were introduced in the 1960's, their 
+      designers looked at this, and came up with two solutions.&nbsp; The first 
+      was to allow the user to put ramps on setpoint changes.&nbsp; This is 
+      still available on most controllers, although it is seldom used.&nbsp; The 
+      second option was to reconfigure the controllers to eliminate the 
+      derivative action on setpoint changes, whilst still allowing it to act on 
+      load changes.</FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+2</FONT></B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture70 height=347 alt="Figure 2" 
+            src="Loop signatures 15_files/loopsigs15fig2.gif" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>Figure 2 shows such a 
+      configuration.&nbsp; The D block has been removed from the error signal, 
+      and the PV is now its input.&nbsp; Thus on a setpoint change there is no 
+      initial derivative action, only P+I, whilst on a load change, the error 
+      causes the P+I to react, and the PV causes the D to act, resulting in a 
+      full P+I+D action.&nbsp;&nbsp; Some manufacturers sometimes refer to this 
+      configuration as "PI-D" control action.
+      <P>The vast majority of controllers are supplied with this as their 
+      default configuration.&nbsp; Indeed most manufacturers do not even allow 
+      you to configure a controller with P+I+D on error. The PI-D configuration 
+      is of extreme interest from the practical point of view, for how can we 
+      tune in the D term on such controllers?&nbsp; Even if you have the world's 
+      greatest tuning package, generally the only way to actually test how the 
+      derivative action is performing is to make a setpoint change.&nbsp; If 
+      your controller does not respond with D to a setpoint change when 
+      performing tuning, then you have a major problem, as you cannot judge if 
+      the D term has been set correctly.&nbsp; 
+      <P>The only way one can perform such tests now is to make step changes in 
+      load.&nbsp; This is not easy to do, and generally the process people are 
+      violently opposed to doing this.&nbsp; Bearing in mind that the vast 
+      majority of all tuning is done by trial and error (or "playing with the 
+      knobs", whilst making setpoint changes), this is the last and probably the 
+      main reason why derivative is hardly ever used in real life.&nbsp; Once 
+      again it illustrates the lack of knowledge of practical control displayed 
+      by manufacturers of controllers.&nbsp; It is the author's firm belief that 
+      no one should ever purchase PID controllers where the user cannot 
+      configure a full PID action on error so that derivative can be tuned and 
+      tested.
+      <P>It is not only for tuning that one would require a full PID action on 
+      setpoint change.&nbsp; Certain processes like temperature batch reactors 
+      need to respond as fast as possible to setpoint changes.
+      <P>Figure 3 shows another popular configuration of controllers, the I-PD 
+      controller, where now both P and D are on the PV, and only the I on the 
+      error.&nbsp; </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+3</FONT></B>
+      <P>
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=500 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture71 height=346 alt="Figure 3" 
+            src="Loop signatures 15_files/loopsigs15fig3.gif" width=500 
+          border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>(Please note that as 
+      mentioned in the diagram, the drawing is only representational only.&nbsp; 
+      The P action does in fact have to respond to the magnitude of the error, 
+      even if it only does so on PV change).&nbsp; This configuration gives the 
+      least bump of all on setpoint change, as the integral action is always a 
+      ramp.
+      <P>People often question if the I-PD controller has any real worth.&nbsp; 
+      The answer is yes.&nbsp; There are many applications, particularly on 
+      level control, where one has high proportional gain in the controller, and 
+      setpoint changes should not bump the valve too much, although fast control 
+      is required for load changes.&nbsp; There are a lot of applications like 
+      this in petro-chemical refineries and paper plants.
+      <P>It should be noted that this controller configuration is untunable. At 
+      the very least, it is essential that one can see how the proportional 
+      action reacts to setpoint changes.&nbsp; Fortunately most manufacturers 
+      (but not all) that supply the I-PD controller (generally as their default 
+      controller), allow one to change it to at least a PI-D configuration. The 
+      manufacturers probably did this, not with the thought of tuning in mind, 
+      but did realise that the secondary controller in a cascade control system 
+      could not operate properly without at least the P action.
+      <P>In conclusion we can summarise the various points discussed on 
+      derivative as follows: 
+      <UL type=DISC>
+        <LI>Derivative is only useful on slow self regulating processes with 
+        multiple first order lags, and integrating processes with a large lag. 
+        <LI>The derivative filter should be placed before the derivative block 
+        only, and the value of its coefficient should be between 0.125 and 0.25. 
+
+        <LI>A controller should be configurable to allow one to choose all three 
+        actions on setpoint change, viz. PID, PI-D, and I-PD. </LI></UL>
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton103',1)" 
+            onmouseout="F_roll('NavigationButton103',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton103 height=19 alt=Home 
+            src="Loop signatures 15_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton103></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton104',1)" 
+            onmouseout="F_roll('NavigationButton104',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton104 height=19 alt=Training 
+            src="Loop signatures 15_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton104></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton105',1)" 
+            onmouseout="F_roll('NavigationButton105',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton105 height=19 alt=Consulting 
+            src="Loop signatures 15_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton105></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton106',1)" 
+            onmouseout="F_roll('NavigationButton106',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton106 height=19 alt=Protuner 
+            src="Loop signatures 15_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton106></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton107',1)" 
+            onmouseout="F_roll('NavigationButton107',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton107 height=19 alt="Contact us" 
+            src="Loop signatures 15_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton107></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton108',1)" 
+            onmouseout="F_roll('NavigationButton108',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton108 height=19 alt=Articles 
+            src="Loop signatures 15_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton108></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 15_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+<title>Case History 103</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Generator" content="Microsoft FrontPage 4.0">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<style>
+</style>
+</head><body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(CaseHistory93Layout, 750, 2039))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="63"><img id="Picture1" src="case_history_103_files/Michael_Brown.gif" alt="" width="750" height="63" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="117"><img src="case_history_103_files/clearpixel.gif" alt="" width="117" height="1" border="0"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_103_files/clearpixel.gif" alt="" width="116" height="1" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="120" height="2"><img src="case_history_103_files/clearpixel.gif" alt="" width="120" height="1" border="0"></td>
+            <td>
+              <p align="center"><a href="http://www.controlloop.co.za/Case_histories/CDpromo.html">Educational
+              CDs</a></p></td>
+            <td width="119"><img src="case_history_103_files/clearpixel.gif" alt="" width="119" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="28"><img src="case_history_103_files/clearpixel.gif" alt="" width="750" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td class="TextObject" width="750">
+                <p><b><font size="4"><span style="color: rgb(204, 0, 0);">Control
+                Loop Case History 103</span></font></b></p>
+                <p><st1:place w:st="on"><font color="#ff0000"><u><span style="font-size: 14pt;" lang="EN-ZA">How
+                </span><span style="font-size: 14pt;" lang="EN-ZA">control
+                systems</span><span style="font-size: 14pt;" lang="EN-ZA"> differ in various industries (part 2)<o:p>
+                </o:p>
+                </span></u></font><span style="font-size: 14pt;" lang="EN-ZA"></span></st1:place>
+                </p>
+                <p class="MsoNormal">Peculiarities and differences in control
+                specific to various industries<span style="">&nbsp;
+                </span>was discussed in the previous <a href="http://www.controlloop.co.za/Case_histories/Case_History_102/case_history_102.html">Case
+                History 102</a> article.<span style="">&nbsp; </span>At
+                the end of the article a specific case of problems encountered a
+                mining mineral processing plant was discussed.<span style="">&nbsp;
+                </span>Some more examples of some of the interesting problem
+                loops found in the same plant are given in this article.</p>
+                <p class="MsoNormal">In mineral processing, like in most other
+                continuous process plants, it is very important to try and keep
+                a constant throughput.<span style="">&nbsp; </span>This
+                starts with the milling circuit, where one must try and provide
+                a constant feedrate of ore into the mill.<span style="">&nbsp;
+                </span>The immediate problem that occurs here is that conveyor
+                weightometers are extremely noisy, particularly in the case of
+                autogenous mills where the large rocks are used to crush the
+                smaller ones, and no steel balls or rods are used.<span style="">&nbsp;</span></p>
+                <p class="MsoNormal">Previous articles have covered noise in
+                detail, and how the worst problem associated with it, is that
+                plant personal mistake it for instability, and try and mask it
+                out by applying enormous filters which themselves result in
+                further serious problems.<span style="">&nbsp; </span>Due
+                to the lack of understanding on how to deal with noise, the
+                average conveyor feedrate control loop ends up being very badly
+                tuned with extremely poor performance.</p>
+                <p class="MsoNormal" align="center"><img src="case_history_103_files/Fig2.jpg" width="740" height="414" border="0"></p>
+                <p class="MsoNormal" align="center"><i>Fig. 2</i></p>
+                <p class="MsoNormal">Figure 2 shows a closed test with the
+                original tuning, on the feedrate control of a mill on one of the
+                plants on the mine.<span style="">&nbsp; </span>This
+                is a particularly interesting loop from the noise point of view,
+                as the noise on this loop contains irregular, extremely low
+                frequency, large amplitude components.<span style="">&nbsp;
+                </span>As can be seen in the figure, the original tuning was
+                extremely poor, with too much gain causing the loop to almost go
+                into oscillation at times, whilst taking a very long time to get
+                the process to a new setpoint on changes.<span style="">&nbsp;
+                </span>In fact it could be said that the process was never
+                really at setpoint.<span style="">&nbsp; </span>This
+                is very bad for good milling.</p>
+                <p class="MsoNormal">How does one deal with a noisy process like
+                this.<span style="">&nbsp; </span>Firstly
+                filtering is completely out.<span style="">&nbsp;
+                </span>To try and filter out large amplitude low frequency noise
+                like this would result in a filter so large that it would
+                destroy any good control.<span style="">&nbsp; </span>Therefore
+                one must try and tune without a filter.</p>
+                <p class="MsoNormal" align="center"><img src="case_history_103_files/Fig3.jpg" width="760" height="454" border="0"></p>
+                <p class="MsoNormal" align="center"><i>Fig. 3</i></p>
+                <p class="MsoNormal">Figure 3 shows how this is achieved, using
+                a step change with the controller in manual.<span style="">&nbsp;
+                </span>One edits the response to eliminate the noise and tunes
+                on the edited curve.<span style="">&nbsp; </span>Typically
+                weigh feeders have very short time constants (in the order of
+                only a few seconds).<span style="">&nbsp; </span>However
+                they are also in most cases deadtime dominant, which is another
+                major reason, why they are so badly tuned, as very few people
+                know how to deal with deadtime dominant processes.<span style="">&nbsp;</span></p>
+                <p class="MsoNormal">Correctly tuned weighfeeders generally end
+                up with a tuning that has very small proportional gain, and a
+                fast integral; very similar to flow loops.<span style="">&nbsp;
+                </span>Generally even though the gain has been drastically
+                reduced to cope with the large deadtime, this still results in
+                good and relatively fast control.<span style="">&nbsp;
+                </span>The low gain actually results in a huge bonus, as the
+                noise is not amplified as it passes through the controller, but
+                is actually diminished, so it has little effect on the output of
+                the controller and hence on the final control element.</p>
+                <p class="MsoNormal" align="center"><img src="case_history_103_files/Fig4.jpg" width="740" height="443" border="0"></p>
+                <p class="MsoNormal" align="center"><i>Fig. 4</i></p>
+                <p class="MsoNormal">The final closed loop test is shown in
+                Figure 4.<span style="">&nbsp; </span>The
+                average of the feed into the mill is now being kept at setpoint
+                extremely well.<span style="">&nbsp; </span>The
+                response to a step change in setpoint is nice and fast, and the
+                controller output is not responding to the noise at all badly;
+                so the final control element (a vibratory feeder), is not being
+                adversely affected.</p>
+                <p class="MsoNormal">In this particular case there was an
+                additional problem as the mill dilution water flow was being
+                ratiod directly from this feed.<span style="">&nbsp;
+                </span>The high noise content was then being fed directly to the
+                setpoint of the flow control through the ratio multiplier.<span style="">&nbsp;
+                </span>The setpoint was then responding to the noise.<span style="">&nbsp;
+                </span>Therefore if one was to tune the dilution water flow
+                controller even reasonably well, it would result in the flow
+                control valve responding to the low frequency high amplitude
+                noise which would probably drastically shorten the valve life.<span style="">&nbsp;</span></p>
+                <p class="MsoNormal">This problem was quickly overcome by rather
+                using the setpoint of the feedrate controller as the input to
+                the ratio setpoint.<span style="">&nbsp; </span>One
+                could then be confident that with the good control of the
+                feedrate following the setpoint, the dilution water would be
+                added in the correct ratio.</p>
+                <p class="MsoNormal">Another very interesting problem loop was a
+                density control of a thickener that never worked.<span style="">&nbsp;
+                </span>The control was based on changing the outlet flow rate
+                which apparently should change the slurry density.<span style="">&nbsp;
+                </span>Although this should have some effect over a very long
+                period, I personally felt that control strategy was not viable,
+                but the process expert was absolutely convinced that the loop
+                should operate perfectly well.<span style="">&nbsp;
+                </span>We first tried a closed loop test with existing tuning
+                parameters, and made a large setpoint change.<span style="">&nbsp;
+                </span>The controller output moved quite a bit, but the density
+                didn&#8217;t change.<span style="">&nbsp; </span>Eventually
+                we put the controller into manual and opened the valve fully.<span style="">&nbsp;
+                </span>After 4 hours the density had still not changed.<span style="">&nbsp;
+                </span>I think this proved that the control was not workable.<span style="">&nbsp;
+                </span>The big problem on this particular loop is that there
+                didn&#8217;t seem to be an alternative strategy which could be used.<span style="">&nbsp;
+                </span>Normally one can add water to slurries to affect density,
+                but in this case the metallurgists did not want to do that, as
+                the whole point of a thickener is to get rid of water.<span style="">&nbsp;
+                </span>At time of writing the problem has still not been
+                resolved.</p>
+                <p class="MsoNormal">As weigh feeder mass control systems are
+                invariably so badly tuned, the last example is also of such a
+                control, as I think it is useful for people to see a couple of
+                examples of the tuning strategy.<span style="">&nbsp;
+                </span>This mine was in fact quite unique insomuch as they did
+                not use filters on these loops, as is found on so many other
+                similar plants.<span style="">&nbsp;</span></p>
+                <p class="MsoNormal" align="center"><img src="case_history_103_files/Fig5.jpg" width="740" height="552" border="0"></p>
+                <p class="MsoNormal" align="center"><i>Fig. 5</i></p>
+                <p class="MsoNormal">Figure 5 shows an &#8220;as found&#8221; (i.e. with
+                the original tuning parameters) closed loop test This loop is
+                more typical than the previous one of the type of noise one
+                encounters on milling feeders.<span style="">&nbsp;
+                </span>The noise is still of high amplitude, but it has a higher
+                frequency, whereas the earlier one had that unusual very low
+                frequency component in it<span style="">&nbsp; </span>(refer
+                Figures 1 &#8211; 4).<span style="">&nbsp;</span></p>
+                <p class="MsoNormal">It can be seen in the test that the
+                response to a setpoint change was extremely slow, taking over 20
+                minutes to fully flow a small setpoint change.</p>
+                <p class="MsoNormal" align="center"><img src="case_history_103_files/Fig6.jpg" width="740" height="550" border="0"></p>
+                <p class="MsoNormal" align="center"><i>Fig. 6</i></p>
+                <p class="MsoNormal">Figure 6 is of a section of the open loop
+                analytical and tuning test, showing the edit that was performed
+                to eliminate the noise for the tuning.<span style="">&nbsp;
+                </span>Figure 7 is the final closed loop test using the new
+                tuning.<span style="">&nbsp; </span>It can be
+                seen how well it is now working, with response to setpoint
+                changes only taking a few seconds.</p>
+                <p class="MsoNormal" align="center"><img src="case_history_103_files/Fig7.jpg" width="740" height="549" border="0"></p>
+                <p class="MsoNormal" align="center"><i>Fig. 7</i></p>
+                <p class="MsoNormal">People often think their controls are
+                working well as they don&#8217;t know how to test tuning.<span style="">&nbsp;
+                </span>To give a typical example, I am writing this section of
+                the article during a lunch break whilst doing the practical
+                section of a training course on a remote mine.</p>
+                <p class="MsoNormal">When we started this morning on the
+                testing, the delegates were looking for a loop to tune.<span style="">&nbsp;
+                </span>The plant was running nice and smoothly (which is more
+                often than not, unusual for mining plants).<span style="">&nbsp;
+                </span>They were flipping through one control loop after another
+                remarking that they all seemed to be working well and didn&#8217;t
+                need tuning.<span style="">&nbsp; </span>( They
+                should rather have said that the loops didn&#8217;t need optimising,
+                of which tuning is a small part).</p>
+                <p class="MsoNormal">Eventually I stopped them on a simple
+                reagent addition flow control that they said was working very
+                well, and asked them why they thought it was well tuned.<span style="">&nbsp;
+                </span>The answer was that the PV was on setpoint.<span style="">&nbsp;
+                </span>The SCADA screen also included a small &#8220;tuning
+                window&#8221; which shows a relatively short term trend of the PV,
+                SP and PD (controller output).<span style="">&nbsp;
+                </span>(These windows are usually running at between a 2 and a 5
+                second update time and are generally not great for working
+                with.)<span style="">&nbsp; </span>This window
+                also showed the PV on top of the SP.<span style="">&nbsp;
+                </span>Surely this proves how good the control is?</p>
+                <p class="MsoNormal">All I did then was to ask them to make a SP
+                step change.<span style="">&nbsp; </span>The
+                metallurgist in charge was concerned about this, but eventually
+                allowed a 1% change to be made (which is a very tiny change for
+                analytical purposes).<span style="">&nbsp;</span></p>
+                <p class="MsoNormal">Anyway we stood there for 30 minutes before
+                the flow finally got down to setpoint.<span style="">&nbsp;
+                </span>The class was now convinced that the control was not
+                good, but was in fact terrible.</p>
+                <p class="MsoNormal">After analysing the loop, which included
+                finding 8% hysteresis on the valve, we then tuned it with a slow
+                tune to keep valve reversals to a minimum.<span style="">&nbsp;
+                </span>The PV now takes only a few seconds to respond fully to
+                the 1% setpoint change.</p>
+                <p class="MsoNormal">The moral of this story is that one cannot
+                judge control performance by looking at steady state trends.<span style="">&nbsp;
+                </span>A senior control engineer at a large chemical plant in
+                the <st1:country-region w:st="on">
+                <st1:place w:st="on">
+                UK</st1:place>
+                </st1:country-region>
+                once termed them &#8220;tramline displays&#8221;.</p>
+                <p class="MsoNormal">Another major problem in all industries is
+                that operators have very little understanding of feedback
+                control.<span style="">&nbsp; </span>The quality
+                of operators problem are again very industry dependent.<span style="">&nbsp;
+                </span>Some industries have very high level operators, and some
+                can get away with operators that have a very low level of
+                education.<span style="">&nbsp; </span>For
+                example in the nuclear power industry many operators are highly
+                qualified with degrees, and in the mining industries, a lot of
+                the operators have not even reached Matriculation school level.</p>
+                <p class="MsoNormal">However in my opinion, most operators,
+                irrespective of qualifications, learn by experience to run the
+                plant, and to make product reasonably well.<span style="">&nbsp;
+                </span>Many of the less qualified ones develop good instincts,
+                but very often have little understanding of the process, and
+                generally none of the control.<span style="">&nbsp;
+                </span>They are often highly suspicious of the controls, and as
+                mentioned in previous articles, they do not trust the C&amp;I
+                people.<span style="">&nbsp; </span>It is very
+                bad to antagonise an operator, because they can really go out of
+                their way to mess up optimisation efforts.</p>
+                <p class="MsoNormal">It is therefore very important when
+                optimising work is being performed to get operators on your
+                side.<span style="">&nbsp; </span>I believe it
+                is also essential that they should receive some training and
+                mentoring so they can know how the controls operate and their
+                capabilities.<span style="">&nbsp; </span>I have
+                found that once an operator realises how much well optimised
+                controls can help him to achieve his production targets, he
+                becomes extremely enthusiastic, and will cooperate fully with
+                the optimisation team.</p>
+                <p class="MsoNormal">Another major problem which is hitting all
+                segments of the South African process industries, is the large
+                brain drain from the country, and the loss of scarce, and
+                important skilled and experienced people.<span style="">&nbsp;
+                </span>As mentioned earlier, optimisation requires intelligent
+                people, and it takes a long time to build up the necessary
+                experience to be really skilled in this field.<span style="">&nbsp;
+                </span>I believe that this problem will be exacerbated over the
+                next few years, which bodes ill for our industries.</p>
+            
+                <p align="left"><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></p>
+                <p align="left"><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; </span></b><a href="mailto:michael.brown@mweb.co.za"><b><span style="font-size: xx-small;">michael.brown@mweb.co.za</span></b></a></p>
+    <center>
+                <p>&nbsp;</p>
+            </center></td>
+        </tr>
+    </tbody></table>
+</center></body></html>

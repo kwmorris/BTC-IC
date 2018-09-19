@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures 31</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_31_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_31_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_31_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_31_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_31_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="2"><img src="loop_signatures_31_files/clearpixel.gif" alt="" border="0" height="1" width="2"></td>
+            <td width="748"><img src="loop_signatures_31_files/clearpixel.gif" alt="" border="0" height="1" width="748"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td class="TextObject" width="748">
+                <p><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures No 31</span></b></p>
+                <p><b><span style="font-size: small;">Non-linearity in control loops (part 2)</span></b></p>
+                <p>(This
+article is a continuation of Loop Signature No 30, exploring reasons
+for non-linearities which may be encountered in feedback control
+loops).&nbsp; </p>
+                <p><b>Operating valve outside linear (or linearised) range</b></p>
+                <p>One
+can only expect to operate with linear installed characteristics within
+certain ranges on most valve types.&nbsp;For example most ordinary type
+butterfly valves are normally only used for control up to about 65%
+wafer opening position.&nbsp;Above this point the inherent valve
+characteristics change quite dramatically, and also these valves can
+exhibit instability above this point.&nbsp;</p>
+                <p>Apart
+from this, valves of most types can exhibit bad non-linearity and even
+instability when operating too close to seat.&nbsp; An old rule of
+thumb is that under normal control conditions, one should work with a
+valve position above 20% opening.</p>
+                <p>The
+solution to this is to size and stroke valves properly.&nbsp;(In the
+case of butterfly valves they should be stroked between 0 and 65%).</p>
+                <p><b>Non-linear processes</b></p>
+                <p>There are many processes that exhibit non-linearity.&nbsp;</p>
+                <p>Typically:</p>
+                <ul>
+                    <li>Heat exchanges are very non-linear with changing load.</li>
+                    <li>Gravity
+feed tanks (i.e. tanks that do not have a pump on the output), exhibit
+continually changing process gain with changing level.</li>
+                    <li>Another good example of non-linear integrating processes is non-uniform vessels like horizontal cylindrical tanks.</li>
+                    <li>pH
+control is very non-linear.&nbsp;Although a pH measuring system is
+linear, the actual titration curve of a fluid is not, so different
+tuning is required when controlling at different pH's.</li>
+                </ul>
+                <p>Solutions
+to this type of non-linearity are to use gain scheduling or in the case
+of non-linear tanks, one can "linearise the measurement" by using a
+calculation block available in many modern transmitters that allows one
+to program the shape of the vessel into the transmitter.&nbsp;The
+transmitter then effectively calculates an output that is proportional
+to volume, which will allow one to control the level in the tank with
+constant process gain. <br>&nbsp;</p>
+                <p><b>Non-linear load changes</b></p>
+                <p>Load
+changes can often result in changing process dynamics, particularly in
+process gain.&nbsp;For example pump characteristics of many types of
+pumps and blowers can be very non-linear, resulting in changing process
+gain as the load changes.</p>
+                <p>Other
+examples are found in controls where pump staging is sometimes
+used.&nbsp;For example under light loads only one pump might be used,
+but as the load increases a second parallel pump might be switched
+on.&nbsp;At that time the process gain will double, and a control loop
+may go unstable.</p>
+                <p>Figure
+5 illustrates such a case that was recorded recently in a power
+station.&nbsp;The loop in question is a cascade flow secondary whose
+setpoint is the output of the level controller in a large
+tank.&nbsp;Under certain circumstances the flow to the tank is doubled
+opening a second line.&nbsp;(It has a similar effect as if a second
+pump had been started).&nbsp;As soon as this happens the setpoint is
+immediately increased substantially.&nbsp;It can be seen how the flow
+starts oscillating.&nbsp;This is most likely to be due to a virtual
+doubling in process gain, without changing the tuning.&nbsp;The cycling
+ceased as soon as the flow was reduced again, and setpoint taken back
+down.</p>
+                <p><img id="Picture6" src="loop_signatures_31_files/loopsig31Fig_5.jpg" alt="Figure 5" title="Figure 5" align="top" border="0" height="447" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 5</i></p>
+                <p>The best solution to these types of problems is to employ gain scheduling.</p>
+                <p><b>Process Saturation</b></p>
+                <p>Possibly
+not really non-linearity, but resembling it, process saturation occurs
+where the process reaches a limited state, and as a result the process
+gain changes, with much smaller movements on the PV.</p>
+                <p>Figure
+6 is taken from an open loop test on an airflow in a brewery.&nbsp;It
+shows the flow responding well as the PD is increased.&nbsp;However
+after a certain point the flow changes in relation to the PD changes
+get smaller, until further changes in PD produce no flow increases at
+all.&nbsp;It is fairly obvious that the pressure in the line is
+insufficient to allow any more flow. </p>
+                <p><img id="Picture7" src="loop_signatures_31_files/loopsig31Fig_6.jpg" alt="Figure 6" title="Figure 6" align="top" border="0" height="447" hspace="0" vspace="0" width="600"></p>
+                <p><i>Figure 6</i></p>
+                <p>In
+a case like this the instrument and control practitioner should consult
+with the process experts to ascertain if this situation is always the
+case, or if further flow could be obtained under other
+conditions.&nbsp;(For example possibly air is being drawn off the
+header to some other circuits whilst we were doing the test).&nbsp;If
+the answer is that the saturation is normal, and no further flow will
+ever be experienced, then bearing in mind that as shown in Figure 6 a
+maximum flow of 63% is reached when the controller output is at 60%,
+two important things should be performed which are good I&amp;C
+practice and will not cost the plant any money except for some
+expenditure in time.&nbsp;These are:</p>
+                <ul>
+                    <li>Airflow
+in most plants is normally measured by the use of a differential
+pressure measurement across an orifice plate, or averaging
+pitot.&nbsp;These are very inaccurate devices typically being about ±2%
+F.S., over an absolutely maximum range of 4:1.&nbsp;This means that
+normally we can measure between 100% and 25% of the flow range with
+relatively poor accuracy, which increasingly gets worse as we get lower
+down the scale.&nbsp;In this case our measurement is being cut off
+above 63%, leaving a very limited range of 38% with very poor accuracy
+to work in.&nbsp;Therefore the transmitter should be respanned to give
+a maximum reading when the flow is at 63%.</li>
+                    <li>The
+valve is in fact oversized, as a maximum flow is reached at 60% valve
+opening.&nbsp;Therefore a high limit should be placed on the controller
+output at this point (or very slightly above to allow a little safety
+margin).&nbsp;This has two benefits.&nbsp;Firstly most controllers
+freeze the integral when a controller's output reaches a limit to
+minimise reset windup, and secondly it prevents mechanical windup by
+preventing the valve moving into a region where it cannot do anything
+to increase the flow.&nbsp;This is a very important point, and it
+should be noted that in fact that a similar high limit should be placed
+on the controller output on every single loop with an oversized valve!</li>
+                </ul>
+                <p><b>Incorrect measuring techniques</b></p>
+                <p>This
+is pretty self-explanatory.&nbsp;For example a differential head
+flow-metering device should have a square root extractor placed in the
+transmitter or in the controller (but not in both, as I have seen on
+several occasions). </p>
+                <p><b>Calibration drift</b></p>
+                <p>Also
+fairly self-explanatory.&nbsp;Calibration drift, particularly on span
+calibration, either in the transmitter and/or in the valve stroking,
+would cause changes in process gain.</p>
+                <p><b>Interactive processes</b></p>
+                <p>Not
+always very obvious, interactive feedback control loops can, and often
+do affect each other's response dynamics.&nbsp;It is quite possible
+that if you tune two feedback loops to minimise interaction between
+them, you may find the one suddenly going unstable, or alternatively
+very sluggish when the other loop is placed in manual.</p>
+                <p><b>Split-range control</b></p>
+                <p>Split
+range control is where the output of a controller is divided into two
+sections, each often feeding a separate valve.&nbsp;For example this
+strategy is sometimes used in heating/cooling control
+system.&nbsp;Commonly when the control strategy is designed and
+initiated, the ranges are split say 50% - 50%, irrespective of the
+actual dynamics of each segment.&nbsp;This is incorrect; the split
+should in fact be determined experimentally, by doing step changes in
+manual in both regions, and then splitting the range so that equal
+process gain is encountered in both segments.</p>
+                <p><b>Changes with time</b></p>
+                <p>The
+most difficult factor of all for feedback control to deal with is
+ageing.&nbsp;Unfortunately just as our own human dynamics change with
+time, so do those in process control loops.&nbsp;For example boilers
+scale up.&nbsp;Friction in valve packing may change. Play in mechanical
+linkages can increase causing bigger dead bands.&nbsp;As these types of
+factors change so do the dynamics.&nbsp;Just out of interest, some
+enterprising users of the Protuner use its modelling function to plot
+such changes, and after documenting a repetitive history of the ageing,
+they use it for predictive maintenance.&nbsp;This technique has worked
+very successfully.&nbsp;</p>
+                <p>If
+the factors that are changing cannot be corrected, then the only other
+solution is to retune the controller.&nbsp;If ageing factors are
+predictable then gain scheduling can be employed.&nbsp;In certain rare
+processes I have encountered in petro-chemical refineries, the
+properties of a particular catalyst change over very short periods of
+time in a completely non-predictable way.&nbsp;This is extremely
+difficult to deal with using feedback control.&nbsp; The only possible
+solution is to use a continuous self-tuning controller if you can find
+one that will work in those circumstances.</p>
+                <p><span style="font-size: 10pt;"></span><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp;</span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a><br><br>&nbsp;</p>
+                <ul>
+                </ul>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

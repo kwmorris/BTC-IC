@@ -1,0 +1,303 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0077)http://www.controlloop.co.za/Articles/Loop_signatures_5/loop_signatures_5.htm -->
+<HTML><HEAD><TITLE>Loop signatures 5</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=ISO-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR>
+<SCRIPT language=JavaScript src="Loop signatures 5_files/menu.js"></SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var controlloop = new MenuBar("controlloop",0,2,0,0,1,1,0,"solid","#CCCCCC","#CCCCCC","#999999","Verdana,Tahoma,Arial,Helvetica",12,"normal","normal","#000000","#FFFFFF","");
+var m1_controlloop = new Menu("Home",127,100,"../../default.htm");
+controlloop.addMenu(m1_controlloop);
+var m2_controlloop = new Menu("Training",127,100,"../../Training/training.htm");
+controlloop.addMenu(m2_controlloop);
+var m3_controlloop = new Menu("Consulting",127,100,"../../Consulting/consulting.htm");
+controlloop.addMenu(m3_controlloop);
+var m4_controlloop = new Menu("Protuner",127,100,"../../Protuner/protuner.htm");
+controlloop.addMenu(m4_controlloop);
+var m5_controlloop = new Menu("Contact us",127,100,"../../Contact_us/contact_us.htm");
+controlloop.addMenu(m5_controlloop);
+var m6_controlloop = new Menu("Articles",130,100,"../../Articles/articles.htm");
+controlloop.addMenu(m6_controlloop);
+//-->
+</SCRIPT>
+
+<SCRIPT>
+<!--
+function F_loadRollover(){} function F_roll(){}
+//-->
+</SCRIPT>
+
+<SCRIPT language=JavaScript1.2 
+src="Loop signatures 5_files/rollover.js"></SCRIPT>
+</HEAD>
+<BODY text=#000000 vLink=#990000 link=#cc0000 bgColor=#ffffff leftMargin=0 
+topMargin=0 MARGINHEIGHT="0" MARGINWIDTH="0">
+<SCRIPT language=JavaScript><!--
+controlloop.start();
+//--></SCRIPT>
+
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=776 border=0>
+  <TBODY>
+  <TR vAlign=top align=left>
+    <TD vAlign=top align=left width=765 colSpan=5 height=77><IMG id=Picture83 
+      height=77 src="Loop signatures 5_files/banneroct2002.jpg" width=765 
+      border=0></TD>
+    <TD colSpan=2></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=20 height=7><IMG height=1 
+      src="Loop signatures 5_files/clearpixel.gif" width=20 border=0></TD>
+    <TD width=23><IMG height=1 src="Loop signatures 5_files/clearpixel.gif" 
+      width=23 border=0></TD>
+    <TD width=698><IMG height=1 src="Loop signatures 5_files/clearpixel.gif" 
+      width=698 border=0></TD>
+    <TD width=11><IMG height=1 src="Loop signatures 5_files/clearpixel.gif" 
+      width=11 border=0></TD>
+    <TD width=13><IMG height=1 src="Loop signatures 5_files/clearpixel.gif" 
+      width=13 border=0></TD>
+    <TD width=1><IMG height=1 src="Loop signatures 5_files/clearpixel.gif" 
+      width=1 border=0></TD>
+    <TD width=10><IMG height=1 src="Loop signatures 5_files/clearpixel.gif" 
+      width=10 border=0></TD></TR>
+  <TR vAlign=top align=left>
+    <TD width=766 colSpan=6 height=24><!--<IMG ID="DynamicMenu2501" HEIGHT=24 WIDTH=766 SRC="../../a_blank.gif" BORDER=0 ALT="DynamicMenu2 5.0">
+                #DM2_controlloop# 1:coolPost:1--><NOLAYER>
+      <DIV id=MBposcontrolloop 
+      style="VISIBILITY: hidden; WIDTH: 766px; HEIGHT: 24px"></DIV></NOLAYER><ILAYER 
+      id=MBposcontrolloopL VISIBILITY="hide" WIDTH="766" HEIGHT="24" 
+      Z-INDEX="0"></ILAYER></TD>
+    <TD></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=13></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=2></TD>
+    <TD width=698>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica>Loop Problem Signatures No 
+      5</FONT></B><FONT face=Verdana,Tahoma,Arial,Helvetica> </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-1>Final control elements - Part 1<BR>Introduction, sizing and 
+      rangeability</FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>There are many types 
+      of final control elements including valves, dampers, feeders, louvers, and 
+      variable speed drive devices, although in general the vast majority of 
+      final control elements found in the industrial control world are 
+      pneumatically actuated valves&nbsp; (typically as illustrated in Figure 
+      1). </FONT>
+      <P><B><FONT face=Verdana,Tahoma,Arial,Helvetica size=-2>Figure 
+1</FONT></B>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1></FONT>&nbsp;
+      <DIV align=center>
+      <TABLE cellSpacing=0 cellPadding=0 width=449 border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG id=Picture40 height=338 alt="Figure 1" 
+            src="Loop signatures 5_files/loopsig5fig1.gif" width=449 
+        border=0></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Verdana,Tahoma,Arial,Helvetica size=-1>It is impossible in 
+      this limited series of articles to go into great depth on all the various 
+      subjects and problems that can be encountered.&nbsp; What I am attempting 
+      to do here is to outline some of the practical problems, and some 'rules 
+      of thumb' relating to final control elements that can affect control in 
+      the real world.&nbsp; Most of the points specifically apply to 
+      pneumatically actuated valves, but may well also be relevant to other 
+      devices as well.&nbsp; It is also assumed that in the general term 'final 
+      control element', we are talking about all the components involved, 
+      including the I/P (current-to-pneumatic) converter, air pressure 
+      regulators, valve actuator, the positioner, and the valve itself.
+      <P>The actual purpose of the final control element is to regulate the flow 
+      of the process fluid strictly in accordance with the dictates of the 
+      controller output (PD).&nbsp; In other words the valve must move to a 
+      position represented by the value of the PD.&nbsp; The faster and more 
+      accurately the valve follows these dictates the better the control 
+      variance becomes.&nbsp; 
+      <P>The importance of the final control element cannot be 
+      overestimated.&nbsp; Many people mistakenly believe that the valve is not 
+      really critical to the control performance.&nbsp; Their thinking is that 
+      if the PD tells the valve to move to a particular position, and if the 
+      valve doesn't get right to that point, then what matter?&nbsp; There is 
+      always the I (integral) term in the controller, the purpose of which is to 
+      eliminate control error, so if the valve doesn't get to the right point 
+      then the controller will keep moving its output until the valve does 
+      actually get to the correct point.
+      <P>This thinking sounds reasonable, but in reality it completely overlooks 
+      the time factor, and the fact that the integral influence is very small 
+      near setpoint (as will be discussed in the section on controllers at a 
+      later date in this series of articles). To give an example, a controller 
+      on a fast process (like flow), with a time constant of about 1 or 2 
+      seconds, where the controller is tuned with fast integral, might take over 
+      30 minutes to finally get a bad valve to the right position.&nbsp; On slow 
+      processes like temperature with time constants of many minutes or even 
+      longer, where the controller is tuned with slow integral, it may take the 
+      controller literally many hours to get the valve positioned 
+      correctly.&nbsp; One 'rule of thumb' right away is that on slow processes, 
+      you cannot afford a poor valve if you want even half-reasonable control.
+      <P>The majority of problems encountered in the control loop are to be 
+      found in the final control element.&nbsp; The reason for this is that 
+      whereas other components in the modern loop like the measuring transmitter 
+      and controller are sophisticated devices, equipped with the latest 
+      technology from the fields of physics, electronics, and computerisation, 
+      and generally with absolutely minimum of moving parts, if any at all, the 
+      valve in essence is a mechanical device where one 'chunk' of metal must be 
+      positioned accurately and repeatably inside another 'chunk' of metal, 
+      often under extremely difficult process conditions of temperature, 
+      abrasion, stickiness, corrosion, pressure, etc.&nbsp; Any mechanical 
+      device is subject to all sorts of problems such as wear, various types of 
+      friction, repeatability, and rangeability. 
+      <P>To give an idea of the problems encountered in typical industrial 
+      plants, a large South African petro-chemical refinery optimised over 3,000 
+      control loops in their plant.&nbsp; The engineer in charge of this project 
+      reported that over 80% of the valves had to be worked on, or even 
+      replaced, before reasonable control could be achieved.&nbsp; One of the 
+      largest manufacturers of control valves in the world offer a service in 
+      the USA and Europe whereby they go into plants (using any make of valve) 
+      with computerised valve diagnostic equipment and give a report on the 
+      state of the valves.&nbsp; The head of the UK branch told me that on 
+      average, the first time they go into a plant, they find generally between 
+      70 and 75% of the valves in the plant have noticeable problems requiring 
+      correction if reasonable control is to be achieved.
+      <P>There are many makes and types of control valves.&nbsp; A proper 
+      control valve specifically designed for modulating control purposes is an 
+      expensive device.&nbsp; Therefore people often go for cheaper 
+      alternatives, using typically valves designed for manual operation, but 
+      fitted with an actuator, and sometimes a positioner.&nbsp; This can be 
+      sufficient for the control required, but the maxim remains:&nbsp; "If you 
+      want good control you need a good valve".
+      <P>The chief features of a good valve is that many years of research, 
+      design know-how and experience has been put into it by the manufacturer to 
+      make the valve perform properly.&nbsp; This performance will include 
+      accurate, repeatable positioning, generally as quickly as possible, under 
+      all the specified operating conditions.&nbsp; In addition most 
+      manufacturers attempt to get the valve to respond to step changes as 
+      exponentially as possible.&nbsp; A little known fact is that in PID 
+      control, different tuning would in theory be needed for different sized 
+      step changes if the response is not exponential, as will occur for example 
+      on electrically actuated valves, which operate with a ramp response.&nbsp; 
+      (In reality this is a minor problem, and would only possibly have a real 
+      effect on very fast processes).
+      <P>The use of a positioner on pneumatic actuated valves is 
+      essential.&nbsp; I have often come across people who believe that one 
+      should try and avoid positioners if possible.&nbsp; Typical thinking 
+      includes the belief that positioners cause instability, that they 
+      shouldn't ever be fitted to small valves and others.&nbsp; However a 
+      positioner is a must, if you want good control.&nbsp; A good manufacturer 
+      will ensure that the positioner on the valve does not cause instability if 
+      set up properly.
+      <P>A positioner does not however make up for an underpowered 
+      actuator.&nbsp; The actuator is the device that actually provides the 
+      motive power for the valve, not the positioner.&nbsp; The latter merely 
+      ensures that the actuator does move the valve to the correct point as 
+      given by the PD.&nbsp; On several occasions I have come across cases where 
+      people have tried to save money by fitting smaller actuator, because a 
+      positioner was fitted.&nbsp; This in fact creates an even more serious 
+      problem which we have named "negative hysteresis", and this will be 
+      described in an another article in the next couple of issues.
+      <P>The correct sizing of the valve is very important as it affects the 
+      process gain.&nbsp; This was discussed in a previous loop signature 
+      dealing with the importance of process gain.&nbsp; The valve sizing is 
+      itself of course established using a special formula.&nbsp; 
+      <P>From the process gain point of view some general 'rules of thumb' are 
+      that for practical purposes on self regulating processes the process gain 
+      should be between 0.5 and 2.0.&nbsp; In the case of integrating processes, 
+      the valve should be sized so that it is large enough to deal with the 
+      biggest load into, (or out of as the case may be), the process. At the 
+      same time the valve should not be too large so that under normal control 
+      conditions it will not operate too close to its seat.
+      <P>This is an interesting point.&nbsp; If a valve operates close to seat 
+      under normal control conditions, apart from the fact that it is obviously 
+      oversized, many valves become very non-linear in low operating 
+      regions.&nbsp; A good guide is that the valve should under normal 
+      conditions operate at over the 20% open position, but some valve experts 
+      say that there should in fact be at least 20% of the actual flow through 
+      the valve. In the latter case, in the case of a valve with an equal 
+      percentage characteristic (see next article), it means that the valve 
+      position should be open past the 45% position.
+      <P>The inherent rangeability of a control valve is the ratio of maximum 
+      controllable flow to minimum controllable flow.&nbsp; Typical figures for 
+      various classes of valves are:
+      <P>Globe valves:&nbsp;&nbsp; 10:1 to 30:1
+      <P>V-notch ball:&nbsp;&nbsp; 100:1 to 300:1
+      <P>Butterfly:&nbsp;&nbsp; 10:1 to 20:1
+      <P>Sanders:&nbsp;&nbsp; 5:1
+      <P>It is of interest to note that even the best control valve does not 
+      have extremely wide rangeability, and if control is in fact required over 
+      a wide range of flows, then other strategies requiring more than one valve 
+      may be necessary.
+      <P>Control problems can result when the required inherent rangeability 
+      exceeds the actual inherent rangeability of the final control 
+      element.&nbsp; Oversizing will of course reduce the inherent rangeability 
+      of the valve directly by the process gain.
+      <P></FONT><A 
+      href="index.html"><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica size=-1>Index to Loop Problem 
+      Signatures</FONT></A>
+      <P align=left><B><FONT face=Verdana,Tahoma,Arial,Helvetica color=#000000 
+      size=-2>Michael Brown is a specialist in control loop optimisation, with 
+      many years of experience in process control instrumentation. His main 
+      activities are consulting, and teaching practical control loop analysis 
+      and optimisation. He gives training courses which can be held in clients' 
+      plants, where students can have the added benefit of practising on live 
+      loops. His work takes him to plants all over South Africa, and also to 
+      other countries. He can be contacted at: <BR>Tel (011) 486-0567<BR>Fax 
+      (011) 646-2385<BR>E-Mail: </FONT><FONT face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2></FONT></B><A href="mailto:michael.brown@pixie.co.za"><B><FONT 
+      face=Verdana,Tahoma,Arial,Helvetica 
+      size=-2>michael.brown@pixie.co.za</FONT></B></A>
+      <P>&nbsp;</P></TD>
+    <TD colSpan=4></TD></TR>
+  <TR vAlign=top align=left>
+    <TD colSpan=7 height=19></TD></TR>
+  <TR vAlign=top align=left>
+    <TD height=19></TD>
+    <TD width=732 colSpan=3>
+      <TABLE id=NavigationBar1 cellSpacing=0 cellPadding=1 width=732 border=0>
+        <TBODY>
+        <TR vAlign=top align=left>
+          <TD width=120><A onmouseover="F_roll('NavigationButton43',1)" 
+            onmouseout="F_roll('NavigationButton43',0)" 
+            href="http://www.controlloop.co.za/default.htm"><IMG 
+            id=NavigationButton43 height=19 alt=Home 
+            src="Loop signatures 5_files/Home_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Home_NRGUIButtonOver.GIF')" border=0 
+            name=NavigationButton43></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton44',1)" 
+            onmouseout="F_roll('NavigationButton44',0)" 
+            href="http://www.controlloop.co.za/Training/training.htm"><IMG 
+            id=NavigationButton44 height=19 alt=Training 
+            src="Loop signatures 5_files/Training_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Training_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton44></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton45',1)" 
+            onmouseout="F_roll('NavigationButton45',0)" 
+            href="http://www.controlloop.co.za/Consulting/consulting.htm"><IMG 
+            id=NavigationButton45 height=19 alt=Consulting 
+            src="Loop signatures 5_files/Consulting_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Consulting_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton45></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton46',1)" 
+            onmouseout="F_roll('NavigationButton46',0)" 
+            href="http://www.controlloop.co.za/Protuner/protuner.htm"><IMG 
+            id=NavigationButton46 height=19 alt=Protuner 
+            src="Loop signatures 5_files/Protuner_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Protuner_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton46></A></TD>
+          <TD width=120><A onmouseover="F_roll('NavigationButton47',1)" 
+            onmouseout="F_roll('NavigationButton47',0)" 
+            href="http://www.controlloop.co.za/Contact_us/contact_us.htm"><IMG 
+            id=NavigationButton47 height=19 alt="Contact us" 
+            src="Loop signatures 5_files/Contact_us_NGUIButton.gif" width=120 
+            onload="F_loadRollover(this,'Contact_us_NRGUIButtonOver.GIF')" 
+            border=0 name=NavigationButton47></A></TD>
+          <TD width=120 height=19><A 
+            onmouseover="F_roll('NavigationButton48',1)" 
+            onmouseout="F_roll('NavigationButton48',0)" 
+            href="http://www.controlloop.co.za/Articles/articles.htm"><IMG 
+            id=NavigationButton48 height=19 alt=Articles 
+            src="Loop signatures 5_files/Articles_HGUIButtonOn.gif" width=120 
+            onload="F_loadRollover(this,'Articles_HRGUIButtonOnOver.GIF')" 
+            border=0 name=NavigationButton48></A></TD></TR></TBODY></TABLE><!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" --><A 
+      href="http://sm6.sitemeter.com/stats.asp?site=sm6controleng" 
+      target=_top><IMG alt="Site Meter" src="Loop signatures 5_files/meter.gif" 
+      border=0></A> <!--WEBBOT bot="HTMLMarkup" Endspan --></TD>
+    <TD colSpan=3></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

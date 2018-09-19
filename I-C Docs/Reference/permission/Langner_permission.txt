@@ -1,0 +1,42 @@
+Permission granted
+
+Ralph Langner
+
+
+Von: Tony Kuphaldt [mailto:TKuphaldt@btc.edu]
+Gesendet: Freitag, 12. Februar 2016 15:24
+An: Langner Communications
+Betreff: Permission to share reports with students
+
+
+
+Hello,
+
+I teach industrial control system maintenance and design, and as a 
+part of this curriculum students learn about the Stuxnet virus as 
+a prototype of future control system threats.  We are currently 
+enhancing the security element of our curriculum, and would like to 
+use some of the papers available on your website as case study 
+material.  The main paper I would like to share with students is the 
+excellent "To Kill A Centrifuge" by Ralph Langner.
+
+Some of our students lack reliable internet access, and so we would 
+like permission to download these documents and share them with 
+students via flash drive or CD-ROM.  Since these are copyrighted 
+documents, we will not do so unless and until your permission is given.
+These resources will be given to students freely, and will not be 
+used for any commercial purpose.
+
+Thank you in advance for your time and attention.
+
+
+Tony Kuphaldt
+Instructor, Instrumentation and Control Technology
+Bellingham Technical College
+3028 Lindbergh Avenue
+Bellingham, WA 98225-1599
+Office located in room 124 of the Desmond McArdle Center (DMC building)
+(360)-752-8477 [office]
+(360)-752-7277 [fax]
+tony.kuphaldt@btc.edu
+

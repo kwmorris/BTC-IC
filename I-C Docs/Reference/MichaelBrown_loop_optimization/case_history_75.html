@@ -1,0 +1,299 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+
+
+
+<title>Case History 75</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="Microsoft FrontPage 4.0">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+</head><body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="63"><img id="Picture1" src="case_history_75_files/Michael_Brown.gif" alt="" width="750" height="63" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="117"><img src="case_history_75_files/clearpixel.gif" alt="" width="117" height="1" border="0"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_75_files/clearpixel.gif" alt="" width="116" height="1" border="0"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="120" height="2"><img src="case_history_75_files/clearpixel.gif" alt="" width="120" height="1" border="0"></td>
+            <td>
+              <p align="center"><a href="http://www.controlloop.co.za/Case_histories/CDpromo.html">Educational
+              CDs</a></p></td>
+            <td width="119"><img src="case_history_75_files/clearpixel.gif" alt="" width="119" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" width="750" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr valign="TOP" align="LEFT">
+            <td width="750" height="28"><img src="case_history_75_files/clearpixel.gif" alt="" width="750" height="1" border="0"></td>
+        </tr>
+        <tr valign="TOP" align="LEFT">
+            <td class="TextObject" width="750">
+                <p style="text-align: left;"><span style="font-size: x-small;"><b><span style="font-size: small; color: rgb(204, 0, 0);">CONTROL LOOP CASE HISTORY 75</span></b><br><br><b><span style="font-size: small;">Mould Level Control in Continuous Casting Machines</span>
+                    </b></span></p>
+	
+<p>One of the more difficult types of processes that I have been asked to
+optimise, is the level control of the mould in a continuous casting
+machine found in large steel manufacturing plants.&nbsp;Figure 1 is a
+basic diagram of such a machine.</span></p>
+                <p>
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture2" src="case_history_75_files/cashis75Fig1.jpg" alt="Figure 1" title="Figure 1" width="550" height="373" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                </p>
+                <p style="text-align: center;"><b>Figure 1</span></b></p>
+       
+<p>Molten steel is poured continuously through a water cooled mould from a
+tundish via a control "valve" to regulate the flow, and then through a
+ceramic submerged entry nozzle into the mould.&nbsp;The outside of the
+steel starts solidifying in the mould.&nbsp;Water sprays further cool
+the steel "strand" as it leaves the mould.&nbsp;As shown in the diagram
+the strand is curved via a series of rollers through 90° and emerges as
+a horizontal slab.&nbsp;As it leaves the machine at this point it is
+now solid, and is cut up by a "flying cutter" as it moves
+along.&nbsp;It is interesting to note that their record of one
+continuous casting for one of the machine I worked on, is approximately
+10kms. for a strand with a cross-sectional area of 1,600 x 250
+mm.&nbsp;Also of interest is the fact that the mould width can be
+varied between 950 mm. and 1,800 mm.&nbsp;Thus pretty large slabs of
+steel can be produced in these gigantic machines.&nbsp;The casting
+speed of the machine can also be varied. Obviously the faster it can
+run the higher the productivity of the process.&nbsp;The mould is also
+kept in a relatively slow vertical up and down oscillation to prevent
+the molten steel from sticking to the walls.</span></p>
+	  
+<p>The actual behaviour and characteristics of the steel strand as it
+solidifies are not completely understood, but a metallurgist described
+the strand leaving the mould as similar to a colossal balloon filled
+with a liquid.&nbsp;The steel skin is still very elastic.</span></p>
+                <p><span style="font-size: x-small;">The
+whole control of the process is entirely dependent on keeping the level
+of the molten steel in the mould at a very constant level.&nbsp;Ideally
+the process metallurgists would like the level to be kept within ±1
+mm.&nbsp;If the level fluctuates the quality of the steel is badly
+affected.&nbsp;Obviously high costs would be entailed if the steel
+overflows the mould, because it would entail repairs and would
+interrupt the process for many hours.</span>
+                </p>
+
+<p>The mould level can be measured by nuclear technology employing a
+radioactive source on one side of the mould and a vertical "strip"
+scintillation counter on the other side.&nbsp;Alternatively and more
+recently an eddy current level monitor is used.&nbsp;Of the two I have
+found that the latter gives a "cleaner" signal.</span></p>
+      
+<p>There are two common methods used to control the flow of steel into the
+mould.&nbsp;The first is to use a ceramic "stopper" rod pushing into a
+circular outlet (or hole)in the tundish.&nbsp;I have found this device
+particularly bad for several reasons.&nbsp;The tip of the stopper is
+constantly eroding and changing shape, which makes the "installed valve
+characteristics" variable and non-linear.&nbsp;Also on one machine I
+worked on, the flow varied between 0 and 100% over a movement of a
+couple of millimetres of the rod.&nbsp;This increased the process gain
+of an already fast integrating process (see later) dramatically, and
+necessitated in extremely small gains in the controller, which
+effectively necessitates a very slow tune. </span></p>
+	 
+<p>The second method which in my opinion is far superior, is to use a gate
+with a circular hole in it, sliding horizontally over an identical
+opening in the bottom of the tundish.&nbsp;This has relatively linear
+installed characteristics, does not cause an unnecessary increase in
+process gain, and allows for a much finer and faster control.&nbsp;The
+gate is moved by an extremely fast and accurately positioned hydraulic
+actuator. </span></p>
+       
+<p>There are some very interesting and difficult problems associated with the
+control of this process.&nbsp;Firstly being a level it is
+integrating.&nbsp;The next problem is that it is extremely fast which
+means it has a very high process gain. Typically I have measured a
+mould with a process gain of about 0.3, which is equivalent to a
+retention time of about 3.3 seconds.&nbsp;This is really
+fast.&nbsp;Fast integrating processes have to be tuned relatively
+slowly with a smaller gain in the controller for stability.&nbsp;This
+means that the control has to be relatively slow, and cannot react very
+quickly to fast changes.&nbsp;</span></p>
+	 
+<p>As will be seen in an article on tuning which will appear shortly in my
+Loop Signature series the following relationship is approximately true
+for integrating processes:</span></p>
+      
+		<p>PG x Kp x I = Constant</span></p>
+                <p>Where PG = Process Gain<br>Kp = Controller Gain<br>I = Controller integral in time/repeat for a series or ideal algorithm.</span></p>
+	
+<p>The relevance of this is that if the process gain changes, then the tuning
+parameters have to be changed proportionally to keep the relationship
+in balance.</span></p>
+       
+<p>Unfortunately there are many factors which can change the process gain and affect the control.&nbsp;These include:</span></p>
+                <ul>
+                    <li>Mould width (i.e. mould volume).</li>
+                    <li>The level of steel in the tundish will affect the flow into the mould.</li>
+                    <li>Steel grade.</li>
+                    <li>Casting speed.</li>
+                    <li>State of submerged entry nozzle which slowly blocks up over time, and has then to be replaced.</li>
+                    <li>The molten steel is not completely consistent.&nbsp;This can result in the flow into the mould varying quite suddenly.</li>
+                </ul>
+   
+<p>Changes in any of these factors could mean that different tuning parameters may
+be needed to keep control optimum.&nbsp;(Sometimes referred to as gain
+scheduling or adaptive tuning).</span></p>
+	   
+<p><b>Report on the controls in a particular casting machine recently investigated<br></b>I thought it might be interesting to show some of the problems that were found.</span></p>
+   
+<p>The machine was quite a large one with 4 strands.&nbsp;It is controlled by
+a well known make of American PLC, and the controls had originally been
+optimised by the original German consultants.&nbsp;The level
+measurement is the eddy current type, and the final control element is
+the sliding gate "valve" type described earlier. </span>
+                </p>
+       
+<p>The process operating personnel were not at all happy with the existing
+control of the level.&nbsp;It deviated a lot from setpoint, and could
+not cope with load changes.&nbsp;It was extremely bad on wide mould
+widths particularly at higher machine speeds.</span></p>
+       
+<p>The gate was first checked.&nbsp;It was found that it followed the output
+signal of the level controller extremely quickly and
+accurately.&nbsp;It was one of the fastest and best final control
+elements I have ever encountered.&nbsp;The plant people had found and
+rectified an earlier problem with hysteresis caused by play in the
+coupling between the piston of the hydraulic cylinder and the actual
+gate.</span></p>
+       
+<p>The first problem found was that the consultants had typically lacked
+understanding on setting up the control blocks in the PLC
+properly.&nbsp;They had firstly set the triggering time (scan rate) of
+the blocks incorrectly, which had completely upset the integral (which
+is time dependent).&nbsp;Secondly they had unfortunately used the
+"parallel" algorithm (refer <a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop Signature </a>series),
+which makes tuning, especially by trial and error, extremely difficult,
+as a change in the proportional term causes the integral repeat time to
+vary.&nbsp;They had also made some other small errors.</span></p>
+       
+<p>Their tuning was also extremely poor and very slow.&nbsp;Figure 2 shows the "as found" closed loop test.&nbsp;</span></p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture3" src="case_history_75_files/cashis75Fig2.jpg" alt="Figure 2" title="Figure 2" width="550" height="411" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <br><b><span style="font-size: xx-small;">Figure 2</span></b></p>
+       
+<p>This test was carried out on a relatively small mould width.&nbsp;It can be
+seen that the level was far from constant and control was very poor,
+particularly during the ladle change which resulted in the level in the
+tundish dropping down quite far.</span></p>
+	
+<p>Two main difficulties were presented in this work.&nbsp;Firstly
+optimisation could only be carried out during actual production, and
+due to the value of the product the production people were very
+reluctant to make the step test changes which are required for
+scientific tuning.&nbsp;This meant that quite a lot of the tuning had
+to be carried out more by trial and error than
+scientifically.&nbsp;Only a couple of very small bump tests were
+possible, but it did allow one to obtain some idea of the process
+dynamics.</span></p>
+       
+<p>The second difficulty was that the control blocks had to be modified
+"on-line".&nbsp;This involved very careful testing to establish the
+true "as found" tuning parameters already in the controller, so that
+when the modifications were made, the controller carried on initially
+with the same effective initial "as found" parameters.<br>
+The result of the tests was a dramatic improvement in the
+control.&nbsp;Figure 3 shows part of a test during which a ladle change
+was made.&nbsp;</span></p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture4" src="case_history_75_files/cashis75Fig3.jpg" alt="Figure 3" title="Figure 3" width="550" height="408" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <br><b><span style="font-size: xx-small;">Figure 3</span></b></p>
+                <p><span style="font-size: x-small;">It can be seen how well the control could cope with this change.</span></p>
+       
+<p>The machine was left running with the new parameters.&nbsp;At one stage
+during the night shift, the control apparently went unstable.&nbsp;This
+occurred simultaneously on both strands that were running at the
+time.&nbsp;There was no apparent reason for this.&nbsp;The only
+difference was that a different grade of steel was being
+manufactured.&nbsp;The tuning was slowed down slightly, and performed
+well after that.&nbsp;The plant was advised that if the same problem
+occurred again it would be vital to ascertain what had changed in the
+process.&nbsp; Obviously something had occurred which had caused the
+dynamics to suddenly change.&nbsp;(This is the type of thing which
+often needs quite a bit of good detective work to sort out).</span></p>
+
+<p>Another problem encountered was that the control with the slightly slower parameters could not cope adequately with speed changes.&nbsp;This was easily solved by slowing down the ramp rate of the changes.</span></p>
+
+<p>Everything was now fine with control at smaller mould widths.&nbsp;Tests were then
+carried out with wide mould widths.&nbsp;The control was relatively
+good at lower machine speeds. However once a certain speed was exceeded
+it appeared as if the control had gone unstable. The plant personnel
+certainly blamed the control.</span></p>
+	      
+<p>How does one ascertain if a closed loop control loop is in fact
+unstable?&nbsp;One way is to go and check if the valve is actually
+oscillating.&nbsp;In this case the movements of the controller output
+had actually increased proportionally to the swings in level, so it did
+look unstable.&nbsp;Another way is to slow the control down.&nbsp;If
+the controller tuning was causing the instability, then slower tuning
+should allow the process to settle down. This then shows the tuning was
+probably at fault.&nbsp;If the cycling still continues then the fault
+must lie elsewhere.</span>
+                </p>
+       
+<p>Figure 4 show such a test.&nbsp;</span></p>
+                <p style="text-align: center;">
+                    <table nof="TE" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <td align="CENTER"><img id="Picture5" src="case_history_75_files/cashis75Fig4.jpg" alt="Figure 4" title="Figure 4" width="550" height="409" border="0"></td>
+                        </tr>
+                    </tbody></table>
+                    <br><b><span style="font-size: xx-small;">Figure 4</span></b></p>
+      
+<p>The large cycling can be seen.&nbsp;In the middle of the test as seen in
+the Figure the controller was virtually detuned (almost into
+manual).&nbsp;The cycling still continued.&nbsp;This proved it is not a
+control problem, but would indicate that waves have appeared in the
+mould, possibly standing waves.&nbsp;This observation has also been
+made by Niemann, Adamy, and Nitshe of Siemens who have done similar
+work on control of continuous casting machines.&nbsp;</span></p>
+       
+<p>The plant is now investigating causes of this, and will hopefully find a
+cure.&nbsp;Unfortunately feedback control can not deal with
+disturbances like this.&nbsp;The dominant frequency of the waves give a
+period of about 15 seconds, which is very close to the ultimate period
+of the control loop.&nbsp;As mentioned in the <a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop Signature</a> series, variance of feedback controls deteriorates with frequencies close to ultimate frequency.</span></p>
+       
+		<p><span style="font-size: x-small;"><a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Index to articles</a></span></p>
+                <p><b><span style="font-size: xx-small;"><span style="color: rgb(0, 0, 0);">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail: </span> </span></b><a href="mailto:michael.brown@mweb.co.za"><b><span style="font-size: xx-small;">michael.brown@mweb.co.za</span></b></a></p>
+                <p><span style="font-size: x-small;"></span>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

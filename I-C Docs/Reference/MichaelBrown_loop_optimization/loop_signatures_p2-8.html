@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Loop Signatures P2-8</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<style>
+</style></head>
+
+
+<body nof="(MB=(daughter2004, 125, 76, 0, 0), L=(LoopSignaturesP28Layout, 750, 1833))" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="loop_signatures_p2-8_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="loop_signatures_p2-8_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="loop_signatures_p2-8_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="loop_signatures_p2-8_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="loop_signatures_p2-8_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="loop_signatures_p2-8_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p style="text-align: center;"><b><span style="font-size: small; color: rgb(153, 0, 0);">Loop Problem Signatures Part 2</span></b></p>
+                <p><b>BASICS OF FREQUENCY PLOTS - PART 3</b></p>
+                <p>In the <a href="http://www.controlloop.co.za/Loop_signatures/Loop_Signatures_P2-7/loop_signatures_p2-7.html">previous article</a>
+in this series it was shown that the ideal Bode closed loop gain plot
+for a simple first order lag, deadtime, self-regulating process is a
+straight line sloping downwards from left to right at a slope of &#8211;20
+db/decade. It is relatively easy to establish how good the tuning is
+from this plot, and how safe it is. </p>
+                <p>The first thing to check is
+if good pole cancellation has been achieved. To do this one examines
+the plot to see if the line is straight, for as mentioned in the
+previous article, if it is bent up at the bottom, the response will be
+slower than desirable, and the process may "step-up" to setpoint.&nbsp;
+Alternatively if it is bent downwards at the bottom it will mean that
+the response will be more cyclic than desirable. </p>
+                <p>From the safety (sometimes
+referred to as "robustness") point of view the plot allows us to easily
+determine two factors called gain margin and phase margin.</p>
+                <p>It will be remembered as well from the <a href="http://www.controlloop.co.za/Loop_signatures/Loop_Signatures_P2-7/loop_signatures_p2-7.html">previous article</a>
+that for instability to occur in a feedback loop the combined loop gain
+must be &#8805; unity (0db) and simultaneously, the (phase angle) must be at
+-180°. </p>
+                <p>The gain margin effectively
+tells us how far away we are from unity gain on our combined plot; by
+seeing what the value of the gain is when the phase lag is at -180°. In
+the closed loop plot in Figure 1, it can be seen that when the phase
+lag is at -180°, the actual gain is &#8211;8.06 db. Therefore to get to unity
+gain we would have to increase our controller's proportional gain by a
+further 8.06 db for instability to occur. We say that the gain margin
+is 8.06 db. </p>
+                <p><img id="Picture2" src="loop_signatures_p2-8_files/Loopsig2-8Fig1.jpg" alt="Loopsig2-8Fig1" title="Loopsig2-8Fig1" align="top" border="0" height="537" hspace="0" vspace="0" width="700"></p>
+                <p><i>Figure 1</i></p>
+                <p>For
+interest's sake, quarter-wave damping has a gain margin of
+approximately 6.25 db.&nbsp; As mentioned in previous articles, quarter
+wave damping is not recommended for several practical reasons, and the
+fastest tuning on a self-regulating process as recommended by
+Techmation, the manufacturers of the Protuner Loop Analyser, would have
+a gain margin of 8 db.&nbsp; This would result in one overshoot and one
+undershoot on this simple process.</p>
+                <p>The phase
+margin tells us how far we are away from -180°, when the gain in the
+loop is unity.&nbsp; As can be seen in Figure 1, if we go to the unity
+gain mark we can read off the phase lag at this point, which is roughly
+120°. Therefore our phase margin is 180° - 120° = 60°. As a general
+rule of thumb 60° is about the minimum phase margin one would like to
+see on this type of process.</p>
+                <p>Another
+factor that can be taken into account when looking at robustness of
+tuning is something called the damping factor.&nbsp; This is however
+considerably more complicated and is beyond the scope of this article.</p>
+                <p>This
+concludes this section on the basics of frequency plots.&nbsp; The main
+reason why I have included it is so that the reader will have a better
+understanding of the remaining articles in this series.&nbsp; These
+will be dealing with the approach to the tuning of every single process
+dynamic he or she may encounter in the real world of industrial
+control.&nbsp; </p>
+                <p>Very
+few people actually ever use frequency plots, which in reality are
+almost impossible to generate from a real process unless you have a
+tool like the Protuner that is capable of doing this.&nbsp; I myself
+use them for the odd occasion where a limited controller does not let
+me use the tuning parameters I would like to have inserted in the
+controller.&nbsp; Typically many controllers have very limited low-end
+gains. For example, a well known make of PLC prevents one for putting
+in gains less than 0.5, and on fast processes like flows, it is one
+generally uses gains much smaller than that.&nbsp; Therefore in cases
+like that, one can start fiddling around in the PLC to try and change
+the loop gain by inserting some other block in the loop, or
+alternatively one can try and get by by using the bigger gain that you
+are limited to, and then increasing the integral until sufficient gain
+and phase margins are reached. (This may not give nice control but it
+will be probably be better than the original "as-found" tuning).</p>
+                <p>The
+other thing that I use the frequency plot for is to model a process for
+simulation.&nbsp; This is a powerful feature in the Protuner, which
+after doing the tuning from the frequency plots, then builds a transfer
+function model using the Bode Plots.&nbsp; Unfortunately this can be
+rather limited especially on more complex dynamics. In cases like these
+one has to "tweak" the model.</p>
+                <p>In
+the next loop signature article we will start off our examination of
+every single type of process dynamics that one would be likely to find
+in industrial processes. These are all more complicated than the simple
+one we have been dealing with in the last few articles.&nbsp; Many of
+them are considered very difficult to control using feedback control.</p>
+                <p><a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Index to articles</a></p>
+                <p><b><span style="font-size: xx-small;">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail:&nbsp; <a href="mailto:michael.brown@pixie.co.za">michael.brown@pixie.co.za</a></span></b></p>
+                <p>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>

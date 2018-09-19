@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Case History 70</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="Author" content="Jenny Allebone">
+<meta name="Description" content="Michael Brown Control Engineering specialises in control loop optimisation, offering training, consulting and loop analysis and optimisation tools">
+<meta name="Generator" content="NetObjects Fusion 4.0.1 for Windows">
+<meta name="Keywords" content="control engineering, engineering, regulatory control, PID control, feedforward control, control training, control loop, control tuning, Protuner, tuning, PID, regulatory, feedforward, training, loop">
+<meta name="Michael Brown Control Engineering" content="Specialist in control loop optimisation. The company's main activities are consulting and teaching practical control loop analysis and optimisation">
+
+
+<body nof="NOF" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    <center>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="63" width="750"><img id="Picture1" src="case_history_70_files/Michael_Brown.gif" alt="" border="0" height="63" width="750"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td width="117"><img src="case_history_70_files/clearpixel.gif" alt="" border="0" height="1" width="117"></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/index.htm">Home</a>]&nbsp;[<a href="http://www.controlloop.co.za/About_us/about_us.html">About us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Contact_us/contact_us.html">Contact us</a>]&nbsp;[<a href="http://www.controlloop.co.za/Training/training.html">Training</a>]&nbsp;[<a href="http://www.controlloop.co.za/Optimisation_services/optimisation_services.html">Optimisation services</a>]&nbsp;[<a href="http://www.controlloop.co.za/Protuner/protuner.html">Protuner</a>]</td>
+            <td width="116"><img src="case_history_70_files/clearpixel.gif" alt="" border="0" height="1" width="116"></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr align="left" valign="top">
+            <td height="2" width="120"><img src="case_history_70_files/clearpixel.gif" alt="" border="0" height="1" width="120"></td>
+            <td></td>
+            <td width="119"><img src="case_history_70_files/clearpixel.gif" alt="" border="0" height="1" width="119"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td></td>
+            <td nof="NB_UYHTNN122" class="TextNavBar" style="text-align: center;" nowrap="nowrap">[<a href="http://www.controlloop.co.za/Loop_signatures/loop_signatures.html">Loop signatures</a>]&nbsp;[<a href="http://www.controlloop.co.za/Case_histories/case_histories.html">Case histories</a>]&nbsp;[<a href="http://www.controlloop.co.za/Continuous_loop_performance_mo/continuous_loop_performance_mo.html">Continuous loop performance monitoring</a>]</td>
+            <td></td>
+        </tr>
+    </tbody></table>
+    <table nof="LY" border="0" cellpadding="0" cellspacing="0" width="750">
+        <tbody><tr align="left" valign="top">
+            <td height="28" width="750"><img src="case_history_70_files/clearpixel.gif" alt="" border="0" height="1" width="750"></td>
+        </tr>
+        <tr align="left" valign="top">
+            <td class="TextObject" width="750">
+                <p><b><span style="color: rgb(204, 0, 51);">CONTROL LOOP CASE HISTORY 70<br></span></b><br><b><span style="font-size: small;">Flow loops behaving badly</span></b></p>
+<p>I have lost count of the number of times I have been told that flow loops
+are very simple things, that they are easy to tune, that you don't need
+a tuning package to tune them, that they can be tuned in a couple of
+minutes, etc., etc.&nbsp;Yet if this is true then I must be remarkably
+unlucky to have found very few working well, in any of the hundreds of
+plants wherein I have performed optimisation.&nbsp;I have also been
+told by an eminent advanced control engineer working in a
+petro-chemical refinery that flow loops need not be tuned too well, as
+speed of such loops will not effect the plant performance.&nbsp;This
+may be true in certain instances, but in general I completely disagree,
+and would stipulate that it is not good practice, particularly where
+these loops are often almost completely detuned.</span></p>
+
+<p>To cite an example, I was recently optimising some controls at a
+plant.&nbsp;They were having trouble with a critically important air
+flow loop.&nbsp;The process is subject to frequent load changes and
+they also need to make setpoint changes from time to time.&nbsp;Several
+technicians had tried to tune it.&nbsp;When I tested the response, it
+took half an hour to get to setpoint after a 10% setpoint
+change.&nbsp;After being tuned correctly (and robustly), it took only
+10 seconds!&nbsp;All that was wrong with it was the tuning.&nbsp;</span></p>
+
+<p>During the past few years, I have also seen some flow loops with terrible
+problems.&nbsp;This article will deal with some of these.</span></p>
+      
+<p>Figure 1 shows a closed loop test "as found" on a flow loop where the operator
+was complaining that the loop was always unstable.&nbsp;Several of the
+instrument people in the plant had tried tuning the loop but could not
+get it to work properly.</span></p>
+	  
+<p style="text-align: center;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture95" src="case_history_70_files/cashis70fig1.jpg" alt="Figure 1" title="Figure 1" border="0" height="409" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    <b>Figure 1</b></span></p>
+
+<p>It is usually thought that if a loop is cycling, then the tuning is
+wrong.&nbsp;Most people immediately try and stop cycling by playing
+with the tuning.&nbsp;However the fact that a loop is cycling does not
+necessarily mean that it has been tuned badly.&nbsp;There are many
+other reasons for cycling, including signal aliasing, hysteresis,
+interaction, slip-stick, and positioner problems.</span></p>
+     
+<p>Often one can get a pretty good idea of what may be causing the cycle by
+examining a recording of the cycle.&nbsp; In this case and as can be
+seen in the figure, the period of the cycle is quite long (varying
+between 20 and 50 seconds).&nbsp;One can immediately rule out tuning as
+the problem.&nbsp;If a loop is tuned unstably, it cycles at the
+ultimate frequency of the loop, the period of which in the case of most
+flow loops is in the region of 6 seconds.&nbsp;Also we can see that the
+PV is cycling in almost a square wave fashion, whilst the PD
+(controller output) is moving in a very distinctive triangular or
+saw-tooth wave.&nbsp;Also at the instant that the PD starts reversing,
+the flow also starts moving in the opposite direction.&nbsp;</span></p>
+	
+<p>This is a very distinctive pattern and is due to the fact that the valve is
+first sticking at a point where the valve is away from
+setpoint.&nbsp;The controller's integral term then starts ramping and
+continues until the valve's actuator has sufficient energy in it to
+manage to get the valve moving again.&nbsp;It then overshoots setpoint,
+and sticks again on the other side.</span></p>
+	
+<p>This has been described in a previous article as a "stick-slip" cycle, which
+is normally caused by valve hysteresis .&nbsp;However in this
+particular case it is caused by a different effect.&nbsp;The test shown
+in Figure 2 is the open loop test, where several equal steps are made
+on the PD.&nbsp;</span></p>
+	
+	<p style="text-align: center;"><span style="font-size: x-small;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture96" src="case_history_70_files/cashis70fig2.jpg" alt="Figure 2" title="Figure 2" border="0" height="409" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    <b>Figure 2</b></span></p>
+   
+<p>The response of the PV is of great interest.&nbsp;It can be seen that the
+valve overshoots considerably every time it moves.&nbsp;Unfortunately,
+this is not repeatable.&nbsp;There is a very large overshoot with a
+fast recovery on steps when the valve is opening.&nbsp;However on
+closing, it overshoots and it then takes quite a long time before it
+recovers.&nbsp;In one case, which is the third step in the test, where
+the valve is to start closing, it first overshoots , and then
+undershoots.&nbsp;This can not be seen in any of the other
+steps.&nbsp;The reason for the valve's behaviour could be caused by a
+variety of factors, including instability in the positioner, an
+undersized actuator, and many other things.</span></p>
+      
+<p>When a valve behaves in a non-repeatable fashion like this, good control
+becomes impossible.&nbsp;Cyclic behaviour in automatic is usually
+always encountered in cases like this, and this behaviour is what one
+sees in Figure 1.&nbsp;</span></p>
+
+<p>The second example is very similar, but the cycle is caused by a different
+phenomenon.&nbsp;Looking at the open loop test in Figure 3, one sees
+the valve overshoots on every reversal.&nbsp;</span>
+                </p>
+                <p style="text-align: center;"><span style="font-size: x-small;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture97" src="case_history_70_files/cashis70fig3.jpg" alt="Figure 3" title="Figure 3" border="0" height="411" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    <b>Figure 3</b></span></p>
+  
+<p>In this case the valve stays in that position, and does not then move back
+in the opposite direction.&nbsp;We have called this phenomenon
+"negative hysteresis" in the loop signature series.&nbsp;It is
+generally a sign that the actuator can not cope with the static
+frictional forces (stiction) needed to be overcome every time the valve
+reverses.&nbsp;The positioner then pumps too much air into the
+actuator, so that when it finally does overcome the stiction it moves
+the valve too far.</span></p>
+     
+<p>The closed loop final test is shown in Figure 4.&nbsp;The closed loop cycle
+here is caused by the positioner overshooting set-point every time the
+valve reverses.&nbsp;The valve then sticks there whilst the output of
+the controller under the action of the integral term ramps until there
+is sufficient energy in the actuator to start the valve moving in the
+opposite direction again.&nbsp;The valve then overshoots setpoint, and
+sticks in that position.</span></p>
+                <p style="text-align: center;"><span style="font-size: x-small;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture98" src="case_history_70_files/cashis70fig4.jpg" alt="Figure 4" title="Figure 4" border="0" height="409" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    <b>Figure 4</b></span></p>
+  
+<p>This type of response is rather unusual insomuch as it is normally not seen
+exactly like this in most cases of negative hysteresis.&nbsp;It is
+definitely a type of stick-slip cycle, so that one must also assume
+that there is quite a slip characteristic in the valve when it starts
+moving on a reversal.</span></p>
+       
+<p>The third example is a flow loop in a fertiliser plant that was also
+extremely cyclic.&nbsp;Figure 5 shows a closed loop "as-found"
+test.&nbsp;</span></p>
+                <p style="text-align: center;"><span style="font-size: x-small;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture99" src="case_history_70_files/cashis70fig5.jpg" alt="Figure 5" title="Figure 5" border="0" height="409" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    <b>Figure 5</b></span></p>
+  
+<p>In the first half of the recording, it can be seen that the process was
+"wavering" around about setpoint.&nbsp;When a step change was made on
+the setpoint, the loop actually went into a cycle.&nbsp;The reason for
+the cycle can be found from the open loop test shown in Figure 6.&nbsp;</span></p>
+                <p style="text-align: center;"><span style="font-size: x-small;">
+                    <table nof="TE" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tbody><tr>
+                            <td align="center"><img id="Picture100" src="case_history_70_files/cashis70fig6.jpg" alt="Figure 6" title="Figure 6" border="0" height="411" width="550"></td>
+                        </tr>
+                    </tbody></table>
+                    <b>Figure 6</b></span></p>
+ 
+<p>Every time a step change is made on the controller output, the flow responds
+with a cyclic underdamped response that slowly dies out.&nbsp;It looks
+very similar to a response of a loop in automatic which has too high a
+gain in the controller.&nbsp;However here the controller is in
+manual.&nbsp;The response is being caused by a positioner which is
+almost unstable.&nbsp;</span></p>
+	 
+<p>This type of thing makes controlling a process impossible.&nbsp;No amount of
+tuning in the world can eliminate these problems.&nbsp;It also
+illustrates how important it is for a plant to have good
+valves.&nbsp;If these types of problems can occur on fast loops like
+flows, one can only shudder to think of the problems that can be
+encountered when trying to control slow processes like temperatures
+with bad valves.&nbsp;</span></p>
+	
+<p>People often think I exaggerate hugely in these articles on the bad state of
+control in plants.&nbsp;However I can assure you that this is
+normal.&nbsp;To illustrate this, I am writing this article whilst
+working on optimising a mining processing plant.&nbsp;The plant was
+commissioned only 5 months ago.&nbsp;The mine is wanting to put an
+advanced control system on top of the regulatory control layer, and the
+consultants realise that such a system cannot work efficiently unless
+the regulatory controls are operating properly, which is why I have
+been called in.&nbsp;</span></p>
+	  
+<p>In the first 3 days, I haven't found a loop working properly in
+automatic.&nbsp;A lot of loops have design problems on the process
+side, and some have poorly thought out control strategies.&nbsp;To make
+things worse I haven't found yet a valve that is capable of performing
+decent control.&nbsp;(Luckily the plant uses a lot of variable speed
+devices for control flows and speeds of feeders.&nbsp;These loops can
+be optimised).&nbsp;However there is one critical sump level control
+which the whole plant throughput is dependent on.&nbsp;On this loop we
+found that the level measuring device freezes its reading a great deal
+of the time, so that operators often have no idea of the true
+level.&nbsp;The control valve is so bad that it only allows control of
+the flow through it between 30% &amp; 50%.&nbsp;It will not allow flow
+to go outside that range.&nbsp;The operators spend a lot of their time
+trying to regulate the level by manually varying other parameters that
+can effect the level.&nbsp;There is no spare valve, although one has
+now been ordered on a priority basis.</span></p>
+      
+<p>It always seems strange to me that prior to my visits nobody seemed really aware of the state of these things.&nbsp;</span></p>
+   
+<p>I believe operators are wonderful.&nbsp;Their job is to make product in
+spite of any difficulties they may encounter, and they generally
+achieve this by finding some way to get around the control problems.
+Ironically the controls were of course originally put there to help
+them, not hinder them.<br><br></span><a href="http://www.controlloop.co.za/Case_histories/case_histories.html"><span style="font-size: x-small;">Index to articles</span></a></p>
+     
+		<p><b><span style="font-size: xx-small; color: rgb(0, 0, 0);">Michael
+Brown is a specialist in control loop optimisation, with many years of
+experience in process control instrumentation. His main activities are
+consulting, and teaching practical control loop analysis and
+optimisation. He gives training courses which can be held in clients'
+plants, where students can have the added benefit of practising on live
+loops. His work takes him to plants all over South Africa, and also to
+other countries. He can be contacted at: <br>Tel (011) 486-0567<br>
+                    Fax (011) 646-2385<br>E-Mail: </span></b><b><span style="font-size: xx-small;"> </span></b><a href="mailto:michael.brown@pixie.co.za"><b><span style="font-size: xx-small;">michael.brown@pixie.co.za</span></b></a><br>&nbsp;</p>
+            </td>
+        </tr>
+    </tbody></table>
+</center></body></html>
