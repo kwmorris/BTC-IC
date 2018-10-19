@@ -1,0 +1,30 @@
+Maintain, calibrate, configure, monitor, test, troubleshoot, install, and repair instrumentation, process controls, data acquisition systems, and electrical systems
+Configure data acquisition hardware
+Connect and verify pressure transducers, thermocouples, and other sensors
+Perform continuity checks, locate and correct wiring errors using measuring instruments such as ohmmeters and sequential continuity checkers
+Read and interpret planning documents, schematics, wiring diagrams, specifications, drawings, manuals, blueprints and engineering sketches
+
+Basic Qualifications:
+Associate degree in instrumentation, control technology, electrical systems, or other electrical field
+3+ years experience working with: RTDs, silicon diode temperature devices, strain gauges, load cells, displacement transducers, pressure transducers, thermocouple, and flow meters (turbine, coriolis, and ultrasonic)
+
+Preferred Skills and Experience:
+Knowledge of Wheatstone bridge theory, ohms law, DC electronics
+Knowledge of oscilloscope & multi-meter, soldering & connectors, crimping tools, wire stripping, continuity testing, routing and tie wrapping cables
+System level troubleshooting skills
+Knowledge in signal conditioning concepts for various types of sensors, to include thermocouple types K, S, and E
+Working knowledge of transducers, op amps, and measurements techniques for temperature, pressure, flow, displacement, vibration and the application of strain gauges
+Intermediate skill using Windows Operating Systems
+Intermediate skill using Microsoft Office
+Knowledge in data acquisition concepts, hardware, and interfacing (SCXI & PXI)
+
+Additional Requirements:
+Tight quarters and physical dexterity
+Lift up to 35 lbs
+Standing, Kneeling, crouching, twisting, working in cramped conditions, and climbing hand over hand
+Elevated Heights
+Work in extreme outdoor environments - heat, cold, rain
+Work exposure to fumes, odors, and noise
+50 - 55 hr work weeks, flexibility required
+Valid drivers license
+Lawful Permanent Resident of the USA
