@@ -12,53 +12,43 @@ Consult the "README.txt" file for help editing this function!
 int
 f_channel_20 (void)
 {
-  float I9 = f_channel[9].value;
-  
-  float pPWH = 0.5;		//input pressure Piece-wise Hand-off (0 disables, -1 forces)
-  
-  float v;
-  
-  float P[20];			//Piece-wise pressure array
-  P[0] = 0;
-  P[1] = 0.0166666666666667;
-  P[2] = 0.13;
-  P[3] = 0.323333333333333;
-  P[4] = 0.586666666666667;
-  P[5] = 0.933333333333333;
-  P[6] = 1.38;
-  P[7] = 1.85;
-  P[8] = 2.44666666666667;
-  P[9] = 3.09666666666667;
-  P[10] = 3.82666666666667;
-  P[11] = 4.62;
-  P[12] = 5.48666666666667;
-  P[13] = 6.44333333333333;
-  P[14] = 7.47666666666667;
-  P[15] = 8.53;
-  P[16] = 9.70333333333333;
-  P[17] = 10.9366666666667;
-  P[18] = 12.2966666666667;
-  P[19] = 13.69;
-  P[20] = 15.0866666666667;
-  
-  if(I9 < 0){
+  float I9 = f_channel[9].value;	//Stores the pressure value from channel 9
+
+  float pPWH = 0.5;		//Input pressure Piece-wise Hand-off threshold (0 disables, -1 forces)
+
+  float hStep = 3;		//Stores the hertz step size for the experimental pressure values
+
+  //Declares and populates an array storing the experimentally determined pressures at known flow rates
+  float P[] = {0, 0.0167, 0.13, 0.3233, 0.5867, 0.9333, 1.38, 1.85, 2.4467, 3.0967, 3.8267, 4.62, 5.4867, 6.4433, 7.4767, 8.53, 9.7033, 10.9367, 12.2967, 13.69, 15.0867};
+  int pLength = 20;	//Stores the number of non-zero values in the experimental pressure array
+
+  float v;			//Declaration for the output value
+
+  if(I9 < 0){		//Sets the input value and output value to zero, and clears the channel comment
 	I9=0;
+	v=0;
 	f_channel[20].comment = "(none)";
-  }else if(I9 < pPWH || pPWH == -1){
+
+  }else if(I9 < pPWH || pPWH == -1){	//Interpolates the output value from the piece-wise array
 	int i;
 	v = -1;
-	for(i = 0; v == -1 && i < 20; i++){
+
+	for(i = 0; v == -1 && i < pLength; i++){		//Steps through the piece-wise array to find the correct points for interpolation
 		if(P[i] <= I9 && I9 < P[i+1]){
-			v = ((I9-P[i])/(P[i+1]-P[i])+i)*3;
+			v = ((I9 - P[i]) / (P[i+1] - P[i]) + i) * hStep;
 		}
 	}
+
 	f_channel[20].comment = f_channel[9].comment;
-  }else{
-    float k = 15.407;
-	v = k*sqrt(I9);
+
+  }else{				//Calculates the output value using a curve calculated from experimental data
+    float k = 15.407;	//k-value calculated from experimental data
+	v = k * sqrt(I9);
 	f_channel[20].comment = "Good Flow Rate";
+
   }
-  
+
+  //Assigns values to the channel outputs
   f_channel[20].value = v;
   f_channel[20].tag = "FI-12";
   f_channel[20].unit = "Hertz";
