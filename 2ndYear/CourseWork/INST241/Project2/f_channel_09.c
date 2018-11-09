@@ -14,26 +14,24 @@ f_channel_09 (void)
 {
   int vURV = 5; 	//input voltage Upper Range Value
   int vLRV = 1;		//input voltage Lower Range Value
-  int pURV = 30;	//output pressure Upper Range Value
+  int pURV = 12;	//output pressure Upper Range Value
   int pLRV = 0;		//output pressure Lower Range Value
-  float pLGV = 0.5;	//output pressure Lowest Good Value
-  float p;
-  int status;
+  int pOpen = -2;	//open loop pressure threshold
+  
+  float p;			//output pressure 
   
   p = (ain[9]-vLRV)/(vURV-vLRV)*(pURV-pLRV)+pLRV;
   
-  if(p < pLGV){
-	  status = 0;
-	  f_channel[9].comment = "Low Flow Rate";
+  if(p < pOpen){
+	  f_channel[9].comment = "Open loop";
   }else{
-	  status = 1;
-	  f_channel[9].comment = "Good Flow Rate";
+	  f_channel[9].comment = "(none)";
   }
   
   f_channel[9].value = p;
   f_channel[9].tag = "FT-12";
   f_channel[9].unit = "inWC";
-  f_channel[9].status = status;
+  f_channel[9].status = 1;
 
   return 1;
 }
