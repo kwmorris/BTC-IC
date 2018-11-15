@@ -6,7 +6,7 @@ Read and interpret planning documents, schematics, wiring diagrams, specificatio
 
 Basic Qualifications:
 Associate degree in instrumentation, control technology, electrical systems, or other electrical field
-3+ years experience working with: RTDs, silicon diode temperature devices, strain gauges, load cells, displacement transducers, pressure transducers, thermocouple, and flow meters (turbine, coriolis, and ultrasonic)
+3+ years experience working with: RTDs, silicon diode temperature devices, strain gauges, load cells, displacement transducers, pressure transducers, thermocouple, and flow meters (turbine, Coriolis, and ultrasonic)
 
 Preferred Skills and Experience:
 Knowledge of Wheatstone bridge theory, ohms law, DC electronics
