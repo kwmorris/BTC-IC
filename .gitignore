@@ -2,3 +2,5 @@
 PLC/Lab/Temp/
 Projects/Tanzen/PLC/Temp/
 *.bak
+*.dwl
+*.dwl2
