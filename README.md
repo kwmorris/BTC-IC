@@ -1,2 +1,2 @@
 # BTC-IC
-BTC - Instrumaentation &amp; Control
+BTC - Instrumentation &amp; Control
