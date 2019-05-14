@@ -1,0 +1,298 @@
+<PojectData Ver="0" ProjectName="Untitled1.fsc" ProjectFile="" SCVersion="1.1.118">
+  <ColDescription Ver="0">
+    <ProjectName Ver="0" Value="" />
+    <ProjectDesc Ver="0" Value="" />
+  </ColDescription>
+  <ColData Ver="0">
+    <_parFBType Ver="0" FB="FF" Protection="nEx" />
+    <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+    <EnvironmentTemperature Ver="0" Value="21" />
+    <StdSpurCurrent Ver="0" Value="10" />
+    <StdSpurLength Ver="0" Value="0.5" />
+    <HandheldCurrent Ver="0" Value="10" />
+    <ShortCircuitChecker Ver="0" Value="true" />
+    <HandheldCheckerField Ver="0" Value="true" />
+    <HandheldCheckerTrunk Ver="0" Value="true" />
+    <HandheldCheckerHost Ver="0" Value="true" />
+  </ColData>
+  <Segment Ver="0">
+    <T002 Ver="0" Key="T002" InputKey="T003" OutputKey="">
+      <Cable SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;CableTypeA08&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="(T002)" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+            <CrossWireSection Ver="0" Value="0.8" />
+            <LineResistance Ver="0" Value="44" />
+            <Length Ver="0" Value="0.5" />
+            <TempCoefficient Ver="0" Value="0.0039" />
+            <AC_Capacity Ver="0" Value="0.056" />
+            <AC_Inductivity Ver="0" Value="0.68" />
+          </DeviceData>
+        </Data>
+      </Cable>
+      <Device SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;GenericTerminator&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="T002" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <AC_Capacity Ver="0" Value="1" />
+            <AC_Resistance Ver="0" Value="100" />
+          </DeviceData>
+        </Data>
+      </Device>
+      <SpurKeys Ver="0">
+        <Strings />
+      </SpurKeys>
+    </T002>
+    <T006 Ver="0" Key="T006" InputKey="T001" OutputKey="">
+      <Cable SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;CableTypeA08&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="(T006)" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+            <CrossWireSection Ver="0" Value="0.8" />
+            <LineResistance Ver="0" Value="44" />
+            <Length Ver="0" Value="0.5" />
+            <TempCoefficient Ver="0" Value="0.0039" />
+            <AC_Capacity Ver="0" Value="0.056" />
+            <AC_Inductivity Ver="0" Value="0.68" />
+          </DeviceData>
+        </Data>
+      </Cable>
+      <Device SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;GenericHost&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="T006" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <InputCurrent Ver="0" Value="10" />
+            <MinInputVoltage Ver="0" Value="9" />
+            <MinACVoltage Ver="0" Value="375" />
+            <AC_Resistance Ver="0" Value="3000" />
+            <AC_SourceVoltage Ver="0" Value="750" />
+          </DeviceData>
+        </Data>
+      </Device>
+      <SpurKeys Ver="0">
+        <Strings />
+      </SpurKeys>
+    </T006>
+    <T007 Ver="0" Key="T007" InputKey="" OutputKey="T001">
+      <Cable SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;CableTypeA08&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="(T007)" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+            <CrossWireSection Ver="0" Value="0.8" />
+            <LineResistance Ver="0" Value="44" />
+            <Length Ver="0" Value="0.5" />
+            <TempCoefficient Ver="0" Value="0.0039" />
+            <AC_Capacity Ver="0" Value="0.056" />
+            <AC_Inductivity Ver="0" Value="0.68" />
+          </DeviceData>
+        </Data>
+      </Cable>
+      <Device SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;GenericTerminator&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="T007" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <AC_Capacity Ver="0" Value="1" />
+            <AC_Resistance Ver="0" Value="100" />
+          </DeviceData>
+        </Data>
+      </Device>
+      <SpurKeys Ver="0">
+        <Strings />
+      </SpurKeys>
+    </T007>
+    <T003 Ver="0" Key="T003" InputKey="T001" OutputKey="T002">
+      <Cable SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;CableTypeA08&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="(T003)" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+            <CrossWireSection Ver="0" Value="0.8" />
+            <LineResistance Ver="0" Value="44" />
+            <Length Ver="0" Value="0.5" />
+            <TempCoefficient Ver="0" Value="0.0039" />
+            <AC_Capacity Ver="0" Value="0.056" />
+            <AC_Inductivity Ver="0" Value="0.68" />
+          </DeviceData>
+        </Data>
+      </Cable>
+      <Device SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;GenericSP4&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="T003" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <NumberOfSpurs Ver="0" Value="4" />
+            <MinInputVoltage Ver="0" Value="9" />
+            <MaxSpurCurrent Ver="0" Value="41" />
+            <CurrentInternal Ver="0" Value="9" />
+            <SpurSeriesResistance Ver="0" Value="20" />
+            <ShortCircuitSpurCurrent Ver="0" Value="57" />
+            <SpurSumSeriesResistance Ver="0" Value="0.5" />
+            <Terminator Ver="0" Value="false" />
+            <AC_Capacity Ver="0" Value="0.01" />
+            <AC_Resistance Ver="0" Value="10000" />
+            <ProtectWithSAA Ver="0" Value="true" />
+          </DeviceData>
+        </Data>
+      </Device>
+      <SpurKeys Ver="0">
+        <Strings String0="T005" String1="" String2="" String3="T004" />
+      </SpurKeys>
+    </T003>
+    <T004 Ver="0" Key="T004" InputKey="T003" OutputKey="">
+      <Cable SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;CableTypeA08&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="(T004)" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+            <CrossWireSection Ver="0" Value="0.8" />
+            <LineResistance Ver="0" Value="44" />
+            <Length Ver="0" Value="0.5" />
+            <TempCoefficient Ver="0" Value="0.0039" />
+            <AC_Capacity Ver="0" Value="0.056" />
+            <AC_Inductivity Ver="0" Value="0.68" />
+          </DeviceData>
+        </Data>
+      </Cable>
+      <Device SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;FF005100460101&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="T004" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <InputCurrent Ver="0" Value="18" />
+            <MinInputVoltage Ver="0" Value="9" />
+          </DeviceData>
+        </Data>
+      </Device>
+      <SpurKeys Ver="0">
+        <Strings />
+      </SpurKeys>
+    </T004>
+    <T005 Ver="0" Key="T005" InputKey="T003" OutputKey="">
+      <Cable SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;CableTypeA08&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="(T005)" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+            <CrossWireSection Ver="0" Value="0.8" />
+            <LineResistance Ver="0" Value="44" />
+            <Length Ver="0" Value="0.5" />
+            <TempCoefficient Ver="0" Value="0.0039" />
+            <AC_Capacity Ver="0" Value="0.056" />
+            <AC_Inductivity Ver="0" Value="0.68" />
+          </DeviceData>
+        </Data>
+      </Cable>
+      <Device SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;FF001151305114&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="T005" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <InputCurrent Ver="0" Value="18" />
+            <MinInputVoltage Ver="0" Value="9" />
+          </DeviceData>
+        </Data>
+      </Device>
+      <SpurKeys Ver="0">
+        <Strings />
+      </SpurKeys>
+    </T005>
+    <T001 Ver="0" Key="T001" InputKey="T007" OutputKey="T003">
+      <Cable SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;CableTypeA08&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="(T001)" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <_cableType Ver="0" Value="A 0.8mm² (AWG 18)" />
+            <CrossWireSection Ver="0" Value="0.8" />
+            <LineResistance Ver="0" Value="44" />
+            <Length Ver="0" Value="0.5" />
+            <TempCoefficient Ver="0" Value="0.0039" />
+            <AC_Capacity Ver="0" Value="0.056" />
+            <AC_Inductivity Ver="0" Value="0.68" />
+          </DeviceData>
+        </Data>
+      </Cable>
+      <Device SegmentXPath="//DeviceTreeRoot/FieldBusTree[@fieldBusType = &quot;FF&quot;]/ProtectionGroupTree[@protectionType = &quot;nEx&quot;]" DeviceXPath=".//DeviceGroupTree/DeviceID[@deviceIDRef = &quot;GenericPowerSupply&quot;]" TemplateID="">
+        <Data Ver="0">
+          <InstanceDescription Ver="0">
+            <Tag Ver="0" Value="T001" />
+            <TagDesc Ver="0" Value="" />
+          </InstanceDescription>
+          <DeviceData Ver="0">
+            <MinOuputVoltage Ver="0" Value="24" />
+            <MinOuputCurrent Ver="0" Value="0.4" />
+            <Terminator Ver="0" Value="false" />
+            <IntegratedMaster Ver="0" Value="false" />
+            <MinACVoltage Ver="0" Value="375" />
+            <AC_Inductivity Ver="0" Value="5" />
+            <AC_Resistance Ver="0" Value="50" />
+            <OutputVoltageRange Ver="0" Value="10" />
+          </DeviceData>
+        </Data>
+      </Device>
+      <SpurKeys Ver="0">
+        <Strings String0="T006" />
+      </SpurKeys>
+    </T001>
+  </Segment>
+  <EditorData Ver="0">
+    <VisibleObjects>
+      <O0 Ver="0" Type="1" LocationX="0" LocationY="0" Scale="1" />
+      <O1 Ver="0" Type="3" LocationX="195" LocationY="280" Tag="T001" />
+      <O2 Ver="0" Type="4" LocationX="49" LocationY="249" Tag="(T001)" vertID="2" horzID="2" posX="0" posY="0" />
+      <O3 Ver="0" Type="3" LocationX="694" LocationY="280" Tag="T002" />
+      <O4 Ver="0" Type="4" LocationX="412" LocationY="249" Tag="(T002)" vertID="2" horzID="2" posX="0" posY="0" />
+      <O5 Ver="0" Type="3" LocationX="372" LocationY="279" Tag="T003" />
+      <O6 Ver="0" Type="4" LocationX="229" LocationY="249" Tag="(T003)" vertID="2" horzID="2" posX="0" posY="0" />
+      <O7 Ver="0" Type="3" LocationX="520" LocationY="368" Tag="T004" />
+      <O8 Ver="0" Type="4" LocationX="404" LocationY="313" Tag="(T004)" vertID="2" horzID="2" posX="0" posY="0" />
+      <O9 Ver="0" Type="3" LocationX="496" LocationY="436" Tag="T005" />
+      <O10 Ver="0" Type="4" LocationX="380" LocationY="313" Tag="(T005)" vertID="2" horzID="2" posX="0" posY="0" />
+      <O11 Ver="0" Type="3" LocationX="196" LocationY="175" Tag="T006" />
+      <O12 Ver="0" Type="4" LocationX="87" LocationY="203" Tag="(T006)" vertID="0" horzID="2" posX="0" posY="0" />
+      <O13 Ver="0" Type="3" LocationX="18" LocationY="280" Tag="T007" />
+      <O14 Ver="0" Type="4" LocationX="0" LocationY="0" Tag="(T007)" vertID="0" horzID="0" posX="0" posY="0" />
+    </VisibleObjects>
+  </EditorData>
+  <DeviceCatalogEditorData>
+    <UserEndDevices>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;xd:Root xmlns:xd="http://www.codewrights.biz/2003/PFSegPlan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.codewrights.biz/2003/PFSegPlan PFSegPlan.xsd"&gt;&lt;!-- ****************************************************************** --&gt;&lt;!-- XML-Version                                                        --&gt;&lt;!-- ================================================================== --&gt;&lt;!-- Contains Version Information about this XML-File                   --&gt;&lt;!-- Important for Updates                                              --&gt;&lt;!-- ****************************************************************** --&gt;&lt;XMLVersion&gt;&lt;Version MainVersion="1" SubVersion="1" /&gt;&lt;/XMLVersion&gt;&lt;!-- ****************************************************************** --&gt;&lt;!-- Bitmaps                                                            --&gt;&lt;!-- ================================================================== --&gt;&lt;!-- Bitmap resource part                                               --&gt;&lt;!-- ****************************************************************** --&gt;&lt;Bitmaps&gt;&lt;Bitmap bmpIDKey="bmpImgListUserCableTemplate"&gt;&lt;MSBitmap name="bmpImgListUserCableTemplate.bmp" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64"&gt;&lt;value&gt;Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAABAQE//8A//+Ghob/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgEBAQEBAQEBAQAAAAACAQIBAQEBAQEBAQEAAQEBAgICAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQEBAQEBAQEAAQEBAQEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAQEBAQABAQEBAQEBAQECAgIBAQEAAQEBAQEBAQEBAgECAAAAAAEBAQEBAQEBAQICAgEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE=&lt;/value&gt;&lt;/MSBitmap&gt;&lt;TransparentColor x="0" y="0" /&gt;&lt;/Bitmap&gt;&lt;Bitmap bmpIDKey="bmpImgListUserDevTemplate"&gt;&lt;MSBitmap name="bmpImgListUserDevTemplate.bmp" type="System.Drawing.Bitmap, System.Drawing, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mimetype="application/x-microsoft.net.object.bytearray.base64"&gt;&lt;value&gt;Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAAASCwAAEgsAAAABAAAAAQAABAQE/wCAAP8A/wD//wD//wD///+Ghob/wMDA//////8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAAAAAAAAAAAAAAAAwMDAwAABAEBAQEBAQEBAAMDAwMABAAEAgICAgICAQADAwMDAAQBAAQCAgICAgEAAwMDAwAEAgEABAICAgIBAAMDBgUFBAICAQAEAgICAQADAwcGBgQCAgIBAAQCAgEAAwMDAwAEAgICAgEABAIBAAMDAwMABAICAgICAQAEAQADAwMDAAQCAgICAgIBAAQAAwMDAwAEBAQEBAQEBAQAAAMDAwMAAAAAAAAAAAAAAAADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM=&lt;/value&gt;&lt;/MSBitmap&gt;&lt;TransparentColor x="0" y="0" /&gt;&lt;/Bitmap&gt;&lt;/Bitmaps&gt;&lt;!-- ****************************************************************** --&gt;&lt;!-- StdBitmaps                                                         --&gt;&lt;!-- ================================================================== --&gt;&lt;!-- Standard Bitmap resource part                                      --&gt;&lt;!-- ****************************************************************** --&gt;&lt;ImageLists&gt;&lt;ImageList imgListIDKey="imgListUserCable" bmpIDRef="bmpImgListUserCableTemplate" indexOffset="0" numberBitmaps="1" /&gt;&lt;/ImageLists&gt;&lt;!-- ****************************************************************** --&gt;&lt;!-- Description                                                        --&gt;&lt;!-- ================================================================== --&gt;&lt;!-- Text resource part containing localizable description elements     --&gt;&lt;!-- ****************************************************************** --&gt;&lt;Descriptions&gt;&lt;!-- Device descriptions --&gt;&lt;Description descIDKey="strConnIn" text="In" help="" /&gt;&lt;Description descIDKey="strCalculatedCurrent" text="Input Current" help="Calculated input current for the device." /&gt;&lt;Description descIDKey="strCalculatedVoltage" text="Input Voltage" help="Calculated input voltage for the device." /&gt;&lt;Description descIDKey="strTag" text="Device Tag" help="tag for the device in the current project" /&gt;&lt;Description descIDKey="strTagDesc" text="Device Instance Description" help="editable description for the device instance in a project" /&gt;&lt;Description descIDKey="strDeviceName" text="Device Name" help="name of the device type" /&gt;&lt;Description descIDKey="strInputCurrent" text="Input Current" help="value of the standard input current for the device" /&gt;&lt;Description descIDKey="strMinInputVoltage" text="Min. Input Voltage" help="minimum value of the input voltage" /&gt;&lt;Description descIDKey="strMinACVoltage" text="Min. AC Input Voltage" help="minimum peak-peak value of the AC input voltage" /&gt;&lt;Description descIDKey="strACSourceVoltage" text="AC Output voltage of sender" help="AC output voltage of the sender" /&gt;&lt;Description descIDKey="strACSourceCurrent" text="AC Output current of sender" help="AC output current of the sender" /&gt;&lt;Description descIDKey="strACResistance" text="AC Resistance" help="AC resistance of the device" /&gt;&lt;Description descIDKey="strCrossWireSection" text="Cross Wire Section" help="cross wire section size of the cable" /&gt;&lt;Description descIDKey="strLineResistance" text="Wire Resistance" help="wire resistance of the cable" /&gt;&lt;Description descIDKey="strLength" text="Wire Length" help="wire length of the cable" /&gt;&lt;Description descIDKey="strTempCoefficient" text="Temp. Coefficient" help="Coefficient value for temperature correction calculation." /&gt;&lt;/Descriptions&gt;&lt;!-- ****************************************************************** --&gt;&lt;!-- Device Tree                                                        --&gt;&lt;!-- ================================================================== --&gt;&lt;!-- device tree part specifying the tree structure                     --&gt;&lt;!-- ================================================================== --&gt;&lt;DeviceTreeRoot&gt;&lt;/DeviceTreeRoot&gt;&lt;!-- ****************************************************************** --&gt;&lt;!-- Device Definition Data                                             --&gt;&lt;!-- ================================================================== --&gt;&lt;Devices&gt;&lt;/Devices&gt;&lt;Graphics&gt;&lt;Graphic graphicIDKey="gDefUserCable" dataValue="Length" labelValue="Tag"&gt;&lt;TextBox horz="right" vert="bottom" minWidth="100" minHeight="32"&gt;&lt;Pos x="0" y="0" /&gt;&lt;/TextBox&gt;&lt;/Graphic&gt;&lt;/Graphics&gt;&lt;/xd:Root&gt;</UserEndDevices>
+  </DeviceCatalogEditorData>
+</PojectData>
