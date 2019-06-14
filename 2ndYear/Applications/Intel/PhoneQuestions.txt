@@ -1,0 +1,7 @@
+Intel Questions:	Dennis Rimley
+-Which Chandler campus?	Ocotillo
+-Hours/shift?	Compressed work week, 12 hrs
+-Average day?	Buddy work, 4/4 crews, PMS Maximo
+-Common technologies?	Pressure, RTD/TC, 
+-I&E separate?	Yes
+--LOTO procedures	We deal low voltage.
